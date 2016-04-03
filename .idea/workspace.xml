@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Mend some lost info.">
+    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Finish mending. Start rewrite ASTBuilder.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Compiler2016.iws" />
@@ -77,8 +77,8 @@
       <file leaf-file-name="Prog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Prog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,10 +119,14 @@
       <file leaf-file-name="MagASTBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Compiler/AST/MagASTBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="255">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#347#356#0" expanded="true" />
+                <element signature="e#398#399#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#555#568#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,7 +188,6 @@
         <option value="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Prog.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/StatementList.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/ExpressionList.java" />
@@ -195,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/NullType.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/boolType.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Prog.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/MagASTBuilder.java" />
       </list>
     </option>
@@ -717,7 +721,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459675586933</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finish mending. Start rewrite ASTBuilder.">
+      <created>1459676145633</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1459676145633</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -776,7 +787,8 @@
     <MESSAGE value="Tiny modifications." />
     <MESSAGE value="Rename package." />
     <MESSAGE value="Mend some lost info." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mend some lost info." />
+    <MESSAGE value="Finish mending. Start rewrite ASTBuilder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish mending. Start rewrite ASTBuilder." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1148,16 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Prog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/StatementList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1182,12 +1184,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/MagASTBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Prog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="165">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/MagASTBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#347#356#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#555#568#0" expanded="true" />
           </folding>
         </state>
       </provider>
