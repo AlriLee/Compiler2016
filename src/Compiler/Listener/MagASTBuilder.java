@@ -1,5 +1,6 @@
-package Compiler.AST;
+package Compiler.Listener;
 
+import Compiler.AST.*;
 import Compiler.AST.Decl.ClassDecl;
 import Compiler.AST.Decl.Declaration;
 import Compiler.AST.Decl.FunctionDecl;
@@ -43,10 +44,11 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitClassDeclaration(MagParser.ClassDeclarationContext ctx) {
+        Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
         if (ctx.classMemberDeclarationList() != null) {
-            stack.push(new ClassDecl(Symbol.getSymbol(ctx.ID().getText()), (VarDeclList) stack.pop()));
+            stack.push(new ClassDecl(symbol, (VarDeclList) stack.pop()));
         } else {
-            stack.push(new ClassDecl(Symbol.getSymbol(ctx.ID().getText())));
+            stack.push(new ClassDecl(symbol));
         }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }

@@ -11,12 +11,12 @@ public class StatementList implements ASTNode {
     public Statement statement;
     public StatementList statementList;
 
-    StatementList(Statement s) {
+    public StatementList(Statement s) {
         statement = s;
         statementList = null;
     }
 
-    StatementList(Statement s, StatementList sl) {
+    public StatementList(Statement s, StatementList sl) {
         statement = s;
         statementList = sl;
     }

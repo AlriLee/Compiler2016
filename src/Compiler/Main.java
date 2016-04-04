@@ -1,9 +1,9 @@
 package Compiler;
 
-import Compiler.AST.MagASTBuilder;
 import Compiler.AST.Parser.MagLexer;
 import Compiler.AST.Parser.MagParser;
 import Compiler.Error.CompileError;
+import Compiler.Listener.MagASTBuilder;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
