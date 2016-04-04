@@ -9,13 +9,17 @@ classDeclaration
 	;
 
 classMemberDeclarationList
-	:	typeArray ID ';'
-	|	typeArray ID ';' classMemberDeclarationList
+	:	typeArray ID ';' # classMemDeclList_
+	|	typeArray ID ';' classMemberDeclarationList # classMemDeclList_list
 	;
-
+/*
+classDeclaration
+	:	'class' ID '{' (typeArray ID ';')* '}'
+	;
+*/
 typeArray
-	:	type
-	|	typeArray '[' ']'
+	:	type # typeArray_type
+	|	typeArray '[' ']' # typeArray_dim
 	;
 
 type
@@ -39,8 +43,8 @@ blockStatement
 	;
 
 statementList
-	:	statement
-	|	statement statementList
+	:	statement # statementList_stmt
+	|	statement statementList # statementList_list
 	;
 
 expressionStatement
@@ -119,20 +123,20 @@ mulDivRemExpression
 	;
 
 creationExpression
-	:	'new' typeArray dimentionExpression? # creation_dim
+	:	'new' typeArray dimensionExpression? # creation_dim
 	|	'new' typeArray '(' expression ')' # creation_para
 	|	prefixExpression # creation_prefix
 	;
 
-dimentionExpression
-	:	'[' expression ']' # dimention_
-	|	'[' expression ']' dimentionExpression #dimention_dim
+dimensionExpression
+	:	'[' expression ']' # dimension_
+	|	'[' expression ']' dimensionExpression #dimension_dim
 	;
 
 prefixExpression
 	:	postfixExpression # prefix_postfix
 	|	'+' prefixExpression # prefix_positive
-	|	'-' prefixExpression # prefix_minus
+	|	'-' prefixExpression # prefix_negative
 	|	'!' prefixExpression # prefix_not
 	|	'~' prefixExpression # prefix_tilde
 	|	'++' prefixExpression # prefix_plusPlus
@@ -167,13 +171,13 @@ logicConstant
 	;
 
 argumentExpressionList
-	:	expression
-	|	expression ',' argumentExpressionList
+	:	expression # argument_expression
+	|	expression ',' argumentExpressionList # argument_expressionList
 	;
 
 selectionStatement
-	:	'if' '(' expression ')' statement
-	|	'if' '(' expression ')' statement 'else' statement
+	:	'if' '(' expression ')' statement # selection_if
+	|	'if' '(' expression ')' statement 'else' statement #selection_ifElse
 	;
 
 iterationStatement
@@ -212,18 +216,18 @@ variableDeclarationStatement
 	;
 
 variableDeclaration
-	:	typeArray ID
-	|	typeArray ID '=' expression
+	:	typeArray ID # varDecl_
+	|	typeArray ID '=' expression # varDecl_init
 	;
 
 functionDeclaration
-	:	typeArray ID '(' parameterList? ')' blockStatement
-	|	'void' ID '(' parameterList? ')' blockStatement
+	:	typeArray ID '(' parameterList? ')' blockStatement # functionDecl_returnType
+	|	'void' ID '(' parameterList? ')' blockStatement # functionDecl_void
 	;
 
 parameterList
-	:	typeArray ID
-	|	typeArray ID ',' parameterList
+	:	typeArray ID # parameter_
+	|	typeArray ID ',' parameterList # parameter_list
 	;
 
 
