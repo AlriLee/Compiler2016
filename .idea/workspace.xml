@@ -2,232 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="AST updated.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/ASTNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/BaseListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/ClassDecl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/Declaration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/FunctionDecl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/VarDecl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/ExpressionList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Info.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/MagASTBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/Mag.g4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/Mag.tokens" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagBaseListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagLexer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagLexer.tokens" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Prog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/BreakStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/CompoundStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ContinueStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/ArrayAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BinaryExpression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BinaryOp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BoolConst.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/ClassAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/CreationExpression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/EmptyExpression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/Expression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/FunctionCall.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/Identifier.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/IntConst.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/NullConst.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/PostSelfDecrement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/PostSelfIncrement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/StringConst.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/UnaryExpression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/UnaryOp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ForLoop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Identifier.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/IfStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ReturnStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Statement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/WhileLoop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/StatementList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Symbol.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/ArrayType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/BasicType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/BoolType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/ClassType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/IntType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/StringType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/Type.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/VoidType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/VarDeclList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Error/CompileError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Tool/Tool.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/ASTNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/ClassDecl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/Declaration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/FunctionDecl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/VarDecl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/ExpressionList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Info.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/MagASTBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/Mag.g4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/Mag.tokens" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.tokens" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Prog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/BreakStatement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/CompoundStatement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/ContinueStatement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/ArrayAccess.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BinaryExpression.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BinaryOp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BoolConst.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/ClassAccess.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/CreationExpression.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/EmptyExpression.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/Expression.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/FunctionCall.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/Identifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/IntConst.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/NullConst.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/PostSelfDecrement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/PostSelfIncrement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/StringConst.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/UnaryExpression.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/UnaryOp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/ForLoop.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Identifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/IfStatement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/ReturnStatement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Statement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/WhileLoop.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/StatementList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Symbol.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/ArrayType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/BasicType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/ClassType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/IntType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/StringType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/Type.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/VoidType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/boolType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/VarDeclList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Compiler/AST" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Main.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Statement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/Type.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/Expression.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Statement.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/Type.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/ASTNode.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/ASTNode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/BaseListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/BaseListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/ClassDecl.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Decl/ClassDecl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/Declaration.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Decl/Declaration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/FunctionDecl.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/VarDecl.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/ExpressionList.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/ExpressionList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Info.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Info.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/MagASTBuilder.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/MagASTBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/Mag.g4" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/Mag.tokens" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.tokens" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagBaseListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagBaseListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagLexer.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagLexer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagLexer.tokens" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagLexer.tokens" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/MagParser.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Prog.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Prog.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/BreakStatement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/BreakStatement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/CompoundStatement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/CompoundStatement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ContinueStatement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/ContinueStatement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/ArrayAccess.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BinaryExpression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BinaryOp.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryOp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BoolConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/ClassAccess.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ClassAccess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/CreationExpression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/EmptyExpression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/EmptyExpression.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/FunctionCall.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/FunctionCall.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/Identifier.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Identifier.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/IntConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/NullConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/PostSelfDecrement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/PostSelfIncrement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/StringConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/UnaryExpression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryExpression.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/UnaryOp.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryOp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ForLoop.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Identifier.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Identifier.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/IfStatement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/IfStatement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ReturnStatement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/WhileLoop.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/WhileLoop.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/StatementList.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/StatementList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Symbol.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Symbol.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/ArrayType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/BasicType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/BasicType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/BoolType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/BoolType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/ClassType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/ClassType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/IntType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/IntType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/StringType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/StringType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/VoidType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/VoidType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/VarDeclList.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/VarDeclList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Error/CompileError.java" afterPath="$PROJECT_DIR$/src/Compiler/Error/CompileError.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Main.java" afterPath="$PROJECT_DIR$/src/Compiler/Main.java" />
     </list>
     <ignored path="Compiler2016.iws" />
@@ -251,20 +84,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MagASTBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/MagASTBuilder.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/MagASTBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="98">
-              <caret line="452" column="30" selection-start-line="452" selection-start-column="20" selection-end-line="452" selection-end-column="30" />
+              <caret line="450" column="30" selection-start-line="450" selection-start-column="20" selection-end-line="450" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#731#740#0" expanded="true" />
+                <element signature="e#581#590#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ClassDecl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/ClassDecl.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/ClassDecl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
@@ -274,7 +107,7 @@
         </entry>
       </file>
       <file leaf-file-name="ForLoop.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ForLoop.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="20" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
@@ -284,7 +117,7 @@
         </entry>
       </file>
       <file leaf-file-name="BinaryOp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BinaryOp.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryOp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
@@ -294,7 +127,7 @@
         </entry>
       </file>
       <file leaf-file-name="BinaryExpression.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BinaryExpression.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -304,7 +137,7 @@
         </entry>
       </file>
       <file leaf-file-name="ASTNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/ASTNode.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/ASTNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -314,10 +147,10 @@
         </entry>
       </file>
       <file leaf-file-name="Prog.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Prog.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Prog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+            <state relative-caret-position="240">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -326,33 +159,33 @@
         </entry>
       </file>
       <file leaf-file-name="IntConst.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/IntConst.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="23" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="23" />
               <folding>
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="NullConst.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/NullConst.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#216#217#0" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Expression.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/Expression.java">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
@@ -386,7 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Compiler/Printer.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" />
         <option value="$PROJECT_DIR$/src/Compiler/Tool/Tool.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/ASTNode.java" />
@@ -395,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/Type.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/BasicType.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Symbol.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Prog.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/VarDeclList.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/ExpressionList.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/IntType.java" />
@@ -437,6 +268,8 @@
         <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/ASTNode.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Prog.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Prog.java" />
       </list>
     </option>
   </component>
@@ -582,7 +415,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractSyntaxTree" />
+              <option name="myItemId" value="AST" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -995,7 +828,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459753345678</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="AST updated.">
+      <created>1459753756832</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1459753756832</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1009,7 +849,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1227" height="777" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1024,8 +864,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24123879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24123879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1066,7 +906,8 @@
     <MESSAGE value="Add a few lines." />
     <MESSAGE value="Done with AST builder." />
     <MESSAGE value="Structure modified." />
-    <option name="LAST_COMMIT_MESSAGE" value="Structure modified." />
+    <MESSAGE value="AST updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="AST updated." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1096,7 +937,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/Declaration.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/Declaration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
@@ -1104,7 +945,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/StatementList.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/StatementList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
@@ -1114,7 +955,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/Type.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/Type.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
@@ -1122,7 +963,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/BasicType.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/BasicType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
@@ -1130,7 +971,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Symbol.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Symbol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
@@ -1138,7 +979,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/VarDeclList.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/VarDeclList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
@@ -1148,7 +989,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/ExpressionList.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/ExpressionList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -1158,7 +999,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/ArrayType.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
@@ -1168,29 +1009,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/VoidType.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/VoidType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
-            <element signature="e#214#215#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/StringType.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/StringType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/ClassAccess.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ClassAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
@@ -1200,7 +1041,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/CreationExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
@@ -1210,7 +1051,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/StringConst.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
@@ -1218,18 +1059,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/PostSelfDecrement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/UnaryExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryExpression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
@@ -1237,7 +1078,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/ArrayAccess.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
@@ -1245,41 +1086,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BoolConst.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/Identifier.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Identifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/PostSelfIncrement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/FunctionCall.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/FunctionCall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
@@ -1289,18 +1130,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/EmptyExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/EmptyExpression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/FunctionDecl.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
@@ -1308,7 +1149,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Statement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
@@ -1316,7 +1157,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/BreakStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/BreakStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
@@ -1324,7 +1165,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/IfStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/IfStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
@@ -1334,7 +1175,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/CompoundStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/CompoundStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
@@ -1344,7 +1185,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ReturnStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
@@ -1354,7 +1195,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Identifier.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Identifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
@@ -1364,7 +1205,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ContinueStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ContinueStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
@@ -1372,7 +1213,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/WhileLoop.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/WhileLoop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
@@ -1382,7 +1223,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/VarDecl.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
@@ -1390,18 +1231,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/BoolType.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/BoolType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/ClassType.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/ClassType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
@@ -1411,18 +1252,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Type/IntType.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/IntType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Parser/Mag.g4">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="37" column="36" selection-start-line="32" selection-start-column="8" selection-end-line="37" selection-end-column="36" />
@@ -1430,7 +1271,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/BaseListener.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/BaseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
@@ -1464,7 +1305,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Decl/ClassDecl.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/ClassDecl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
@@ -1472,18 +1313,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/MagASTBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/MagASTBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
-          <caret line="452" column="30" selection-start-line="452" selection-start-column="20" selection-end-line="452" selection-end-column="30" />
+          <caret line="450" column="30" selection-start-line="450" selection-start-column="20" selection-end-line="450" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#731#740#0" expanded="true" />
+            <element signature="e#581#590#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/Expression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
@@ -1493,7 +1334,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/ForLoop.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="20" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
@@ -1501,7 +1342,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BinaryOp.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryOp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
@@ -1509,29 +1350,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/IntConst.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="23" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/NullConst.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Statement/Expression/BinaryExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -1539,7 +1380,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/ASTNode.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/ASTNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -1547,10 +1388,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AbstractSyntaxTree/Prog.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Prog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

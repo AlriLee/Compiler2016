@@ -1,6 +1,6 @@
 package Compiler.Error;
 
-import Compiler.AbstractSyntaxTree.BaseListener;
+import Compiler.AST.BaseListener;
 
 /**
  * Created by Alri on 16/4/4.
