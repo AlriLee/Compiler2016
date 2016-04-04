@@ -1,6 +1,8 @@
 package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Symbol;
+import Compiler.Environment.SymbolTable;
+import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -12,6 +14,9 @@ public class Identifier extends Expression {
 
     public Identifier(Symbol s) {
         symbol = s;
+        if (SymbolTable.getType(s) == null) {
+            throw new CompileError("no symbol named \"" + symbol.name + "\"");
+        }
     }
 
     @Override

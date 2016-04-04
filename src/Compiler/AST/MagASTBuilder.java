@@ -9,6 +9,7 @@ import Compiler.AST.Statement.*;
 import Compiler.AST.Statement.Expression.*;
 import Compiler.AST.Statement.Expression.Identifier;
 import Compiler.AST.Type.*;
+import Compiler.Environment.SymbolTable;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.LinkedList;
@@ -508,8 +509,16 @@ public class MagASTBuilder extends BaseListener {
     @Override
     public void exitVarDecl_init(MagParser.VarDecl_initContext ctx) {
         Expression init = (Expression) stack.pop();
-        stack.push(new VarDecl((Type) stack.pop(), Symbol.getSymbol(ctx.ID().getText()), init));
+        Type type = (Type) stack.pop();
+        Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
+        stack.push(new VarDecl(type, symbol, init));
+        SymbolTable.addSymbol(symbol, type);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
+    }
+
+    @Override
+    public void enterFunctionDecl_returnType(MagParser.FunctionDecl_returnTypeContext ctx) {
+        SymbolTable.beginScope();
     }
 
     @Override
@@ -522,6 +531,7 @@ public class MagASTBuilder extends BaseListener {
         else paraList = null;
         stack.push(new FunctionDecl((Type) stack.pop(), functionName, paraList, block));
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
+        SymbolTable.endScope();
     }
 
     @Override

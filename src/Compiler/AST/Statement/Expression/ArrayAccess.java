@@ -9,10 +9,10 @@ public class ArrayAccess extends Expression {
     public Expression arrayBody;
     public Expression arrayIndex;
 
-    public ArrayAccess() {
+    /*public ArrayAccess() {
         arrayBody = null;
         arrayIndex = null;
-    }
+    }*/
 
     public ArrayAccess(Expression ab, Expression ai) {
         arrayBody = ab;

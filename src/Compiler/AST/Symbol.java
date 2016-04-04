@@ -29,7 +29,6 @@ public class Symbol implements ASTNode {
 
     @Override
     public String toString(int d) {
-        String string = indent(d) + name;
-        return string;
+        return indent(d) + name + "\n";
     }
 }
