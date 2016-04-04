@@ -1,4 +1,4 @@
-package Compiler.AST;
+package Compiler.Listener;
 
 import Compiler.AST.Parser.MagBaseListener;
 import org.antlr.v4.runtime.ParserRuleContext;

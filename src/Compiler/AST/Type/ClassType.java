@@ -1,6 +1,9 @@
 package Compiler.AST.Type;
 
+import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Symbol;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -9,9 +12,11 @@ import static Compiler.Tool.Tool.indent;
  */
 public class ClassType extends BasicType {
     public Symbol className;
+    public List<VarDecl> classMember;
 
-    public ClassType(Symbol className) {
-        this.className = className;
+    public ClassType(Symbol cn) {
+        className = cn;
+        classMember = null;
     }
 
     @Override
