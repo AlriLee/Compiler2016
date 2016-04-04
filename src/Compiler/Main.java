@@ -1,8 +1,8 @@
 package Compiler;
 
-import Compiler.AST.MagASTBuilder;
-import Compiler.AST.Parser.MagLexer;
-import Compiler.AST.Parser.MagParser;
+import Compiler.AbstractSyntaxTree.MagASTBuilder;
+import Compiler.AbstractSyntaxTree.Parser.MagLexer;
+import Compiler.AbstractSyntaxTree.Parser.MagParser;
 import Compiler.Error.CompileError;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -42,7 +42,7 @@ public class Main {
         walker.walk(evalByListener, tree);
         System.out.println("Listener:");
 
-        /*AST root = evalByListener.stack.peek();
+        /*AbstractSyntaxTree root = evalByListener.stack.peek();
         Printer printer = new Printer();
         printer.visit(root);*/
         System.out.println(evalByListener.stack.peek().toString(0));
