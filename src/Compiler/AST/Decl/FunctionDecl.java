@@ -10,7 +10,7 @@ import static Compiler.Tool.Tool.indent;
 /**
  * Created by Alri on 16/3/31.
  */
-public class FunctionDecl implements Declaration {
+public class FunctionDecl implements Type, Declaration {
     public Type returnType;
     public Symbol functionName;
     public VarDeclList parameters;

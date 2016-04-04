@@ -3,6 +3,8 @@ package Compiler;
 import Compiler.AST.Parser.MagLexer;
 import Compiler.AST.Parser.MagParser;
 import Compiler.Error.CompileError;
+import Compiler.Listener.ClassDeclListener;
+import Compiler.Listener.FunctionDeclListener;
 import Compiler.Listener.MagASTBuilder;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -38,13 +40,15 @@ public class Main {
         System.out.println();
 
         ParseTreeWalker walker = new ParseTreeWalker();
-        MagASTBuilder evalByListener = new MagASTBuilder(parser);
-        walker.walk(evalByListener, tree);
+        walker.walk(new ClassDeclListener(), tree);
+        walker.walk(new FunctionDeclListener(), tree);
+        walker.walk(new MagASTBuilder(), tree);
+
         System.out.println("Listener:");
 
         /*AST root = evalByListener.stack.peek();
         Printer printer = new Printer();
         printer.visit(root);*/
-        System.out.println(evalByListener.stack.peek().toString(0));
+        System.out.println(MagASTBuilder.stack.peek().toString(0));
     }
 }

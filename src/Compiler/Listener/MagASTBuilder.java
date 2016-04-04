@@ -20,12 +20,7 @@ import java.util.Stack;
  * Created by Alri on 16/4/3.
  */
 public class MagASTBuilder extends BaseListener {
-    public MagParser parser;
-    public Stack<ASTNode> stack = new Stack<ASTNode>();
-
-    public MagASTBuilder(MagParser p) {
-        parser = p;
-    }
+    public static Stack<ASTNode> stack = new Stack<ASTNode>();
 
     @Override
     public void exitProgram(MagParser.ProgramContext ctx) {
