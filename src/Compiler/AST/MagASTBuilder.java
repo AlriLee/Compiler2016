@@ -9,6 +9,7 @@ import Compiler.AST.Statement.*;
 import Compiler.AST.Statement.Expression.*;
 import Compiler.AST.Statement.Expression.Identifier;
 import Compiler.AST.Type.*;
+import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.LinkedList;
 import java.util.Stack;
@@ -446,15 +447,31 @@ public class MagASTBuilder extends BaseListener {
     @Override
     public void exitForStatement(MagParser.ForStatementContext ctx) {
         Statement forStatement = (Statement) stack.pop();
+
+        MagParser.ExpressionContext[] expressionContexts = new MagParser.ExpressionContext[3];
+
+        int total = 0;
+        for (ParseTree parseTree : ctx.children) {
+            if (parseTree.getText().equals(";")) {
+                total++;
+            }
+            if (parseTree instanceof MagParser.ExpressionContext) {
+                expressionContexts[total] = (MagParser.ExpressionContext) parseTree;
+            }
+        }
+
         Expression init = null, cond = null, incr = null;
-        if (ctx.expression(2) != null) {
+        if (expressionContexts[2] != null) {
             incr = (Expression) stack.pop();
+//            System.out.println("2: " + expressionContexts[2].getText());
         }
-        if (ctx.expression(1) != null) {
+        if (expressionContexts[1] != null) {
             cond = (Expression) stack.pop();
+//            System.out.println("1: " + expressionContexts[1].getText());
         }
-        if (ctx.expression(0) != null) {
+        if (expressionContexts[0] != null) {
             init = (Expression) stack.pop();
+//            System.out.println("0: " + expressionContexts[0].getText());
         }
         stack.push(new ForLoop(init, cond, incr, forStatement));
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());

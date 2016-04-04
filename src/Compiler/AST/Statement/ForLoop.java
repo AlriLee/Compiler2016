@@ -28,9 +28,15 @@ public class ForLoop implements Statement {
     @Override
     public String toString(int d) {
         String string = indent(d) + "ForLoop\n";
-        string += initExpression.toString(d + 1);
-        string += conditionExpression.toString(d + 1);
-        string += incrementExpression.toString(d + 1);
+        if (initExpression != null) {
+            string += initExpression.toString(d + 1);
+        }
+        if (conditionExpression != null) {
+            string += conditionExpression.toString(d + 1);
+        }
+        if (incrementExpression != null) {
+            string += incrementExpression.toString(d + 1);
+        }
         string += forStatement.toString(d + 1);
 
         return string;
