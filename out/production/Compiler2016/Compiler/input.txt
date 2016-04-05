@@ -1,3 +1,7 @@
+void f(int[] a) {
+
+}
+
 int main()
 {
     int i = 2;
