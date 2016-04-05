@@ -1,133 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Modify FunctionDeclListener.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" />
+    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Mend error in creationExpression in g4 file.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/Mag.g4" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/Mag.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/input.txt" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/input.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagBaseListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagBaseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagLexer.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/input.txt" afterPath="$PROJECT_DIR$/src/Compiler/input.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" afterPath="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
     </list>
     <ignored path="Compiler2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,90 +28,11 @@
       <file leaf-file-name="MagASTBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="280" column="39" selection-start-line="280" selection-start-column="39" selection-end-line="280" selection-end-column="39" />
+            <state relative-caret-position="15">
+              <caret line="172" column="13" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreationExpression.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/input.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MagParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="843">
-              <caret line="607" column="0" selection-start-line="607" selection-start-column="0" selection-end-line="607" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mag.g4" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FunctionDeclListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#645#654#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
-                <element signature="e#1945#1946#0" expanded="true" />
-                <element signature="e#2053#2054#0" expanded="true" />
-                <element signature="e#2093#2094#0" expanded="true" />
-                <element signature="e#2189#2190#0" expanded="true" />
-                <element signature="e#2229#2230#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReturnStatement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -308,12 +105,12 @@
         <option value="$PROJECT_DIR$/src/Compiler/Listener/BaseListener.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/ClassType.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
         <option value="$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java" />
         <option value="$PROJECT_DIR$/src/Compiler/Main.java" />
         <option value="$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java" />
         <option value="$PROJECT_DIR$/src/Compiler/input.txt" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" />
+        <option value="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
       </list>
     </option>
   </component>
@@ -325,7 +122,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="52" />
+    <option name="x" value="53" />
     <option name="y" value="23" />
     <option name="width" value="1227" />
     <option name="height" value="777" />
@@ -355,8 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -364,237 +159,11 @@
               <option name="myItemId" value="Compiler2016" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Listener" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Environment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AST" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AST" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Type" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AST" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Statement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AST" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Statement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Expression" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AST" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1073,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459860090262</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Mend error in creationExpression in g4 file.">
+      <created>1459863859359</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1459863859359</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1086,19 +662,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="23" width="1227" height="777" extended-state="0" />
-    <editor active="true" />
+    <frame x="53" y="23" width="1227" height="777" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3502825" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26129943" sideWeight="0.5028525" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18361582" sideWeight="0.4971475" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1108,12 +682,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3502825" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18361582" sideWeight="0.4971475" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1129,7 +705,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tiny modifications." />
     <MESSAGE value="Rename package." />
     <MESSAGE value="Mend some lost info." />
     <MESSAGE value="Finish mending. Start rewrite ASTBuilder." />
@@ -1154,7 +729,8 @@
     <MESSAGE value="Get more understanding on what second pass does." />
     <MESSAGE value="Back up." />
     <MESSAGE value="Modify FunctionDeclListener." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify FunctionDeclListener." />
+    <MESSAGE value="Mend error in creationExpression in g4 file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mend error in creationExpression in g4 file." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1170,38 +746,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="e#324#325#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/FunctionCall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/EmptyExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#223#224#0" expanded="false" />
-            <element signature="e#277#278#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1220,9 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1230,9 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1240,9 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1257,9 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1267,10 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#198#199#0" expanded="false" />
-            <element signature="e#245#246#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1278,10 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#196#197#0" expanded="false" />
-            <element signature="e#242#243#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1289,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,10 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#300#301#0" expanded="false" />
-            <element signature="e#347#348#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,15 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1360,9 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1370,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1382,14 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/BasicType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1397,18 +894,731 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/ClassType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/Declaration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/VoidType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/Compiler/Library/antlr-4.5-complete.jar!/org/antlr/v4/runtime/tree/ParseTreeWalker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Mag4.5/Mag.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1018">
+          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#645#654#0" expanded="true" />
+            <element signature="e#1885#1886#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
+            <element signature="e#2053#2054#0" expanded="true" />
+            <element signature="e#2093#2094#0" expanded="true" />
+            <element signature="e#2189#2190#0" expanded="true" />
+            <element signature="e#2229#2230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="806" column="0" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
+          <folding>
+            <element signature="e#20473#20474#0" expanded="true" />
+            <element signature="e#20497#20498#0" expanded="true" />
+            <element signature="e#20547#20548#0" expanded="true" />
+            <element signature="e#20571#20572#0" expanded="true" />
+            <element signature="e#20621#20622#0" expanded="true" />
+            <element signature="e#20643#20644#0" expanded="true" />
+            <element signature="e#20689#20690#0" expanded="true" />
+            <element signature="e#20712#20713#0" expanded="true" />
+            <element signature="e#20760#20761#0" expanded="true" />
+            <element signature="e#20788#20789#0" expanded="true" />
+            <element signature="e#20823#20824#0" expanded="true" />
+            <element signature="e#20841#20842#0" expanded="true" />
+            <element signature="e#85451#85452#0" expanded="true" />
+            <element signature="e#85488#85489#0" expanded="true" />
+            <element signature="e#85549#85550#0" expanded="true" />
+            <element signature="e#85611#85612#0" expanded="true" />
+            <element signature="e#85671#85672#0" expanded="true" />
+            <element signature="e#85735#85736#0" expanded="true" />
+            <element signature="e#86308#86309#0" expanded="true" />
+            <element signature="e#86336#86337#0" expanded="true" />
+            <element signature="e#86803#86804#0" expanded="true" />
+            <element signature="e#86840#86841#0" expanded="true" />
+            <element signature="e#86870#86871#0" expanded="true" />
+            <element signature="e#86911#86912#0" expanded="true" />
+            <element signature="e#87103#87104#0" expanded="true" />
+            <element signature="e#87140#87141#0" expanded="true" />
+            <element signature="e#87777#87778#0" expanded="true" />
+            <element signature="e#87824#87825#0" expanded="true" />
+            <element signature="e#87889#87890#0" expanded="true" />
+            <element signature="e#87917#87918#0" expanded="true" />
+            <element signature="e#88094#88095#0" expanded="true" />
+            <element signature="e#88116#88117#0" expanded="true" />
+            <element signature="e#88157#88158#0" expanded="true" />
+            <element signature="e#88214#88215#0" expanded="true" />
+            <element signature="e#88244#88245#0" expanded="true" />
+            <element signature="e#88285#88286#0" expanded="true" />
+            <element signature="e#88941#88942#0" expanded="true" />
+            <element signature="e#88963#88964#0" expanded="true" />
+            <element signature="e#89004#89005#0" expanded="true" />
+            <element signature="e#89061#89062#0" expanded="true" />
+            <element signature="e#89091#89092#0" expanded="true" />
+            <element signature="e#89132#89133#0" expanded="true" />
+            <element signature="e#89605#89606#0" expanded="true" />
+            <element signature="e#89642#89643#0" expanded="true" />
+            <element signature="e#89720#89721#0" expanded="true" />
+            <element signature="e#89750#89751#0" expanded="true" />
+            <element signature="e#89798#89799#0" expanded="true" />
+            <element signature="e#89826#89827#0" expanded="true" />
+            <element signature="e#89955#89956#0" expanded="true" />
+            <element signature="e#89977#89978#0" expanded="true" />
+            <element signature="e#90008#90009#0" expanded="true" />
+            <element signature="e#90060#90061#0" expanded="true" />
+            <element signature="e#90511#90512#0" expanded="true" />
+            <element signature="e#90533#90534#0" expanded="true" />
+            <element signature="e#90574#90575#0" expanded="true" />
+            <element signature="e#90631#90632#0" expanded="true" />
+            <element signature="e#91086#91087#0" expanded="true" />
+            <element signature="e#91123#91124#0" expanded="true" />
+            <element signature="e#91153#91154#0" expanded="true" />
+            <element signature="e#91194#91195#0" expanded="true" />
+            <element signature="e#91237#91238#0" expanded="true" />
+            <element signature="e#91262#91263#0" expanded="true" />
+            <element signature="e#91709#91710#0" expanded="true" />
+            <element signature="e#91746#91747#0" expanded="true" />
+            <element signature="e#91797#91798#0" expanded="true" />
+            <element signature="e#91859#91860#0" expanded="true" />
+            <element signature="e#92046#92047#0" expanded="true" />
+            <element signature="e#92112#92113#0" expanded="true" />
+            <element signature="e#92171#92172#0" expanded="true" />
+            <element signature="e#92237#92238#0" expanded="true" />
+            <element signature="e#92286#92287#0" expanded="true" />
+            <element signature="e#92347#92348#0" expanded="true" />
+            <element signature="e#92545#92546#0" expanded="true" />
+            <element signature="e#92575#92576#0" expanded="true" />
+            <element signature="e#93042#93043#0" expanded="true" />
+            <element signature="e#93079#93080#0" expanded="true" />
+            <element signature="e#93128#93129#0" expanded="true" />
+            <element signature="e#93189#93190#0" expanded="true" />
+            <element signature="e#93232#93233#0" expanded="true" />
+            <element signature="e#93267#93268#0" expanded="true" />
+            <element signature="e#93742#93743#0" expanded="true" />
+            <element signature="e#93779#93780#0" expanded="true" />
+            <element signature="e#93861#93862#0" expanded="true" />
+            <element signature="e#93895#93896#0" expanded="true" />
+            <element signature="e#93947#93948#0" expanded="true" />
+            <element signature="e#93975#93976#0" expanded="true" />
+            <element signature="e#94120#94121#0" expanded="true" />
+            <element signature="e#94142#94143#0" expanded="true" />
+            <element signature="e#94183#94184#0" expanded="true" />
+            <element signature="e#94240#94241#0" expanded="true" />
+            <element signature="e#94717#94718#0" expanded="true" />
+            <element signature="e#94739#94740#0" expanded="true" />
+            <element signature="e#94780#94781#0" expanded="true" />
+            <element signature="e#94837#94838#0" expanded="true" />
+            <element signature="e#94886#94887#0" expanded="true" />
+            <element signature="e#94947#94948#0" expanded="true" />
+            <element signature="e#95442#95443#0" expanded="true" />
+            <element signature="e#95479#95480#0" expanded="true" />
+            <element signature="e#95522#95523#0" expanded="true" />
+            <element signature="e#95580#95581#0" expanded="true" />
+            <element signature="e#95623#95624#0" expanded="true" />
+            <element signature="e#95663#95664#0" expanded="true" />
+            <element signature="e#96142#96143#0" expanded="true" />
+            <element signature="e#96179#96180#0" expanded="true" />
+            <element signature="e#96353#96354#0" expanded="true" />
+            <element signature="e#96384#96385#0" expanded="true" />
+            <element signature="e#96865#96866#0" expanded="true" />
+            <element signature="e#96902#96903#0" expanded="true" />
+            <element signature="e#96991#96992#0" expanded="true" />
+            <element signature="e#97032#97033#0" expanded="true" />
+            <element signature="e#97091#97092#0" expanded="true" />
+            <element signature="e#97119#97120#0" expanded="true" />
+            <element signature="e#97276#97277#0" expanded="true" />
+            <element signature="e#97298#97299#0" expanded="true" />
+            <element signature="e#97353#97354#0" expanded="true" />
+            <element signature="e#97417#97418#0" expanded="true" />
+            <element signature="e#98041#98042#0" expanded="true" />
+            <element signature="e#98063#98064#0" expanded="true" />
+            <element signature="e#98690#98691#0" expanded="true" />
+            <element signature="e#98727#98728#0" expanded="true" />
+            <element signature="e#98815#98816#0" expanded="true" />
+            <element signature="e#98855#98856#0" expanded="true" />
+            <element signature="e#98913#98914#0" expanded="true" />
+            <element signature="e#98941#98942#0" expanded="true" />
+            <element signature="e#99086#99087#0" expanded="true" />
+            <element signature="e#99108#99109#0" expanded="true" />
+            <element signature="e#99848#99849#0" expanded="true" />
+            <element signature="e#99870#99871#0" expanded="true" />
+            <element signature="e#100502#100503#0" expanded="true" />
+            <element signature="e#100539#100540#0" expanded="true" />
+            <element signature="e#100628#100629#0" expanded="true" />
+            <element signature="e#100669#100670#0" expanded="true" />
+            <element signature="e#100728#100729#0" expanded="true" />
+            <element signature="e#100756#100757#0" expanded="true" />
+            <element signature="e#100919#100920#0" expanded="true" />
+            <element signature="e#100941#100942#0" expanded="true" />
+            <element signature="e#101556#101557#0" expanded="true" />
+            <element signature="e#101578#101579#0" expanded="true" />
+            <element signature="e#102324#102325#0" expanded="true" />
+            <element signature="e#102361#102362#0" expanded="true" />
+            <element signature="e#102449#102450#0" expanded="true" />
+            <element signature="e#102489#102490#0" expanded="true" />
+            <element signature="e#102547#102548#0" expanded="true" />
+            <element signature="e#102575#102576#0" expanded="true" />
+            <element signature="e#102736#102737#0" expanded="true" />
+            <element signature="e#102758#102759#0" expanded="true" />
+            <element signature="e#103370#103371#0" expanded="true" />
+            <element signature="e#103392#103393#0" expanded="true" />
+            <element signature="e#104136#104137#0" expanded="true" />
+            <element signature="e#104173#104174#0" expanded="true" />
+            <element signature="e#104262#104263#0" expanded="true" />
+            <element signature="e#104303#104304#0" expanded="true" />
+            <element signature="e#104362#104363#0" expanded="true" />
+            <element signature="e#104390#104391#0" expanded="true" />
+            <element signature="e#104555#104556#0" expanded="true" />
+            <element signature="e#104577#104578#0" expanded="true" />
+            <element signature="e#105197#105198#0" expanded="true" />
+            <element signature="e#105219#105220#0" expanded="true" />
+            <element signature="e#105970#105971#0" expanded="true" />
+            <element signature="e#106007#106008#0" expanded="true" />
+            <element signature="e#106096#106097#0" expanded="true" />
+            <element signature="e#106137#106138#0" expanded="true" />
+            <element signature="e#106196#106197#0" expanded="true" />
+            <element signature="e#106224#106225#0" expanded="true" />
+            <element signature="e#106375#106376#0" expanded="true" />
+            <element signature="e#106397#106398#0" expanded="true" />
+            <element signature="e#106587#106588#0" expanded="true" />
+            <element signature="e#106653#106654#0" expanded="true" />
+            <element signature="e#107132#107133#0" expanded="true" />
+            <element signature="e#107154#107155#0" expanded="true" />
+            <element signature="e#107213#107214#0" expanded="true" />
+            <element signature="e#107279#107280#0" expanded="true" />
+            <element signature="e#107768#107769#0" expanded="true" />
+            <element signature="e#107805#107806#0" expanded="true" />
+            <element signature="e#107892#107893#0" expanded="true" />
+            <element signature="e#107931#107932#0" expanded="true" />
+            <element signature="e#107988#107989#0" expanded="true" />
+            <element signature="e#108016#108017#0" expanded="true" />
+            <element signature="e#108173#108174#0" expanded="true" />
+            <element signature="e#108195#108196#0" expanded="true" />
+            <element signature="e#108813#108814#0" expanded="true" />
+            <element signature="e#108835#108836#0" expanded="true" />
+            <element signature="e#108894#108895#0" expanded="true" />
+            <element signature="e#108960#108961#0" expanded="true" />
+            <element signature="e#109568#109569#0" expanded="true" />
+            <element signature="e#109590#109591#0" expanded="true" />
+            <element signature="e#109649#109650#0" expanded="true" />
+            <element signature="e#109715#109716#0" expanded="true" />
+            <element signature="e#110335#110336#0" expanded="true" />
+            <element signature="e#110372#110373#0" expanded="true" />
+            <element signature="e#110461#110462#0" expanded="true" />
+            <element signature="e#110502#110503#0" expanded="true" />
+            <element signature="e#110561#110562#0" expanded="true" />
+            <element signature="e#110589#110590#0" expanded="true" />
+            <element signature="e#110744#110745#0" expanded="true" />
+            <element signature="e#110766#110767#0" expanded="true" />
+            <element signature="e#110819#110820#0" expanded="true" />
+            <element signature="e#110882#110883#0" expanded="true" />
+            <element signature="e#111361#111362#0" expanded="true" />
+            <element signature="e#111383#111384#0" expanded="true" />
+            <element signature="e#111567#111568#0" expanded="true" />
+            <element signature="e#111630#111631#0" expanded="true" />
+            <element signature="e#112113#112114#0" expanded="true" />
+            <element signature="e#112135#112136#0" expanded="true" />
+            <element signature="e#112319#112320#0" expanded="true" />
+            <element signature="e#112382#112383#0" expanded="true" />
+            <element signature="e#112865#112866#0" expanded="true" />
+            <element signature="e#112887#112888#0" expanded="true" />
+            <element signature="e#113071#113072#0" expanded="true" />
+            <element signature="e#113134#113135#0" expanded="true" />
+            <element signature="e#113611#113612#0" expanded="true" />
+            <element signature="e#113633#113634#0" expanded="true" />
+            <element signature="e#113817#113818#0" expanded="true" />
+            <element signature="e#113880#113881#0" expanded="true" />
+            <element signature="e#114361#114362#0" expanded="true" />
+            <element signature="e#114398#114399#0" expanded="true" />
+            <element signature="e#114482#114483#0" expanded="true" />
+            <element signature="e#114518#114519#0" expanded="true" />
+            <element signature="e#114572#114573#0" expanded="true" />
+            <element signature="e#114600#114601#0" expanded="true" />
+            <element signature="e#114743#114744#0" expanded="true" />
+            <element signature="e#114765#114766#0" expanded="true" />
+            <element signature="e#114818#114819#0" expanded="true" />
+            <element signature="e#114881#114882#0" expanded="true" />
+            <element signature="e#114936#114937#0" expanded="true" />
+            <element signature="e#115000#115001#0" expanded="true" />
+            <element signature="e#115463#115464#0" expanded="true" />
+            <element signature="e#115485#115486#0" expanded="true" />
+            <element signature="e#115540#115541#0" expanded="true" />
+            <element signature="e#115604#115605#0" expanded="true" />
+            <element signature="e#116069#116070#0" expanded="true" />
+            <element signature="e#116091#116092#0" expanded="true" />
+            <element signature="e#116144#116145#0" expanded="true" />
+            <element signature="e#116207#116208#0" expanded="true" />
+            <element signature="e#116262#116263#0" expanded="true" />
+            <element signature="e#116326#116327#0" expanded="true" />
+            <element signature="e#116811#116812#0" expanded="true" />
+            <element signature="e#116848#116849#0" expanded="true" />
+            <element signature="e#116933#116934#0" expanded="true" />
+            <element signature="e#116970#116971#0" expanded="true" />
+            <element signature="e#117025#117026#0" expanded="true" />
+            <element signature="e#117053#117054#0" expanded="true" />
+            <element signature="e#117200#117201#0" expanded="true" />
+            <element signature="e#117222#117223#0" expanded="true" />
+            <element signature="e#117813#117814#0" expanded="true" />
+            <element signature="e#117835#117836#0" expanded="true" />
+            <element signature="e#117890#117891#0" expanded="true" />
+            <element signature="e#117954#117955#0" expanded="true" />
+            <element signature="e#118533#118534#0" expanded="true" />
+            <element signature="e#118555#118556#0" expanded="true" />
+            <element signature="e#118610#118611#0" expanded="true" />
+            <element signature="e#118674#118675#0" expanded="true" />
+            <element signature="e#119281#119282#0" expanded="true" />
+            <element signature="e#119318#119319#0" expanded="true" />
+            <element signature="e#119406#119407#0" expanded="true" />
+            <element signature="e#119446#119447#0" expanded="true" />
+            <element signature="e#119504#119505#0" expanded="true" />
+            <element signature="e#119532#119533#0" expanded="true" />
+            <element signature="e#119679#119680#0" expanded="true" />
+            <element signature="e#119701#119702#0" expanded="true" />
+            <element signature="e#119888#119889#0" expanded="true" />
+            <element signature="e#119954#119955#0" expanded="true" />
+            <element signature="e#120423#120424#0" expanded="true" />
+            <element signature="e#120445#120446#0" expanded="true" />
+            <element signature="e#120632#120633#0" expanded="true" />
+            <element signature="e#120698#120699#0" expanded="true" />
+            <element signature="e#121177#121178#0" expanded="true" />
+            <element signature="e#121199#121200#0" expanded="true" />
+            <element signature="e#121258#121259#0" expanded="true" />
+            <element signature="e#121324#121325#0" expanded="true" />
+            <element signature="e#121803#121804#0" expanded="true" />
+            <element signature="e#121825#121826#0" expanded="true" />
+            <element signature="e#122012#122013#0" expanded="true" />
+            <element signature="e#122078#122079#0" expanded="true" />
+            <element signature="e#122561#122562#0" expanded="true" />
+            <element signature="e#122598#122599#0" expanded="true" />
+            <element signature="e#122685#122686#0" expanded="true" />
+            <element signature="e#122724#122725#0" expanded="true" />
+            <element signature="e#122781#122782#0" expanded="true" />
+            <element signature="e#122809#122810#0" expanded="true" />
+            <element signature="e#122958#122959#0" expanded="true" />
+            <element signature="e#122980#122981#0" expanded="true" />
+            <element signature="e#123035#123036#0" expanded="true" />
+            <element signature="e#123099#123100#0" expanded="true" />
+            <element signature="e#123568#123569#0" expanded="true" />
+            <element signature="e#123590#123591#0" expanded="true" />
+            <element signature="e#123621#123622#0" expanded="true" />
+            <element signature="e#123673#123674#0" expanded="true" />
+            <element signature="e#124266#124267#0" expanded="true" />
+            <element signature="e#124288#124289#0" expanded="true" />
+            <element signature="e#124329#124330#0" expanded="true" />
+            <element signature="e#124386#124387#0" expanded="true" />
+            <element signature="e#124429#124430#0" expanded="true" />
+            <element signature="e#124487#124488#0" expanded="true" />
+            <element signature="e#124972#124973#0" expanded="true" />
+            <element signature="e#125009#125010#0" expanded="true" />
+            <element signature="e#125097#125098#0" expanded="true" />
+            <element signature="e#125137#125138#0" expanded="true" />
+            <element signature="e#125195#125196#0" expanded="true" />
+            <element signature="e#125223#125224#0" expanded="true" />
+            <element signature="e#125370#125371#0" expanded="true" />
+            <element signature="e#125392#125393#0" expanded="true" />
+            <element signature="e#125435#125436#0" expanded="true" />
+            <element signature="e#125493#125494#0" expanded="true" />
+            <element signature="e#126084#126085#0" expanded="true" />
+            <element signature="e#126106#126107#0" expanded="true" />
+            <element signature="e#126149#126150#0" expanded="true" />
+            <element signature="e#126207#126208#0" expanded="true" />
+            <element signature="e#126672#126673#0" expanded="true" />
+            <element signature="e#126694#126695#0" expanded="true" />
+            <element signature="e#127329#127330#0" expanded="true" />
+            <element signature="e#127366#127367#0" expanded="true" />
+            <element signature="e#127458#127459#0" expanded="true" />
+            <element signature="e#127502#127503#0" expanded="true" />
+            <element signature="e#127564#127565#0" expanded="true" />
+            <element signature="e#127592#127593#0" expanded="true" />
+            <element signature="e#127737#127738#0" expanded="true" />
+            <element signature="e#127759#127760#0" expanded="true" />
+            <element signature="e#128218#128219#0" expanded="true" />
+            <element signature="e#128240#128241#0" expanded="true" />
+            <element signature="e#128851#128852#0" expanded="true" />
+            <element signature="e#128888#128889#0" expanded="true" />
+            <element signature="e#128973#128974#0" expanded="true" />
+            <element signature="e#129010#129011#0" expanded="true" />
+            <element signature="e#129065#129066#0" expanded="true" />
+            <element signature="e#129093#129094#0" expanded="true" />
+            <element signature="e#129236#129237#0" expanded="true" />
+            <element signature="e#129258#129259#0" expanded="true" />
+            <element signature="e#129315#129316#0" expanded="true" />
+            <element signature="e#129380#129381#0" expanded="true" />
+            <element signature="e#129849#129850#0" expanded="true" />
+            <element signature="e#129871#129872#0" expanded="true" />
+            <element signature="e#129926#129927#0" expanded="true" />
+            <element signature="e#129990#129991#0" expanded="true" />
+            <element signature="e#130461#130462#0" expanded="true" />
+            <element signature="e#130483#130484#0" expanded="true" />
+            <element signature="e#130538#130539#0" expanded="true" />
+            <element signature="e#130602#130603#0" expanded="true" />
+            <element signature="e#131063#131064#0" expanded="true" />
+            <element signature="e#131085#131086#0" expanded="true" />
+            <element signature="e#131140#131141#0" expanded="true" />
+            <element signature="e#131204#131205#0" expanded="true" />
+            <element signature="e#131665#131666#0" expanded="true" />
+            <element signature="e#131687#131688#0" expanded="true" />
+            <element signature="e#131742#131743#0" expanded="true" />
+            <element signature="e#131806#131807#0" expanded="true" />
+            <element signature="e#132271#132272#0" expanded="true" />
+            <element signature="e#132293#132294#0" expanded="true" />
+            <element signature="e#132348#132349#0" expanded="true" />
+            <element signature="e#132412#132413#0" expanded="true" />
+            <element signature="e#132881#132882#0" expanded="true" />
+            <element signature="e#132903#132904#0" expanded="true" />
+            <element signature="e#132958#132959#0" expanded="true" />
+            <element signature="e#133022#133023#0" expanded="true" />
+            <element signature="e#133511#133512#0" expanded="true" />
+            <element signature="e#133548#133549#0" expanded="true" />
+            <element signature="e#133634#133635#0" expanded="true" />
+            <element signature="e#133672#133673#0" expanded="true" />
+            <element signature="e#133728#133729#0" expanded="true" />
+            <element signature="e#133756#133757#0" expanded="true" />
+            <element signature="e#133893#133894#0" expanded="true" />
+            <element signature="e#133915#133916#0" expanded="true" />
+            <element signature="e#133972#133973#0" expanded="true" />
+            <element signature="e#134037#134038#0" expanded="true" />
+            <element signature="e#134067#134068#0" expanded="true" />
+            <element signature="e#134108#134109#0" expanded="true" />
+            <element signature="e#134567#134568#0" expanded="true" />
+            <element signature="e#134589#134590#0" expanded="true" />
+            <element signature="e#134646#134647#0" expanded="true" />
+            <element signature="e#134711#134712#0" expanded="true" />
+            <element signature="e#135186#135187#0" expanded="true" />
+            <element signature="e#135208#135209#0" expanded="true" />
+            <element signature="e#135265#135266#0" expanded="true" />
+            <element signature="e#135330#135331#0" expanded="true" />
+            <element signature="e#135373#135374#0" expanded="true" />
+            <element signature="e#135431#135432#0" expanded="true" />
+            <element signature="e#135910#135911#0" expanded="true" />
+            <element signature="e#135932#135933#0" expanded="true" />
+            <element signature="e#135989#135990#0" expanded="true" />
+            <element signature="e#136054#136055#0" expanded="true" />
+            <element signature="e#136529#136530#0" expanded="true" />
+            <element signature="e#136551#136552#0" expanded="true" />
+            <element signature="e#136608#136609#0" expanded="true" />
+            <element signature="e#136673#136674#0" expanded="true" />
+            <element signature="e#137281#137282#0" expanded="true" />
+            <element signature="e#137303#137304#0" expanded="true" />
+            <element signature="e#137360#137361#0" expanded="true" />
+            <element signature="e#137425#137426#0" expanded="true" />
+            <element signature="e#137906#137907#0" expanded="true" />
+            <element signature="e#137943#137944#0" expanded="true" />
+            <element signature="e#138029#138030#0" expanded="true" />
+            <element signature="e#138067#138068#0" expanded="true" />
+            <element signature="e#138123#138124#0" expanded="true" />
+            <element signature="e#138151#138152#0" expanded="true" />
+            <element signature="e#138300#138301#0" expanded="true" />
+            <element signature="e#138322#138323#0" expanded="true" />
+            <element signature="e#138361#138362#0" expanded="true" />
+            <element signature="e#138417#138418#0" expanded="true" />
+            <element signature="e#138882#138883#0" expanded="true" />
+            <element signature="e#138904#138905#0" expanded="true" />
+            <element signature="e#138934#138935#0" expanded="true" />
+            <element signature="e#138975#138976#0" expanded="true" />
+            <element signature="e#139444#139445#0" expanded="true" />
+            <element signature="e#139466#139467#0" expanded="true" />
+            <element signature="e#139509#139510#0" expanded="true" />
+            <element signature="e#139567#139568#0" expanded="true" />
+            <element signature="e#140040#140041#0" expanded="true" />
+            <element signature="e#140077#140078#0" expanded="true" />
+            <element signature="e#140154#140155#0" expanded="true" />
+            <element signature="e#140183#140184#0" expanded="true" />
+            <element signature="e#140230#140231#0" expanded="true" />
+            <element signature="e#140258#140259#0" expanded="true" />
+            <element signature="e#140385#140386#0" expanded="true" />
+            <element signature="e#140407#140408#0" expanded="true" />
+            <element signature="e#140456#140457#0" expanded="true" />
+            <element signature="e#140517#140518#0" expanded="true" />
+            <element signature="e#140970#140971#0" expanded="true" />
+            <element signature="e#140992#140993#0" expanded="true" />
+            <element signature="e#141033#141034#0" expanded="true" />
+            <element signature="e#141085#141086#0" expanded="true" />
+            <element signature="e#141536#141537#0" expanded="true" />
+            <element signature="e#141558#141559#0" expanded="true" />
+            <element signature="e#142003#142004#0" expanded="true" />
+            <element signature="e#142025#142026#0" expanded="true" />
+            <element signature="e#142063#142064#0" expanded="true" />
+            <element signature="e#142112#142113#0" expanded="true" />
+            <element signature="e#142583#142584#0" expanded="true" />
+            <element signature="e#142620#142621#0" expanded="true" />
+            <element signature="e#142702#142703#0" expanded="true" />
+            <element signature="e#142736#142737#0" expanded="true" />
+            <element signature="e#142788#142789#0" expanded="true" />
+            <element signature="e#142816#142817#0" expanded="true" />
+            <element signature="e#142947#142948#0" expanded="true" />
+            <element signature="e#142969#142970#0" expanded="true" />
+            <element signature="e#143416#143417#0" expanded="true" />
+            <element signature="e#143438#143439#0" expanded="true" />
+            <element signature="e#143923#143924#0" expanded="true" />
+            <element signature="e#143960#143961#0" expanded="true" />
+            <element signature="e#144051#144052#0" expanded="true" />
+            <element signature="e#144094#144095#0" expanded="true" />
+            <element signature="e#144155#144156#0" expanded="true" />
+            <element signature="e#144183#144184#0" expanded="true" />
+            <element signature="e#144348#144349#0" expanded="true" />
+            <element signature="e#144370#144371#0" expanded="true" />
+            <element signature="e#144413#144414#0" expanded="true" />
+            <element signature="e#144471#144472#0" expanded="true" />
+            <element signature="e#144978#144979#0" expanded="true" />
+            <element signature="e#145000#145001#0" expanded="true" />
+            <element signature="e#145043#145044#0" expanded="true" />
+            <element signature="e#145101#145102#0" expanded="true" />
+            <element signature="e#145741#145742#0" expanded="true" />
+            <element signature="e#145778#145779#0" expanded="true" />
+            <element signature="e#145865#145866#0" expanded="true" />
+            <element signature="e#145904#145905#0" expanded="true" />
+            <element signature="e#145961#145962#0" expanded="true" />
+            <element signature="e#145989#145990#0" expanded="true" />
+            <element signature="e#146132#146133#0" expanded="true" />
+            <element signature="e#146154#146155#0" expanded="true" />
+            <element signature="e#146197#146198#0" expanded="true" />
+            <element signature="e#146255#146256#0" expanded="true" />
+            <element signature="e#146296#146297#0" expanded="true" />
+            <element signature="e#146353#146354#0" expanded="true" />
+            <element signature="e#146824#146825#0" expanded="true" />
+            <element signature="e#146846#146847#0" expanded="true" />
+            <element signature="e#146889#146890#0" expanded="true" />
+            <element signature="e#146947#146948#0" expanded="true" />
+            <element signature="e#146994#146995#0" expanded="true" />
+            <element signature="e#147049#147050#0" expanded="true" />
+            <element signature="e#147095#147096#0" expanded="true" />
+            <element signature="e#147152#147153#0" expanded="true" />
+            <element signature="e#147641#147642#0" expanded="true" />
+            <element signature="e#147678#147679#0" expanded="true" />
+            <element signature="e#147729#147730#0" expanded="true" />
+            <element signature="e#147791#147792#0" expanded="true" />
+            <element signature="e#147838#147839#0" expanded="true" />
+            <element signature="e#147898#147899#0" expanded="true" />
+            <element signature="e#147941#147942#0" expanded="true" />
+            <element signature="e#147980#147981#0" expanded="true" />
+            <element signature="e#148465#148466#0" expanded="true" />
+            <element signature="e#148502#148503#0" expanded="true" />
+            <element signature="e#148545#148546#0" expanded="true" />
+            <element signature="e#148603#148604#0" expanded="true" />
+            <element signature="e#148644#148645#0" expanded="true" />
+            <element signature="e#148701#148702#0" expanded="true" />
+            <element signature="e#148744#148745#0" expanded="true" />
+            <element signature="e#148779#148780#0" expanded="true" />
+            <element signature="e#149252#149253#0" expanded="true" />
+            <element signature="e#149289#149290#0" expanded="true" />
+            <element signature="e#149330#149331#0" expanded="true" />
+            <element signature="e#149387#149388#0" expanded="true" />
+            <element signature="e#149436#149437#0" expanded="true" />
+            <element signature="e#149492#149493#0" expanded="true" />
+            <element signature="e#149540#149541#0" expanded="true" />
+            <element signature="e#149598#149599#0" expanded="true" />
+            <element signature="e#149641#149642#0" expanded="true" />
+            <element signature="e#149674#149675#0" expanded="true" />
+            <element signature="e#150145#150146#0" expanded="true" />
+            <element signature="e#150182#150183#0" expanded="true" />
+            <element signature="e#150235#150236#0" expanded="true" />
+            <element signature="e#150298#150299#0" expanded="true" />
+            <element signature="e#150349#150350#0" expanded="true" />
+            <element signature="e#150411#150412#0" expanded="true" />
+            <element signature="e#150468#150469#0" expanded="true" />
+            <element signature="e#150533#150534#0" expanded="true" />
+            <element signature="e#150576#150577#0" expanded="true" />
+            <element signature="e#150610#150611#0" expanded="true" />
+            <element signature="e#151087#151088#0" expanded="true" />
+            <element signature="e#151124#151125#0" expanded="true" />
+            <element signature="e#151167#151168#0" expanded="true" />
+            <element signature="e#151225#151226#0" expanded="true" />
+            <element signature="e#151268#151269#0" expanded="true" />
+            <element signature="e#151304#151305#0" expanded="true" />
+            <element signature="e#151783#151784#0" expanded="true" />
+            <element signature="e#151820#151821#0" expanded="true" />
+            <element signature="e#151863#151864#0" expanded="true" />
+            <element signature="e#151898#151899#0" expanded="true" />
+            <element signature="e#152381#152382#0" expanded="true" />
+            <element signature="e#152418#152419#0" expanded="true" />
+            <element signature="e#152461#152462#0" expanded="true" />
+            <element signature="e#152499#152500#0" expanded="true" />
+            <element signature="e#153218#153219#0" expanded="true" />
+            <element signature="e#153267#153268#0" expanded="true" />
+            <element signature="e#153782#153783#0" expanded="true" />
+            <element signature="e#153819#153820#0" expanded="true" />
+            <element signature="e#153907#153908#0" expanded="true" />
+            <element signature="e#153947#153948#0" expanded="true" />
+            <element signature="e#154005#154006#0" expanded="true" />
+            <element signature="e#154033#154034#0" expanded="true" />
+            <element signature="e#154170#154171#0" expanded="true" />
+            <element signature="e#154192#154193#0" expanded="true" />
+            <element signature="e#154233#154234#0" expanded="true" />
+            <element signature="e#154290#154291#0" expanded="true" />
+            <element signature="e#154320#154321#0" expanded="true" />
+            <element signature="e#154361#154362#0" expanded="true" />
+            <element signature="e#154818#154819#0" expanded="true" />
+            <element signature="e#154840#154841#0" expanded="true" />
+            <element signature="e#154881#154882#0" expanded="true" />
+            <element signature="e#154938#154939#0" expanded="true" />
+            <element signature="e#154968#154969#0" expanded="true" />
+            <element signature="e#155009#155010#0" expanded="true" />
+            <element signature="e#155052#155053#0" expanded="true" />
+            <element signature="e#155110#155111#0" expanded="true" />
+            <element signature="e#155593#155594#0" expanded="true" />
+            <element signature="e#155630#155631#0" expanded="true" />
+            <element signature="e#155718#155719#0" expanded="true" />
+            <element signature="e#155758#155759#0" expanded="true" />
+            <element signature="e#155816#155817#0" expanded="true" />
+            <element signature="e#155844#155845#0" expanded="true" />
+            <element signature="e#156011#156012#0" expanded="true" />
+            <element signature="e#156033#156034#0" expanded="true" />
+            <element signature="e#156074#156075#0" expanded="true" />
+            <element signature="e#156131#156132#0" expanded="true" />
+            <element signature="e#156161#156162#0" expanded="true" />
+            <element signature="e#156202#156203#0" expanded="true" />
+            <element signature="e#156253#156254#0" expanded="true" />
+            <element signature="e#156315#156316#0" expanded="true" />
+            <element signature="e#156364#156365#0" expanded="true" />
+            <element signature="e#156425#156426#0" expanded="true" />
+            <element signature="e#156922#156923#0" expanded="true" />
+            <element signature="e#156944#156945#0" expanded="true" />
+            <element signature="e#156974#156975#0" expanded="true" />
+            <element signature="e#157015#157016#0" expanded="true" />
+            <element signature="e#157066#157067#0" expanded="true" />
+            <element signature="e#157128#157129#0" expanded="true" />
+            <element signature="e#157177#157178#0" expanded="true" />
+            <element signature="e#157238#157239#0" expanded="true" />
+            <element signature="e#157719#157720#0" expanded="true" />
+            <element signature="e#157756#157757#0" expanded="true" />
+            <element signature="e#157838#157839#0" expanded="true" />
+            <element signature="e#157872#157873#0" expanded="true" />
+            <element signature="e#157924#157925#0" expanded="true" />
+            <element signature="e#157952#157953#0" expanded="true" />
+            <element signature="e#158081#158082#0" expanded="true" />
+            <element signature="e#158103#158104#0" expanded="true" />
+            <element signature="e#158144#158145#0" expanded="true" />
+            <element signature="e#158201#158202#0" expanded="true" />
+            <element signature="e#158231#158232#0" expanded="true" />
+            <element signature="e#158272#158273#0" expanded="true" />
+            <element signature="e#158725#158726#0" expanded="true" />
+            <element signature="e#158747#158748#0" expanded="true" />
+            <element signature="e#158788#158789#0" expanded="true" />
+            <element signature="e#158845#158846#0" expanded="true" />
+            <element signature="e#158875#158876#0" expanded="true" />
+            <element signature="e#158916#158917#0" expanded="true" />
+            <element signature="e#158965#158966#0" expanded="true" />
+            <element signature="e#159026#159027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="793" column="9" selection-start-line="793" selection-start-column="9" selection-end-line="793" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagBaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="910" column="16" selection-start-line="910" selection-start-column="16" selection-end-line="910" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="131" column="39" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1421,48 +1631,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/Declaration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ClassAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/VoidType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1493,8 +1681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#303#304#0" expanded="true" />
             <element signature="e#364#365#0" expanded="true" />
@@ -1502,117 +1690,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ClassAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+        <state relative-caret-position="270">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/Type.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#645#654#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#1945#1946#0" expanded="true" />
-            <element signature="e#2053#2054#0" expanded="true" />
-            <element signature="e#2093#2094#0" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-            <element signature="e#2229#2230#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/Compiler/Library/antlr-4.5-complete.jar!/org/antlr/v4/runtime/tree/ParseTreeWalker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="607" column="0" selection-start-line="607" selection-start-column="0" selection-end-line="607" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Mag4.5/Mag.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="280" column="39" selection-start-line="280" selection-start-column="39" selection-end-line="280" selection-end-column="39" />
+        <state relative-caret-position="15">
+          <caret line="172" column="13" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

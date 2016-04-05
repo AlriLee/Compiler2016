@@ -294,6 +294,16 @@ public class MagASTBuilder extends BaseListener {
     }
 
     @Override
+    public void exitDimVoid_(MagParser.DimVoid_Context ctx) {
+        //?
+    }
+
+    @Override
+    public void exitDimVoid_d(MagParser.DimVoid_dContext ctx) {
+        //?
+    }
+
+    @Override
     public void exitCreation_para(MagParser.Creation_paraContext ctx) {
         // No constructor function currently.
     }
