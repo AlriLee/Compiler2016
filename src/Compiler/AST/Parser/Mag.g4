@@ -123,7 +123,7 @@ mulDivRemExpression
 	;
 
 creationExpression
-	:	'new' typeArray dimensionExpression? # creation_dim
+	:	'new' type dimensionExpression? # creation_dim
 	|	'new' typeArray '(' expression ')' # creation_para
 	|	prefixExpression # creation_prefix
 	;
@@ -131,7 +131,13 @@ creationExpression
 dimensionExpression
 	:	'[' expression ']' # dimension_
 	|	'[' expression ']' dimensionExpression #dimension_dim
+	|   dimensionVoidExpression # dimension_void
 	;
+
+dimensionVoidExpression
+    :   '[' ']' # dimVoid_
+    |   '[' ']' dimensionVoidExpression # dimVoid_d
+    ;
 
 prefixExpression
 	:	postfixExpression # prefix_postfix

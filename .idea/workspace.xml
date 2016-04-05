@@ -1,8 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Back up.">
+    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Modify FunctionDeclListener.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/Mag.g4" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/Mag.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/input.txt" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/input.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagBaseListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagBaseListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagLexer.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/input.txt" afterPath="$PROJECT_DIR$/src/Compiler/input.txt" />
     </list>
     <ignored path="Compiler2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,6 +149,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MagASTBuilder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="280" column="39" selection-start-line="280" selection-start-column="39" selection-end-line="280" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreationExpression.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/input.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MagParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="843">
+              <caret line="607" column="0" selection-start-line="607" selection-start-column="0" selection-end-line="607" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mag.g4" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FunctionDeclListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#645#654#0" expanded="true" />
+                <element signature="e#1885#1886#0" expanded="true" />
+                <element signature="e#1945#1946#0" expanded="true" />
+                <element signature="e#2053#2054#0" expanded="true" />
+                <element signature="e#2093#2094#0" expanded="true" />
+                <element signature="e#2189#2190#0" expanded="true" />
+                <element signature="e#2229#2230#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ReturnStatement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,106 +230,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassDeclListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FunctionDecl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FunctionDeclListener.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#645#654#0" expanded="true" />
-                <element signature="e#2053#2054#0" expanded="true" />
-                <element signature="e#2093#2094#0" expanded="true" />
-                <element signature="e#2189#2190#0" expanded="true" />
-                <element signature="e#2229#2230#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayAccess.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinaryExpression.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinaryOp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryOp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoolConst.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-              <folding>
-                <element signature="e#303#304#0" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VoidType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/VoidType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding>
-                <element signature="e#199#200#0" expanded="true" />
-                <element signature="e#246#247#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SymbolTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+            <state relative-caret-position="310">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,7 +263,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/BasicType.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/VarDeclList.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/ExpressionList.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/IntType.java" />
@@ -211,8 +311,9 @@
         <option value="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
         <option value="$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java" />
         <option value="$PROJECT_DIR$/src/Compiler/Main.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/input.txt" />
         <option value="$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/input.txt" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" />
       </list>
     </option>
   </component>
@@ -224,7 +325,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
+    <option name="x" value="52" />
     <option name="y" value="23" />
     <option name="width" value="1227" />
     <option name="height" value="777" />
@@ -463,6 +564,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Expression" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -939,7 +1066,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459853578003</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Modify FunctionDeclListener.">
+      <created>1459860090262</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1459860090262</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -952,17 +1086,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="23" width="1227" height="777" extended-state="6" />
+    <frame x="52" y="23" width="1227" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3502825" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26129943" sideWeight="0.5028525" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18361582" sideWeight="0.4971475" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -972,14 +1108,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3502825" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26129943" sideWeight="0.4971475" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1019,7 +1153,8 @@
     <MESSAGE value="Done with first pass. Begin second pass." />
     <MESSAGE value="Get more understanding on what second pass does." />
     <MESSAGE value="Back up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Back up." />
+    <MESSAGE value="Modify FunctionDeclListener." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify FunctionDeclListener." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1035,36 +1170,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/StringType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#200#201#0" expanded="false" />
-            <element signature="e#249#250#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="e#324#325#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1184,6 +1289,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1202,16 +1308,6 @@
           <folding>
             <element signature="e#300#301#0" expanded="false" />
             <element signature="e#347#348#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1301,34 +1397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3450">
-          <caret line="230" column="5" selection-start-line="230" selection-start-column="5" selection-end-line="230" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1368,38 +1440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="475" column="5" selection-start-line="475" selection-start-column="5" selection-end-line="475" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#22549#22550#0" expanded="true" />
-            <element signature="e#22589#22590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ClassAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1411,24 +1455,6 @@
           <folding>
             <element signature="e#199#200#0" expanded="true" />
             <element signature="e#246#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1476,17 +1502,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+        <state relative-caret-position="748">
+          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#645#654#0" expanded="true" />
+            <element signature="e#1885#1886#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
             <element signature="e#2053#2054#0" expanded="true" />
             <element signature="e#2093#2094#0" expanded="true" />
             <element signature="e#2189#2190#0" expanded="true" />
             <element signature="e#2229#2230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/Compiler/Library/antlr-4.5-complete.jar!/org/antlr/v4/runtime/tree/ParseTreeWalker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="843">
+          <caret line="607" column="0" selection-start-line="607" selection-start-column="0" selection-end-line="607" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Mag4.5/Mag.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="280" column="39" selection-start-line="280" selection-start-column="39" selection-end-line="280" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
