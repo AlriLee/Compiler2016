@@ -50,7 +50,8 @@ public class SymbolTable {
 
     public static void addSymbol(Symbol symbol, Type type) {
         if (hashMapStack.peek().containsKey(symbol)) {
-            throw new CompileError("Symbol name conflict in the same scope.");
+            System.out.println(hashMapStack.peek().get(symbol));
+            throw new CompileError("Symbol name conflict in the same scope." + symbol.toString(0));
         }
         hashMapStack.peek().put(symbol, type);
         if (!symbolStackHashMap.containsKey(symbol)) {

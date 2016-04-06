@@ -1,6 +1,6 @@
 package Compiler.AST.Statement.Expression;
 
-import Compiler.AST.Type.LvalueType;
+import Compiler.AST.Type.IntType;
 import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
@@ -12,10 +12,14 @@ public class PostSelfIncrement extends Expression {
     public Expression body;
 
     public PostSelfIncrement(Expression b) {
-        if (!(b.type instanceof LvalueType)) {
+        if (!(b.type.isLvalue())) {
             throw new CompileError("Non lvalue used as operand of increment operator.");
         }
+        if (!(b.type instanceof IntType)) {
+            throw new CompileError("Non int-type object used as operand of increment operator." + body.toString(0));
+        }
         body = b;
+        type = new IntType();
     }
 
     @Override

@@ -22,6 +22,7 @@ public class VarDecl implements Declaration, Statement {
     }
 
     public VarDecl(Type t, Symbol n, Expression i) {
+        // Type checking
         type = t;
         name = n;
         init = i;

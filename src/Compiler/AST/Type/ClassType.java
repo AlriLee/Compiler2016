@@ -1,9 +1,7 @@
 package Compiler.AST.Type;
 
-import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Symbol;
-
-import java.util.List;
+import Compiler.AST.VarDeclList;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -12,7 +10,7 @@ import static Compiler.Tool.Tool.indent;
  */
 public class ClassType extends BasicType {
     public Symbol className;
-    public List<VarDecl> classMember;
+    public VarDeclList classMember;
 
     public ClassType(Symbol cn) {
         className = cn;
@@ -27,5 +25,18 @@ public class ClassType extends BasicType {
         else
             string += "null\n";
         return string;
+    }
+
+    @Override
+    public boolean equal(Type rhs) {
+        if (rhs instanceof ClassType)
+            return true;
+        else return false;
+    }
+
+    @Override
+    public boolean isLvalue() {
+        if (lvalue) return true;
+        else return false;
     }
 }

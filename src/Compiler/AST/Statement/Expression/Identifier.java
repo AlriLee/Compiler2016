@@ -17,6 +17,7 @@ public class Identifier extends Expression {
         if (SymbolTable.getType(s) == null) {
             throw new CompileError("no symbol named \"" + symbol.name + "\"");
         }
+        type = SymbolTable.getType(s);
     }
 
     @Override

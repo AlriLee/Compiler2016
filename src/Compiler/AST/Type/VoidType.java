@@ -10,4 +10,17 @@ public class VoidType extends BasicType {
     public String toString(int d) {
         return indent(d) + "VoidType\n";
     }
+
+    @Override
+    public boolean equal(Type rhs) {
+        if (rhs instanceof VoidType)
+            return true;
+        else return false;
+    }
+
+    @Override
+    public boolean isLvalue() {
+        if (lvalue) return true;
+        else return false;
+    }
 }

@@ -42,4 +42,16 @@ public class FunctionDecl implements Type, Declaration {
         if (functionBody != null) string += functionBody.toString(d + 1);
         return string;
     }
+
+    @Override
+    public boolean equal(Type rhs) {
+        if (rhs instanceof FunctionDecl)
+            return true;
+        else return false;
+    }
+
+    @Override
+    public boolean isLvalue() {
+        return false;
+    }
 }

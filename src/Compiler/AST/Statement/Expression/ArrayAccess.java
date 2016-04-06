@@ -1,5 +1,9 @@
 package Compiler.AST.Statement.Expression;
 
+import Compiler.AST.Type.ArrayType;
+import Compiler.AST.Type.IntType;
+import Compiler.Error.CompileError;
+
 import static Compiler.Tool.Tool.indent;
 
 /**
@@ -15,6 +19,13 @@ public class ArrayAccess extends Expression {
     }*/
 
     public ArrayAccess(Expression ab, Expression ai) {
+        if (!(ab.type instanceof ArrayType)) {
+            throw new CompileError("Access non-array object." + ab.type.toString(0));
+        }
+        if (!(ai.type instanceof IntType)) {
+            throw new CompileError("Non-int type" + ai.type.toString(0) + "used as array index.");
+        }
+        type = ((ArrayType) ab.type).baseType;
         arrayBody = ab;
         arrayIndex = ai;
     }

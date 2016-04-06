@@ -11,6 +11,7 @@ import Compiler.AST.Statement.Expression.*;
 import Compiler.AST.Statement.Expression.Identifier;
 import Compiler.AST.Type.*;
 import Compiler.Environment.SymbolTable;
+import Compiler.Error.CompileError;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.LinkedList;
@@ -78,9 +79,18 @@ public class MagASTBuilder extends BaseListener {
         } else if (ctx.getText().equals("bool")) {
             stack.push(new BoolType());
         } else {
-            stack.push(new ClassType(Symbol.getSymbol(ctx.ID().getText())));
+            Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
+            if (SymbolTable.getType(symbol) == null) {
+                throw new CompileError("Undefined class type.");
+            }
+            stack.push(new ClassType(symbol));
         }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
+    }
+
+    @Override
+    public void enterBlockStatement(MagParser.BlockStatementContext ctx) {
+        SymbolTable.beginScope();
     }
 
     @Override
@@ -90,6 +100,7 @@ public class MagASTBuilder extends BaseListener {
         } else {
             stack.push(new CompoundStatement((StatementList) stack.pop()));
         }
+        SymbolTable.endScope();
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -404,7 +415,7 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitConstant_int(MagParser.Constant_intContext ctx) {
-        IntConst intConst = new IntConst(Integer.valueOf(ctx.getText()).intValue());
+        IntConst intConst = new IntConst(Long.valueOf(ctx.getText()).longValue());
         intConst.type = new IntType();
         stack.push(intConst);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
@@ -537,6 +548,7 @@ public class MagASTBuilder extends BaseListener {
         Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
         stack.push(new VarDecl(type, symbol, init));
         SymbolTable.addSymbol(symbol, type);
+        //System.out.println("AddSymbol" + symbol.toString(0));
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 

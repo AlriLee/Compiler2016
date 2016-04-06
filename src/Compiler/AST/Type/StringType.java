@@ -10,4 +10,17 @@ public class StringType extends BasicType {
     public String toString(int d) {
         return indent(d) + "StringType\n";
     }
+
+    @Override
+    public boolean equal(Type rhs) {
+        if (rhs instanceof StringType)
+            return true;
+        else return false;
+    }
+
+    @Override
+    public boolean isLvalue() {
+        if (lvalue) return true;
+        else return false;
+    }
 }

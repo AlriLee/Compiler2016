@@ -1,5 +1,9 @@
 int main()
 {
-    int[][][][] a = new int[10][][][];
-
+    f f1;
+    f1.a;
+    return 0;
+}
+class f{
+int a;
 }
