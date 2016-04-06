@@ -1,7 +1,10 @@
 package Compiler.Environment;
 
 import Compiler.AST.Symbol;
+import Compiler.AST.Type.IntType;
+import Compiler.AST.Type.StringType;
 import Compiler.AST.Type.Type;
+import Compiler.AST.Type.VoidType;
 import Compiler.Error.CompileError;
 
 import java.util.HashMap;
@@ -15,7 +18,34 @@ public class SymbolTable {
     public static Stack<HashMap<Symbol, Type>> hashMapStack = new Stack<HashMap<Symbol, Type>>();
 
     static {
-        beginScope();
+        beginScope(); // Initialize the symbolTable to allow global declarations.
+
+        //Add built-in functions to the outside-most scope.
+
+        // void print(string str);
+        Symbol printMethodSymbol = Symbol.getSymbol("print");
+        Type printMethodType = new VoidType();
+        addSymbol(printMethodSymbol, printMethodType);
+
+        //void println(string str);
+        Symbol printlnMethodSymbol = Symbol.getSymbol("println");
+        Type printlnMethodType = new VoidType();
+        addSymbol(printlnMethodSymbol, printlnMethodType);
+
+        //string getString();
+        Symbol getStringMethodSymbol = Symbol.getSymbol("getSymbol");
+        Type getStringMethodType = new StringType();
+        addSymbol(getStringMethodSymbol, getStringMethodType);
+
+        //int getInt();
+        Symbol getIntSymbol = Symbol.getSymbol("getInt");
+        Type getIntType = new IntType();
+        addSymbol(getIntSymbol, getIntType);
+
+        //string toString(int i);
+        Symbol toStringSymbol = Symbol.getSymbol("toString");
+        Type toStringType = new StringType();
+        addSymbol(toStringSymbol, toStringType);
     }
 
     public static void addSymbol(Symbol symbol, Type type) {

@@ -294,7 +294,7 @@ public class MagASTBuilder extends BaseListener {
     }
 
     @Override
-    public void exitDimension_void(MagParser.Dimension_voidContext ctx) {
+    public void exitDimVoid_(MagParser.DimVoid_Context ctx) {
         Stack<Expression> reorderStack = new Stack<Expression>();
         while (stack.peek() instanceof Expression) {
             reorderStack.push((Expression) stack.pop());
@@ -304,11 +304,6 @@ public class MagASTBuilder extends BaseListener {
             stack.push((Expression) reorderStack.pop());
         }
         stack.push(new ArrayType(type, new EmptyExpression()));
-    }
-
-    @Override
-    public void exitDimVoid_(MagParser.DimVoid_Context ctx) {
-        stack.push(new ArrayType((Type) stack.pop(), new EmptyExpression()));
     }
 
     @Override
@@ -373,7 +368,9 @@ public class MagASTBuilder extends BaseListener {
     @Override
     public void exitPostfix_id(MagParser.Postfix_idContext ctx) {
         Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
-        stack.push(new ClassAccess((Expression) stack.pop(), symbol));
+        Expression expression = (Expression) stack.pop();
+
+        stack.push(new ClassAccess(expression, symbol));
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -392,7 +389,7 @@ public class MagASTBuilder extends BaseListener {
     @Override
     public void exitPrimary_id(MagParser.Primary_idContext ctx) {
         Identifier identifier = new Identifier(Symbol.getSymbol(ctx.ID().getText()));
-        identifier.type = new LvalueType();
+        //identifier.type = new LvalueType();
         stack.push(identifier);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }

@@ -1,5 +1,8 @@
 package Compiler.AST.Statement.Expression;
 
+import Compiler.AST.Type.LvalueType;
+import Compiler.Error.CompileError;
+
 import static Compiler.Tool.Tool.indent;
 
 /**
@@ -9,6 +12,9 @@ public class PostSelfIncrement extends Expression {
     public Expression body;
 
     public PostSelfIncrement(Expression b) {
+        if (!(b.type instanceof LvalueType)) {
+            throw new CompileError("Non lvalue used as operand of increment operator.");
+        }
         body = b;
     }
 
