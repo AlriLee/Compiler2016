@@ -294,18 +294,26 @@ public class MagASTBuilder extends BaseListener {
     }
 
     @Override
-    public void exitDimVoid_(MagParser.DimVoid_Context ctx) {
-        //?
+    public void exitDimension_void(MagParser.Dimension_voidContext ctx) {
+        Stack<Expression> reorderStack = new Stack<Expression>();
+        while (stack.peek() instanceof Expression) {
+            reorderStack.push((Expression) stack.pop());
+        }
+        Type type = (Type) stack.pop();
+        while (!reorderStack.empty()) {
+            stack.push((Expression) reorderStack.pop());
+        }
+        stack.push(new ArrayType(type, new EmptyExpression()));
     }
 
     @Override
-    public void exitDimVoid_d(MagParser.DimVoid_dContext ctx) {
-        //?
+    public void exitDimVoid_(MagParser.DimVoid_Context ctx) {
+        stack.push(new ArrayType((Type) stack.pop(), new EmptyExpression()));
     }
 
     @Override
     public void exitCreation_para(MagParser.Creation_paraContext ctx) {
-        // No constructor function currently.
+        // No constructor function currently. This production is not in use.
     }
 
     @Override
@@ -383,37 +391,49 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitPrimary_id(MagParser.Primary_idContext ctx) {
-        stack.push(new Identifier(Symbol.getSymbol(ctx.ID().getText())));
+        Identifier identifier = new Identifier(Symbol.getSymbol(ctx.ID().getText()));
+        identifier.type = new LvalueType();
+        stack.push(identifier);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
     @Override
     public void exitConstant_null(MagParser.Constant_nullContext ctx) {
-        stack.push(new NullConst());
+        NullConst nullConst = new NullConst();
+        nullConst.type = new NullType();
+        stack.push(nullConst);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
     @Override
     public void exitConstant_int(MagParser.Constant_intContext ctx) {
-        stack.push(new IntConst(Integer.valueOf(ctx.getText()).intValue()));
+        IntConst intConst = new IntConst(Integer.valueOf(ctx.getText()).intValue());
+        intConst.type = new IntType();
+        stack.push(intConst);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
     @Override
     public void exitConstant_string(MagParser.Constant_stringContext ctx) {
-        stack.push(new StringConst(ctx.getText()));
+        StringConst stringConst = new StringConst(ctx.getText());
+        stringConst.type = new StringType();
+        stack.push(stringConst);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
     @Override
     public void exitLogic_true(MagParser.Logic_trueContext ctx) {
-        stack.push(new BoolConst(true));
+        BoolConst boolConst = new BoolConst(true);
+        boolConst.type = new BoolType();
+        stack.push(boolConst);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
     @Override
     public void exitLogic_false(MagParser.Logic_falseContext ctx) {
-        stack.push(new BoolConst(false));
+        BoolConst boolConst = new BoolConst(false);
+        boolConst.type = new BoolType();
+        stack.push(boolConst);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 

@@ -131,7 +131,13 @@ creationExpression
 dimensionExpression
 	:	'[' expression ']' # dimension_
 	|	'[' expression ']' dimensionExpression #dimension_dim
+	|   dimensionVoidExpression # dimension_void
 	;
+
+dimensionVoidExpression
+    :   '[' ']' # dimVoid_
+    |   '[' ']' dimensionVoidExpression # dimVoid_d
+    ;
 
 prefixExpression
 	:	postfixExpression # prefix_postfix
