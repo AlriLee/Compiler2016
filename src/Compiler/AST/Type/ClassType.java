@@ -17,6 +17,14 @@ public class ClassType extends BasicType {
         classMember = null;
     }
 
+    public boolean hasMember(Symbol memberSymbol) {
+        return classMember.hasVariable(memberSymbol);
+    }
+
+    public Type getMemberType(Symbol memberSymbol) {
+        return classMember.getVariableType(memberSymbol);
+    }
+
     @Override
     public String toString(int d) {
         String string = indent(d) + "ClassType\n" + indent(d + 1);
@@ -31,12 +39,6 @@ public class ClassType extends BasicType {
     public boolean equal(Type rhs) {
         if (rhs instanceof ClassType)
             return true;
-        else return false;
-    }
-
-    @Override
-    public boolean isLvalue() {
-        if (lvalue) return true;
         else return false;
     }
 }

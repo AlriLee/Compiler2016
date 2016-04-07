@@ -18,6 +18,7 @@ public class Identifier extends Expression {
             throw new CompileError("no symbol named \"" + symbol.name + "\"");
         }
         type = SymbolTable.getType(s);
+        lvalue = true;
     }
 
     @Override

@@ -28,6 +28,7 @@ public class ArrayAccess extends Expression {
         type = ((ArrayType) ab.type).baseType;
         arrayBody = ab;
         arrayIndex = ai;
+        lvalue = ab.lvalue;
     }
 
     @Override

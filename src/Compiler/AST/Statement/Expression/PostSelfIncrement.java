@@ -12,7 +12,7 @@ public class PostSelfIncrement extends Expression {
     public Expression body;
 
     public PostSelfIncrement(Expression b) {
-        if (!(b.type.isLvalue())) {
+        if (!b.lvalue) {
             throw new CompileError("Non lvalue used as operand of increment operator.");
         }
         if (!(b.type instanceof IntType)) {

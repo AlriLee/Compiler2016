@@ -6,6 +6,7 @@ import static Compiler.Tool.Tool.indent;
  * Created by Alri on 16/3/31.
  */
 public class IntType extends BasicType {
+    public boolean lvalue;
     @Override
     public String toString(int d) {
         return indent(d) + "IntType\n";
@@ -16,11 +17,5 @@ public class IntType extends BasicType {
             return true;
         else
             return false;
-    }
-
-    @Override
-    public boolean isLvalue() {
-        if (lvalue) return true;
-        else return false;
     }
 }

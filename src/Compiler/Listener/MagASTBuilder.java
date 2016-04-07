@@ -80,10 +80,11 @@ public class MagASTBuilder extends BaseListener {
             stack.push(new BoolType());
         } else {
             Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
-            if (SymbolTable.getType(symbol) == null) {
+            Type type = SymbolTable.getType(symbol);
+            if (type == null) {
                 throw new CompileError("Undefined class type.");
             }
-            stack.push(new ClassType(symbol));
+            stack.push(type);
         }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
@@ -91,6 +92,21 @@ public class MagASTBuilder extends BaseListener {
     @Override
     public void enterBlockStatement(MagParser.BlockStatementContext ctx) {
         SymbolTable.beginScope();
+
+        String functionName = null;
+        if (ctx.parent instanceof MagParser.FunctionDecl_returnTypeContext) {
+            functionName = ((MagParser.FunctionDecl_returnTypeContext) ctx.parent).ID().getText();
+        } else if (ctx.parent instanceof MagParser.FunctionDecl_voidContext) {
+            functionName = ((MagParser.FunctionDecl_voidContext) ctx.parent).ID().getText();
+        }
+        if (functionName != null) {
+            FunctionDecl function = (FunctionDecl) SymbolTable.getType(Symbol.getSymbol(functionName));
+            for (VarDeclList varDeclList = function.parameters; varDeclList != null; varDeclList = varDeclList.varDeclList) {
+                VarDecl varDecl = varDeclList.varDecl;
+                SymbolTable.addSymbol(varDecl.name, varDecl.type);
+                System.out.println(varDecl.name + " " + varDecl.type.toString());
+            }
+        }
     }
 
     @Override
@@ -415,9 +431,13 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitConstant_int(MagParser.Constant_intContext ctx) {
-        IntConst intConst = new IntConst(Long.valueOf(ctx.getText()).longValue());
-        intConst.type = new IntType();
-        stack.push(intConst);
+        try {
+            IntConst intConst = new IntConst(Long.valueOf(ctx.getText()).longValue());
+            intConst.type = new IntType();
+            stack.push(intConst);
+        } catch (NumberFormatException e) {
+            throw new CompileError("the number format is error");
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -537,7 +557,10 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitVarDecl_(MagParser.VarDecl_Context ctx) {
-        stack.push(new VarDecl((Type) stack.pop(), Symbol.getSymbol(ctx.ID().getText())));
+        Type type = (Type) stack.pop();
+        Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
+        stack.push(new VarDecl(type, symbol));
+        SymbolTable.addSymbol(symbol, type);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -552,34 +575,42 @@ public class MagASTBuilder extends BaseListener {
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
+    /*
     @Override
     public void enterFunctionDecl_returnType(MagParser.FunctionDecl_returnTypeContext ctx) {
         SymbolTable.beginScope();
     }
 
     @Override
+    public void enterFunctionDecl_void(MagParser.FunctionDecl_voidContext ctx) {
+        SymbolTable.beginScope();
+    }
+    */
+
+    @Override
     public void exitFunctionDecl_returnType(MagParser.FunctionDecl_returnTypeContext ctx) {
         CompoundStatement block = (CompoundStatement) stack.pop();
         Symbol functionName = Symbol.getSymbol(ctx.ID().getText());
-        VarDeclList paraList;
+        VarDeclList paraList = null;
         if (ctx.parameterList() != null)
             paraList = (VarDeclList) stack.pop();
-        else paraList = null;
         stack.push(new FunctionDecl((Type) stack.pop(), functionName, paraList, block));
+        ((FunctionDecl) SymbolTable.getType(functionName)).parameters = paraList;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
-        SymbolTable.endScope();
+        //SymbolTable.endScope();
     }
 
     @Override
     public void exitFunctionDecl_void(MagParser.FunctionDecl_voidContext ctx) {
         CompoundStatement block = (CompoundStatement) stack.pop();
         Symbol functionName = Symbol.getSymbol(ctx.ID().getText());
-        VarDeclList paraList;
+        VarDeclList paraList = null;
         if (ctx.parameterList() != null)
             paraList = (VarDeclList) stack.pop();
-        else paraList = null;
         stack.push(new FunctionDecl(new VoidType(), functionName, paraList, block));
+        ((FunctionDecl) SymbolTable.getType(functionName)).parameters = paraList;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
+        //SymbolTable.endScope();
     }
 
     @Override

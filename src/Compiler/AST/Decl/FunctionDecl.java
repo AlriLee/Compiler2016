@@ -49,9 +49,4 @@ public class FunctionDecl implements Type, Declaration {
             return true;
         else return false;
     }
-
-    @Override
-    public boolean isLvalue() {
-        return false;
-    }
 }

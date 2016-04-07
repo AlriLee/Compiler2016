@@ -2,6 +2,7 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.BoolType;
 import Compiler.AST.Type.IntType;
+import Compiler.AST.Type.StringType;
 import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
@@ -18,11 +19,12 @@ public class BinaryExpression extends Expression {
         // Type checking
         switch (o) {
             case ASSIGN: {
-                if (!(l.type.isLvalue()))
+                if (!(l.lvalue))
                     throw new CompileError("Assign something to non-lvalue.");
-                if (l.type.equal(r.type))
+                if (!l.type.equal(r.type))
                     throw new CompileError("Type conflict between lhs and rhs of " + o.toString() + " operator.");
                 type = l.type;
+                lvalue = true;
                 break;
             }
             case LOGICAL_AND:
@@ -36,16 +38,60 @@ public class BinaryExpression extends Expression {
             }
             case OR:
             case XOR:
-            case AND:
+            case AND: {
+                if (!(l.type instanceof IntType))
+                    throw new CompileError("Non-int expr used on left-hand-side of " + o.toString());
+                if (!(r.type instanceof IntType))
+                    throw new CompileError("Non-int expr used on right-hand-side of " + o.toString());
+                type = new IntType();
+                break;
+            }
+//  !!! type equal
             case NEQ:
-            case EQ:
+            case EQ: {
+                if (!l.type.equal(r.type)) {
+                    throw new CompileError("Type conflict between two sides of " + o.toString());
+                }
+                type = new BoolType();
+                break;
+            }
+//  !!! int / string
             case LT:
             case GT:
             case LEQ:
-            case GEQ:
+            case GEQ: {
+                if (!l.type.equal(r.type)) {
+                    throw new CompileError("Type conflict between two sides of " + o.toString());
+                }
+                if (!(l.type instanceof IntType) && !(l.type instanceof StringType)) {
+                    throw new CompileError("Type of left hand side of " + o.toString() + " is neither int nor string.");
+                }
+                if (!(r.type instanceof IntType) && !(r.type instanceof StringType)) {
+                    throw new CompileError("Type of right hand side of " + o.toString() + " is neither int nor string.");
+                }
+                type = new BoolType();
+                break;
+            }
+            case ADD: {
+                if (l.type == null) {
+                    if (l instanceof FunctionCall) {
+                        throw new CompileError("");
+                    }
+                }
+                if (!l.type.equal(r.type)) {
+                    throw new CompileError("Type conflict between two sides of " + o.toString());
+                }
+                if (!(l.type instanceof IntType) && !(l.type instanceof StringType)) {
+                    throw new CompileError("Type of left hand side of " + o.toString() + " is neither int nor string.");
+                }
+                if (!(r.type instanceof IntType) && !(r.type instanceof StringType)) {
+                    throw new CompileError("Type of right hand side of " + o.toString() + " is neither int nor string.");
+                }
+                type = l.type;
+                break;
+            }
             case SHL:
             case SHR:
-            case ADD:
             case SUB:
             case MUL:
             case DIV:
@@ -61,6 +107,7 @@ public class BinaryExpression extends Expression {
         left = l;
         op = o;
         right = r;
+        // How to decide whether this object is lvalue?
     }
 
     @Override

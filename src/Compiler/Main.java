@@ -2,6 +2,7 @@ package Compiler;
 
 import Compiler.AST.Parser.MagLexer;
 import Compiler.AST.Parser.MagParser;
+import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
 import Compiler.Listener.ClassDeclListener;
 import Compiler.Listener.FunctionDeclListener;
@@ -27,6 +28,8 @@ public class Main {
     }
 
     public void compile(String[] args) throws Exception {
+        SymbolTable.initilize();
+
         InputStream in = new FileInputStream("src/Compiler/input.txt"); // or System.in;
         ANTLRInputStream input = new ANTLRInputStream(in);
         //ANTLRInputStream input = new ANTLRInputStream(System.in);

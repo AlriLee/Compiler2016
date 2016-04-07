@@ -4,6 +4,7 @@ import Compiler.AST.Statement.Expression.Expression;
 import Compiler.AST.Statement.Statement;
 import Compiler.AST.Symbol;
 import Compiler.AST.Type.Type;
+import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -23,6 +24,8 @@ public class VarDecl implements Declaration, Statement {
 
     public VarDecl(Type t, Symbol n, Expression i) {
         // Type checking
+        if (!(t.equal(i.type)))
+            throw new CompileError("Wrong type of expression " + i.toString() + " used to initialize variable " + n.toString() + " of type " + t.toString());
         type = t;
         name = n;
         init = i;

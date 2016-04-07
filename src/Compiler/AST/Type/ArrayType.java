@@ -10,12 +10,6 @@ import static Compiler.Tool.Tool.indent;
 public class ArrayType implements Type {
     public Type baseType;
     public Expression arraySize;
-    boolean lvalue;
-
-    public ArrayType() {
-        baseType = null;
-        arraySize = null;
-    }
 
     public ArrayType(Type bt) {
         baseType = bt;
@@ -45,11 +39,5 @@ public class ArrayType implements Type {
             return baseType.equal(((ArrayType) rhs).baseType);
         else
             return false;
-    }
-
-    @Override
-    public boolean isLvalue() {
-        if (lvalue) return true;
-        else return false;
     }
 }

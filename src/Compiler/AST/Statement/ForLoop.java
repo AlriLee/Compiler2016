@@ -1,6 +1,8 @@
 package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
+import Compiler.AST.Type.BoolType;
+import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -14,11 +16,9 @@ public class ForLoop implements Statement {
     public Statement forStatement;
 
     public ForLoop(Expression init, Expression cond, Expression incre, Statement state) {
-        /*
-            if (!(cond.type instanceof BoolType)) {
-                throw new CompileError("A bool-type expression is exp.....");
-            }
-         */
+        if (!(cond.type instanceof BoolType)) {
+            throw new CompileError("A BoolType expression is expected.");
+        }
         initExpression = init;
         conditionExpression = cond;
         incrementExpression = incre;

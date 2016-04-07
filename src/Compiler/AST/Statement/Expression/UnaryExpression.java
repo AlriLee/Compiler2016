@@ -1,5 +1,9 @@
 package Compiler.AST.Statement.Expression;
 
+import Compiler.AST.Type.BoolType;
+import Compiler.AST.Type.IntType;
+import Compiler.Error.CompileError;
+
 import static Compiler.Tool.Tool.indent;
 
 /**
@@ -12,6 +16,35 @@ public class UnaryExpression extends Expression {
     public UnaryExpression(UnaryOp o, Expression e) {
         op = o;
         expression = e;
+        switch (op) {
+            case NOT: {
+                if (!(e.type instanceof BoolType)) {
+                    throw new CompileError("Type error.");
+                }
+                type = e.type;
+                break;
+            }
+            case PLUS:
+            case MINUS:
+            case TILDE: {
+                if (!(e.type instanceof IntType)) {
+                    throw new CompileError("Type error.");
+                }
+                type = e.type;
+                break;
+            }
+            case INC:
+            case DEC: {
+                if (!e.lvalue) {
+                    throw new CompileError("UnaryExpression " + op.toString() + " used on non-lvalue expression " + expression.toString(0));
+                }
+                if (!(e.type instanceof IntType)) {
+                    throw new CompileError("UnaryExpression " + op.toString() + " used on non-int type expression " + e.type.toString(0));
+                }
+                type = e.type;
+                break;
+            }
+        }
     }
 
     @Override

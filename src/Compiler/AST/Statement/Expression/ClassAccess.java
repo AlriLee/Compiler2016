@@ -2,7 +2,6 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Symbol;
 import Compiler.AST.Type.ClassType;
-import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
@@ -15,15 +14,18 @@ public class ClassAccess extends Expression {
     public Symbol attribute;
 
     public ClassAccess(Expression cn, Symbol at) {
+        className = cn;
+        attribute = at;
         if (!(cn.type instanceof ClassType)) {
             throw new CompileError("Non-class type accessed." + cn.type.toString());
         }
-        Symbol symbol = ((ClassType) (cn.type)).className;
-
-        // Is this necessary?
-        if (!(SymbolTable.hashMapStack.peek().containsKey(symbol))) {
-            throw new CompileError("No such class exits.");
+        ClassType classType = (ClassType) className.type;
+        if (classType.hasMember(attribute)) {
+            type = classType.getMemberType(attribute);
+            return;
         }
+        // How to decide whether this object is lvalue?
+
         //List<VarDecl> memList = ((ClassType)SymbolTable.hashMapStack.peek().get(symbol)).classMember;
         /*for (int i = 0; i < memList.size(); ++i) {
             Type t = ((VarDecl)memList.get(i)).type;
@@ -34,9 +36,8 @@ public class ClassAccess extends Expression {
                 type = t;
                 return;
             }
-        }
-        throw new CompileError("Class " + symbol.toString() + "does not contain member named " + attribute.toString());
-        */
+        }*/
+        throw new CompileError("Class " + className.type.toString() + "does not contain member named " + attribute.toString());
     }
 
     @Override

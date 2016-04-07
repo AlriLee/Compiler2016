@@ -1,5 +1,7 @@
 package Compiler.AST.Statement.Expression;
 
+import Compiler.AST.Type.StringType;
+
 import static Compiler.Tool.Tool.indent;
 
 /**
@@ -14,6 +16,7 @@ public class StringConst extends Expression {
 
     public StringConst(String sv) {
         stringValue = sv;
+        type = new StringType();
     }
 
     @Override

@@ -1,5 +1,7 @@
 package Compiler.AST.Statement.Expression;
 
+import Compiler.AST.Type.BoolType;
+
 import static Compiler.Tool.Tool.indent;
 
 /**
@@ -10,6 +12,7 @@ public class BoolConst extends Expression {
 
     public BoolConst(boolean v) {
         value = v;
+        type = new BoolType();
     }
 
     @Override

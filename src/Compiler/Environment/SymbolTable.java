@@ -1,11 +1,17 @@
 package Compiler.Environment;
 
+import Compiler.AST.Decl.FunctionDecl;
+import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Symbol;
 import Compiler.AST.Type.IntType;
 import Compiler.AST.Type.StringType;
 import Compiler.AST.Type.Type;
 import Compiler.AST.Type.VoidType;
+import Compiler.AST.VarDeclList;
 import Compiler.Error.CompileError;
+import Compiler.Listener.FunctionDeclListener;
+import Compiler.Listener.MagASTBuilder;
+import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
 import java.util.HashMap;
 import java.util.Stack;
@@ -14,38 +20,69 @@ import java.util.Stack;
  * Created by Alri on 16/4/4.
  */
 public class SymbolTable {
-    public static HashMap<Symbol, Stack<Type>> symbolStackHashMap = new HashMap<Symbol, Stack<Type>>();
-    public static Stack<HashMap<Symbol, Type>> hashMapStack = new Stack<HashMap<Symbol, Type>>();
+    public static HashMap<Symbol, Stack<Type>> symbolStackHashMap;
+    public static Stack<HashMap<Symbol, Type>> hashMapStack;
 
-    static {
+    public static void initilize() {
+        MagASTBuilder.stack = new Stack<>();
+        FunctionDeclListener.stack = new ParseTreeProperty<>();
+
+        symbolStackHashMap = new HashMap<Symbol, Stack<Type>>();
+        hashMapStack = new Stack<HashMap<Symbol, Type>>();
+
         beginScope(); // Initialize the symbolTable to allow global declarations.
 
         //Add built-in functions to the outside-most scope.
 
         // void print(string str);
         Symbol printMethodSymbol = Symbol.getSymbol("print");
-        Type printMethodType = new VoidType();
-        addSymbol(printMethodSymbol, printMethodType);
+        addSymbol(printMethodSymbol, new FunctionDecl(
+                        new VoidType(),
+                        printMethodSymbol,
+                        new VarDeclList(new VarDecl(new IntType(), Symbol.getSymbol("str"))),
+                        null
+                )
+        );
 
         //void println(string str);
         Symbol printlnMethodSymbol = Symbol.getSymbol("println");
-        Type printlnMethodType = new VoidType();
-        addSymbol(printlnMethodSymbol, printlnMethodType);
+        addSymbol(printlnMethodSymbol, new FunctionDecl(
+                        new VoidType(),
+                        printlnMethodSymbol,
+                        new VarDeclList(new VarDecl(new IntType(), Symbol.getSymbol("str"))),
+                        null
+                )
+        );
 
         //string getString();
         Symbol getStringMethodSymbol = Symbol.getSymbol("getSymbol");
-        Type getStringMethodType = new StringType();
-        addSymbol(getStringMethodSymbol, getStringMethodType);
+        addSymbol(getStringMethodSymbol, new FunctionDecl(
+                        new StringType(),
+                        getStringMethodSymbol,
+                        null,
+                        null
+                )
+        );
 
         //int getInt();
         Symbol getIntSymbol = Symbol.getSymbol("getInt");
-        Type getIntType = new IntType();
-        addSymbol(getIntSymbol, getIntType);
+        addSymbol(getIntSymbol, new FunctionDecl(
+                        new IntType(),
+                        getIntSymbol,
+                        null,
+                        null
+                )
+        );
 
         //string toString(int i);
         Symbol toStringSymbol = Symbol.getSymbol("toString");
-        Type toStringType = new StringType();
-        addSymbol(toStringSymbol, toStringType);
+        addSymbol(toStringSymbol, new FunctionDecl(
+                        new StringType(),
+                        toStringSymbol,
+                        new VarDeclList(new VarDecl(new IntType(), Symbol.getSymbol("i"))),
+                        null
+                )
+        );
     }
 
     public static void addSymbol(Symbol symbol, Type type) {

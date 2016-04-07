@@ -8,4 +8,5 @@ import Compiler.AST.Type.Type;
  */
 public abstract class Expression implements Statement {
     public Type type;
+    public boolean lvalue = false;
 }

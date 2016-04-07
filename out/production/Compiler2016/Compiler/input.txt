@@ -1,9 +1,5 @@
-int main()
-{
-    f f1;
-    f1.a;
+int main() {
+    while (1) { }
+    break;
     return 0;
-}
-class f{
-int a;
 }

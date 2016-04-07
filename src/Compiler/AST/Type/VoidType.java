@@ -17,10 +17,4 @@ public class VoidType extends BasicType {
             return true;
         else return false;
     }
-
-    @Override
-    public boolean isLvalue() {
-        if (lvalue) return true;
-        else return false;
-    }
 }
