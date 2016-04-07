@@ -2,6 +2,7 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Symbol;
 import Compiler.AST.Type.ClassType;
+import Compiler.AST.Type.Type;
 import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
@@ -16,14 +17,10 @@ public class ClassAccess extends Expression {
     public ClassAccess(Expression cn, Symbol at) {
         className = cn;
         attribute = at;
-        if (!(cn.type instanceof ClassType)) {
-            throw new CompileError("Non-class type accessed." + cn.type.toString());
-        }
-        ClassType classType = (ClassType) className.type;
-        if (classType.hasMember(attribute)) {
-            type = classType.getMemberType(attribute);
-            return;
-        }
+
+        Type classType =  className.type;
+        type = classType.getMemberType(attribute);
+        lvalue = className.lvalue;
         // How to decide whether this object is lvalue?
 
         //List<VarDecl> memList = ((ClassType)SymbolTable.hashMapStack.peek().get(symbol)).classMember;
@@ -37,7 +34,6 @@ public class ClassAccess extends Expression {
                 return;
             }
         }*/
-        throw new CompileError("Class " + className.type.toString() + "does not contain member named " + attribute.toString());
     }
 
     @Override

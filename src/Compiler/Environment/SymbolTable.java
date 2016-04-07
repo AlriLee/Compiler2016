@@ -3,10 +3,7 @@ package Compiler.Environment;
 import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Symbol;
-import Compiler.AST.Type.IntType;
-import Compiler.AST.Type.StringType;
-import Compiler.AST.Type.Type;
-import Compiler.AST.Type.VoidType;
+import Compiler.AST.Type.*;
 import Compiler.AST.VarDeclList;
 import Compiler.Error.CompileError;
 import Compiler.Listener.FunctionDeclListener;
@@ -24,6 +21,12 @@ public class SymbolTable {
     public static Stack<HashMap<Symbol, Type>> hashMapStack;
 
     public static void initilize() {
+        MagASTBuilder.initialize();
+
+        ArrayType.initialize();
+        IntType.initialize();
+        StringType.initialize();
+
         MagASTBuilder.stack = new Stack<>();
         FunctionDeclListener.stack = new ParseTreeProperty<>();
 
@@ -39,7 +42,7 @@ public class SymbolTable {
         addSymbol(printMethodSymbol, new FunctionDecl(
                         new VoidType(),
                         printMethodSymbol,
-                        new VarDeclList(new VarDecl(new IntType(), Symbol.getSymbol("str"))),
+                        new VarDeclList(new VarDecl(new StringType(), Symbol.getSymbol("str"))),
                         null
                 )
         );
@@ -49,13 +52,13 @@ public class SymbolTable {
         addSymbol(printlnMethodSymbol, new FunctionDecl(
                         new VoidType(),
                         printlnMethodSymbol,
-                        new VarDeclList(new VarDecl(new IntType(), Symbol.getSymbol("str"))),
+                        new VarDeclList(new VarDecl(new StringType(), Symbol.getSymbol("str"))),
                         null
                 )
         );
 
         //string getString();
-        Symbol getStringMethodSymbol = Symbol.getSymbol("getSymbol");
+        Symbol getStringMethodSymbol = Symbol.getSymbol("getString");
         addSymbol(getStringMethodSymbol, new FunctionDecl(
                         new StringType(),
                         getStringMethodSymbol,

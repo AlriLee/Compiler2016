@@ -2,8 +2,10 @@ package Compiler.AST.Decl;
 
 import Compiler.AST.Statement.CompoundStatement;
 import Compiler.AST.Symbol;
+import Compiler.AST.Type.IntType;
 import Compiler.AST.Type.Type;
 import Compiler.AST.VarDeclList;
+import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -29,6 +31,16 @@ public class FunctionDecl implements Type, Declaration {
         functionName = fn;
         parameters = pm;
         functionBody = fb;
+        if (functionName.name.equals("main")) {
+            if (!(returnType instanceof IntType)) {
+                throw new CompileError("int main()");
+            }
+        }
+    }
+
+    @Override
+    public Type getMemberType(Symbol memberSymbol) {
+        return null;
     }
 
     @Override

@@ -1,8 +1,6 @@
 package Compiler.AST.Statement.Expression;
 
-import Compiler.AST.Type.BoolType;
-import Compiler.AST.Type.IntType;
-import Compiler.AST.Type.StringType;
+import Compiler.AST.Type.*;
 import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
@@ -16,13 +14,26 @@ public class BinaryExpression extends Expression {
     public Expression right;
 
     public BinaryExpression(Expression l, BinaryOp o, Expression r) {
+        boolean sameType = l.type.equal(r.type);
+        if (l.type instanceof NullType) {
+            if (r.type instanceof NullType || r.type instanceof ClassType || r.type instanceof ArrayType) {
+                sameType = true;
+            }
+        }
+        if (r.type instanceof NullType) {
+            if (l.type instanceof NullType || l.type instanceof ClassType || l.type instanceof ArrayType) {
+                sameType = true;
+            }
+        }
+        if (!sameType) {
+            throw new CompileError("type error");
+        }
+
         // Type checking
         switch (o) {
             case ASSIGN: {
                 if (!(l.lvalue))
                     throw new CompileError("Assign something to non-lvalue.");
-                if (!l.type.equal(r.type))
-                    throw new CompileError("Type conflict between lhs and rhs of " + o.toString() + " operator.");
                 type = l.type;
                 lvalue = true;
                 break;
@@ -49,9 +60,6 @@ public class BinaryExpression extends Expression {
 //  !!! type equal
             case NEQ:
             case EQ: {
-                if (!l.type.equal(r.type)) {
-                    throw new CompileError("Type conflict between two sides of " + o.toString());
-                }
                 type = new BoolType();
                 break;
             }
@@ -60,9 +68,6 @@ public class BinaryExpression extends Expression {
             case GT:
             case LEQ:
             case GEQ: {
-                if (!l.type.equal(r.type)) {
-                    throw new CompileError("Type conflict between two sides of " + o.toString());
-                }
                 if (!(l.type instanceof IntType) && !(l.type instanceof StringType)) {
                     throw new CompileError("Type of left hand side of " + o.toString() + " is neither int nor string.");
                 }
@@ -77,9 +82,6 @@ public class BinaryExpression extends Expression {
                     if (l instanceof FunctionCall) {
                         throw new CompileError("");
                     }
-                }
-                if (!l.type.equal(r.type)) {
-                    throw new CompileError("Type conflict between two sides of " + o.toString());
                 }
                 if (!(l.type instanceof IntType) && !(l.type instanceof StringType)) {
                     throw new CompileError("Type of left hand side of " + o.toString() + " is neither int nor string.");

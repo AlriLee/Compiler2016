@@ -1,5 +1,13 @@
 package Compiler.AST.Type;
 
+import Compiler.AST.Decl.FunctionDecl;
+import Compiler.AST.Decl.VarDecl;
+import Compiler.AST.Symbol;
+import Compiler.AST.VarDeclList;
+import Compiler.Error.CompileError;
+
+import java.util.HashMap;
+
 import static Compiler.Tool.Tool.indent;
 
 /**
@@ -10,6 +18,42 @@ public class IntType extends BasicType {
     @Override
     public String toString(int d) {
         return indent(d) + "IntType\n";
+    }
+
+    private static HashMap<Symbol, Type> members;
+
+    public static void initialize() {
+        members = new HashMap<>();
+        Symbol thisSymbol = Symbol.getSymbol("this");
+        VarDeclList varDeclList = new VarDeclList(new VarDecl(new StringType(), thisSymbol));
+
+        // string substring(int left, int right)
+        Symbol substringSymbol = Symbol.getSymbol("substring");
+        members.put(substringSymbol, new FunctionDecl(
+                        new StringType(),
+                        substringSymbol,
+                        varDeclList,
+                        null
+                )
+        );
+
+        // int ord(int pos);
+        Symbol ordSymbol = Symbol.getSymbol("ord");
+        members.put(ordSymbol, new FunctionDecl(
+                        new StringType(),
+                        ordSymbol,
+                        varDeclList,
+                        null
+                )
+        );
+    }
+
+    @Override
+    public Type getMemberType(Symbol memberSymbol) {
+        if (members.containsKey(memberSymbol)) {
+            return members.get(memberSymbol);
+        }
+        throw new CompileError("no member");
     }
 
     public boolean equal(Type rhs) {

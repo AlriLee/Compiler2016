@@ -1,5 +1,8 @@
 package Compiler.AST.Type;
 
+import Compiler.AST.Symbol;
+import Compiler.Error.CompileError;
+
 import static Compiler.Tool.Tool.indent;
 
 /**
@@ -9,6 +12,11 @@ public class VoidType extends BasicType {
     @Override
     public String toString(int d) {
         return indent(d) + "VoidType\n";
+    }
+
+    @Override
+    public Type getMemberType(Symbol memberSymbol) {
+        throw new CompileError("no member");
     }
 
     @Override

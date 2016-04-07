@@ -1,6 +1,8 @@
 package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
+import Compiler.AST.Type.BoolType;
+import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -16,12 +18,18 @@ public class IfStatement implements Statement {
         condition = cond;
         consequence = conse;
         alternative = null;
+        if (!(condition.type instanceof BoolType)) {
+            throw new CompileError("type error");
+        }
     }
 
     public IfStatement(Expression cond, Statement conse, Statement alter) {
         condition = cond;
         consequence = conse;
         alternative = alter;
+        if (!(condition.type instanceof BoolType)) {
+            throw new CompileError("type error");
+        }
     }
 
     @Override

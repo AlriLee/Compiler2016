@@ -2,6 +2,7 @@ package Compiler.AST.Type;
 
 import Compiler.AST.Symbol;
 import Compiler.AST.VarDeclList;
+import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -22,7 +23,10 @@ public class ClassType extends BasicType {
     }
 
     public Type getMemberType(Symbol memberSymbol) {
-        return classMember.getVariableType(memberSymbol);
+        if (hasMember(memberSymbol)) {
+            return classMember.getVariableType(memberSymbol);
+        }
+        throw new CompileError("no member");
     }
 
     @Override
@@ -37,8 +41,6 @@ public class ClassType extends BasicType {
 
     @Override
     public boolean equal(Type rhs) {
-        if (rhs instanceof ClassType)
-            return true;
-        else return false;
+        return rhs == this;
     }
 }

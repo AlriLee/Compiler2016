@@ -1,6 +1,13 @@
 package Compiler.AST.Type;
 
+import Compiler.AST.Decl.FunctionDecl;
+import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Statement.Expression.Expression;
+import Compiler.AST.Symbol;
+import Compiler.AST.VarDeclList;
+import Compiler.Error.CompileError;
+
+import java.util.HashMap;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -10,6 +17,24 @@ import static Compiler.Tool.Tool.indent;
 public class ArrayType implements Type {
     public Type baseType;
     public Expression arraySize;
+
+    private static HashMap<Symbol, Type> members;
+
+    public static void initialize() {
+        members = new HashMap<>();
+        Symbol thisSymbol = Symbol.getSymbol("this");
+        VarDeclList varDeclList = new VarDeclList(new VarDecl(new StringType(), thisSymbol));
+
+        // int size()
+        Symbol sizeSymbol = Symbol.getSymbol("size");
+        members.put(sizeSymbol, new FunctionDecl(
+                new IntType(),
+                sizeSymbol,
+                varDeclList,
+                null
+            )
+        );
+    }
 
     public ArrayType(Type bt) {
         baseType = bt;
@@ -23,6 +48,14 @@ public class ArrayType implements Type {
 
     public void changeSize(Expression as) {
         arraySize = as;
+    }
+
+    @Override
+    public Type getMemberType(Symbol memberSymbol) {
+        if (members.containsKey(memberSymbol)) {
+            return members.get(memberSymbol);
+        }
+        throw new CompileError("no member");
     }
 
     @Override

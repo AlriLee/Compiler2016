@@ -30,8 +30,7 @@ public class Main {
     public void compile(String[] args) throws Exception {
         SymbolTable.initilize();
 
-        InputStream in = new FileInputStream("src/Compiler/input.txt"); // or System.in;
-        ANTLRInputStream input = new ANTLRInputStream(in);
+        ANTLRInputStream input = new ANTLRInputStream(System.in);
         //ANTLRInputStream input = new ANTLRInputStream(System.in);
         MagLexer lexer = new MagLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);

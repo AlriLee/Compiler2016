@@ -16,7 +16,7 @@ public class PostSelfIncrement extends Expression {
             throw new CompileError("Non lvalue used as operand of increment operator.");
         }
         if (!(b.type instanceof IntType)) {
-            throw new CompileError("Non int-type object used as operand of increment operator." + body.toString(0));
+            throw new CompileError("Non int-type object used as operand of increment operator.");
         }
         body = b;
         type = new IntType();
