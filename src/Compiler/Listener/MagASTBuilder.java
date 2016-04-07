@@ -23,6 +23,31 @@ import java.util.Stack;
 public class MagASTBuilder extends BaseListener {
     public static Stack<ASTNode> stack = new Stack<ASTNode>();
 
+    public static boolean inForLoop = false;
+    public static boolean inWhileLoop = false;
+    public static boolean inFunction_returnType = false;
+    public static boolean inFunction_void = false;
+
+    @Override
+    public void enterForStatement(MagParser.ForStatementContext ctx) {
+        inForLoop = true;
+    }
+
+    @Override
+    public void enterWhileStatement(MagParser.WhileStatementContext ctx) {
+        inWhileLoop = true;
+    }
+
+    @Override
+    public void enterFunctionDecl_returnType(MagParser.FunctionDecl_returnTypeContext ctx) {
+        inFunction_returnType = true;
+    }
+
+    @Override
+    public void enterFunctionDecl_void(MagParser.FunctionDecl_voidContext ctx) {
+        inFunction_void = true;
+    }
+
     @Override
     public void exitProgram(MagParser.ProgramContext ctx) {
         LinkedList<Declaration> decls = new LinkedList<Declaration>();
@@ -497,6 +522,7 @@ public class MagASTBuilder extends BaseListener {
     public void exitWhileStatement(MagParser.WhileStatementContext ctx) {
         Statement body = (Statement) stack.pop();
         stack.push(new WhileLoop((Expression) stack.pop(), body));
+        inWhileLoop = false;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -530,14 +556,20 @@ public class MagASTBuilder extends BaseListener {
 //            System.out.println("0: " + expressionContexts[0].getText());
         }
         stack.push(new ForLoop(init, cond, incr, forStatement));
+
+        inForLoop = false;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
     @Override
     public void exitReturnStatement(MagParser.ReturnStatementContext ctx) {
         if (ctx.expression() != null) {
+            if (!inFunction_returnType)
+                throw new CompileError("Return non-void expression while not in a function that should return anything.");
             stack.push(new ReturnStatement((Expression) stack.pop()));
         } else {
+            if (!inFunction_void)
+                throw new CompileError("Return void expression while not in a void function.");
             stack.push(new ReturnStatement());
         }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
@@ -546,12 +578,18 @@ public class MagASTBuilder extends BaseListener {
     @Override
     public void exitBreakStatement(MagParser.BreakStatementContext ctx) {
         stack.push(new BreakStatement());
+        if (!inForLoop && !inWhileLoop) {
+            throw new CompileError("BreakStatement used in neither ForLoop nor WhileLoop.");
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
     @Override
     public void exitContinueStatement(MagParser.ContinueStatementContext ctx) {
         stack.push(new ContinueStatement());
+        if (!inForLoop && !inWhileLoop) {
+            throw new CompileError("ContinueStatement used in neither ForLoop nor WhileLoop.");
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -596,6 +634,7 @@ public class MagASTBuilder extends BaseListener {
             paraList = (VarDeclList) stack.pop();
         stack.push(new FunctionDecl((Type) stack.pop(), functionName, paraList, block));
         ((FunctionDecl) SymbolTable.getType(functionName)).parameters = paraList;
+        inFunction_returnType = false;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
         //SymbolTable.endScope();
     }
@@ -609,6 +648,7 @@ public class MagASTBuilder extends BaseListener {
             paraList = (VarDeclList) stack.pop();
         stack.push(new FunctionDecl(new VoidType(), functionName, paraList, block));
         ((FunctionDecl) SymbolTable.getType(functionName)).parameters = paraList;
+        inFunction_void = false;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
         //SymbolTable.endScope();
     }

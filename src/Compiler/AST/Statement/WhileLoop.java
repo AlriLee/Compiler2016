@@ -1,6 +1,8 @@
 package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
+import Compiler.AST.Type.BoolType;
+import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -12,6 +14,9 @@ public class WhileLoop implements Statement {
     public Statement body;
 
     public WhileLoop(Expression cond, Statement b) {
+        if (!(cond.type instanceof BoolType)) {
+            throw new CompileError("A BoolType expression is expected in WhileLoop.");
+        }
         condition = cond;
         body = b;
     }

@@ -16,8 +16,8 @@ public class ForLoop implements Statement {
     public Statement forStatement;
 
     public ForLoop(Expression init, Expression cond, Expression incre, Statement state) {
-        if (!(cond.type instanceof BoolType)) {
-            throw new CompileError("A BoolType expression is expected.");
+        if (cond != null && !(cond.type instanceof BoolType)) {
+            throw new CompileError("A BoolType expression is expected in ForLoop.");
         }
         initExpression = init;
         conditionExpression = cond;
