@@ -2,7 +2,10 @@ package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
 import Compiler.AST.Type.BoolType;
+import Compiler.ControlFlowGraph.Instruction.ConditionBranchInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.JumpInstruction;
+import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
 import Compiler.Error.CompileError;
 
 import java.util.List;
@@ -34,6 +37,15 @@ public class WhileLoop implements Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
-
+        LabelInstruction whileLoopLabel = new LabelInstruction("WhileLoop");
+        LabelInstruction bodyLabel = new LabelInstruction("WhileBody");
+        LabelInstruction outLabel = new LabelInstruction("OutOfWhile");
+        instruction.add(whileLoopLabel);
+        condition.emit(instruction);
+        instruction.add(new ConditionBranchInstruction(condition.register, bodyLabel, outLabel));
+        instruction.add(bodyLabel);
+        body.emit(instruction);
+        instruction.add(new JumpInstruction(whileLoopLabel));
+        instruction.add(outLabel);
     }
 }

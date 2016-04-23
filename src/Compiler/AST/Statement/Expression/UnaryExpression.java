@@ -2,7 +2,12 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.BoolType;
 import Compiler.AST.Type.IntType;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.UnaryInstruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Register;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -42,6 +47,36 @@ public class UnaryExpression extends Expression {
                     throw new CompileError("UnaryExpression " + op.toString() + " used on non-int type expression " + e.type.toString(0));
                 }
                 type = e.type;
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+        expression.emit(instructions);
+        switch (op) {
+            case NOT: {
+                register = new Register();
+                instructions.add(new UnaryInstruction(op, (Register) register, expression.register));
+                break;
+            }
+            case PLUS: {
+                register = expression.register;
+                break;
+            }
+            case MINUS: {
+                register = new Register();
+                instructions.add(new UnaryInstruction(op, (Register) register, expression.register));
+                break;
+            }
+            case TILDE: {
+
+                break;
+            }
+            case INC:
+            case DEC: {
+
                 break;
             }
         }

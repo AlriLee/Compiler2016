@@ -3,7 +3,7 @@ package Compiler.AST.Statement.Expression;
 import Compiler.AST.Statement.Statement;
 import Compiler.AST.Type.Type;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
-import Compiler.Operand.Register.Register;
+import Compiler.Operand.Operand;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
 public abstract class Expression implements Statement {
     public Type type;
     public boolean lvalue = false;
-    public Register register;
+    public Operand register;
 
     public void emit(List<Instruction> instructions) {
 

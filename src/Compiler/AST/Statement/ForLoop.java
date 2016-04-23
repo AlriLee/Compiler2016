@@ -2,7 +2,10 @@ package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
 import Compiler.AST.Type.BoolType;
+import Compiler.ControlFlowGraph.Instruction.ConditionBranchInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.JumpInstruction;
+import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
 import Compiler.Error.CompileError;
 
 import java.util.List;
@@ -47,6 +50,17 @@ public class ForLoop implements Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
-
+        LabelInstruction forLoopLabel = new LabelInstruction("ForLoop");
+        LabelInstruction bodyLabel = new LabelInstruction("ForBody");
+        LabelInstruction outLabel = new LabelInstruction("OutOfFor");
+        initExpression.emit(instruction);
+        instruction.add(forLoopLabel);
+        conditionExpression.emit(instruction);
+        instruction.add(new ConditionBranchInstruction(conditionExpression.register, bodyLabel, outLabel));
+        instruction.add(bodyLabel);
+        forStatement.emit(instruction);
+        incrementExpression.emit(instruction);
+        instruction.add(new JumpInstruction(forLoopLabel));
+        instruction.add(outLabel);
     }
 }

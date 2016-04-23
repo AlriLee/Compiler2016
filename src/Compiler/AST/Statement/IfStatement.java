@@ -2,7 +2,9 @@ package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
 import Compiler.AST.Type.BoolType;
+import Compiler.ControlFlowGraph.Instruction.ConditionBranchInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
 import Compiler.Error.CompileError;
 
 import java.util.List;
@@ -46,6 +48,13 @@ public class IfStatement implements Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
-
+        LabelInstruction consequenceLabel = new LabelInstruction("consequence");
+        LabelInstruction alternativeLabel = new LabelInstruction("alternative");
+        condition.emit(instruction);
+        instruction.add(new ConditionBranchInstruction(condition.register, consequenceLabel, alternativeLabel));
+        instruction.add(consequenceLabel);
+        consequence.emit(instruction);
+        instruction.add(alternativeLabel);
+        alternative.emit(instruction);
     }
 }
