@@ -2,9 +2,11 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.BoolType;
 import Compiler.AST.Type.IntType;
+import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.ControlFlowGraph.Instruction.UnaryInstruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Immediate;
 import Compiler.Operand.Register;
 
 import java.util.List;
@@ -74,9 +76,12 @@ public class UnaryExpression extends Expression {
 
                 break;
             }
-            case INC:
+            case INC: {
+                instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) register, (Register) register, new Immediate(1)));
+                break;
+            }
             case DEC: {
-
+                instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) register, (Register) register, new Immediate(1)));
                 break;
             }
         }

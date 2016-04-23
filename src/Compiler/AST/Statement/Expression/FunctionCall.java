@@ -3,7 +3,11 @@ package Compiler.AST.Statement.Expression;
 import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.ExpressionList;
 import Compiler.AST.VarDeclList;
+import Compiler.ControlFlowGraph.Instruction.CallInstruction;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -62,5 +66,14 @@ public class FunctionCall extends Expression {
             string += arguments.toString(d + 1);
         }
         return string;
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+        functionBody.emit(instructions);
+        for (ExpressionList arg = arguments; arg != null; arg = arg.expressionList) {
+            arg.expression.emit(instructions);
+        }
+        instructions.add(new CallInstruction((FunctionDecl) functionBody.type));
     }
 }

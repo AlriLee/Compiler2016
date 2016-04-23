@@ -1,7 +1,14 @@
 package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.IntType;
+import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.MoveInstruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Immediate;
+import Compiler.Operand.Register;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -25,5 +32,13 @@ public class PostSelfIncrement extends Expression {
     @Override
     public String toString(int d) {
         return indent(d) + "PostSelfIncrement\n" + body.toString(d + 1);
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+        body.emit(instructions);
+        register = new Register();
+        instructions.add(new MoveInstruction((Register) register, body.register));
+        instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) body.register, body.register, new Immediate(1)));
     }
 }
