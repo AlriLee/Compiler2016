@@ -2,6 +2,10 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Statement.Statement;
 import Compiler.AST.Type.Type;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.Operand.Register.Register;
+
+import java.util.List;
 
 /**
  * Created by Alri on 16/3/31.
@@ -9,4 +13,9 @@ import Compiler.AST.Type.Type;
 public abstract class Expression implements Statement {
     public Type type;
     public boolean lvalue = false;
+    public Register register;
+
+    public void emit(List<Instruction> instructions) {
+
+    }
 }

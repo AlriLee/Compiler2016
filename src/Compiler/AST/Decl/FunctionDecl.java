@@ -5,6 +5,7 @@ import Compiler.AST.Symbol;
 import Compiler.AST.Type.IntType;
 import Compiler.AST.Type.Type;
 import Compiler.AST.VarDeclList;
+import Compiler.ControlFlowGraph.ControlFlowGraph;
 import Compiler.Error.CompileError;
 
 import static Compiler.Tool.Tool.indent;
@@ -17,15 +18,8 @@ public class FunctionDecl implements Type, Declaration {
     public Symbol functionName;
     public VarDeclList parameters;
     public CompoundStatement functionBody;
+    public ControlFlowGraph cfg;
 
-    /*
-        public FunctionDecl() {
-            returnType = null;
-            functionName = null;
-            parameters = null;
-            functionBody = null;
-        }
-    */
     public FunctionDecl(Type rt, Symbol fn, VarDeclList pm, CompoundStatement fb) {
         returnType = rt;
         functionName = fn;
@@ -60,5 +54,10 @@ public class FunctionDecl implements Type, Declaration {
         if (rhs instanceof FunctionDecl)
             return true;
         else return false;
+    }
+
+    public void emit() {
+        cfg = new ControlFlowGraph();
+        functionBody.emit(cfg.instruction);
     }
 }

@@ -1,9 +1,10 @@
 package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Symbol;
-import Compiler.AST.Type.ClassType;
 import Compiler.AST.Type.Type;
-import Compiler.Error.CompileError;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -34,6 +35,11 @@ public class ClassAccess extends Expression {
                 return;
             }
         }*/
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+
     }
 
     @Override

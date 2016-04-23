@@ -7,7 +7,10 @@ import Compiler.AST.Type.ArrayType;
 import Compiler.AST.Type.ClassType;
 import Compiler.AST.Type.NullType;
 import Compiler.AST.Type.Type;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -47,5 +50,14 @@ public class VarDecl implements Declaration, Statement {
         string += name.toString(d + 1);
         if (init != null) string += init.toString(d + 1);
         return string;
+    }
+
+    public void emit() {
+
+    }
+
+    @Override
+    public void emit(List<Instruction> instruction) {
+
     }
 }

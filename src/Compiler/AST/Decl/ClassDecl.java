@@ -31,4 +31,8 @@ public class ClassDecl implements Declaration {
         }
         return string;
     }
+
+    public void emit() {
+
+    }
 }

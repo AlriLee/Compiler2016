@@ -2,7 +2,10 @@ package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
 import Compiler.AST.Type.BoolType;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -39,5 +42,10 @@ public class IfStatement implements Statement {
             string += alternative.toString(d + 1);
         }
         return string;
+    }
+
+    @Override
+    public void emit(List<Instruction> instruction) {
+
     }
 }

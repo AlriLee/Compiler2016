@@ -1,6 +1,9 @@
 package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -25,5 +28,10 @@ public class ReturnStatement implements Statement {
             string += expr.toString(d + 1);
         }
         return string;
+    }
+
+    @Override
+    public void emit(List<Instruction> instruction) {
+
     }
 }

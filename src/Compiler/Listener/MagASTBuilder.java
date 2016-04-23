@@ -8,7 +8,6 @@ import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Parser.MagParser;
 import Compiler.AST.Statement.*;
 import Compiler.AST.Statement.Expression.*;
-import Compiler.AST.Statement.Expression.Identifier;
 import Compiler.AST.Type.*;
 import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
@@ -60,7 +59,7 @@ public class MagASTBuilder extends BaseListener {
     @Override
     public void enterFunctionDecl_returnType(MagParser.FunctionDecl_returnTypeContext ctx) {
         Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
-        FunctionDecl function = (FunctionDecl) SymbolTable.getType(symbol);
+        FunctionDecl function = (FunctionDecl) SymbolTable.getType(symbol).type;
         functionReturnType = function.returnType;
     }
 
@@ -126,7 +125,7 @@ public class MagASTBuilder extends BaseListener {
             stack.push(new BoolType());
         } else {
             Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
-            Type type = SymbolTable.getType(symbol);
+            Type type = SymbolTable.getType(symbol).type;
             if (type == null) {
                 throw new CompileError("Undefined class type.");
             }
@@ -146,7 +145,7 @@ public class MagASTBuilder extends BaseListener {
             functionName = ((MagParser.FunctionDecl_voidContext) ctx.parent).ID().getText();
         }
         if (functionName != null) {
-            FunctionDecl function = (FunctionDecl) SymbolTable.getType(Symbol.getSymbol(functionName));
+            FunctionDecl function = (FunctionDecl) SymbolTable.getType(Symbol.getSymbol(functionName)).type;
             for (VarDeclList varDeclList = function.parameters; varDeclList != null; varDeclList = varDeclList.varDeclList) {
                 VarDecl varDecl = varDeclList.varDecl;
                 SymbolTable.addSymbol(varDecl.name, varDecl.type);
@@ -657,7 +656,7 @@ public class MagASTBuilder extends BaseListener {
         if (ctx.parameterList() != null)
             paraList = (VarDeclList) stack.pop();
         stack.push(new FunctionDecl((Type) stack.pop(), functionName, paraList, block));
-        ((FunctionDecl) SymbolTable.getType(functionName)).parameters = paraList;
+        ((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
         functionReturnType = null;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
         //SymbolTable.endScope();
@@ -671,7 +670,7 @@ public class MagASTBuilder extends BaseListener {
         if (ctx.parameterList() != null)
             paraList = (VarDeclList) stack.pop();
         stack.push(new FunctionDecl(new VoidType(), functionName, paraList, block));
-        ((FunctionDecl) SymbolTable.getType(functionName)).parameters = paraList;
+        ((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
         functionReturnType = null;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
         //SymbolTable.endScope();

@@ -1,6 +1,9 @@
 package Compiler.AST.Statement;
 
 import Compiler.AST.StatementList;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -25,5 +28,12 @@ public class CompoundStatement implements Statement {
             string += statementBlock.toString(d + 1);
         }
         return string;
+    }
+
+    @Override
+    public void emit(List<Instruction> instruction) {
+        for (StatementList statementList = statementBlock; statementList != null; statementList = statementList.statementList) {
+            statementList.statement.emit(instruction);
+        }
     }
 }

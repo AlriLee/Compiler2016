@@ -1,6 +1,7 @@
 package Compiler.AST;
 
 import Compiler.AST.Decl.Declaration;
+import Compiler.AST.Decl.FunctionDecl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -28,5 +29,9 @@ public class Prog implements ASTNode {
             string += declarations.get(i).toString(d + 1);
         }
         return string;
+    }
+
+    public void emit() {
+        declarations.stream().filter(declaration -> declaration instanceof FunctionDecl).forEach(declaration -> declaration.emit());
     }
 }

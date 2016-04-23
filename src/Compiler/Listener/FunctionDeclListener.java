@@ -5,17 +5,12 @@ import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Parser.MagBaseListener;
 import Compiler.AST.Parser.MagParser;
-import Compiler.AST.Statement.Expression.Expression;
-import Compiler.AST.Statement.ReturnStatement;
 import Compiler.AST.Symbol;
 import Compiler.AST.Type.*;
 import Compiler.AST.VarDeclList;
 import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
-
-import java.util.Set;
-import java.util.Stack;
 
 /**
  * Created by Alri on 16/4/4.
@@ -31,7 +26,7 @@ public class FunctionDeclListener extends MagBaseListener {
     @Override
     public void exitClassDeclaration(MagParser.ClassDeclarationContext ctx) {
         Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
-        ClassType classType = (ClassType)SymbolTable.symbolStackHashMap.get(symbol).peek();
+        ClassType classType = (ClassType) SymbolTable.symbolStackHashMap.get(symbol).peek().type;
         classType.classMember = (VarDeclList)stack.get(ctx.classMemberDeclarationList());
         classType.classMember.checkDuplicated();
     }
@@ -89,7 +84,7 @@ public class FunctionDeclListener extends MagBaseListener {
             if (SymbolTable.getType(symbol) == null) {
                 throw new CompileError("Undefined class type.");
             }
-            stack.put(ctx, SymbolTable.getType(symbol));
+            stack.put(ctx, SymbolTable.getType(symbol).type);
         }
     }
 

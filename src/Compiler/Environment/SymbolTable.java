@@ -17,8 +17,8 @@ import java.util.Stack;
  * Created by Alri on 16/4/4.
  */
 public class SymbolTable {
-    public static HashMap<Symbol, Stack<Type>> symbolStackHashMap;
-    public static Stack<HashMap<Symbol, Type>> hashMapStack;
+    public static HashMap<Symbol, Stack<SymbolTableEntry>> symbolStackHashMap;
+    public static Stack<HashMap<Symbol, SymbolTableEntry>> hashMapStack;
 
     public static void initilize() {
         MagASTBuilder.initialize();
@@ -30,8 +30,8 @@ public class SymbolTable {
         MagASTBuilder.stack = new Stack<>();
         FunctionDeclListener.stack = new ParseTreeProperty<>();
 
-        symbolStackHashMap = new HashMap<Symbol, Stack<Type>>();
-        hashMapStack = new Stack<HashMap<Symbol, Type>>();
+        symbolStackHashMap = new HashMap<>();
+        hashMapStack = new Stack<>();
 
         beginScope(); // Initialize the symbolTable to allow global declarations.
 
@@ -93,14 +93,15 @@ public class SymbolTable {
             System.out.println(hashMapStack.peek().get(symbol));
             throw new CompileError("Symbol name conflict in the same scope." + symbol.toString(0));
         }
-        hashMapStack.peek().put(symbol, type);
+        SymbolTableEntry entry = new SymbolTableEntry(symbol.name, type);
+        hashMapStack.peek().put(symbol, entry);
         if (!symbolStackHashMap.containsKey(symbol)) {
-            symbolStackHashMap.put(symbol, new Stack<Type>());
+            symbolStackHashMap.put(symbol, new Stack<>());
         }
-        symbolStackHashMap.get(symbol).push(type);
+        symbolStackHashMap.get(symbol).push(entry);
     }
 
-    public static Type getType(Symbol symbol) {
+    public static SymbolTableEntry getType(Symbol symbol) {
         if (!symbolStackHashMap.containsKey(symbol) || symbolStackHashMap.get(symbol).empty()) {
             return null;
         }
@@ -108,7 +109,7 @@ public class SymbolTable {
     }
 
     public static void beginScope() {
-        hashMapStack.push(new HashMap<Symbol, Type>());
+        hashMapStack.push(new HashMap<>());
     }
 
     public static void endScope() {

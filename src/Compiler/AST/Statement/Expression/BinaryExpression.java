@@ -1,7 +1,12 @@
 package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.*;
+import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Register.Register;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -109,7 +114,42 @@ public class BinaryExpression extends Expression {
         left = l;
         op = o;
         right = r;
-        // How to decide whether this object is lvalue?
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+        switch (op) {
+            case ASSIGN: {
+                left.emit(instructions);
+                right.emit(instructions);
+                instructions.add(new BinaryInstruction(BinaryOp.ASSIGN, left.register, right.register, left.register));
+                break;
+            }
+            case LOGICAL_AND:
+            case LOGICAL_OR:
+            case OR:
+            case XOR:
+            case AND:
+            case NEQ:
+            case EQ:
+            case LT:
+            case GT:
+            case LEQ:
+            case GEQ:
+            case ADD:
+            case SHL:
+            case SHR:
+            case SUB:
+            case MUL:
+            case DIV:
+            case MOD: {
+                left.emit(instructions);
+                right.emit(instructions);
+                this.register = new Register();
+                instructions.add(new BinaryInstruction(op, left.register, right.register, this.register));
+                break;
+            }
+        }
     }
 
     @Override

@@ -1,6 +1,9 @@
 package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.Type;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -10,6 +13,11 @@ import static Compiler.Tool.Tool.indent;
 public class CreationExpression extends Expression {
     public CreationExpression(Type t) {
         type = t;
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+
     }
 
     @Override
