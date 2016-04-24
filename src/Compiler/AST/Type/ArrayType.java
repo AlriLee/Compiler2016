@@ -15,10 +15,19 @@ import static Compiler.Tool.Tool.indent;
  * Created by Alri on 16/3/31.
  */
 public class ArrayType implements Type {
+    private static HashMap<Symbol, Type> members;
     public Type baseType;
     public Expression arraySize;
 
-    private static HashMap<Symbol, Type> members;
+    public ArrayType(Type bt) {
+        baseType = bt;
+        arraySize = null;
+    }
+
+    public ArrayType(Type bt, Expression as) {
+        baseType = bt;
+        arraySize = as;
+    }
 
     public static void initialize() {
         members = new HashMap<>();
@@ -36,14 +45,9 @@ public class ArrayType implements Type {
         );
     }
 
-    public ArrayType(Type bt) {
-        baseType = bt;
-        arraySize = null;
-    }
-
-    public ArrayType(Type bt, Expression as) {
-        baseType = bt;
-        arraySize = as;
+    @Override
+    public long size() {
+        return 4;
     }
 
     public void changeSize(Expression as) {

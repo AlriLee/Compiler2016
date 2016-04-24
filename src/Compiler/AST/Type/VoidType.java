@@ -25,4 +25,9 @@ public class VoidType extends BasicType {
             return true;
         else return false;
     }
+
+    @Override
+    public long size() {
+        throw new Error();
+    }
 }

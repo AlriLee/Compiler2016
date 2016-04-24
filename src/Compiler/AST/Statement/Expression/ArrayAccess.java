@@ -2,7 +2,13 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.ArrayType;
 import Compiler.AST.Type.IntType;
+import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Immediate;
+import Compiler.Operand.Register;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -12,11 +18,6 @@ import static Compiler.Tool.Tool.indent;
 public class ArrayAccess extends Expression {
     public Expression arrayBody;
     public Expression arrayIndex;
-
-    /*public ArrayAccess() {
-        arrayBody = null;
-        arrayIndex = null;
-    }*/
 
     public ArrayAccess(Expression ab, Expression ai) {
         if (!(ab.type instanceof ArrayType)) {
@@ -37,5 +38,15 @@ public class ArrayAccess extends Expression {
         if (arrayBody != null) string += arrayBody.toString(d + 1);
         if (arrayIndex != null) string += arrayIndex.toString(d + 1);
         return string;
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+        arrayBody.emit(instructions);
+        arrayIndex.emit(instructions);
+        long size = arrayBody.type.size();
+        Register offSet = new Register();
+        instructions.add(new BinaryInstruction(BinaryOp.MUL, offSet, arrayIndex.operand, new Immediate(size)));
+        instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) operand, arrayBody.operand, offSet));
     }
 }

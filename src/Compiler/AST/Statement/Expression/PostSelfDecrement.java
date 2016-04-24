@@ -36,14 +36,8 @@ public class PostSelfDecrement extends Expression {
 
     @Override
     public void emit(List<Instruction> instructions) {
-        /*
-        Register temp = new Register();
-        register = new Register();
-        instructions.add(new MoveInstruction(temp, register));
-        instructions.add(new BinaryInstruction(BinaryOp.ADD, register, register, new Immediate(1)));
-        */
-        register = new Register();
-        instructions.add(new MoveInstruction((Register) register, body.register));
-        instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) body.register, body.register, new Immediate(1)));
+        operand = new Register();
+        instructions.add(new MoveInstruction((Register) operand, body.operand));
+        instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) body.operand, body.operand, new Immediate(1)));
     }
 }

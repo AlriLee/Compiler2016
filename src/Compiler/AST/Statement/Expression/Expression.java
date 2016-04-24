@@ -13,9 +13,11 @@ import java.util.List;
 public abstract class Expression implements Statement {
     public Type type;
     public boolean lvalue = false;
-    public Operand register;
+    public Operand operand;
 
     public void emit(List<Instruction> instructions) {
+    }
 
+    public void load(List<Instruction> instructions) {
     }
 }

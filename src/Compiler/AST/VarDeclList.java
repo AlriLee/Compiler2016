@@ -1,7 +1,6 @@
 package Compiler.AST;
 
 import Compiler.AST.Decl.VarDecl;
-import Compiler.AST.Statement.Statement;
 import Compiler.AST.Type.NullType;
 import Compiler.AST.Type.Type;
 import Compiler.Error.CompileError;
@@ -17,15 +16,18 @@ import static Compiler.Tool.Tool.indent;
 public class VarDeclList implements ASTNode {
     public VarDecl varDecl;
     public VarDeclList varDeclList;
+    public long varDeclSize;
 
     public VarDeclList(VarDecl varDecl) {
         this.varDecl = varDecl;
         this.varDeclList = null;
+        varDeclSize = varDecl.size;
     }
 
     public VarDeclList(VarDecl varDecl, VarDeclList varDeclList) {
         this.varDecl = varDecl;
         this.varDeclList = varDeclList;
+        varDeclSize = varDeclList.varDeclSize + varDecl.size;
     }
 
     public static VarDeclList getVarDeclList(List<Pair<String, Type>> parameters) {
@@ -60,10 +62,22 @@ public class VarDeclList implements ASTNode {
         return new NullType();
     }
 
+    public long getVarDeclOffSet(Symbol variableSymbol) {
+        long vdi = 0;
+        for (VarDeclList vdl = varDeclList; vdl != null; vdl = vdl.varDeclList) {
+            if (varDecl.name.equals(variableSymbol)) {
+                vdi = vdl.varDeclSize;
+                break;
+            }
+        }
+        return vdi;
+    }
+
     public String toString(int d) {
         String string = indent(d) + "VarDeclList" + "\n" + varDecl.toString(d + 1);
         if (varDeclList != null)
             string += varDeclList.toString(d + 1);
         return string;
     }
+
 }

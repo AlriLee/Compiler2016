@@ -59,17 +59,17 @@ public class UnaryExpression extends Expression {
         expression.emit(instructions);
         switch (op) {
             case NOT: {
-                register = new Register();
-                instructions.add(new UnaryInstruction(op, (Register) register, expression.register));
+                operand = new Register();
+                instructions.add(new UnaryInstruction(op, (Register) operand, expression.operand));
                 break;
             }
             case PLUS: {
-                register = expression.register;
+                operand = expression.operand;
                 break;
             }
             case MINUS: {
-                register = new Register();
-                instructions.add(new UnaryInstruction(op, (Register) register, expression.register));
+                operand = new Register();
+                instructions.add(new UnaryInstruction(op, (Register) operand, expression.operand));
                 break;
             }
             case TILDE: {
@@ -77,11 +77,13 @@ public class UnaryExpression extends Expression {
                 break;
             }
             case INC: {
-                instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) register, (Register) register, new Immediate(1)));
+                operand = new Register();
+                instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) operand, (Register) operand, new Immediate(1)));
                 break;
             }
             case DEC: {
-                instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) register, (Register) register, new Immediate(1)));
+                operand = new Register();
+                instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) operand, (Register) operand, new Immediate(1)));
                 break;
             }
         }

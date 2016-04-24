@@ -15,13 +15,21 @@ import static Compiler.Tool.Tool.indent;
 /**
  * Created by Alri on 16/3/31.
  */
-public class ForLoop implements Statement {
+public class ForLoop implements LoopStatement {
     public Expression initExpression;
     public Expression conditionExpression;
     public Expression incrementExpression;
     public Statement forStatement;
+    public LabelInstruction forLoopLabel = new LabelInstruction("ForLoop");
 
-    public ForLoop(Expression init, Expression cond, Expression incre, Statement state) {
+    public ForLoop() {
+        initExpression = null;
+        conditionExpression = null;
+        incrementExpression = null;
+        forStatement = null;
+    }
+
+    public ForLoop FulfillForLoop(Expression init, Expression cond, Expression incre, Statement state) {
         if (cond != null && !(cond.type instanceof BoolType)) {
             throw new CompileError("A BoolType expression is expected in ForLoop.");
         }
@@ -29,6 +37,7 @@ public class ForLoop implements Statement {
         conditionExpression = cond;
         incrementExpression = incre;
         forStatement = state;
+        return this;
     }
 
     @Override
@@ -50,13 +59,12 @@ public class ForLoop implements Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
-        LabelInstruction forLoopLabel = new LabelInstruction("ForLoop");
         LabelInstruction bodyLabel = new LabelInstruction("ForBody");
         LabelInstruction outLabel = new LabelInstruction("OutOfFor");
         initExpression.emit(instruction);
         instruction.add(forLoopLabel);
         conditionExpression.emit(instruction);
-        instruction.add(new ConditionBranchInstruction(conditionExpression.register, bodyLabel, outLabel));
+        instruction.add(new ConditionBranchInstruction(conditionExpression.operand, bodyLabel, outLabel));
         instruction.add(bodyLabel);
         forStatement.emit(instruction);
         incrementExpression.emit(instruction);

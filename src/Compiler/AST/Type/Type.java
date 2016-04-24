@@ -9,5 +9,7 @@ import Compiler.AST.Symbol;
 public interface Type extends ASTNode {
     boolean equal(Type rhs);
 
+    long size();
+
     Type getMemberType(Symbol memberSymbol);
 }

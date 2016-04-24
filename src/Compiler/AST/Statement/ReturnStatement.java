@@ -13,10 +13,6 @@ import static Compiler.Tool.Tool.indent;
 public class ReturnStatement implements Statement {
     public Expression expr;
 
-    public ReturnStatement() {
-        expr = null;
-    }
-
     public ReturnStatement(Expression e) {
         expr = e;
     }

@@ -24,10 +24,12 @@ public class MagASTBuilder extends BaseListener {
 
     public static int loopCounts;
     public static Type functionReturnType;
+    public static Stack<LoopStatement> loopStatementStack;
 
     public static void initialize() {
         loopCounts = 0;
         functionReturnType = null;
+        loopStatementStack = new Stack<>();
     }
 
     @Override
@@ -46,12 +48,14 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void enterForStatement(MagParser.ForStatementContext ctx) {
+        loopStatementStack.push(new ForLoop());
         loopCounts++;
         SymbolTable.beginScope();
     }
 
     @Override
     public void enterWhileStatement(MagParser.WhileStatementContext ctx) {
+        loopStatementStack.push(new WhileLoop());
         loopCounts++;
         SymbolTable.beginScope();
     }
@@ -541,7 +545,7 @@ public class MagASTBuilder extends BaseListener {
     @Override
     public void exitWhileStatement(MagParser.WhileStatementContext ctx) {
         Statement body = (Statement) stack.pop();
-        stack.push(new WhileLoop((Expression) stack.pop(), body));
+        stack.push(((WhileLoop) loopStatementStack.pop()).FulfillWhileLoop((Expression) stack.pop(), body));
         loopCounts--;
         SymbolTable.endScope();
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
@@ -576,7 +580,7 @@ public class MagASTBuilder extends BaseListener {
             init = (Expression) stack.pop();
 //            System.out.println("0: " + expressionContexts[0].getText());
         }
-        stack.push(new ForLoop(init, cond, incr, forStatement));
+        stack.push(((ForLoop) loopStatementStack.pop()).FulfillForLoop(init, cond, incr, forStatement));
 
         loopCounts--;
         SymbolTable.endScope();
@@ -600,7 +604,7 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitBreakStatement(MagParser.BreakStatementContext ctx) {
-        stack.push(new BreakStatement());
+        stack.push(new BreakStatement(loopStatementStack.peek()));
         if (loopCounts == 0) {
             throw new CompileError("BreakStatement used in neither ForLoop nor WhileLoop.");
         }
@@ -609,7 +613,7 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitContinueStatement(MagParser.ContinueStatementContext ctx) {
-        stack.push(new ContinueStatement());
+        stack.push(new ContinueStatement(loopStatementStack.peek()));
         if (loopCounts == 0) {
             throw new CompileError("ContinueStatement used in neither ForLoop nor WhileLoop.");
         }

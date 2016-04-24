@@ -37,8 +37,8 @@ public class PostSelfIncrement extends Expression {
     @Override
     public void emit(List<Instruction> instructions) {
         body.emit(instructions);
-        register = new Register();
-        instructions.add(new MoveInstruction((Register) register, body.register));
-        instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) body.register, body.register, new Immediate(1)));
+        operand = new Register();
+        instructions.add(new MoveInstruction((Register) operand, body.operand));
+        instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) body.operand, body.operand, new Immediate(1)));
     }
 }

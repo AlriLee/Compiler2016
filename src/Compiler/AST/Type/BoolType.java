@@ -25,4 +25,9 @@ public class BoolType extends BasicType {
             return true;
         else return false;
     }
+
+    @Override
+    public long size() {
+        return 1;
+    }
 }

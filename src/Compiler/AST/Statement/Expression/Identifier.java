@@ -32,6 +32,6 @@ public class Identifier extends Expression {
 
     @Override
     public void emit(List<Instruction> instructions) {
-        register = entry.register;
+        operand = entry.register;
     }
 }

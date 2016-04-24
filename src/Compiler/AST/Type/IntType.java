@@ -14,13 +14,8 @@ import static Compiler.Tool.Tool.indent;
  * Created by Alri on 16/3/31.
  */
 public class IntType extends BasicType {
-    public boolean lvalue;
-    @Override
-    public String toString(int d) {
-        return indent(d) + "IntType\n";
-    }
-
     private static HashMap<Symbol, Type> members;
+    public boolean lvalue;
 
     public static void initialize() {
         members = new HashMap<>();
@@ -49,6 +44,11 @@ public class IntType extends BasicType {
     }
 
     @Override
+    public String toString(int d) {
+        return indent(d) + "IntType\n";
+    }
+
+    @Override
     public Type getMemberType(Symbol memberSymbol) {
         if (members.containsKey(memberSymbol)) {
             return members.get(memberSymbol);
@@ -61,5 +61,10 @@ public class IntType extends BasicType {
             return true;
         else
             return false;
+    }
+
+    @Override
+    public long size() {
+        return 4;
     }
 }

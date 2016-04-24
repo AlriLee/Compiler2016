@@ -3,8 +3,10 @@ package Compiler.AST.Statement.Expression;
 import Compiler.AST.Type.*;
 import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.LoadInstruction;
 import Compiler.ControlFlowGraph.Instruction.MoveInstruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Address;
 import Compiler.Operand.Register;
 
 import java.util.List;
@@ -123,7 +125,14 @@ public class BinaryExpression extends Expression {
         right.emit(instructions);
         switch (op) {
             case ASSIGN: {
-                instructions.add(new MoveInstruction((Register) left.register, right.register));
+                if (left.operand instanceof Address) {
+                    instructions.add(new LoadInstruction((Register) left.operand, right.operand));
+                } else {
+                    if (right.operand instanceof Address) {
+                        right.load(instructions);
+                    }
+                    instructions.add(new MoveInstruction((Register) left.operand, right.operand));
+                }
                 break;
             }
             case LOGICAL_AND:
@@ -144,8 +153,8 @@ public class BinaryExpression extends Expression {
             case MUL:
             case DIV:
             case MOD: {
-                this.register = new Register();
-                instructions.add(new BinaryInstruction(op, (Register) this.register, left.register, right.register));
+                this.operand = new Register();
+                instructions.add(new BinaryInstruction(op, (Register) this.operand, left.operand, right.operand));
                 break;
             }
         }

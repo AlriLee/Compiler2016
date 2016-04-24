@@ -15,16 +15,23 @@ import static Compiler.Tool.Tool.indent;
 /**
  * Created by Alri on 16/3/31.
  */
-public class WhileLoop implements Statement {
+public class WhileLoop implements LoopStatement {
     public Expression condition;
     public Statement body;
+    public LabelInstruction whileLoopLabel = new LabelInstruction("WhileLoop");
 
-    public WhileLoop(Expression cond, Statement b) {
+    public WhileLoop() {
+        condition = null;
+        body = null;
+    }
+
+    public WhileLoop FulfillWhileLoop(Expression cond, Statement b) {
         if (!(cond.type instanceof BoolType)) {
             throw new CompileError("A BoolType expression is expected in WhileLoop.");
         }
         condition = cond;
         body = b;
+        return this;
     }
 
     @Override
@@ -37,12 +44,11 @@ public class WhileLoop implements Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
-        LabelInstruction whileLoopLabel = new LabelInstruction("WhileLoop");
         LabelInstruction bodyLabel = new LabelInstruction("WhileBody");
         LabelInstruction outLabel = new LabelInstruction("OutOfWhile");
         instruction.add(whileLoopLabel);
         condition.emit(instruction);
-        instruction.add(new ConditionBranchInstruction(condition.register, bodyLabel, outLabel));
+        instruction.add(new ConditionBranchInstruction(condition.operand, bodyLabel, outLabel));
         instruction.add(bodyLabel);
         body.emit(instruction);
         instruction.add(new JumpInstruction(whileLoopLabel));

@@ -21,11 +21,13 @@ public class VarDecl implements Declaration, Statement {
     public Type type;
     public Symbol name;
     public Expression init;
+    public long size;
 
     public VarDecl(Type t, Symbol n) {
         type = t;
         name = n;
         init = null;
+        size = type.size();
     }
 
     public VarDecl(Type t, Symbol n, Expression i) {
@@ -41,6 +43,7 @@ public class VarDecl implements Declaration, Statement {
         if (!sameType) {
             throw new CompileError("type error");
         }
+        size = type.size();
     }
 
     @Override

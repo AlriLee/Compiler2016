@@ -4,6 +4,7 @@ import Compiler.AST.Statement.Expression.Expression;
 import Compiler.AST.Type.BoolType;
 import Compiler.ControlFlowGraph.Instruction.ConditionBranchInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.JumpInstruction;
 import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
 import Compiler.Error.CompileError;
 
@@ -50,11 +51,15 @@ public class IfStatement implements Statement {
     public void emit(List<Instruction> instruction) {
         LabelInstruction consequenceLabel = new LabelInstruction("consequence");
         LabelInstruction alternativeLabel = new LabelInstruction("alternative");
+        LabelInstruction outLabel = new LabelInstruction("OutOfIf");
         condition.emit(instruction);
-        instruction.add(new ConditionBranchInstruction(condition.register, consequenceLabel, alternativeLabel));
+        instruction.add(new ConditionBranchInstruction(condition.operand, consequenceLabel, alternativeLabel));
         instruction.add(consequenceLabel);
         consequence.emit(instruction);
+        instruction.add(new JumpInstruction(outLabel));
         instruction.add(alternativeLabel);
         alternative.emit(instruction);
+        instruction.add(new JumpInstruction(outLabel));
+        instruction.add(outLabel);
     }
 }

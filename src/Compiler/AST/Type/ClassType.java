@@ -29,6 +29,10 @@ public class ClassType extends BasicType {
         throw new CompileError("no member");
     }
 
+    public long getMemberOffSet(Symbol memberSymbol) {
+        return classMember.getVarDeclOffSet(memberSymbol);
+    }
+
     @Override
     public String toString(int d) {
         String string = indent(d) + "ClassType\n" + indent(d + 1);
@@ -42,5 +46,11 @@ public class ClassType extends BasicType {
     @Override
     public boolean equal(Type rhs) {
         return rhs == this;
+    }
+
+    @Override
+    public long size() {
+        return 4;
+        //return classMember.varDeclSize;
     }
 }
