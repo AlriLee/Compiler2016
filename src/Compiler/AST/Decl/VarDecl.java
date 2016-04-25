@@ -27,7 +27,7 @@ public class VarDecl implements Declaration, Statement {
         type = t;
         name = n;
         init = null;
-        size = type.size();
+        size = type.pointerSize();
     }
 
     public VarDecl(Type t, Symbol n, Expression i) {
@@ -43,7 +43,7 @@ public class VarDecl implements Declaration, Statement {
         if (!sameType) {
             throw new CompileError("type error");
         }
-        size = type.size();
+        size = type.pointerSize();
     }
 
     @Override

@@ -2,6 +2,8 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.Type;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.MoveInstruction;
+import Compiler.Operand.Register;
 
 import java.util.List;
 
@@ -17,7 +19,7 @@ public class CreationExpression extends Expression {
 
     @Override
     public void emit(List<Instruction> instructions) {
-
+        instructions.add(new MoveInstruction((Register) operand, type.alloc(instructions)));
     }
 
     @Override

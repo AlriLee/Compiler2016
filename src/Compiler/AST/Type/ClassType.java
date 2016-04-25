@@ -2,7 +2,12 @@ package Compiler.AST.Type;
 
 import Compiler.AST.Symbol;
 import Compiler.AST.VarDeclList;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Immediate;
+import Compiler.Operand.Operand;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -49,8 +54,12 @@ public class ClassType extends BasicType {
     }
 
     @Override
-    public long size() {
+    public long pointerSize() {
         return 4;
-        //return classMember.varDeclSize;
+    }
+
+    @Override
+    public Operand alloc(List<Instruction> instructions) {
+        return new Immediate(classMember.varDeclSize);
     }
 }

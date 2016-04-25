@@ -6,7 +6,12 @@ import Compiler.AST.Type.IntType;
 import Compiler.AST.Type.Type;
 import Compiler.AST.VarDeclList;
 import Compiler.ControlFlowGraph.ControlFlowGraph;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Operand;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -19,6 +24,7 @@ public class FunctionDecl implements Type, Declaration {
     public VarDeclList parameters;
     public CompoundStatement functionBody;
     public ControlFlowGraph cfg;
+    public LabelInstruction endOfFunctionLabel = new LabelInstruction("EndOfFunction");
 
     public FunctionDecl(Type rt, Symbol fn, VarDeclList pm, CompoundStatement fb) {
         returnType = rt;
@@ -59,5 +65,16 @@ public class FunctionDecl implements Type, Declaration {
     public void emit() {
         cfg = new ControlFlowGraph();
         functionBody.emit(cfg.instruction);
+        cfg.instruction.add(endOfFunctionLabel);
+    }
+
+    @Override
+    public long pointerSize() {
+        return 0;
+    }
+
+    @Override
+    public Operand alloc(List<Instruction> instructions) {
+        return null;
     }
 }

@@ -1,7 +1,11 @@
 package Compiler.AST.Type;
 
 import Compiler.AST.Symbol;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Operand;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -27,7 +31,12 @@ public class BoolType extends BasicType {
     }
 
     @Override
-    public long size() {
+    public long pointerSize() {
         return 1;
+    }
+
+    @Override
+    public Operand alloc(List<Instruction> instructions) {
+        throw new CompileError("Unable to new a boolType.");
     }
 }

@@ -28,7 +28,7 @@ public class ClassAccess extends Expression {
         type = classType.getMemberType(attribute);
         lvalue = className.lvalue;
         //List<VarDecl> memList = ((ClassType)SymbolTable.hashMapStack.peek().get(symbol)).classMember;
-        /*for (int i = 0; i < memList.size(); ++i) {
+        /*for (int i = 0; i < memList.pointerSize(); ++i) {
             Type t = ((VarDecl)memList.get(i)).type;
             Symbol s = ((VarDecl)memList.get(i)).name;
             if (s.equals(attribute)) {
@@ -52,7 +52,7 @@ public class ClassAccess extends Expression {
         long attributeOffSet = ((ClassType) classType).getMemberOffSet(attribute);
         //Register offSet = new Register();
         //instructions.add(new LoadInstruction(offSet, new Immediate(attributeOffSet)));
-        operand = new Address((Register) className.operand, new Immediate(attributeOffSet), type.size());
+        operand = new Address((Register) className.operand, new Immediate(attributeOffSet), type.pointerSize());
     }
 
     @Override

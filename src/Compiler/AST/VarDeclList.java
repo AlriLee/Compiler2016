@@ -27,7 +27,10 @@ public class VarDeclList implements ASTNode {
     public VarDeclList(VarDecl varDecl, VarDeclList varDeclList) {
         this.varDecl = varDecl;
         this.varDeclList = varDeclList;
-        varDeclSize = varDeclList.varDeclSize + varDecl.size;
+        //if (varDeclList == null) System.out.println("The varDeclList is null.\n" + varDecl.toString(0));
+        if (varDeclList != null)
+            varDeclSize = varDeclList.varDeclSize + varDecl.size;
+        else varDeclSize = varDecl.size;
     }
 
     public static VarDeclList getVarDeclList(List<Pair<String, Type>> parameters) {

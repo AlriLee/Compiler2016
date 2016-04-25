@@ -153,7 +153,7 @@ public class MagASTBuilder extends BaseListener {
             for (VarDeclList varDeclList = function.parameters; varDeclList != null; varDeclList = varDeclList.varDeclList) {
                 VarDecl varDecl = varDeclList.varDecl;
                 SymbolTable.addSymbol(varDecl.name, varDecl.type);
-                System.out.println(varDecl.name + " " + varDecl.type.toString());
+                //System.out.println(varDecl.name + " " + varDecl.type.toString());
             }
         }
     }

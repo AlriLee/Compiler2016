@@ -2,6 +2,7 @@ package Compiler.AST.Statement;
 
 import Compiler.AST.Statement.Expression.Expression;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.ReturnInstruction;
 
 import java.util.List;
 
@@ -17,6 +18,10 @@ public class ReturnStatement implements Statement {
         expr = e;
     }
 
+    public ReturnStatement() {
+        expr = null;
+    }
+
     @Override
     public String toString(int d) {
         String string = indent(d) + "ReturnStatement\n";
@@ -28,6 +33,7 @@ public class ReturnStatement implements Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
-
+        expr.emit(instruction);
+        instruction.add(new ReturnInstruction(expr.operand));
     }
 }

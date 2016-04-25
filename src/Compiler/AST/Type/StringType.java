@@ -4,11 +4,14 @@ import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Symbol;
 import Compiler.AST.VarDeclList;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Operand;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -90,7 +93,12 @@ public class StringType extends BasicType {
     }
 
     @Override
-    public long size() {
-        return 0;
-    }
+    public long pointerSize() {
+        return 4;
+    }// TODO
+
+    @Override
+    public Operand alloc(List<Instruction> instructions) {
+        throw new CompileError("Unable to new a string.");
+    }// TODO
 }

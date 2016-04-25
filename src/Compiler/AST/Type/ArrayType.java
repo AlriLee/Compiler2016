@@ -2,12 +2,19 @@ package Compiler.AST.Type;
 
 import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.Decl.VarDecl;
+import Compiler.AST.Statement.Expression.BinaryOp;
 import Compiler.AST.Statement.Expression.Expression;
 import Compiler.AST.Symbol;
 import Compiler.AST.VarDeclList;
+import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Immediate;
+import Compiler.Operand.Operand;
+import Compiler.Operand.Register;
 
 import java.util.HashMap;
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -34,8 +41,8 @@ public class ArrayType implements Type {
         Symbol thisSymbol = Symbol.getSymbol("this");
         VarDeclList varDeclList = new VarDeclList(new VarDecl(new StringType(), thisSymbol));
 
-        // int size()
-        Symbol sizeSymbol = Symbol.getSymbol("size");
+        // int pointerSize()
+        Symbol sizeSymbol = Symbol.getSymbol("pointerSize");
         members.put(sizeSymbol, new FunctionDecl(
                 new IntType(),
                 sizeSymbol,
@@ -43,11 +50,6 @@ public class ArrayType implements Type {
                 null
             )
         );
-    }
-
-    @Override
-    public long size() {
-        return 4;
     }
 
     public void changeSize(Expression as) {
@@ -76,5 +78,17 @@ public class ArrayType implements Type {
             return baseType.equal(((ArrayType) rhs).baseType);
         else
             return false;
+    }
+
+    @Override
+    public long pointerSize() {
+        return 4;
+    }
+
+    @Override
+    public Operand alloc(List<Instruction> instructions) {
+        Operand reg = new Register();
+        instructions.add(new BinaryInstruction(BinaryOp.MUL, (Register) reg, arraySize.operand, new Immediate(baseType.pointerSize())));
+        return reg;
     }
 }

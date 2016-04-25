@@ -6,7 +6,10 @@ import Compiler.AST.VarDeclList;
 import Compiler.ControlFlowGraph.Instruction.CallInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Operand;
+import Compiler.Operand.Register;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
@@ -45,8 +48,8 @@ public class FunctionCall extends Expression {
         VarDeclList list1 = function.parameters;
         ExpressionList list2 = arguments;
         while (list1 != null && list2 != null) {
-            System.out.println(list1.varDecl.type.toString());
-            System.out.println(list2.expression.type.toString());
+            //System.out.println(list1.varDecl.type.toString());
+            //System.out.println(list2.expression.type.toString());
             if (!list1.varDecl.type.equal(list2.expression.type)) {
                 throw new CompileError("parameter type error");
             }
@@ -70,10 +73,16 @@ public class FunctionCall extends Expression {
 
     @Override
     public void emit(List<Instruction> instructions) {
+        List<Operand> parameters = new ArrayList<>();
         functionBody.emit(instructions);
         for (ExpressionList arg = arguments; arg != null; arg = arg.expressionList) {
             arg.expression.emit(instructions);
+            arg.expression.load(instructions);
+            //System.out.println(arg.expression.toString(0));
+            parameters.add(arg.expression.operand);
         }
-        instructions.add(new CallInstruction((FunctionDecl) functionBody.type));
+        operand = new Register();
+        instructions.add(new CallInstruction((FunctionDecl) functionBody.type, parameters, operand));
+        // operand of functionCall
     }
 }
