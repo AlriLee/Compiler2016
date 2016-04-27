@@ -37,8 +37,8 @@ public class SymbolTable {
 
         //Add built-in functions to the outside-most scope.
 
-        // void print(string str);
-        Symbol printMethodSymbol = Symbol.getSymbol("print");
+        // void printInitialInstructions(string str);
+        Symbol printMethodSymbol = Symbol.getSymbol("printInitialInstructions");
         addSymbol(printMethodSymbol, new FunctionDecl(
                         new VoidType(),
                         printMethodSymbol,
@@ -88,7 +88,7 @@ public class SymbolTable {
         );
     }
 
-    public static void addSymbol(Symbol symbol, Type type) {
+    public static SymbolTableEntry addSymbol(Symbol symbol, Type type) {
         if (hashMapStack.peek().containsKey(symbol)) {
             System.out.println(hashMapStack.peek().get(symbol));
             throw new CompileError("Symbol name conflict in the same scope." + symbol.toString(0));
@@ -99,6 +99,7 @@ public class SymbolTable {
             symbolStackHashMap.put(symbol, new Stack<>());
         }
         symbolStackHashMap.get(symbol).push(entry);
+        return entry;
     }
 
     public static SymbolTableEntry getType(Symbol symbol) {

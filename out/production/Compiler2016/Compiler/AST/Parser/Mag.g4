@@ -330,3 +330,7 @@ Newline
 LineComment
 	: '//' ~[\r\n]* -> skip
 	;
+
+BlockComment
+    : '/*' .*? '*/' -> skip
+    ;

@@ -11,6 +11,7 @@ import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
 import Compiler.Error.CompileError;
 import Compiler.Operand.Operand;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
@@ -24,7 +25,9 @@ public class FunctionDecl implements Type, Declaration {
     public VarDeclList parameters;
     public CompoundStatement functionBody;
     public ControlFlowGraph cfg;
-    public LabelInstruction endOfFunctionLabel = new LabelInstruction("EndOfFunction");
+    public LabelInstruction beginOfFunctionDeclLabel = new LabelInstruction("BeginOfFunctionDecl");
+    public LabelInstruction endOfFunctionDeclLabel = new LabelInstruction("EndOfFunctionDecl");
+    public List<Operand> parameterOperand;
 
     public FunctionDecl(Type rt, Symbol fn, VarDeclList pm, CompoundStatement fb) {
         returnType = rt;
@@ -33,9 +36,10 @@ public class FunctionDecl implements Type, Declaration {
         functionBody = fb;
         if (functionName.name.equals("main")) {
             if (!(returnType instanceof IntType)) {
-                throw new CompileError("int main()");
+                throw new CompileError("returnType error in int main()");
             }
         }
+        parameterOperand = new ArrayList<>();
     }
 
     @Override
@@ -64,8 +68,9 @@ public class FunctionDecl implements Type, Declaration {
 
     public void emit() {
         cfg = new ControlFlowGraph();
+        cfg.instruction.add(beginOfFunctionDeclLabel);
         functionBody.emit(cfg.instruction);
-        cfg.instruction.add(endOfFunctionLabel);
+        cfg.instruction.add(endOfFunctionDeclLabel);
     }
 
     @Override

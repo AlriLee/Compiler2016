@@ -20,6 +20,7 @@ import static Compiler.Tool.Tool.indent;
 public class FunctionCall extends Expression {
     public Expression functionBody;
     public ExpressionList arguments;
+    public List<Operand> parameters;
 
     public FunctionCall(Expression fb) {
         functionBody = fb;
@@ -73,7 +74,7 @@ public class FunctionCall extends Expression {
 
     @Override
     public void emit(List<Instruction> instructions) {
-        List<Operand> parameters = new ArrayList<>();
+        parameters = new ArrayList<>();
         functionBody.emit(instructions);
         for (ExpressionList arg = arguments; arg != null; arg = arg.expressionList) {
             arg.expression.emit(instructions);

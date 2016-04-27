@@ -11,6 +11,7 @@ import Compiler.AST.Statement.Expression.*;
 import Compiler.AST.Type.*;
 import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Operand;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.LinkedList;
@@ -62,6 +63,7 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void enterFunctionDecl_returnType(MagParser.FunctionDecl_returnTypeContext ctx) {
+        SymbolTable.beginScope();//new
         Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
         FunctionDecl function = (FunctionDecl) SymbolTable.getType(symbol).type;
         functionReturnType = function.returnType;
@@ -69,6 +71,7 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void enterFunctionDecl_void(MagParser.FunctionDecl_voidContext ctx) {
+        SymbolTable.beginScope();//new
         functionReturnType = new VoidType();
     }
 
@@ -652,6 +655,7 @@ public class MagASTBuilder extends BaseListener {
     }
     */
 
+
     @Override
     public void exitFunctionDecl_returnType(MagParser.FunctionDecl_returnTypeContext ctx) {
         CompoundStatement block = (CompoundStatement) stack.pop();
@@ -663,7 +667,7 @@ public class MagASTBuilder extends BaseListener {
         ((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
         functionReturnType = null;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
-        //SymbolTable.endScope();
+        SymbolTable.endScope();
     }
 
     @Override
@@ -677,12 +681,18 @@ public class MagASTBuilder extends BaseListener {
         ((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
         functionReturnType = null;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
-        //SymbolTable.endScope();
+        SymbolTable.endScope();
     }
 
     @Override
     public void exitParameter_(MagParser.Parameter_Context ctx) {
-        stack.push(new VarDeclList(new VarDecl((Type) stack.pop(), Symbol.getSymbol(ctx.ID().getText()))));
+        Symbol symbol = Symbol.getSymbol(ctx.ID().getText());
+        Type type = (Type) stack.pop();
+        stack.push(new VarDeclList(new VarDecl(type, symbol)));
+        Operand paraOperand = SymbolTable.addSymbol(symbol, type).register;
+// TODO
+        Symbol functionSymbol = Symbol.getSymbol(ctx.parent.getText());
+        //((FunctionDecl)SymbolTable.getType(functionSymbol).type).parameterOperand.add(paraOperand);
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 

@@ -54,6 +54,7 @@ StringLiteral=53
 Whitespace=54
 Newline=55
 LineComment=56
+BlockComment=57
 'break'=1
 'continue'=2
 'else'=3

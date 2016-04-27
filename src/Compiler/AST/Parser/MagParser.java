@@ -22,7 +22,8 @@ public class MagParser extends Parser {
 			Plus = 29, PlusPlus = 30, Minus = 31, MinusMinus = 32, Star = 33, Div = 34, Mod = 35,
 			And = 36, Or = 37, AndAnd = 38, OrOr = 39, Caret = 40, Not = 41, Tilde = 42, Question = 43,
 			Colon = 44, Semi = 45, Comma = 46, Assign = 47, Equal = 48, NotEqual = 49, Dot = 50,
-			ID = 51, IntLiteral = 52, StringLiteral = 53, Whitespace = 54, Newline = 55, LineComment = 56;
+			ID = 51, IntLiteral = 52, StringLiteral = 53, Whitespace = 54, Newline = 55, LineComment = 56,
+			BlockComment = 57;
 	public static final int
 			RULE_program = 0, RULE_classDeclaration = 1, RULE_classMemberDeclarationList = 2,
 			RULE_typeArray = 3, RULE_type = 4, RULE_statement = 5, RULE_blockStatement = 6,
@@ -57,7 +58,7 @@ public class MagParser extends Parser {
 	@Deprecated
 	public static final String[] tokenNames;
 	public static final String _serializedATN =
-			"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3:\u01f0\4\2\t\2\4" +
+			"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3;\u01f0\4\2\t\2\4" +
 					"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t" +
 					"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22" +
 					"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31" +
@@ -258,7 +259,7 @@ public class MagParser extends Parser {
 			"Plus", "PlusPlus", "Minus", "MinusMinus", "Star", "Div", "Mod", "And",
 			"Or", "AndAnd", "OrOr", "Caret", "Not", "Tilde", "Question", "Colon",
 			"Semi", "Comma", "Assign", "Equal", "NotEqual", "Dot", "ID", "IntLiteral",
-			"StringLiteral", "Whitespace", "Newline", "LineComment"
+			"StringLiteral", "Whitespace", "Newline", "LineComment", "BlockComment"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -336,12 +337,13 @@ public class MagParser extends Parser {
 				_la = _input.LA(1);
 				do {
 					{
-						setState(89);
+				setState(89);
 						switch (getInterpreter().adaptivePredict(_input, 0, _ctx)) {
-							case 1: {
-								setState(84);
-								classDeclaration();
-							}
+							case 1:
+					{
+						setState(84);
+						classDeclaration();
+					}
 							break;
 							case 2: {
 								setState(85);
@@ -355,7 +357,7 @@ public class MagParser extends Parser {
 								match(Semi);
 							}
 							break;
-						}
+				}
 					}
 					setState(91);
 					_errHandler.sync(this);
@@ -392,7 +394,7 @@ public class MagParser extends Parser {
 					{
 						setState(96);
 						classMemberDeclarationList();
-					}
+				}
 				}
 
 				setState(99);
@@ -492,13 +494,13 @@ public class MagParser extends Parser {
 								match(LeftBracket);
 								setState(117);
 								match(RightBracket);
-							}
-						}
 					}
+						}
+				}
 					setState(122);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 4, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -523,7 +525,7 @@ public class MagParser extends Parser {
 					_errHandler.recoverInline(this);
 				} else {
 					consume();
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -609,7 +611,7 @@ public class MagParser extends Parser {
 					{
 						setState(134);
 						statementList();
-					}
+				}
 				}
 
 				setState(137);
@@ -673,7 +675,7 @@ public class MagParser extends Parser {
 					{
 						setState(145);
 						expression();
-					}
+				}
 				}
 
 				setState(148);
@@ -785,14 +787,14 @@ public class MagParser extends Parser {
 								setState(163);
 								match(OrOr);
 								setState(164);
-								logicalAndExpression(0);
-							}
-						}
+					logicalAndExpression(0);
 					}
+						}
+				}
 					setState(169);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 10, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -844,14 +846,14 @@ public class MagParser extends Parser {
 								setState(174);
 								match(AndAnd);
 								setState(175);
-								bitwiseOrExpression(0);
-							}
-						}
+					bitwiseOrExpression(0);
 					}
+						}
+				}
 					setState(180);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 11, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -903,14 +905,14 @@ public class MagParser extends Parser {
 								setState(185);
 								match(Or);
 								setState(186);
-								bitwiseXorExpression(0);
-							}
-						}
+					bitwiseXorExpression(0);
 					}
+						}
+				}
 					setState(191);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 12, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -962,14 +964,14 @@ public class MagParser extends Parser {
 								setState(196);
 								match(Caret);
 								setState(197);
-								bitwiseAndExpression(0);
-							}
-						}
+					bitwiseAndExpression(0);
 					}
+						}
+				}
 					setState(202);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 13, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -1021,14 +1023,14 @@ public class MagParser extends Parser {
 								setState(207);
 								match(And);
 								setState(208);
-								equalityExpression(0);
-							}
-						}
+					equalityExpression(0);
 					}
+						}
+				}
 					setState(213);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 14, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -1074,17 +1076,17 @@ public class MagParser extends Parser {
 						{
 							setState(223);
 							switch (getInterpreter().adaptivePredict(_input, 15, _ctx)) {
-								case 1: {
-									_localctx = new Equality_equalContext(new EqualityExpressionContext(_parentctx, _parentState));
-									pushNewRecursionContext(_localctx, _startState, RULE_equalityExpression);
-									setState(217);
-									if (!(precpred(_ctx, 2)))
-										throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-									setState(218);
-									match(Equal);
-									setState(219);
-									relationalExpression(0);
-								}
+								case 1:
+						{
+							_localctx = new Equality_equalContext(new EqualityExpressionContext(_parentctx, _parentState));
+							pushNewRecursionContext(_localctx, _startState, RULE_equalityExpression);
+							setState(217);
+							if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+							setState(218);
+							match(Equal);
+							setState(219);
+							relationalExpression(0);
+						}
 								break;
 								case 2: {
 									_localctx = new Equality_notEqualContext(new EqualityExpressionContext(_parentctx, _parentState));
@@ -1098,13 +1100,13 @@ public class MagParser extends Parser {
 									relationalExpression(0);
 								}
 								break;
-							}
-						}
 					}
+						}
+				}
 					setState(227);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 16, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -1150,17 +1152,17 @@ public class MagParser extends Parser {
 						{
 							setState(243);
 							switch (getInterpreter().adaptivePredict(_input, 17, _ctx)) {
-								case 1: {
-									_localctx = new Relational_lessContext(new RelationalExpressionContext(_parentctx, _parentState));
-									pushNewRecursionContext(_localctx, _startState, RULE_relationalExpression);
-									setState(231);
-									if (!(precpred(_ctx, 4)))
-										throw new FailedPredicateException(this, "precpred(_ctx, 4)");
-									setState(232);
-									match(Less);
-									setState(233);
-									shiftExpression(0);
-								}
+								case 1:
+						{
+							_localctx = new Relational_lessContext(new RelationalExpressionContext(_parentctx, _parentState));
+							pushNewRecursionContext(_localctx, _startState, RULE_relationalExpression);
+							setState(231);
+							if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
+							setState(232);
+							match(Less);
+							setState(233);
+							shiftExpression(0);
+						}
 								break;
 								case 2: {
 									_localctx = new Relational_greaterContext(new RelationalExpressionContext(_parentctx, _parentState));
@@ -1198,13 +1200,13 @@ public class MagParser extends Parser {
 									shiftExpression(0);
 								}
 								break;
-							}
-						}
 					}
+						}
+				}
 					setState(247);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 18, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -1250,17 +1252,17 @@ public class MagParser extends Parser {
 						{
 							setState(257);
 							switch (getInterpreter().adaptivePredict(_input, 19, _ctx)) {
-								case 1: {
-									_localctx = new Shift_leftShiftContext(new ShiftExpressionContext(_parentctx, _parentState));
-									pushNewRecursionContext(_localctx, _startState, RULE_shiftExpression);
-									setState(251);
-									if (!(precpred(_ctx, 2)))
-										throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-									setState(252);
-									match(LeftShift);
-									setState(253);
-									addSubExpression(0);
-								}
+								case 1:
+						{
+							_localctx = new Shift_leftShiftContext(new ShiftExpressionContext(_parentctx, _parentState));
+							pushNewRecursionContext(_localctx, _startState, RULE_shiftExpression);
+							setState(251);
+							if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+							setState(252);
+							match(LeftShift);
+							setState(253);
+							addSubExpression(0);
+						}
 								break;
 								case 2: {
 									_localctx = new Shift_rightShiftContext(new ShiftExpressionContext(_parentctx, _parentState));
@@ -1274,13 +1276,13 @@ public class MagParser extends Parser {
 									addSubExpression(0);
 								}
 								break;
-							}
-						}
 					}
+						}
+				}
 					setState(261);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 20, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -1326,17 +1328,17 @@ public class MagParser extends Parser {
 						{
 							setState(271);
 							switch (getInterpreter().adaptivePredict(_input, 21, _ctx)) {
-								case 1: {
-									_localctx = new AddSub_addContext(new AddSubExpressionContext(_parentctx, _parentState));
-									pushNewRecursionContext(_localctx, _startState, RULE_addSubExpression);
-									setState(265);
-									if (!(precpred(_ctx, 2)))
-										throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-									setState(266);
-									match(Plus);
-									setState(267);
-									mulDivRemExpression(0);
-								}
+								case 1:
+						{
+							_localctx = new AddSub_addContext(new AddSubExpressionContext(_parentctx, _parentState));
+							pushNewRecursionContext(_localctx, _startState, RULE_addSubExpression);
+							setState(265);
+							if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+							setState(266);
+							match(Plus);
+							setState(267);
+							mulDivRemExpression(0);
+						}
 								break;
 								case 2: {
 									_localctx = new AddSub_subContext(new AddSubExpressionContext(_parentctx, _parentState));
@@ -1350,13 +1352,13 @@ public class MagParser extends Parser {
 									mulDivRemExpression(0);
 								}
 								break;
-							}
-						}
 					}
+						}
+				}
 					setState(275);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 22, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -1402,17 +1404,17 @@ public class MagParser extends Parser {
 						{
 							setState(288);
 							switch (getInterpreter().adaptivePredict(_input, 23, _ctx)) {
-								case 1: {
-									_localctx = new MulDivRem_mulContext(new MulDivRemExpressionContext(_parentctx, _parentState));
-									pushNewRecursionContext(_localctx, _startState, RULE_mulDivRemExpression);
-									setState(279);
-									if (!(precpred(_ctx, 3)))
-										throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-									setState(280);
-									match(Star);
-									setState(281);
-									creationExpression();
-								}
+								case 1:
+						{
+							_localctx = new MulDivRem_mulContext(new MulDivRemExpressionContext(_parentctx, _parentState));
+							pushNewRecursionContext(_localctx, _startState, RULE_mulDivRemExpression);
+							setState(279);
+							if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
+							setState(280);
+							match(Star);
+							setState(281);
+							creationExpression();
+						}
 								break;
 								case 2: {
 									_localctx = new MulDivRem_divContext(new MulDivRemExpressionContext(_parentctx, _parentState));
@@ -1438,13 +1440,13 @@ public class MagParser extends Parser {
 									creationExpression();
 								}
 								break;
-							}
-						}
 					}
+						}
+				}
 					setState(292);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 24, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -1475,9 +1477,9 @@ public class MagParser extends Parser {
 						case 1: {
 							setState(295);
 							dimensionExpression();
-						}
-						break;
 					}
+						break;
+				}
 				}
 				break;
 				case 2:
@@ -1733,19 +1735,19 @@ public class MagParser extends Parser {
 						{
 							setState(362);
 							switch (getInterpreter().adaptivePredict(_input, 31, _ctx)) {
-								case 1: {
-									_localctx = new Postfix_expressionContext(new PostfixExpressionContext(_parentctx, _parentState));
-									pushNewRecursionContext(_localctx, _startState, RULE_postfixExpression);
-									setState(344);
-									if (!(precpred(_ctx, 5)))
-										throw new FailedPredicateException(this, "precpred(_ctx, 5)");
-									setState(345);
-									match(LeftBracket);
-									setState(346);
-									expression();
-									setState(347);
-									match(RightBracket);
-								}
+								case 1:
+						{
+							_localctx = new Postfix_expressionContext(new PostfixExpressionContext(_parentctx, _parentState));
+							pushNewRecursionContext(_localctx, _startState, RULE_postfixExpression);
+							setState(344);
+							if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
+							setState(345);
+							match(LeftBracket);
+							setState(346);
+							expression();
+							setState(347);
+							match(RightBracket);
+						}
 								break;
 								case 2: {
 									_localctx = new Postfix_argumentContext(new PostfixExpressionContext(_parentctx, _parentState));
@@ -1761,8 +1763,8 @@ public class MagParser extends Parser {
 										{
 											setState(351);
 											argumentExpressionList();
-										}
-									}
+							}
+						}
 
 									setState(354);
 									match(RightParen);
@@ -1800,13 +1802,13 @@ public class MagParser extends Parser {
 									match(MinusMinus);
 								}
 								break;
-							}
-						}
 					}
+						}
+				}
 					setState(366);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input, 32, _ctx);
-				}
+			}
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -2123,7 +2125,7 @@ public class MagParser extends Parser {
 					{
 						setState(420);
 						expression();
-					}
+				}
 				}
 
 				setState(423);
@@ -2134,7 +2136,7 @@ public class MagParser extends Parser {
 					{
 						setState(424);
 						expression();
-					}
+				}
 				}
 
 				setState(427);
@@ -2145,7 +2147,7 @@ public class MagParser extends Parser {
 					{
 						setState(428);
 						expression();
-					}
+				}
 				}
 
 				setState(431);
@@ -2218,7 +2220,7 @@ public class MagParser extends Parser {
 					{
 						setState(440);
 						expression();
-					}
+				}
 				}
 
 				setState(443);
@@ -2364,7 +2366,7 @@ public class MagParser extends Parser {
 						{
 							setState(467);
 							parameterList();
-						}
+					}
 					}
 
 					setState(470);
@@ -2389,7 +2391,7 @@ public class MagParser extends Parser {
 						{
 							setState(476);
 							parameterList();
-						}
+					}
 					}
 
 					setState(479);
@@ -2635,12 +2637,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_program;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterProgram(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitProgram(this);
@@ -2664,12 +2664,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_classDeclaration;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterClassDeclaration(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitClassDeclaration(this);
@@ -2715,7 +2713,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterClassMemDeclList_list(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitClassMemDeclList_list(this);
@@ -2739,7 +2736,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterClassMemDeclList_(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitClassMemDeclList_(this);
@@ -2777,7 +2773,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterTypeArray_type(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitTypeArray_type(this);
@@ -2797,7 +2792,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterTypeArray_dim(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitTypeArray_dim(this);
@@ -2817,12 +2811,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_type;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterType(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitType(this);
@@ -2862,12 +2854,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_statement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitStatement(this);
@@ -2887,12 +2877,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_blockStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterBlockStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitBlockStatement(this);
@@ -2930,7 +2918,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterStatementList_stmt(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitStatementList_stmt(this);
@@ -2954,7 +2941,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterStatementList_list(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitStatementList_list(this);
@@ -2974,12 +2960,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_expressionStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterExpressionStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitExpressionStatement(this);
@@ -2999,12 +2983,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_expression;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterExpression(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitExpression(this);
@@ -3046,7 +3028,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterAssignment_assign(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitAssignment_assign(this);
@@ -3066,7 +3047,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterAssignment_logicalOr(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitAssignment_logicalOr(this);
@@ -3108,7 +3088,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterLogicalOr_or(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitLogicalOr_or(this);
@@ -3128,7 +3107,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterLogicalOr_logicalAnd(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitLogicalOr_logicalAnd(this);
@@ -3166,7 +3144,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterLogicalAnd_bitwiseOr(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitLogicalAnd_bitwiseOr(this);
@@ -3190,7 +3167,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterLogicalAnd_and(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitLogicalAnd_and(this);
@@ -3228,7 +3204,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterBitwiseOr_bitwiseXor(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitBitwiseOr_bitwiseXor(this);
@@ -3252,7 +3227,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterBitwiseOr_or(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitBitwiseOr_or(this);
@@ -3290,7 +3264,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterBitwiseXor_bitwiseAnd(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitBitwiseXor_bitwiseAnd(this);
@@ -3314,7 +3287,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterBitwiseXor_xor(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitBitwiseXor_xor(this);
@@ -3356,7 +3328,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterBitwiseAnd_and(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitBitwiseAnd_and(this);
@@ -3376,7 +3347,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterBitwiseAnd_equal(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitBitwiseAnd_equal(this);
@@ -3414,7 +3384,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterEquality_relational(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitEquality_relational(this);
@@ -3438,7 +3407,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterEquality_notEqual(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitEquality_notEqual(this);
@@ -3462,7 +3430,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterEquality_equal(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitEquality_equal(this);
@@ -3500,7 +3467,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterRelational_shift(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitRelational_shift(this);
@@ -3524,7 +3490,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterRelational_geq(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitRelational_geq(this);
@@ -3548,7 +3513,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterRelational_greater(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitRelational_greater(this);
@@ -3572,7 +3536,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterRelational_leq(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitRelational_leq(this);
@@ -3596,7 +3559,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterRelational_less(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitRelational_less(this);
@@ -3638,7 +3600,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterShift_leftShift(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitShift_leftShift(this);
@@ -3658,7 +3619,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterShift_addSub(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitShift_addSub(this);
@@ -3682,7 +3642,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterShift_rightShift(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitShift_rightShift(this);
@@ -3720,7 +3679,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterAddSub_mulDivRem(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitAddSub_mulDivRem(this);
@@ -3744,7 +3702,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterAddSub_sub(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitAddSub_sub(this);
@@ -3768,7 +3725,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterAddSub_add(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitAddSub_add(this);
@@ -3810,7 +3766,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterMulDivRem_rem(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitMulDivRem_rem(this);
@@ -3834,7 +3789,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterMulDivRem_div(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitMulDivRem_div(this);
@@ -3854,7 +3808,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterMulDivRem_creation(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitMulDivRem_creation(this);
@@ -3878,7 +3831,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterMulDivRem_mul(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitMulDivRem_mul(this);
@@ -3916,7 +3868,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterCreation_prefix(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitCreation_prefix(this);
@@ -3940,7 +3891,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterCreation_dim(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitCreation_dim(this);
@@ -3964,7 +3914,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterCreation_para(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitCreation_para(this);
@@ -4006,7 +3955,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterDimension_dim(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitDimension_dim(this);
@@ -4026,7 +3974,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterDimension_(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitDimension_(this);
@@ -4046,7 +3993,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterDimension_void(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitDimension_void(this);
@@ -4075,12 +4021,10 @@ public class MagParser extends Parser {
 		public DimVoid_Context(DimensionVoidExpressionContext ctx) {
 			copyFrom(ctx);
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterDimVoid_(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitDimVoid_(this);
@@ -4100,7 +4044,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterDimVoid_d(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitDimVoid_d(this);
@@ -4138,7 +4081,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrefix_postfix(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrefix_postfix(this);
@@ -4158,7 +4100,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrefix_negative(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrefix_negative(this);
@@ -4178,7 +4119,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrefix_plusPlus(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrefix_plusPlus(this);
@@ -4198,7 +4138,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrefix_not(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrefix_not(this);
@@ -4218,7 +4157,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrefix_positive(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrefix_positive(this);
@@ -4238,7 +4176,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrefix_tilde(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrefix_tilde(this);
@@ -4258,7 +4195,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrefix_minusMinus(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrefix_minusMinus(this);
@@ -4300,7 +4236,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPostfix_id(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPostfix_id(this);
@@ -4320,7 +4255,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPostfix_incre(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPostfix_incre(this);
@@ -4344,7 +4278,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPostfix_expression(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPostfix_expression(this);
@@ -4364,7 +4297,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPostfix_primary(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPostfix_primary(this);
@@ -4388,7 +4320,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPostfix_argument(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPostfix_argument(this);
@@ -4408,7 +4339,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPostfix_decre(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPostfix_decre(this);
@@ -4446,7 +4376,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrimary_constant(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrimary_constant(this);
@@ -4466,7 +4395,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrimary_id(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrimary_id(this);
@@ -4486,7 +4414,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterPrimary_expression(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitPrimary_expression(this);
@@ -4524,7 +4451,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterConstant_logic(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitConstant_logic(this);
@@ -4544,7 +4470,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterConstant_string(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitConstant_string(this);
@@ -4555,12 +4480,10 @@ public class MagParser extends Parser {
 		public Constant_nullContext(ConstantContext ctx) {
 			copyFrom(ctx);
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterConstant_null(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitConstant_null(this);
@@ -4580,7 +4503,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterConstant_int(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitConstant_int(this);
@@ -4609,12 +4531,10 @@ public class MagParser extends Parser {
 		public Logic_falseContext(LogicConstantContext ctx) {
 			copyFrom(ctx);
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterLogic_false(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitLogic_false(this);
@@ -4625,12 +4545,10 @@ public class MagParser extends Parser {
 		public Logic_trueContext(LogicConstantContext ctx) {
 			copyFrom(ctx);
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterLogic_true(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitLogic_true(this);
@@ -4668,7 +4586,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterArgument_expression(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitArgument_expression(this);
@@ -4692,7 +4609,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterArgument_expressionList(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitArgument_expressionList(this);
@@ -4734,7 +4650,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterSelection_if(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitSelection_if(this);
@@ -4762,7 +4677,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterSelection_ifElse(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitSelection_ifElse(this);
@@ -4786,12 +4700,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_iterationStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterIterationStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitIterationStatement(this);
@@ -4815,12 +4727,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_whileStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterWhileStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitWhileStatement(this);
@@ -4848,12 +4758,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_forStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterForStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitForStatement(this);
@@ -4881,12 +4789,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_jumpStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterJumpStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitJumpStatement(this);
@@ -4906,12 +4812,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_returnStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterReturnStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitReturnStatement(this);
@@ -4927,12 +4831,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_breakStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterBreakStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitBreakStatement(this);
@@ -4948,12 +4850,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_continueStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterContinueStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitContinueStatement(this);
@@ -4973,12 +4873,10 @@ public class MagParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_variableDeclarationStatement;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterVariableDeclarationStatement(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitVariableDeclarationStatement(this);
@@ -5020,7 +4918,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterVarDecl_(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitVarDecl_(this);
@@ -5048,7 +4945,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterVarDecl_init(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitVarDecl_init(this);
@@ -5098,7 +4994,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterFunctionDecl_returnType(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitFunctionDecl_returnType(this);
@@ -5126,7 +5021,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterFunctionDecl_void(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitFunctionDecl_void(this);
@@ -5168,7 +5062,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterParameter_(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitParameter_(this);
@@ -5196,7 +5089,6 @@ public class MagParser extends Parser {
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).enterParameter_list(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof MagListener) ((MagListener) listener).exitParameter_list(this);

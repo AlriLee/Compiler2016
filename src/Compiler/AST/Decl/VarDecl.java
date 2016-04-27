@@ -61,6 +61,7 @@ public class VarDecl implements Declaration, Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
+        init.emit(instruction);
 
     }
 }
