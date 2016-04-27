@@ -15,8 +15,7 @@ public abstract class Expression implements Statement {
     public boolean lvalue = false;
     public Operand operand;
 
-    public void emit(List<Instruction> instructions) {
-    }
+    public abstract void emit(List<Instruction> instructions);
 
     public void load(List<Instruction> instructions) {
     }

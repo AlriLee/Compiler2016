@@ -55,10 +55,14 @@ public class IfStatement implements Statement {
         condition.emit(instruction);
         instruction.add(new ConditionBranchInstruction(condition.operand, consequenceLabel, alternativeLabel));
         instruction.add(consequenceLabel);
-        consequence.emit(instruction);
+        if (consequence != null) {
+            consequence.emit(instruction);
+        }
         instruction.add(new JumpInstruction(outLabel));
         instruction.add(alternativeLabel);
-        alternative.emit(instruction);
+        if (alternative != null) {
+            alternative.emit(instruction);
+        }
         instruction.add(new JumpInstruction(outLabel));
         instruction.add(outLabel);
     }

@@ -8,6 +8,8 @@ import Compiler.AST.Type.ClassType;
 import Compiler.AST.Type.NullType;
 import Compiler.AST.Type.Type;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.MoveInstruction;
+import Compiler.Environment.SymbolTableEntry;
 import Compiler.Error.CompileError;
 
 import java.util.List;
@@ -22,12 +24,14 @@ public class VarDecl implements Declaration, Statement {
     public Symbol name;
     public Expression init;
     public long size;
+    public SymbolTableEntry entry;
 
     public VarDecl(Type t, Symbol n) {
         type = t;
         name = n;
         init = null;
         size = type.pointerSize();
+        entry = null;
     }
 
     public VarDecl(Type t, Symbol n, Expression i) {
@@ -61,7 +65,9 @@ public class VarDecl implements Declaration, Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
-        init.emit(instruction);
-
+        if (init != null) {
+            init.emit(instruction);
+            instruction.add(new MoveInstruction(entry.register, init.operand));
+        }
     }
 }

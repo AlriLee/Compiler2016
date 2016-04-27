@@ -21,6 +21,7 @@ public class Identifier extends Expression {
             throw new CompileError("no symbol named \"" + s.name + "\"");
         }
         entry = SymbolTable.getType(s);
+        //System.out.println("In Identifier " + entry.name);
         type = entry.type;
         lvalue = true;
     }

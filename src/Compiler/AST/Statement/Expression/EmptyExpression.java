@@ -1,6 +1,9 @@
 package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.NullType;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -14,5 +17,10 @@ public class EmptyExpression extends Expression {
     @Override
     public String toString(int d) {
         return indent(d) + "EmptyExpression\n";
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+
     }
 }

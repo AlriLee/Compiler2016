@@ -24,6 +24,7 @@ public class FunctionDecl implements Type, Declaration {
     public Symbol functionName;
     public VarDeclList parameters;
     public CompoundStatement functionBody;
+
     public ControlFlowGraph cfg;
     public LabelInstruction beginOfFunctionDeclLabel = new LabelInstruction("BeginOfFunctionDecl");
     public LabelInstruction endOfFunctionDeclLabel = new LabelInstruction("EndOfFunctionDecl");
@@ -71,6 +72,12 @@ public class FunctionDecl implements Type, Declaration {
         cfg.instruction.add(beginOfFunctionDeclLabel);
         functionBody.emit(cfg.instruction);
         cfg.instruction.add(endOfFunctionDeclLabel);
+    }
+
+    public void addParameterOperand() {
+        for (VarDeclList vdl = parameters; vdl != null; vdl = vdl.varDeclList) {
+//            parameterOperand.add(vdl.varDecl.)
+        }
     }
 
     @Override

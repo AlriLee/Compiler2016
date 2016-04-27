@@ -1,6 +1,9 @@
 package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.StringType;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+
+import java.util.List;
 
 import static Compiler.Tool.Tool.indent;
 
@@ -10,13 +13,14 @@ import static Compiler.Tool.Tool.indent;
 public class StringConst extends Expression {
     public String stringValue;
 
-    /*public StringConst() {
-        stringValue = null;
-    }*/
-
     public StringConst(String sv) {
         stringValue = sv;
         type = new StringType();
+    }
+
+    @Override
+    public void emit(List<Instruction> instructions) {
+        // TODO
     }
 
     @Override
