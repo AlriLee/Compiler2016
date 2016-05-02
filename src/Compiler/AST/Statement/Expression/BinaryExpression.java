@@ -1,10 +1,7 @@
 package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.*;
-import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
-import Compiler.ControlFlowGraph.Instruction.Instruction;
-import Compiler.ControlFlowGraph.Instruction.LoadInstruction;
-import Compiler.ControlFlowGraph.Instruction.MoveInstruction;
+import Compiler.ControlFlowGraph.Instruction.*;
 import Compiler.Error.CompileError;
 import Compiler.Operand.Address;
 import Compiler.Operand.Register;
@@ -121,18 +118,18 @@ public class BinaryExpression extends Expression {
 
     @Override
     public void emit(List<Instruction> instructions) {
+        this.operand = new Register();
         left.emit(instructions);
         right.emit(instructions);
         switch (op) {
             case ASSIGN: {
+                right.load(instructions);
                 if (left.operand instanceof Address) {
-                    instructions.add(new LoadInstruction((Register) left.operand, right.operand));
+                    instructions.add(new StoreInstruction((Address) left.operand, right.operand));
                 } else {
-                    if (right.operand instanceof Address) {
-                        right.load(instructions);
-                    }
                     instructions.add(new MoveInstruction((Register) left.operand, right.operand));
                 }
+                this.operand = left.operand;
                 break;
             }
             case LOGICAL_AND:
@@ -153,7 +150,8 @@ public class BinaryExpression extends Expression {
             case MUL:
             case DIV:
             case MOD: {
-                this.operand = new Register();
+                left.load(instructions);
+                right.load(instructions);
                 instructions.add(new BinaryInstruction(op, (Register) this.operand, left.operand, right.operand));
                 break;
             }
@@ -168,5 +166,14 @@ public class BinaryExpression extends Expression {
                 + op.toString()
                 + right.toString(d + 1)
                 ;
+    }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+        if (operand instanceof Address) {
+            Address srcAddr = (Address) operand;
+            operand = new Register();
+            instructions.add(new LoadInstruction((Register) operand, srcAddr));
+        }
     }
 }

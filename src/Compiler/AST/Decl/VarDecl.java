@@ -11,6 +11,7 @@ import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.ControlFlowGraph.Instruction.MoveInstruction;
 import Compiler.Environment.SymbolTableEntry;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Address;
 
 import java.util.List;
 
@@ -67,6 +68,8 @@ public class VarDecl implements Declaration, Statement {
     public void emit(List<Instruction> instruction) {
         if (init != null) {
             init.emit(instruction);
+            if (init.operand instanceof Address)
+                init.load(instruction);
             instruction.add(new MoveInstruction(entry.register, init.operand));
         }
     }

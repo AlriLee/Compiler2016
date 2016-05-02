@@ -86,4 +86,9 @@ public class FunctionCall extends Expression {
         instructions.add(new CallInstruction((FunctionDecl) functionBody.type, parameters, operand));
         // operand of functionCall
     }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
+    }
 }

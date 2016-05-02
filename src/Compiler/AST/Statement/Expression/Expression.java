@@ -17,6 +17,12 @@ public abstract class Expression implements Statement {
 
     public abstract void emit(List<Instruction> instructions);
 
-    public void load(List<Instruction> instructions) {
-    }
+    /*public void load(List<Instruction> instructions) {
+        if (operand instanceof Address) {
+            Address srcAddr = (Address) operand;
+            operand = new Register();
+            instructions.add(new LoadInstruction((Register) operand, srcAddr));
+        }
+    }*/
+    public abstract void load(List<Instruction> instructions);
 }

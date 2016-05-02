@@ -24,6 +24,6 @@ public class ContinueStatement implements Statement {
     @Override
     public void emit(List<Instruction> instruction) {
         if (loop instanceof WhileLoop) instruction.add(new JumpInstruction(((WhileLoop) loop).whileLoopLabel));
-        if (loop instanceof ForLoop) instruction.add(new JumpInstruction(((ForLoop) loop).forLoopLabel));
+        if (loop instanceof ForLoop) instruction.add(new JumpInstruction(((ForLoop) loop).continueLoopLabel));
     }
 }

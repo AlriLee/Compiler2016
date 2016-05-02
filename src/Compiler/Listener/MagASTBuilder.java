@@ -650,7 +650,8 @@ public class MagASTBuilder extends BaseListener {
         if (ctx.parameterList() != null) {
             paraList = (VarDeclList) stack.pop();
         }
-        stack.push(new FunctionDecl((Type) stack.pop(), functionName, paraList, block));
+        //stack.push(new FunctionDecl((Type) stack.pop(), functionName, paraList, block));
+        // TODO
         ((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
         functionReturnType = null;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());

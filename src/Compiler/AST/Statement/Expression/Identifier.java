@@ -35,4 +35,9 @@ public class Identifier extends Expression {
     public void emit(List<Instruction> instructions) {
         operand = entry.register;
     }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
+    }
 }

@@ -77,12 +77,12 @@ public class UnaryExpression extends Expression {
                 break;
             }
             case INC: {
-                operand = new Register();
+                operand = expression.operand;
                 instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) operand, (Register) operand, new Immediate(1)));
                 break;
             }
             case DEC: {
-                operand = new Register();
+                operand = expression.operand;
                 instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) operand, (Register) operand, new Immediate(1)));
                 break;
             }
@@ -95,5 +95,10 @@ public class UnaryExpression extends Expression {
         string = string + indent(d + 1) + op.toString();
         string += expression.toString(d + 1);
         return string;
+    }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
     }
 }

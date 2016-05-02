@@ -1,11 +1,15 @@
 package Compiler.AST.Type;
 
+import Compiler.AST.Statement.Expression.BinaryOp;
 import Compiler.AST.Symbol;
 import Compiler.AST.VarDeclList;
+import Compiler.ControlFlowGraph.Instruction.AllocInstruction;
+import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
 import Compiler.Operand.Immediate;
 import Compiler.Operand.Operand;
+import Compiler.Operand.Register;
 
 import java.util.List;
 
@@ -60,6 +64,11 @@ public class ClassType extends BasicType {
 
     @Override
     public Operand alloc(List<Instruction> instructions) {
-        return new Immediate(classMember.varDeclSize);
+        //return new Immediate(classMember.varDeclSize);
+        Operand allocAddress = new Register();
+        Operand allocSize = new Register();
+        instructions.add(new BinaryInstruction(BinaryOp.MUL, (Register) allocSize, new Immediate(classMember.varDeclSize), new Immediate(4)));
+        instructions.add(new AllocInstruction((Register) allocAddress, (Register) allocSize));
+        return allocAddress;
     }
 }

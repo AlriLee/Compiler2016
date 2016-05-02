@@ -29,4 +29,9 @@ public class IntConst extends Expression {
     public void emit(List<Instruction> instructions) {
         operand = new Immediate(intValue);
     }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
+    }
 }

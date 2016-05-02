@@ -32,4 +32,9 @@ public class StringConst extends Expression {
             string += (indent(d + 1) + "null\n");
         return string;
     }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
+    }
 }

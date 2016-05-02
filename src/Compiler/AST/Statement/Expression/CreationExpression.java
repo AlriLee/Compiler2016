@@ -19,7 +19,9 @@ public class CreationExpression extends Expression {
 
     @Override
     public void emit(List<Instruction> instructions) {
-        instructions.add(new MoveInstruction((Register) operand, type.alloc(instructions)));
+        operand = new Register();
+        MoveInstruction moveInstruction = new MoveInstruction((Register) operand, type.alloc(instructions));
+        instructions.add(moveInstruction);
     }
 
     @Override
@@ -27,5 +29,10 @@ public class CreationExpression extends Expression {
         String string = indent(d) + "CreationExpression\n";
         string += type.toString(d + 1);
         return string;
+    }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
     }
 }

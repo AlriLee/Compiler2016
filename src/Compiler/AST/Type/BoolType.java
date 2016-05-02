@@ -32,7 +32,7 @@ public class BoolType extends BasicType {
 
     @Override
     public long pointerSize() {
-        return 1;
+        return 4;
     }
 
     @Override

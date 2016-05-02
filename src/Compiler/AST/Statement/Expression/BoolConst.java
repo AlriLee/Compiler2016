@@ -28,4 +28,9 @@ public class BoolConst extends Expression {
     public void emit(List<Instruction> instructions) {
         operand = new Immediate(value ? 1 : 0);
     }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
+    }
 }

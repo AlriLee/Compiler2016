@@ -21,6 +21,7 @@ public class ForLoop implements LoopStatement {
     public Expression incrementExpression;
     public Statement forStatement;
     public LabelInstruction forLoopLabel = new LabelInstruction("ForLoop");
+    public LabelInstruction continueLoopLabel = new LabelInstruction("continueFor");
 
     public ForLoop() {
         initExpression = null;
@@ -61,13 +62,19 @@ public class ForLoop implements LoopStatement {
     public void emit(List<Instruction> instruction) {
         LabelInstruction bodyLabel = new LabelInstruction("ForBody");
         LabelInstruction outLabel = new LabelInstruction("OutOfFor");
-        initExpression.emit(instruction);
+        if (initExpression != null)
+            initExpression.emit(instruction);
         instruction.add(forLoopLabel);
-        conditionExpression.emit(instruction);
-        instruction.add(new ConditionBranchInstruction(conditionExpression.operand, bodyLabel, outLabel));
+        if (conditionExpression != null) {
+            conditionExpression.emit(instruction);
+            instruction.add(new ConditionBranchInstruction(conditionExpression.operand, bodyLabel, outLabel));
+        }
         instruction.add(bodyLabel);
-        forStatement.emit(instruction);
-        incrementExpression.emit(instruction);
+        if (forStatement != null)
+            forStatement.emit(instruction);
+        instruction.add(continueLoopLabel);
+        if (incrementExpression != null)
+            incrementExpression.emit(instruction);
         instruction.add(new JumpInstruction(forLoopLabel));
         instruction.add(outLabel);
     }

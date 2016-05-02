@@ -53,6 +53,7 @@ public class IfStatement implements Statement {
         LabelInstruction alternativeLabel = new LabelInstruction("alternative");
         LabelInstruction outLabel = new LabelInstruction("OutOfIf");
         condition.emit(instruction);
+        condition.load(instruction);
         instruction.add(new ConditionBranchInstruction(condition.operand, consequenceLabel, alternativeLabel));
         instruction.add(consequenceLabel);
         if (consequence != null) {

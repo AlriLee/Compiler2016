@@ -6,6 +6,7 @@ import Compiler.AST.Statement.Expression.BinaryOp;
 import Compiler.AST.Statement.Expression.Expression;
 import Compiler.AST.Symbol;
 import Compiler.AST.VarDeclList;
+import Compiler.ControlFlowGraph.Instruction.AllocInstruction;
 import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.Error.CompileError;
@@ -87,8 +88,18 @@ public class ArrayType implements Type {
 
     @Override
     public Operand alloc(List<Instruction> instructions) {
-        Operand reg = new Register();
-        instructions.add(new BinaryInstruction(BinaryOp.MUL, (Register) reg, arraySize.operand, new Immediate(baseType.pointerSize())));
-        return reg;
+        /*Operand arrayReg = new Register();
+        arraySize.emit(instructions);
+        Immediate allocSize = new Immediate(baseType.pointerSize());
+        Operand allocAddress = new Register();
+        instructions.add(new AllocInstruction((Register)allocAddress, allocSize));
+        instructions.add(new BinaryInstruction(BinaryOp.MUL, (Register) arrayReg, arraySize.operand, allocSize));
+        return arrayReg;*/
+        Operand allocAddress = new Register();
+        arraySize.emit(instructions);
+        Operand allocSize = new Register();
+        instructions.add(new BinaryInstruction(BinaryOp.MUL, (Register) allocSize, arraySize.operand, new Immediate(baseType.pointerSize())));
+        instructions.add(new AllocInstruction((Register) allocAddress, (Register) allocSize));
+        return allocAddress;
     }
 }

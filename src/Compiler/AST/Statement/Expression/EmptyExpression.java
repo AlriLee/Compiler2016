@@ -23,4 +23,9 @@ public class EmptyExpression extends Expression {
     public void emit(List<Instruction> instructions) {
 
     }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
+    }
 }

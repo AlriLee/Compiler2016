@@ -24,4 +24,9 @@ public class NullConst extends Expression {
     public void emit(List<Instruction> instructions) {
         operand = new Immediate(0);
     }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+
+    }
 }

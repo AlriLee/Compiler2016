@@ -1,141 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="To do Register definition in VarDecl.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/FunctionDecl.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/FunctionDecl.class" />
+    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Back up 4.27.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/VarDecl.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/VarDecl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimVoid_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimVoid_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimVoid_dContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimVoid_dContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionVoidExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionVoidExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_voidContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_voidContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/Identifier.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/Identifier.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/ArrayAccess.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/ArrayAccess.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BinaryExpression$1.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BinaryExpression$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BinaryExpression.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BinaryExpression.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BoolConst.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/BoolConst.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/CreationExpression.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/CreationExpression.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/EmptyExpression.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/EmptyExpression.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/Expression.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/Expression.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/PostSelfDecrement.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/PostSelfDecrement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/StringConst.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/StringConst.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/UnaryExpression.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/UnaryExpression.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/ForLoop.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/ForLoop.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/IfStatement.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/IfStatement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/ArrayType.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/ArrayType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/BoolType.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/BoolType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/ClassType.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Type/ClassType.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Listener/MagASTBuilder.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Listener/MagASTBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/ContinueStatement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/ContinueStatement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ClassAccess.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ClassAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/EmptyExpression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/EmptyExpression.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/FunctionCall.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/FunctionCall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Identifier.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Identifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryExpression.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryExpression.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/IfStatement.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/IfStatement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Type/BoolType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/BoolType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Type/ClassType.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Type/ClassType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" afterPath="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
     </list>
     <ignored path="Compiler2016.iws" />
@@ -150,6 +56,9 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Compiler2016$IntermediateRepresentationTest__5_.coverage" NAME="IntermediateRepresentationTest (5) Coverage Results" MODIFIED="1462195293411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Compiler.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Compiler2016$SemanticCheckTest__1_.coverage" NAME="SemanticCheckTest (1) Coverage Results" MODIFIED="1460009987015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Compiler.*</FILTER>
     </SUITE>
@@ -163,101 +72,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StringConst.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java">
+      <file leaf-file-name="IntermediateRepresentationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Compiler/IntermediateRepresentationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+            <state relative-caret-position="291">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnaryExpression.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryExpression.java">
+      <file leaf-file-name="VarDecl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="455">
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Identifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Identifier.java">
+      <file leaf-file-name="Symbol.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Symbol.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            <state relative-caret-position="300">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function-1.mx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/function-1.mx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LabelInstruction.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LabelInstruction.java">
+      <file leaf-file-name="MagASTBuilder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayAccess.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinaryExpression.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="131" column="49" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntConst.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NullConst.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostSelfDecrement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostSelfIncrement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="286">
+              <caret line="653" column="15" selection-start-line="653" selection-start-column="15" selection-end-line="653" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -286,57 +148,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/LoopStatement.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/WhileLoop.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/BreakStatement.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/ContinueStatement.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/AllocInstruction.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Decl/ClassDecl.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/Type.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/ClassType.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/NullType.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/VoidType.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/BoolType.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/Operand/Operand.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/ConditionBranchInstruction.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LabelInstruction.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/ReturnStatement.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/ReturnInstruction.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/JumpInstruction.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/CallInstruction.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryOp.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/BinaryInstruction.java" />
         <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/UnaryInstruction.java" />
         <option value="$PROJECT_DIR$/test/Compiler/ControlFlowGraph.java" />
         <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlockBuilder.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlock.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/FunctionCall.java" />
         <option value="$PROJECT_DIR$/test/Compiler/Compiler.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" />
         <option value="$PROJECT_DIR$/test/Compiler/ControlFlowGraphTest.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/ControlFlowGraph.java" />
         <option value="$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/VarDeclList.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/StringType.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Type/IntType.java" />
         <option value="$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java" />
         <option value="$PROJECT_DIR$/test/Interpreter/LLIRInterpreter.java" />
-        <option value="$PROJECT_DIR$/test/Compiler/IntermediateRepresentationTest.java" />
         <option value="$PROJECT_DIR$/testcase/cfg/basic.mx" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/StoreInstruction.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LabelInstruction.java" />
+        <option value="$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-1.mx" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/BoolType.java" />
         <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/MoveInstruction.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/IfStatement.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlock.java" />
+        <option value="$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
+        <option value="$PROJECT_DIR$/testcase/cfg/intermediate-representation/oop-1.mx" />
+        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/AllocInstruction.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/ClassType.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/ControlFlowGraph.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" />
+        <option value="$PROJECT_DIR$/test/Compiler/IntermediateRepresentationTest.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/Operand/Address.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ClassAccess.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LoadInstruction.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/EmptyExpression.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/FunctionCall.java" />
         <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Identifier.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryExpression.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java" />
+        <option value="$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-7.mx" />
+        <option value="$PROJECT_DIR$/testcase/cfg/intermediate-representation/loop-1.mx" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/ContinueStatement.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/AST/Statement/IfStatement.java" />
+        <option value="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
       </list>
     </option>
   </component>
@@ -348,7 +210,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="52" />
+    <option name="x" value="46" />
     <option name="y" value="23" />
     <option name="width" value="1227" />
     <option name="height" value="777" />
@@ -378,6 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -481,6 +344,10 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -497,6 +364,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Listener" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,6 +430,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Error" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Environment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -614,6 +547,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Type" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Statement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -648,10 +607,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Decl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -699,102 +683,7 @@
       <recent name="$PROJECT_DIR$/src/Compiler" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IntermediateRepresentationTest">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Compiler.Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Compiler2016" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SemanticCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Compiler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Compiler2016" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Compiler" />
-      <option name="MAIN_CLASS_NAME" value="Compiler.SemanticCheckTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ControlFlowGraphTest.testPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Compiler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Compiler2016" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Compiler" />
-      <option name="MAIN_CLASS_NAME" value="Compiler.ControlFlowGraphTest" />
-      <option name="METHOD_NAME" value="testPass" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ControlFlowGraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Compiler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Compiler2016" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Compiler" />
-      <option name="MAIN_CLASS_NAME" value="Compiler.ControlFlowGraphTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.IntermediateRepresentationTest (1)">
     <configuration default="false" name="IntermediateRepresentationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -811,6 +700,110 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IntermediateRepresentationTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Compiler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Compiler2016" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Compiler" />
+      <option name="MAIN_CLASS_NAME" value="Compiler.IntermediateRepresentationTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" value="[16]" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IntermediateRepresentationTest (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Compiler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Compiler2016" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Compiler" />
+      <option name="MAIN_CLASS_NAME" value="Compiler.IntermediateRepresentationTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" value="[18]" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IntermediateRepresentationTest (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Compiler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Compiler2016" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Compiler" />
+      <option name="MAIN_CLASS_NAME" value="Compiler.IntermediateRepresentationTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" value="[14]" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IntermediateRepresentationTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Compiler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Compiler2016" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Compiler" />
+      <option name="MAIN_CLASS_NAME" value="Compiler.IntermediateRepresentationTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" value="[15]" />
       <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -1034,19 +1027,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SemanticCheckTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ControlFlowGraphTest.testPass" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ControlFlowGraphTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest (2)" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest (3)" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest (4)" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ControlFlowGraphTest.testPass" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ControlFlowGraphTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SemanticCheckTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest (4)" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest (2)" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.IntermediateRepresentationTest (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -1351,39 +1344,46 @@
       <option name="project" value="LOCAL" />
       <updated>1461718885979</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Back up 4.27.">
+      <created>1461771951838</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1461771951838</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ControlFlowGraphTest - 2016.04.27 at 20h 13m 20s.xml">
-      <configuration name="ControlFlowGraphTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControlFlowGraphTest_testPass - 2016.04.27 at 22h 08m 02s.xml">
-      <configuration name="ControlFlowGraphTest.testPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControlFlowGraphTest_testPass - 2016.04.27 at 22h 08m 07s.xml">
-      <configuration name="ControlFlowGraphTest.testPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControlFlowGraphTest_testPass - 2016.04.27 at 22h 19m 45s.xml">
-      <configuration name="ControlFlowGraphTest.testPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IntermediateRepresentationTest - 2016.04.27 at 22h 19m 59s.xml">
+    <history-entry file="IntermediateRepresentationTest - 2016.05.02 at 21h 35m 10s.xml">
       <configuration name="IntermediateRepresentationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntermediateRepresentationTest - 2016.04.27 at 22h 22m 33s.xml">
+    <history-entry file="IntermediateRepresentationTest - 2016.05.02 at 21h 37m 39s.xml">
       <configuration name="IntermediateRepresentationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntermediateRepresentationTest - 2016.04.27 at 22h 23m 00s.xml">
+    <history-entry file="IntermediateRepresentationTest - 2016.05.02 at 21h 42m 00s.xml">
       <configuration name="IntermediateRepresentationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntermediateRepresentationTest - 2016.04.27 at 22h 24m 25s.xml">
+    <history-entry file="IntermediateRepresentationTest - 2016.05.02 at 21h 42m 06s.xml">
       <configuration name="IntermediateRepresentationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntermediateRepresentationTest - 2016.04.27 at 23h 07m 18s.xml">
-      <configuration name="IntermediateRepresentationTest" configurationId="JUnit" />
+    <history-entry file="IntermediateRepresentationTest_(1) - 2016.05.02 at 21h 43m 21s.xml">
+      <configuration name="IntermediateRepresentationTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntermediateRepresentationTest - 2016.04.27 at 23h 07m 39s.xml">
-      <configuration name="IntermediateRepresentationTest" configurationId="JUnit" />
+    <history-entry file="IntermediateRepresentationTest_(1) - 2016.05.02 at 21h 50m 40s.xml">
+      <configuration name="IntermediateRepresentationTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntermediateRepresentationTest_(4) - 2016.05.02 at 21h 35m 19s.xml">
+      <configuration name="IntermediateRepresentationTest (4)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntermediateRepresentationTest_(4) - 2016.05.02 at 21h 36m 40s.xml">
+      <configuration name="IntermediateRepresentationTest (4)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntermediateRepresentationTest_(4) - 2016.05.02 at 21h 37m 28s.xml">
+      <configuration name="IntermediateRepresentationTest (4)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntermediateRepresentationTest_(4) - 2016.05.02 at 21h 43m 30s.xml">
+      <configuration name="IntermediateRepresentationTest (4)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1396,7 +1396,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="23" width="1227" height="777" extended-state="6" />
+    <frame x="46" y="23" width="1227" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1408,8 +1408,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32485875" sideWeight="0.50611246" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48728815" sideWeight="0.49388754" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37853107" sideWeight="0.49388754" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08475958" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1420,13 +1420,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3121469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3121469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925835" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1444,7 +1444,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/testcase" />
     </ignored-roots>
-    <MESSAGE value="Structure modified." />
     <MESSAGE value="AST updated." />
     <MESSAGE value="Change package name &quot;AbstractSyntaxTree&quot; to &quot;AST&quot;." />
     <MESSAGE value="Add SymbolTable." />
@@ -1469,14 +1468,41 @@
     <MESSAGE value="Start CFG building." />
     <MESSAGE value="Back up 4.25." />
     <MESSAGE value="To do Register definition in VarDecl." />
-    <option name="LAST_COMMIT_MESSAGE" value="To do Register definition in VarDecl." />
+    <MESSAGE value="Back up 4.27." />
+    <option name="LAST_COMMIT_MESSAGE" value="Back up 4.27." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Compiler/Operand/Address.java</url>
+          <line>17</line>
+          <properties class="Compiler.Operand.Address" method="toString" />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LoadInstruction.java</url>
+          <line>20</line>
+          <properties class="Compiler.ControlFlowGraph.Instruction.LoadInstruction" method="toString" />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/Compiler/IntermediateRepresentationTest.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java</url>
+          <line>153</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="41" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1485,433 +1511,428 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="5173" column="0" selection-start-line="5173" selection-start-column="0" selection-end-line="5173" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Compiler/Compiler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-6.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/loop-2.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-4.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-5.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-2.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/ClassDecl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/ArrayType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="41" column="90" selection-start-line="41" selection-start-column="90" selection-end-line="41" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/BaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/VarDeclList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="40" column="82" selection-start-line="40" selection-start-column="82" selection-end-line="40" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/StringType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/IntType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Interpreter/LLIRInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6593">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2922#2923#0" expanded="false" />
-            <element signature="e#2983#2984#0" expanded="false" />
-            <element signature="e#17182#17183#0" expanded="false" />
-            <element signature="e#17255#17256#0" expanded="false" />
-            <element signature="e#19025#19026#0" expanded="false" />
-            <element signature="e#19067#19068#0" expanded="false" />
-            <element signature="e#19099#19100#0" expanded="false" />
-            <element signature="e#19129#19130#0" expanded="false" />
-            <element signature="e#19700#19701#0" expanded="false" />
-            <element signature="e#19731#19732#0" expanded="false" />
-            <element signature="e#19769#19770#0" expanded="false" />
-            <element signature="e#19801#19802#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Symbol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/Declaration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/CompoundStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Prog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Compiler/ControlFlowGraphTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/cfg/basic.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTableEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="method#initilize#0;class#SymbolTable#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="158" column="83" selection-start-line="158" selection-start-column="83" selection-end-line="158" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/arithmetic-1.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Compiler/IntermediateRepresentationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-550">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/MoveInstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/IfStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/ReturnInstruction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/ControlFlowGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/arithmetic-2.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          <folding>
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/JumpInstruction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
-          <folding />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#330#331#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/EmptyExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LabelInstruction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#437#438#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Immediate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="131" column="49" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="49" />
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#279#280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LoadInstruction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/CompoundStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/NullConst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/FunctionCall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="361">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Identifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        <state relative-caret-position="390">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LabelInstruction.java">
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfDecrement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="361">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/PostSelfIncrement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/UnaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BoolConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/CreationExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/EmptyExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-3.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/MoveInstruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/IntConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/Instruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/StoreInstruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#457#458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-5.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/loop-2.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/loop-3.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-8.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/array-7.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/class-3.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/class-4.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/class-2.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/class-1.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ForLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/ContinueStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/ArrayAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" column="9" selection-start-line="23" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/BinaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="176" column="9" selection-start-line="176" selection-start-column="9" selection-end-line="176" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/IfStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/ControlFlowGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/loop-1.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/cfg/intermediate-representation/function-1.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Operand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#220#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTableEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="2882" column="0" selection-start-line="2882" selection-start-column="0" selection-end-line="2882" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Symbol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/VarDecl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Compiler/IntermediateRepresentationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="653" column="15" selection-start-line="653" selection-start-column="15" selection-end-line="653" selection-end-column="15" />
           <folding />
         </state>
       </provider>

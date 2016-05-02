@@ -57,6 +57,12 @@ public class ClassAccess extends Expression {
 
     @Override
     public void load(List<Instruction> instructions) {
-        instructions.add(new LoadInstruction((Register) operand, (Address) operand));
+        //long attributeOffSet = ((ClassType) className.type).getMemberOffSet(attribute);
+        //instructions.add(new LoadInstruction((Register) operand, (Address) operand, type.pointerSize(), attributeOffSet));
+        if (operand instanceof Address) {
+            Address srcAddr = (Address) operand;
+            operand = new Register();
+            instructions.add(new LoadInstruction((Register) operand, srcAddr));
+        }
     }
 }

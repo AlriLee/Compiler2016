@@ -4,8 +4,11 @@ import Compiler.AST.Type.ArrayType;
 import Compiler.AST.Type.IntType;
 import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.LoadInstruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Address;
 import Compiler.Operand.Immediate;
+import Compiler.Operand.Operand;
 import Compiler.Operand.Register;
 
 import java.util.List;
@@ -47,6 +50,18 @@ public class ArrayAccess extends Expression {
         long size = arrayBody.type.pointerSize();
         Register offSet = new Register();
         instructions.add(new BinaryInstruction(BinaryOp.MUL, offSet, arrayIndex.operand, new Immediate(size)));
-        instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) operand, arrayBody.operand, offSet));
+        Operand arrayReg = new Register();
+        instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) arrayReg, arrayBody.operand, offSet));
+        this.operand = new Address((Register) arrayReg, new Immediate(0), size);
+    }
+
+    @Override
+    public void load(List<Instruction> instructions) {
+        //instructions.add(new LoadInstruction((Register)operand, operand, arrayBody.type.pointerSize(), 0));
+        if (operand instanceof Address) {
+            Address srcAddr = (Address) operand;
+            operand = new Register();
+            instructions.add(new LoadInstruction((Register) operand, srcAddr));
+        }
     }
 }
