@@ -46,7 +46,9 @@ public class ArrayAccess extends Expression {
     @Override
     public void emit(List<Instruction> instructions) {
         arrayBody.emit(instructions);
+        arrayBody.load(instructions);
         arrayIndex.emit(instructions);
+        arrayIndex.load(instructions);
         long size = arrayBody.type.pointerSize();
         Register offSet = new Register();
         instructions.add(new BinaryInstruction(BinaryOp.MUL, offSet, arrayIndex.operand, new Immediate(size)));

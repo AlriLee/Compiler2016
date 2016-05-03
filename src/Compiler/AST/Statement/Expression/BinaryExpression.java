@@ -4,6 +4,7 @@ import Compiler.AST.Type.*;
 import Compiler.ControlFlowGraph.Instruction.*;
 import Compiler.Error.CompileError;
 import Compiler.Operand.Address;
+import Compiler.Operand.Immediate;
 import Compiler.Operand.Register;
 
 import java.util.List;
@@ -119,10 +120,10 @@ public class BinaryExpression extends Expression {
     @Override
     public void emit(List<Instruction> instructions) {
         this.operand = new Register();
-        left.emit(instructions);
-        right.emit(instructions);
         switch (op) {
             case ASSIGN: {
+                left.emit(instructions);
+                right.emit(instructions);
                 right.load(instructions);
                 if (left.operand instanceof Address) {
                     instructions.add(new StoreInstruction((Address) left.operand, right.operand));
@@ -132,8 +133,46 @@ public class BinaryExpression extends Expression {
                 this.operand = left.operand;
                 break;
             }
-            case LOGICAL_AND:
-            case LOGICAL_OR:
+            case LOGICAL_AND: {
+                left.emit(instructions);
+                left.load(instructions);
+                LabelInstruction logicalTrue = new LabelInstruction("logicalTrue");
+                LabelInstruction logicalFalse = new LabelInstruction("logicalFalse");
+                LabelInstruction logicalMerge = new LabelInstruction("logicalMerge");
+                JumpInstruction logicalMergeJump = new JumpInstruction(logicalMerge);
+                instructions.add(new ConditionBranchInstruction(left.operand, logicalTrue, logicalFalse));
+                instructions.add(logicalTrue);
+                right.emit(instructions);
+                right.load(instructions);
+                instructions.add(new MoveInstruction((Register) operand, right.operand));
+                instructions.add(logicalMergeJump);
+                //instructions.add(new BinaryInstruction(op, (Register) this.operand, left.operand, right.operand));
+                instructions.add(logicalFalse);
+                instructions.add(new MoveInstruction((Register) operand, new Immediate(0)));
+                instructions.add(logicalMergeJump);
+                instructions.add(logicalMerge);
+                break;
+            }
+            case LOGICAL_OR: {
+                left.emit(instructions);
+                left.load(instructions);
+                LabelInstruction logicalTrue = new LabelInstruction("logicalTrue");
+                LabelInstruction logicalFalse = new LabelInstruction("logicalFalse");
+                LabelInstruction logicalMerge = new LabelInstruction("logicalMerge");
+                JumpInstruction logicalMergeJump = new JumpInstruction(logicalMerge);
+                instructions.add(new ConditionBranchInstruction(left.operand, logicalTrue, logicalFalse));
+                instructions.add(logicalTrue);
+                instructions.add(new MoveInstruction((Register) operand, new Immediate(1)));
+                instructions.add(logicalMergeJump);
+                instructions.add(logicalFalse);
+                right.emit(instructions);
+                right.load(instructions);
+                //instructions.add(new BinaryInstruction(op, (Register) this.operand, left.operand, right.operand));
+                instructions.add(new MoveInstruction((Register) operand, right.operand));
+                instructions.add(logicalMergeJump);
+                instructions.add(logicalMerge);
+                break;
+            }
             case OR:
             case XOR:
             case AND:
@@ -150,6 +189,8 @@ public class BinaryExpression extends Expression {
             case MUL:
             case DIV:
             case MOD: {
+                left.emit(instructions);
+                right.emit(instructions);
                 left.load(instructions);
                 right.load(instructions);
                 instructions.add(new BinaryInstruction(op, (Register) this.operand, left.operand, right.operand));

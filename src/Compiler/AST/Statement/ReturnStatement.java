@@ -34,6 +34,7 @@ public class ReturnStatement implements Statement {
     @Override
     public void emit(List<Instruction> instruction) {
         expr.emit(instruction);
+        expr.load(instruction);
         instruction.add(new ReturnInstruction(expr.operand));
     }
 }
