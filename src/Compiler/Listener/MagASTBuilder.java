@@ -650,9 +650,14 @@ public class MagASTBuilder extends BaseListener {
         if (ctx.parameterList() != null) {
             paraList = (VarDeclList) stack.pop();
         }
+        stack.pop();
         //stack.push(new FunctionDecl((Type) stack.pop(), functionName, paraList, block));
-        // TODO
-        ((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
+        FunctionDecl functionDeclVoid = (FunctionDecl) SymbolTable.getType(functionName).type;
+        functionDeclVoid.returnType = functionReturnType;
+        functionDeclVoid.parameters = paraList;
+        functionDeclVoid.functionBody = block;
+        stack.push(functionDeclVoid);
+        //((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
         functionReturnType = null;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
         //SymbolTable.endScope();
@@ -663,10 +668,17 @@ public class MagASTBuilder extends BaseListener {
         CompoundStatement block = (CompoundStatement) stack.pop();
         Symbol functionName = Symbol.getSymbol(ctx.ID().getText());
         VarDeclList paraList = null;
-        if (ctx.parameterList() != null)
+        if (ctx.parameterList() != null) {
             paraList = (VarDeclList) stack.pop();
-        stack.push(new FunctionDecl(new VoidType(), functionName, paraList, block));
-        ((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
+        }
+        stack.pop();
+        //stack.push(new FunctionDecl(new VoidType(), functionName, paraList, block));
+        FunctionDecl functionDeclVoid = (FunctionDecl) SymbolTable.getType(functionName).type;
+        functionDeclVoid.returnType = functionReturnType;
+        functionDeclVoid.parameters = paraList;
+        functionDeclVoid.functionBody = block;
+        stack.push(functionDeclVoid);
+        //((FunctionDecl) SymbolTable.getType(functionName).type).parameters = paraList;
         functionReturnType = null;
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
         //SymbolTable.endScope();

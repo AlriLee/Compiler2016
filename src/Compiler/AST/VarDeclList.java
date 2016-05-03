@@ -21,7 +21,7 @@ public class VarDeclList implements ASTNode {
     public VarDeclList(VarDecl varDecl) {
         this.varDecl = varDecl;
         this.varDeclList = null;
-        varDeclSize = varDecl.size;
+        varDeclSize = 1;
     }
 
     public VarDeclList(VarDecl varDecl, VarDeclList varDeclList) {
@@ -29,8 +29,8 @@ public class VarDeclList implements ASTNode {
         this.varDeclList = varDeclList;
         //if (varDeclList == null) System.out.println("The varDeclList is null.\n" + varDecl.toString(0));
         if (varDeclList != null)
-            varDeclSize = varDeclList.varDeclSize + varDecl.size;
-        else varDeclSize = varDecl.size;
+            varDeclSize = varDeclList.varDeclSize + 1;
+        else varDeclSize = 1;
     }
 
     public static VarDeclList getVarDeclList(List<Pair<String, Type>> parameters) {
@@ -67,13 +67,14 @@ public class VarDeclList implements ASTNode {
 
     public long getVarDeclOffSet(Symbol variableSymbol) {
         long vdi = 0;
-        for (VarDeclList vdl = varDeclList; vdl != null; vdl = vdl.varDeclList) {
-            if (varDecl.name.equals(variableSymbol)) {
+        for (VarDeclList vdl = this; vdl != null; vdl = vdl.varDeclList) {
+            //System.out.println(vdl.varDecl.name.toString());
+            if (vdl.varDecl.name.equals(variableSymbol)) {
                 vdi = vdl.varDeclSize;
                 break;
             }
         }
-        return vdi;
+        return (this.varDeclSize - vdi) * 4;
     }
 
     public String toString(int d) {
