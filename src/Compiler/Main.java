@@ -29,7 +29,6 @@ public class Main {
         SymbolTable.initilize();
 
         ANTLRInputStream input = new ANTLRInputStream(System.in);
-        //ANTLRInputStream input = new ANTLRInputStream(System.in);
         MagLexer lexer = new MagLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         MagParser parser = new MagParser(tokens);
