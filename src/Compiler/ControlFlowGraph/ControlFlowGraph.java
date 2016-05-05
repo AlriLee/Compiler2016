@@ -1,0 +1,105 @@
+package Compiler.ControlFlowGraph;
+
+import Compiler.ControlFlowGraph.BasicBlock.BasicBlock;
+import Compiler.ControlFlowGraph.Instruction.ConditionBranchInstruction;
+import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.JumpInstruction;
+import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
+import Compiler.Operand.Register;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+/**
+ * Created by Alri on 16/4/23.
+ */
+public class ControlFlowGraph {
+    public List<Instruction> instruction;
+    public List<BasicBlock> basicBlockList;
+
+    public ControlFlowGraph() {
+        instruction = new ArrayList<>();
+        basicBlockList = new ArrayList<>();
+    }
+
+    public void buildBasicBlock() {
+        List<Instruction> backup = instruction;
+        instruction = new ArrayList<>();
+        for (int i = 0; i < backup.size(); ++i) {
+            instruction.add(backup.get(i));
+            if (i + 1 < backup.size() && backup.get(i) instanceof LabelInstruction && backup.get(i + 1) instanceof LabelInstruction) {
+                instruction.add(new JumpInstruction((LabelInstruction) backup.get(i + 1)));
+            }
+        }
+
+        Instruction ins;
+        boolean reachable = true;
+        boolean hasEnd = true;
+        for (int i = 0; i < instruction.size(); ++i) {
+            ins = instruction.get(i);
+            if (ins instanceof LabelInstruction) {
+                reachable = true;
+                if (!hasEnd) {
+                    basicBlockList.get(basicBlockList.size() - 1).addInstruction(new JumpInstruction((LabelInstruction) ins));
+                    hasEnd = true;
+                }
+                BasicBlock basicBlock = new BasicBlock((LabelInstruction) ins);
+                basicBlockList.add(basicBlock);
+                continue;
+            } else if (!reachable) continue;
+            basicBlockList.get(basicBlockList.size() - 1).addInstruction(ins);
+            hasEnd = false;
+            if (ins instanceof JumpInstruction || ins instanceof ConditionBranchInstruction) {
+                reachable = false;
+                hasEnd = true;
+            }
+        }
+
+        for (int i = 0; i < basicBlockList.size(); ++i) {
+            basicBlockList.get(i).analyseLiveness();
+            basicBlockList.get(i).getSuccessor();
+            //System.out.println(basicBlockList.get(i).livenessToString());
+        }
+
+        while (true) {
+            boolean modified = false;
+
+            for (BasicBlock block : basicBlockList) {
+                block.liveAnalysis.liveIn = new HashSet<>();
+                block.liveAnalysis.liveOut.forEach(block.liveAnalysis.liveIn::add);
+                block.liveAnalysis.varKill.forEach(block.liveAnalysis.liveIn::remove);
+                block.liveAnalysis.ueVar.forEach(block.liveAnalysis.liveIn::add);
+            }
+
+            for (BasicBlock block : basicBlockList) {
+                Set<Register> liveOut = block.liveAnalysis.liveOut;
+                block.liveAnalysis.liveOut = new HashSet<>();
+                for (BasicBlock successor : block.successor) {
+                    block.liveAnalysis.liveOut.addAll(successor.liveAnalysis.liveIn);
+                }
+                if (!block.liveAnalysis.liveOut.equals(liveOut)) {
+                    modified = true;
+                }
+            }
+
+            if (!modified) {
+                break;
+            }
+        }
+
+        /*for (int i = 0; i < basicBlockList.size(); ++i) {
+            System.out.println(basicBlockList.get(i).livenessToString());
+        }*/
+    }
+
+    public String basicBlockToString() {
+        String basicBlockString = "";
+        for (int i = 0; i < basicBlockList.size(); ++i) {
+            //System.out.println(basicBlockList.get(i).toString());
+            basicBlockString += basicBlockList.get(i).toString();
+        }
+        return basicBlockString;
+    }
+}

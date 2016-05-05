@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Back up 5.4.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Main.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Main.class" />
+    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Build interference graph.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/LoopStatement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/ControlFlowGraph.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/AllocInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/BinaryInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/CallInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/ConditionBranchInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/Instruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/JumpInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LabelInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/LoadInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/MoveInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/ReturnInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/StoreInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/UnaryInstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Environment/SymbolTableEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/MIPSRegister.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Operand/Address.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Operand/Immediate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Operand/Operand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Operand/Register.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Compiler2016.iws" />
@@ -304,28 +325,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GlobalRegisterAllocator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1076,7 +1075,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462371624503</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Build interference graph.">
+      <created>1462415331141</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1462415331141</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1122,7 +1128,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="23" width="1227" height="777" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1133,11 +1139,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32485875" sideWeight="0.50611246" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21186441" sideWeight="0.49388754" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19209039" sideWeight="0.49388754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24123879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24123879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18361582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1169,7 +1175,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/testcase" />
     </ignored-roots>
-    <MESSAGE value="Add some semantic check." />
     <MESSAGE value="Add *DeclListener." />
     <MESSAGE value="Done with first pass. Begin second pass." />
     <MESSAGE value="Get more understanding on what second pass does." />
@@ -1194,7 +1199,8 @@
     <MESSAGE value="TODO: Short-circuit evaluation, String" />
     <MESSAGE value="IR tests passed. String unsolved. Back up 5.3." />
     <MESSAGE value="Back up 5.4." />
-    <option name="LAST_COMMIT_MESSAGE" value="Back up 5.4." />
+    <MESSAGE value="Build interference graph." />
+    <option name="LAST_COMMIT_MESSAGE" value="Build interference graph." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
