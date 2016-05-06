@@ -4,6 +4,7 @@ import Compiler.Operand.Operand;
 import Compiler.Operand.Register;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public abstract class Instruction {
     public List<Register> getUsedReg() {
         List<Operand> usedOp = getUsedOp();
         if (usedOp == null)
-            return null;
+            return Collections.emptyList();
         List<Register> usedReg = new ArrayList<>();
         for (int i = 0; i < usedOp.size(); ++i) {
             if (usedOp.get(i) instanceof Register) {
@@ -30,7 +31,7 @@ public abstract class Instruction {
     public List<Register> getDefinedReg() {
         List<Operand> definedOp = getDefinedOp();
         if (definedOp == null)
-            return null;
+            return Collections.emptyList();
         List<Register> definedReg = new ArrayList<>();
         for (int i = 0; i < definedOp.size(); ++i) {
             if (definedOp.get(i) instanceof Register) {

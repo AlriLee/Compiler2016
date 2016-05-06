@@ -2,14 +2,17 @@ package Compiler.Environment;
 
 import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.Decl.VarDecl;
+import Compiler.AST.Prog;
 import Compiler.AST.Symbol;
 import Compiler.AST.Type.*;
 import Compiler.AST.VarDeclList;
 import Compiler.Error.CompileError;
 import Compiler.Listener.FunctionDeclListener;
 import Compiler.Listener.MagASTBuilder;
+import Compiler.Operand.StringImmediate;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Stack;
 
@@ -17,8 +20,10 @@ import java.util.Stack;
  * Created by Alri on 16/4/4.
  */
 public class SymbolTable {
+    public static Prog program;
     public static HashMap<Symbol, Stack<SymbolTableEntry>> symbolStackHashMap;
     public static Stack<HashMap<Symbol, SymbolTableEntry>> hashMapStack;
+    public static ArrayList<StringImmediate> stringImmediateArrayList;
 
     public static void initilize() {
         MagASTBuilder.initialize();
@@ -32,6 +37,7 @@ public class SymbolTable {
 
         symbolStackHashMap = new HashMap<>();
         hashMapStack = new Stack<>();
+        stringImmediateArrayList = new ArrayList<>();
 
         beginScope(); // Initialize the symbolTable to allow global declarations.
 

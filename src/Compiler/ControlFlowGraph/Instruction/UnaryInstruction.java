@@ -11,9 +11,9 @@ import java.util.List;
  * Created by Alri on 16/4/23.
  */
 public class UnaryInstruction extends Instruction {
-    UnaryOp op;
-    Register dest;
-    Operand src;
+    public UnaryOp op;
+    public Register dest;
+    public Operand src;
 
     public UnaryInstruction(UnaryOp o, Register d, Operand s) {
         op = o;

@@ -8,8 +8,10 @@ import Compiler.AST.VarDeclList;
 import Compiler.ControlFlowGraph.ControlFlowGraph;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
 import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
+import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
 import Compiler.Operand.Operand;
+import Compiler.Operand.Register;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,16 +70,21 @@ public class FunctionDecl implements Type, Declaration {
     }
 
     public void emit() {
-        cfg = new ControlFlowGraph();
+        cfg = new ControlFlowGraph(this);
         cfg.instruction.add(beginOfFunctionDeclLabel);
+        if (functionName.name.equals("main")) {
+            for (Declaration declaration : SymbolTable.program.declarations) {
+                if (declaration instanceof VarDecl) {
+                    ((VarDecl) declaration).entry.register.type = Register.registerType.GLOBAL;
+                    ((VarDecl) declaration).emit(cfg.instruction);
+                }
+            }
+        }
+        for (Operand operand : parameterOperand) {
+            ((Register) operand).type = Register.registerType.PARAMETER;
+        }
         functionBody.emit(cfg.instruction);
         cfg.instruction.add(endOfFunctionDeclLabel);
-    }
-
-    public void addParameterOperand() {
-        for (VarDeclList vdl = parameters; vdl != null; vdl = vdl.varDeclList) {
-//            parameterOperand.add(vdl.varDecl.)
-        }
     }
 
     @Override

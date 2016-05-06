@@ -1,22 +1,30 @@
 package Compiler;
 
+import Compiler.AST.Decl.Declaration;
+import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.Parser.MagLexer;
 import Compiler.AST.Parser.MagParser;
+import Compiler.AST.Prog;
 import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
 import Compiler.Listener.ClassDeclListener;
 import Compiler.Listener.ErrorListener;
 import Compiler.Listener.FunctionDeclListener;
 import Compiler.Listener.MagASTBuilder;
+import Compiler.Translator.MIPSTranslator;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
+
 public class Main {
     public static void main(String[] args) {
         try {
-            new Main().compile(args);
+            new Main().compile(System.in, System.out);
         } catch (Exception e) {
             e.printStackTrace();
         } catch (CompileError e) {
@@ -25,10 +33,10 @@ public class Main {
         }
     }
 
-    public void compile(String[] args) throws Exception {
+    public void compile(InputStream file, OutputStream output) throws Exception {
         SymbolTable.initilize();
 
-        ANTLRInputStream input = new ANTLRInputStream(System.in);
+        ANTLRInputStream input = new ANTLRInputStream(file);
         MagLexer lexer = new MagLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         MagParser parser = new MagParser(tokens);
@@ -40,5 +48,16 @@ public class Main {
         walker.walk(new ClassDeclListener(), tree);
         walker.walk(new FunctionDeclListener(), tree);
         walker.walk(new MagASTBuilder(), tree);
+
+        SymbolTable.program = (Prog) MagASTBuilder.stack.peek();
+        SymbolTable.program.emit();
+        for (Declaration declaration : SymbolTable.program.declarations) {
+            if (declaration instanceof FunctionDecl) {
+                FunctionDecl function = (FunctionDecl) declaration;
+                function.cfg.buildBasicBlock();
+                function.cfg.analyseFrame();
+            }
+        }
+        new MIPSTranslator(new PrintStream(output)).translate();
     }
 }

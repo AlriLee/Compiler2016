@@ -1,0 +1,6 @@
+int main() {
+	int[] a = new int[10];
+	int b = a[5] = 5;
+	println(toString(b));
+	return 0;
+}

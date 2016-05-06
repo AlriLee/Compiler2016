@@ -52,7 +52,6 @@ public class BasicBlock {
 
     public void getSuccessor() {
         if (blockInstruction.size() == 0) {
-            System.out.println("Null blockInstruction");
             return;
         }
         Instruction lastInstruction = blockInstruction.get(blockInstruction.size() - 1);

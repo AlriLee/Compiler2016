@@ -1,0 +1,16 @@
+int a = 1;
+int b = 1;
+
+int one() {
+	return 1;
+}
+
+int two() {
+	return 2;
+}
+
+int main() {
+    println(toString(a + b));
+	println(toString(one() + two()));
+	return 0;
+}

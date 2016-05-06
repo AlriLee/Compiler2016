@@ -2,6 +2,7 @@ package Compiler.AST.Statement.Expression;
 
 import Compiler.AST.Type.StringType;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.Operand.StringImmediate;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class StringConst extends Expression {
 
     @Override
     public void emit(List<Instruction> instructions) {
-        // TODO
+        operand = new StringImmediate(stringValue);
     }
 
     @Override
