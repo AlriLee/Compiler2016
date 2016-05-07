@@ -9,7 +9,9 @@ import Compiler.AST.VarDeclList;
 import Compiler.ControlFlowGraph.Instruction.AllocInstruction;
 import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.StoreInstruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Address;
 import Compiler.Operand.Immediate;
 import Compiler.Operand.Operand;
 import Compiler.Operand.Register;
@@ -43,7 +45,7 @@ public class ArrayType implements Type {
         VarDeclList varDeclList = new VarDeclList(new VarDecl(new StringType(), thisSymbol));
 
         // int pointerSize()
-        Symbol sizeSymbol = Symbol.getSymbol("pointerSize");
+        Symbol sizeSymbol = Symbol.getSymbol("size");
         members.put(sizeSymbol, new FunctionDecl(
                 new IntType(),
                 sizeSymbol,
@@ -99,7 +101,10 @@ public class ArrayType implements Type {
         arraySize.emit(instructions);
         Operand allocSize = new Register();
         instructions.add(new BinaryInstruction(BinaryOp.MUL, (Register) allocSize, arraySize.operand, new Immediate(baseType.pointerSize())));
+        instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) allocSize, allocSize, new Immediate(4)));
         instructions.add(new AllocInstruction((Register) allocAddress, (Register) allocSize));
+        instructions.add(new StoreInstruction(new Address((Register) allocAddress, new Immediate(0), 4), arraySize.operand));
+        instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) allocAddress, allocAddress, new Immediate(4)));
         return allocAddress;
     }
 }

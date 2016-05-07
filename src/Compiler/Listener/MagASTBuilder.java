@@ -244,7 +244,12 @@ public class MagASTBuilder extends BaseListener {
     public void exitEquality_equal(MagParser.Equality_equalContext ctx) {
         Expression rhs = (Expression) stack.pop();
         Expression lhs = (Expression) stack.pop();
-        stack.push(new BinaryExpression(lhs, BinaryOp.EQ, rhs));
+        if (!(lhs.type instanceof StringType || rhs.type instanceof StringType))
+            stack.push(new BinaryExpression(lhs, BinaryOp.EQ, rhs));
+        else {
+            ExpressionList expressionList = new ExpressionList(rhs);
+            stack.push(new FunctionCall(new Identifier(Symbol.getSymbol("stringIsEqual")), new ExpressionList(lhs, expressionList)));
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -252,15 +257,26 @@ public class MagASTBuilder extends BaseListener {
     public void exitEquality_notEqual(MagParser.Equality_notEqualContext ctx) {
         Expression rhs = (Expression) stack.pop();
         Expression lhs = (Expression) stack.pop();
-        stack.push(new BinaryExpression(lhs, BinaryOp.NEQ, rhs));
+        if (!(lhs.type instanceof StringType || rhs.type instanceof StringType))
+            stack.push(new BinaryExpression(lhs, BinaryOp.NEQ, rhs));
+        else {
+            ExpressionList expressionList = new ExpressionList(rhs);
+            stack.push(new FunctionCall(new Identifier(Symbol.getSymbol("stringNeq")), new ExpressionList(lhs, expressionList)));
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
     @Override
     public void exitRelational_less(MagParser.Relational_lessContext ctx) {
+        System.out.printf("\n" + ctx.getText() + "\n");
         Expression rhs = (Expression) stack.pop();
         Expression lhs = (Expression) stack.pop();
-        stack.push(new BinaryExpression(lhs, BinaryOp.LT, rhs));
+        if (!(lhs.type instanceof StringType || rhs.type instanceof StringType))
+            stack.push(new BinaryExpression(lhs, BinaryOp.LT, rhs));
+        else {
+            ExpressionList expressionList = new ExpressionList(rhs);
+            stack.push(new FunctionCall(new Identifier(Symbol.getSymbol("stringLess")), new ExpressionList(lhs, expressionList)));
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -268,7 +284,12 @@ public class MagASTBuilder extends BaseListener {
     public void exitRelational_greater(MagParser.Relational_greaterContext ctx) {
         Expression rhs = (Expression) stack.pop();
         Expression lhs = (Expression) stack.pop();
-        stack.push(new BinaryExpression(lhs, BinaryOp.GT, rhs));
+        if (!(lhs.type instanceof StringType || rhs.type instanceof StringType))
+            stack.push(new BinaryExpression(lhs, BinaryOp.GT, rhs));
+        else {
+            ExpressionList expressionList = new ExpressionList(rhs);
+            stack.push(new FunctionCall(new Identifier(Symbol.getSymbol("stringLarge")), new ExpressionList(lhs, expressionList)));
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -276,7 +297,12 @@ public class MagASTBuilder extends BaseListener {
     public void exitRelational_leq(MagParser.Relational_leqContext ctx) {
         Expression rhs = (Expression) stack.pop();
         Expression lhs = (Expression) stack.pop();
-        stack.push(new BinaryExpression(lhs, BinaryOp.LEQ, rhs));
+        if (!(lhs.type instanceof StringType || rhs.type instanceof StringType))
+            stack.push(new BinaryExpression(lhs, BinaryOp.LEQ, rhs));
+        else {
+            ExpressionList expressionList = new ExpressionList(rhs);
+            stack.push(new FunctionCall(new Identifier(Symbol.getSymbol("stringLeq")), new ExpressionList(lhs, expressionList)));
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -284,7 +310,12 @@ public class MagASTBuilder extends BaseListener {
     public void exitRelational_geq(MagParser.Relational_geqContext ctx) {
         Expression rhs = (Expression) stack.pop();
         Expression lhs = (Expression) stack.pop();
-        stack.push(new BinaryExpression(lhs, BinaryOp.GEQ, rhs));
+        if (!(lhs.type instanceof StringType || rhs.type instanceof StringType))
+            stack.push(new BinaryExpression(lhs, BinaryOp.GEQ, rhs));
+        else {
+            ExpressionList expressionList = new ExpressionList(rhs);
+            stack.push(new FunctionCall(new Identifier(Symbol.getSymbol("stringGeq")), new ExpressionList(lhs, expressionList)));
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -308,7 +339,12 @@ public class MagASTBuilder extends BaseListener {
     public void exitAddSub_add(MagParser.AddSub_addContext ctx) {
         Expression rhs = (Expression) stack.pop();
         Expression lhs = (Expression) stack.pop();
-        stack.push(new BinaryExpression(lhs, BinaryOp.ADD, rhs));
+        if (!(lhs.type instanceof StringType || rhs.type instanceof StringType))
+            stack.push(new BinaryExpression(lhs, BinaryOp.ADD, rhs));
+        else {
+            ExpressionList expressionList = new ExpressionList(rhs);
+            stack.push(new FunctionCall(new Identifier(Symbol.getSymbol("stringConcatenate")), new ExpressionList(lhs, expressionList)));
+        }
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 
@@ -644,6 +680,7 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitFunctionDecl_returnType(MagParser.FunctionDecl_returnTypeContext ctx) {
+        //System.out.print(ctx.ID().getText());
         CompoundStatement block = (CompoundStatement) stack.pop();
         Symbol functionName = Symbol.getSymbol(ctx.ID().getText());
         VarDeclList paraList = null;
@@ -665,13 +702,14 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitFunctionDecl_void(MagParser.FunctionDecl_voidContext ctx) {
+        //System.out.print(ctx.ID().getText());
         CompoundStatement block = (CompoundStatement) stack.pop();
         Symbol functionName = Symbol.getSymbol(ctx.ID().getText());
         VarDeclList paraList = null;
         if (ctx.parameterList() != null) {
             paraList = (VarDeclList) stack.pop();
         }
-        stack.pop();
+        //stack.pop();
         //stack.push(new FunctionDecl(new VoidType(), functionName, paraList, block));
         FunctionDecl functionDeclVoid = (FunctionDecl) SymbolTable.getType(functionName).type;
         functionDeclVoid.returnType = functionReturnType;
@@ -700,7 +738,6 @@ public class MagASTBuilder extends BaseListener {
 //        stack.peek().info = new Info(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine());
     }
 }
-
 
 
 

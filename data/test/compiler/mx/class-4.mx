@@ -9,6 +9,6 @@ int main() {
     obj.x = 10;
     obj.y = 20;
     obj.z = 40;
-    printInt(obj.x + obj.y + obj.z);
+    print(toString(obj.x + obj.y + obj.z));
     return 0;
 }

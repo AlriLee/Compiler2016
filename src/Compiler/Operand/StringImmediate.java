@@ -14,6 +14,10 @@ public class StringImmediate extends Register {
         SymbolTable.stringImmediateArrayList.add(this);
     }
 
+    //public int stringSize() {
+    //TODO
+    //}
+
     @Override
     public String toString() {
         return literal;

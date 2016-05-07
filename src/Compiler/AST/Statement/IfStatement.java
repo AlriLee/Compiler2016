@@ -25,6 +25,7 @@ public class IfStatement implements Statement {
         consequence = conse;
         alternative = null;
         if (!(condition.type instanceof BoolType)) {
+            System.out.print("\nthe type of condition is " + condition.type.toString(0));
             throw new CompileError("type error");
         }
     }

@@ -7,6 +7,6 @@ int g(int x) {
 }
 
 int main() {
-	printInt(g(10));
+	print(toString(g(10)));
 	return 0;
 }

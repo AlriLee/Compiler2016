@@ -30,6 +30,11 @@ public class FunctionCall extends Expression {
         }
         FunctionDecl functionDecl = (FunctionDecl) functionBody.type;
         type = functionDecl.returnType;
+
+        if (functionBody instanceof ClassAccess) {
+            System.out.printf(((ClassAccess) functionBody).className.toString(0));
+            arguments = new ExpressionList(((ClassAccess) functionBody).className, arguments);
+        }
     }
 
     public FunctionCall(Expression fb, ExpressionList arg) {
@@ -40,6 +45,7 @@ public class FunctionCall extends Expression {
         }
 
         if (functionBody instanceof ClassAccess) {
+            System.out.printf(((ClassAccess) functionBody).className.toString(0));
             arguments = new ExpressionList(((ClassAccess) functionBody).className, arguments);
         }
 
@@ -75,7 +81,7 @@ public class FunctionCall extends Expression {
     @Override
     public void emit(List<Instruction> instructions) {
         parameters = new ArrayList<>();
-        functionBody.emit(instructions);
+//TODO:        functionBody.emit(instructions);
         for (ExpressionList arg = arguments; arg != null; arg = arg.expressionList) {
             arg.expression.emit(instructions);
             arg.expression.load(instructions);

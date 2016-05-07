@@ -197,14 +197,14 @@ func__toString:
 # the zero in the end of the string will not be counted
 ###### Checked ######
 # you don't need to preserve reg before calling it
-func__string.length:
+func__length:
 	lw $v0, -4($a0)
 	jr $ra
 
 # string arg in $a0, left in $a1, right in $a2
 ###### Checked ######
 # used $a0, $a1, $t0, $t1, $t2, $v1, $v0
-func__string.substring:
+func__substring:
 	subu $sp, $sp, 4
 	sw $ra, 0($sp)
 
@@ -235,7 +235,7 @@ func__string.substring:
 ###### Checked ######
 # 16/5/4 Fixed a serious bug: can not parse negtive number
 # used $v0, $v1
-func__string.parseInt:
+func__parseInt:
 	subu $sp, $sp, 16
 	sw $a0, 0($sp)
 	sw $t0, 4($sp)
@@ -292,14 +292,14 @@ func__string.parseInt:
 # string arg in $a0, pos in $a1
 ###### Checked ######
 # used $v0, $v1
-func__string.ord:
+func__ord:
 	add $v1, $a0, $a1
 	lb $v0, 0($v1)
 	jr $ra
 
 # array arg in $a0
 # used $v0
-func__array.size:
+func__size:
 	lw $v0, -4($a0)
 	jr $ra
 
@@ -495,105 +495,106 @@ func__stringNeq:
 main:
 	sub $sp, $sp, 192
 	sw $ra, 120($sp)
-BeginOfFunctionDecl913:
+BeginOfFunctionDecl899:
 	li $t0, 5
-	sw $t0, 156($sp)
+	sw $t0, 176($sp)
 	li $t0, 0
-	sw $t0, 140($sp)
-	lw $t0, 140($sp)
+	sw $t0, 180($sp)
+	lw $t0, 180($sp)
 	li $t1, 0
 	sne $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, 164($sp)
-	beqz $t0, logicalFalse916
-	b logicalTrue915
-logicalTrue915:
-	lw $t0, 156($sp)
-	lw $t1, 140($sp)
-	div $t1, $t0, $t1
-	sw $t1, 176($sp)
+	sw $t1, 148($sp)
+	lw $t0, 148($sp)
+	beqz $t0, logicalFalse902
+	b logicalTrue901
+logicalTrue901:
 	lw $t0, 176($sp)
+	lw $t1, 180($sp)
+	div $t1, $t0, $t1
+	sw $t1, 132($sp)
+	lw $t0, 132($sp)
 	li $t1, 1
 	sne $t1, $t0, $t1
-	sw $t1, 168($sp)
-	lw $t0, 168($sp)
-	sw $t0, 188($sp)
-	b logicalMerge917
-logicalFalse916:
+	sw $t1, 184($sp)
+	lw $t0, 184($sp)
+	sw $t0, 168($sp)
+	b logicalMerge903
+logicalFalse902:
 	li $t0, 0
-	sw $t0, 188($sp)
-	b logicalMerge917
-logicalMerge917:
-	lw $t0, 188($sp)
+	sw $t0, 168($sp)
+	b logicalMerge903
+logicalMerge903:
+	lw $t0, 168($sp)
 	sw $t0, 172($sp)
 	lw $t0, 172($sp)
-	beqz $t0, alternative919
-	b consequence918
-consequence918:
+	beqz $t0, alternative905
+	b consequence904
+consequence904:
 	li $t0, 10
-	sw $t0, 148($sp)
-	b OutOfIf920
-alternative919:
+	sw $t0, 128($sp)
+	b OutOfIf906
+alternative905:
 	li $t0, 20
-	sw $t0, 148($sp)
-	b OutOfIf920
-OutOfIf920:
-	lw $t0, 148($sp)
+	sw $t0, 128($sp)
+	b OutOfIf906
+OutOfIf906:
+	lw $t0, 128($sp)
 	li $t1, 10
-	seq $t1, $t0, $t1
-	sw $t1, 180($sp)
-	lw $t0, 180($sp)
-	beqz $t0, logicalFalse922
-	b logicalTrue921
-logicalTrue921:
-	lw $t0, 156($sp)
-	lw $t1, 140($sp)
-	div $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
-	li $t1, 0
-	seq $t1, $t0, $t1
-	sw $t1, 152($sp)
-	lw $t0, 152($sp)
-	sw $t0, 132($sp)
-	b logicalMerge923
-logicalFalse922:
-	li $t0, 0
-	sw $t0, 132($sp)
-	b logicalMerge923
-logicalMerge923:
-	lw $t0, 132($sp)
-	beqz $t0, logicalFalse925
-	b logicalTrue924
-logicalTrue924:
-	lw $t0, 156($sp)
-	li $t1, 5
 	seq $t1, $t0, $t1
 	sw $t1, 144($sp)
 	lw $t0, 144($sp)
-	sw $t0, 160($sp)
-	b logicalMerge926
-logicalFalse925:
-	li $t0, 0
-	sw $t0, 160($sp)
-	b logicalMerge926
-logicalMerge926:
+	beqz $t0, logicalFalse908
+	b logicalTrue907
+logicalTrue907:
+	lw $t0, 176($sp)
+	lw $t1, 180($sp)
+	div $t1, $t0, $t1
+	sw $t1, 160($sp)
 	lw $t0, 160($sp)
-	not $t1, $t0	sw $t1, 128($sp)
-	lw $t0, 128($sp)
-	sw $t0, 184($sp)
-	lw $t0, 184($sp)
-	beqz $t0, alternative928
-	b consequence927
-consequence927:
+	li $t1, 0
+	seq $t1, $t0, $t1
+	sw $t1, 188($sp)
+	lw $t0, 188($sp)
+	sw $t0, 136($sp)
+	b logicalMerge909
+logicalFalse908:
+	li $t0, 0
+	sw $t0, 136($sp)
+	b logicalMerge909
+logicalMerge909:
+	lw $t0, 136($sp)
+	beqz $t0, logicalFalse911
+	b logicalTrue910
+logicalTrue910:
+	lw $t0, 176($sp)
+	li $t1, 5
+	seq $t1, $t0, $t1
+	sw $t1, 140($sp)
+	lw $t0, 140($sp)
+	sw $t0, 164($sp)
+	b logicalMerge912
+logicalFalse911:
+	li $t0, 0
+	sw $t0, 164($sp)
+	b logicalMerge912
+logicalMerge912:
+	lw $t0, 164($sp)
+	xor $t1, $t0, 1
+	sw $t1, 152($sp)
+	lw $t0, 152($sp)
+	sw $t0, 156($sp)
+	lw $t0, 156($sp)
+	beqz $t0, alternative914
+	b consequence913
+consequence913:
 	li $t0, 30
-	sw $t0, 148($sp)
-	b OutOfIf929
-alternative928:
-	b OutOfIf929
-OutOfIf929:
-	lw $v0, 148($sp)
-EndOfFunctionDecl914:
+	sw $t0, 128($sp)
+	b OutOfIf915
+alternative914:
+	b OutOfIf915
+OutOfIf915:
+	lw $v0, 128($sp)
+EndOfFunctionDecl900:
 	lw $ra, 120($sp)
 	add $sp, $sp, 192
 	jr $ra

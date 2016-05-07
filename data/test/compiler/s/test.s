@@ -197,14 +197,14 @@ func__toString:
 # the zero in the end of the string will not be counted
 ###### Checked ######
 # you don't need to preserve reg before calling it
-func__string.length:
+func__length:
 	lw $v0, -4($a0)
 	jr $ra
 
 # string arg in $a0, left in $a1, right in $a2
 ###### Checked ######
 # used $a0, $a1, $t0, $t1, $t2, $v1, $v0
-func__string.substring:
+func__substring:
 	subu $sp, $sp, 4
 	sw $ra, 0($sp)
 
@@ -235,7 +235,7 @@ func__string.substring:
 ###### Checked ######
 # 16/5/4 Fixed a serious bug: can not parse negtive number
 # used $v0, $v1
-func__string.parseInt:
+func__parseInt:
 	subu $sp, $sp, 16
 	sw $a0, 0($sp)
 	sw $t0, 4($sp)
@@ -292,14 +292,14 @@ func__string.parseInt:
 # string arg in $a0, pos in $a1
 ###### Checked ######
 # used $v0, $v1
-func__string.ord:
+func__ord:
 	add $v1, $a0, $a1
 	lb $v0, 0($v1)
 	jr $ra
 
 # array arg in $a0
 # used $v0
-func__array.size:
+func__size:
 	lw $v0, -4($a0)
 	jr $ra
 
@@ -495,29 +495,29 @@ func__stringNeq:
 main:
 	sub $sp, $sp, 136
 	sw $ra, 120($sp)
-BeginOfFunctionDecl1091:
+BeginOfFunctionDecl1079:
 	li $t0, 1
-	sw $t0, global_504
+	sw $t0, global_690
 	li $t0, 1
-	sw $t0, global_505
-	lw $t0, global_504
-	lw $t1, global_505
+	sw $t0, global_691
+	lw $t0, global_690
+	lw $t1, global_691
 	seq $t1, $t0, $t1
 	sw $t1, 128($sp)
 	lw $t0, 128($sp)
-	beqz $t0, alternative1094
-	b consequence1093
-consequence1093:
+	beqz $t0, alternative1082
+	b consequence1081
+consequence1081:
 	li $t0, 1
 	sw $t0, 132($sp)
-	b OutOfIf1095
-alternative1094:
+	b OutOfIf1083
+alternative1082:
 	li $t0, 2
 	sw $t0, 132($sp)
-	b OutOfIf1095
-OutOfIf1095:
+	b OutOfIf1083
+OutOfIf1083:
 	li $v0, 0
-EndOfFunctionDecl1092:
+EndOfFunctionDecl1080:
 	lw $ra, 120($sp)
 	add $sp, $sp, 136
 	jr $ra
@@ -526,9 +526,9 @@ _end: .asciiz "\n"
 	.align 2
 _buffer: .space 256
 	.align 2
-global_504:
+global_690:
 .space 4
 .align 2
-global_505:
+global_691:
 .space 4
 .align 2

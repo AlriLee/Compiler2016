@@ -197,14 +197,14 @@ func__toString:
 # the zero in the end of the string will not be counted
 ###### Checked ######
 # you don't need to preserve reg before calling it
-func__string.length:
+func__length:
 	lw $v0, -4($a0)
 	jr $ra
 
 # string arg in $a0, left in $a1, right in $a2
 ###### Checked ######
 # used $a0, $a1, $t0, $t1, $t2, $v1, $v0
-func__string.substring:
+func__substring:
 	subu $sp, $sp, 4
 	sw $ra, 0($sp)
 
@@ -235,7 +235,7 @@ func__string.substring:
 ###### Checked ######
 # 16/5/4 Fixed a serious bug: can not parse negtive number
 # used $v0, $v1
-func__string.parseInt:
+func__parseInt:
 	subu $sp, $sp, 16
 	sw $a0, 0($sp)
 	sw $t0, 4($sp)
@@ -292,14 +292,14 @@ func__string.parseInt:
 # string arg in $a0, pos in $a1
 ###### Checked ######
 # used $v0, $v1
-func__string.ord:
+func__ord:
 	add $v1, $a0, $a1
 	lb $v0, 0($v1)
 	jr $ra
 
 # array arg in $a0
 # used $v0
-func__array.size:
+func__size:
 	lw $v0, -4($a0)
 	jr $ra
 
@@ -495,65 +495,65 @@ func__stringNeq:
 main:
 	sub $sp, $sp, 164
 	sw $ra, 120($sp)
-BeginOfFunctionDecl724:
+BeginOfFunctionDecl730:
 	li $t0, 10
-	sw $t0, 144($sp)
+	sw $t0, 132($sp)
 	li $t0, 0
-	sw $t0, 140($sp)
+	sw $t0, 156($sp)
+	li $t0, 1
+	sw $t0, 144($sp)
+ForLoop732:
+	lw $t0, 144($sp)
+	lw $t1, 132($sp)
+	sle $t1, $t0, $t1
+	sw $t1, 136($sp)
+	lw $t0, 136($sp)
+	beqz $t0, OutOfFor737
+	b ForBody736
+ForBody736:
+	lw $t0, 156($sp)
+	lw $t1, 144($sp)
+	add $t1, $t0, $t1
+	sw $t1, 140($sp)
+	lw $t0, 140($sp)
+	sw $t0, 156($sp)
+continueFor733:
+	lw $t0, 144($sp)
+	li $t1, 1
+	add $t1, $t0, $t1
+	sw $t1, 144($sp)
+	b ForLoop732
+OutOfFor737:
 	li $t0, 1
 	sw $t0, 128($sp)
-ForLoop726:
+ForLoop734:
 	lw $t0, 128($sp)
-	lw $t1, 144($sp)
+	lw $t1, 132($sp)
 	sle $t1, $t0, $t1
-	sw $t1, 152($sp)
-	lw $t0, 152($sp)
-	beqz $t0, OutOfFor731
-	b ForBody730
-ForBody730:
-	lw $t0, 140($sp)
-	lw $t1, 128($sp)
-	add $t1, $t0, $t1
 	sw $t1, 148($sp)
 	lw $t0, 148($sp)
-	sw $t0, 140($sp)
-continueFor727:
+	beqz $t0, OutOfFor739
+	b ForBody738
+ForBody738:
+	lw $t0, 156($sp)
+	li $t1, 10
+	add $t1, $t0, $t1
+	sw $t1, 152($sp)
+	lw $t0, 152($sp)
+	lw $t1, 128($sp)
+	add $t1, $t0, $t1
+	sw $t1, 160($sp)
+	lw $t0, 160($sp)
+	sw $t0, 156($sp)
+continueFor735:
 	lw $t0, 128($sp)
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, 128($sp)
-	b ForLoop726
-OutOfFor731:
-	li $t0, 1
-	sw $t0, 136($sp)
-ForLoop728:
-	lw $t0, 136($sp)
-	lw $t1, 144($sp)
-	sle $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $t0, 156($sp)
-	beqz $t0, OutOfFor733
-	b ForBody732
-ForBody732:
-	lw $t0, 140($sp)
-	li $t1, 10
-	add $t1, $t0, $t1
-	sw $t1, 160($sp)
-	lw $t0, 160($sp)
-	lw $t1, 136($sp)
-	add $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $t0, 132($sp)
-	sw $t0, 140($sp)
-continueFor729:
-	lw $t0, 136($sp)
-	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 136($sp)
-	b ForLoop728
-OutOfFor733:
-	lw $v0, 140($sp)
-EndOfFunctionDecl725:
+	b ForLoop734
+OutOfFor739:
+	lw $v0, 156($sp)
+EndOfFunctionDecl731:
 	lw $ra, 120($sp)
 	add $sp, $sp, 164
 	jr $ra

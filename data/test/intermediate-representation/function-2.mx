@@ -16,6 +16,9 @@ class Pair {
 int main() {
 	Pair pair = new Pair(7, 7);
 	pair.getSum();
-	printInt(pair.sum);
-	return 0;
+	return pair.sum;
 }
+
+/*! assert: exitcode
+14
+*/

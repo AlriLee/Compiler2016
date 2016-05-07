@@ -6,6 +6,6 @@ int main() {
         sum = sum + i;
         i = i+1;
     }
-    printInt(sum);
+    print(toString(sum));
     return 0;
 }

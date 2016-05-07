@@ -22,6 +22,7 @@ public class ForLoop implements LoopStatement {
     public Statement forStatement;
     public LabelInstruction forLoopLabel = new LabelInstruction("ForLoop");
     public LabelInstruction continueLoopLabel = new LabelInstruction("continueFor");
+    public LabelInstruction outLabel;
 
     public ForLoop() {
         initExpression = null;
@@ -61,7 +62,7 @@ public class ForLoop implements LoopStatement {
     @Override
     public void emit(List<Instruction> instruction) {
         LabelInstruction bodyLabel = new LabelInstruction("ForBody");
-        LabelInstruction outLabel = new LabelInstruction("OutOfFor");
+        outLabel = new LabelInstruction("OutOfFor");
         if (initExpression != null)
             initExpression.emit(instruction);
         instruction.add(forLoopLabel);

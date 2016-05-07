@@ -8,6 +8,6 @@ int main() {
             sum = sum + i;
         sum = sum + 1;
     }
-    printInt(sum);
+    print(toString(sum));
     return 0;
 }

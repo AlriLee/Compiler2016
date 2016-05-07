@@ -48,6 +48,7 @@ public class ClassAccess extends Expression {
     @Override
     public void emit(List<Instruction> instructions) {
         className.emit(instructions);
+        className.load(instructions);
         Type classType = className.type;
         long attributeOffSet = ((ClassType) classType).getMemberOffSet(attribute);
         //Register offSet = new Register();

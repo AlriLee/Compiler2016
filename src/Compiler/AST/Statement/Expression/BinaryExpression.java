@@ -20,6 +20,11 @@ public class BinaryExpression extends Expression {
     public Expression right;
 
     public BinaryExpression(Expression l, BinaryOp o, Expression r) {
+        if (op == BinaryOp.LEQ) {
+            if (l.type instanceof StringType && r.type instanceof StringType) {
+                throw new InternalError();
+            }
+        }
         boolean sameType = l.type.equal(r.type);
         if (l.type instanceof NullType) {
             if (r.type instanceof NullType || r.type instanceof ClassType || r.type instanceof ArrayType) {

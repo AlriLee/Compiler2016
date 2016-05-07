@@ -32,6 +32,10 @@ public class Prog implements ASTNode {
     }
 
     public void emit() {
-        declarations.stream().filter(declaration -> declaration instanceof FunctionDecl).forEach(declaration -> declaration.emit());
+        for (Declaration declaration : declarations) {
+            if (declaration instanceof FunctionDecl) {
+                declaration.emit();
+            }
+        }
     }
 }

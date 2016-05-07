@@ -56,6 +56,7 @@ public class Main {
                 FunctionDecl function = (FunctionDecl) declaration;
                 function.cfg.buildBasicBlock();
                 function.cfg.analyseFrame();
+                //function.cfg.allocator = new GlobalRegisterAllocator(function.cfg);
             }
         }
         new MIPSTranslator(new PrintStream(output)).translate();

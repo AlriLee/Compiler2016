@@ -19,6 +19,7 @@ public class WhileLoop implements LoopStatement {
     public Expression condition;
     public Statement body;
     public LabelInstruction whileLoopLabel = new LabelInstruction("WhileLoop");
+    public LabelInstruction outLabel;
 
     public WhileLoop() {
         condition = null;
@@ -45,7 +46,7 @@ public class WhileLoop implements LoopStatement {
     @Override
     public void emit(List<Instruction> instruction) {
         LabelInstruction bodyLabel = new LabelInstruction("WhileBody");
-        LabelInstruction outLabel = new LabelInstruction("OutOfWhile");
+        outLabel = new LabelInstruction("OutOfWhile");
         instruction.add(whileLoopLabel);
         condition.emit(instruction);
         instruction.add(new ConditionBranchInstruction(condition.operand, bodyLabel, outLabel));

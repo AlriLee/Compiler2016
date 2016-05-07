@@ -12,6 +12,6 @@ int main() {
     obj.b = obj.x > obj.y;
     if (obj.b) obj.z = 40;
     else obj.z = 80;
-    printInt(obj.x + obj.y + obj.z);
+    print(toString(obj.x + obj.y + obj.z));
     return 0;
 }

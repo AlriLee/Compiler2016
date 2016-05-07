@@ -197,14 +197,14 @@ func__toString:
 # the zero in the end of the string will not be counted
 ###### Checked ######
 # you don't need to preserve reg before calling it
-func__string.length:
+func__length:
 	lw $v0, -4($a0)
 	jr $ra
 
 # string arg in $a0, left in $a1, right in $a2
 ###### Checked ######
 # used $a0, $a1, $t0, $t1, $t2, $v1, $v0
-func__string.substring:
+func__substring:
 	subu $sp, $sp, 4
 	sw $ra, 0($sp)
 
@@ -235,7 +235,7 @@ func__string.substring:
 ###### Checked ######
 # 16/5/4 Fixed a serious bug: can not parse negtive number
 # used $v0, $v1
-func__string.parseInt:
+func__parseInt:
 	subu $sp, $sp, 16
 	sw $a0, 0($sp)
 	sw $t0, 4($sp)
@@ -292,14 +292,14 @@ func__string.parseInt:
 # string arg in $a0, pos in $a1
 ###### Checked ######
 # used $v0, $v1
-func__string.ord:
+func__ord:
 	add $v1, $a0, $a1
 	lb $v0, 0($v1)
 	jr $ra
 
 # array arg in $a0
 # used $v0
-func__array.size:
+func__size:
 	lw $v0, -4($a0)
 	jr $ra
 
@@ -495,53 +495,53 @@ func__stringNeq:
 f:
 	sub $sp, $sp, 148
 	sw $ra, 120($sp)
-BeginOfFunctionDecl1006:
+BeginOfFunctionDecl992:
 	lw $t0, 144($sp)
 	li $t1, 1
 	seq $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
-	beqz $t0, alternative1011
-	b consequence1010
-consequence1010:
+	sw $t1, 128($sp)
+	lw $t0, 128($sp)
+	beqz $t0, alternative997
+	b consequence996
+consequence996:
 	li $v0, 1
-	b OutOfIf1012
-alternative1011:
+	b OutOfIf998
+alternative997:
 	lw $t0, 144($sp)
 	li $t1, 1
 	sub $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
+	sw $t1, 132($sp)
+	lw $t0, 132($sp)
 	sw $t0, -4($sp)
 	jal f
-	sw $v0, 140($sp)
+	sw $v0, 136($sp)
 	lw $t0, 144($sp)
-	lw $t1, 140($sp)
+	lw $t1, 136($sp)
 	mul $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $v0, 132($sp)
-	b OutOfIf1012
-OutOfIf1012:
-	b EndOfFunctionDecl1007
-EndOfFunctionDecl1007:
+	sw $t1, 140($sp)
+	lw $v0, 140($sp)
+	b OutOfIf998
+OutOfIf998:
+	b EndOfFunctionDecl993
+EndOfFunctionDecl993:
 	lw $ra, 120($sp)
 	add $sp, $sp, 148
 	jr $ra
 main:
 	sub $sp, $sp, 140
 	sw $ra, 120($sp)
-BeginOfFunctionDecl1008:
+BeginOfFunctionDecl994:
 	li $t0, 10
 	sw $t0, -4($sp)
 	jal f
-	sw $v0, 132($sp)
-	lw $a0, 132($sp)
+	sw $v0, 128($sp)
+	lw $a0, 128($sp)
 	jal func__toString
 	sw $v0, 136($sp)
 	lw $a0, 136($sp)
 	jal func__println
-	sw $v0, 128($sp)
-EndOfFunctionDecl1009:
+	sw $v0, 132($sp)
+EndOfFunctionDecl995:
 	lw $ra, 120($sp)
 	add $sp, $sp, 140
 	jr $ra

@@ -12,8 +12,8 @@ import java.util.*;
  */
 public class GlobalRegisterAllocator {
     public static List<MIPSRegister> physicalRegister = new ArrayList<MIPSRegister>() {{
-        add(MIPSRegister.t0);
-        add(MIPSRegister.t1);
+        //add(MIPSRegister.t0);
+        //add(MIPSRegister.t1);
         add(MIPSRegister.t2);
         add(MIPSRegister.t3);
         add(MIPSRegister.t4);
@@ -35,7 +35,6 @@ public class GlobalRegisterAllocator {
         add(MIPSRegister.gp);
         add(MIPSRegister.fp);
     }};
-    public static MIPSRegister temperary1 = MIPSRegister.v1, temperary2 = MIPSRegister.a3;
     public Map<Register, MIPSRegister> allocMapping;
     public Map<Register, Set<Register>> interferenceGraph;
     public Set<Register> vertices;
@@ -72,6 +71,11 @@ public class GlobalRegisterAllocator {
                     }
                 }
                 //System.out.println("liveNow size: " + liveNow.size());
+                if (allocPhysicalReg(20)) {
+                    System.out.print("Able to alloc vr in physical registers.\n");
+                } else {
+                    System.out.print("Unable to alloc vr.\n");
+                }
             }
         }
     }
@@ -105,14 +109,19 @@ public class GlobalRegisterAllocator {
     }
 
     public boolean colourNode(Map.Entry<Register, Set<Register>> node) {
-        /*for (int i = 1; i <= 25; ++i) {
-            MIPSRegister mipsRegister = MIPSRegister.getRegister(i);
+        for (MIPSRegister colour : physicalRegister) {
+            boolean used = false;
             for (Register v: node.getValue()) {
-                if (allocMapping.containsKey(v)) {
-// TODO
+                if (allocMapping.get(node.getKey()) == colour) {
+                    used = true;
+                    break;
                 }
             }
-        }*/
+            if (!used) {
+                allocMapping.put(node.getKey(), colour);
+                return true;
+            }
+        }
         return false;
     }
 

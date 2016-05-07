@@ -22,6 +22,8 @@ import static Compiler.Tool.Tool.indent;
  * Created by Alri on 16/3/31.
  */
 public class FunctionDecl implements Type, Declaration {
+    public static FunctionDecl instance;
+
     public Type returnType;
     public Symbol functionName;
     public VarDeclList parameters;
@@ -70,11 +72,13 @@ public class FunctionDecl implements Type, Declaration {
     }
 
     public void emit() {
+        instance = this;
         cfg = new ControlFlowGraph(this);
         cfg.instruction.add(beginOfFunctionDeclLabel);
         if (functionName.name.equals("main")) {
             for (Declaration declaration : SymbolTable.program.declarations) {
                 if (declaration instanceof VarDecl) {
+                    //System.out.printf("Global variable %s   Register %s\n", ((VarDecl) declaration).name, ((VarDecl) declaration).entry.register);
                     ((VarDecl) declaration).entry.register.type = Register.registerType.GLOBAL;
                     ((VarDecl) declaration).emit(cfg.instruction);
                 }

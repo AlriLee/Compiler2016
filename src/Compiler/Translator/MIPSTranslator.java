@@ -74,7 +74,7 @@ public class MIPSTranslator {
                     output.printf("\tlw %s, %d($sp)\n", to, graph.frame.getOffset(register));
                 } else {
                     if (register.type == Register.registerType.GLOBAL) {
-                        output.printf("\tlw %s, global_%d", to, register.id);
+                        output.printf("\tlw %s, global_%d\n", to, register.id);
                     }
                 }
             }
@@ -96,29 +96,36 @@ public class MIPSTranslator {
 
     public void store(Register src, MIPSRegister dest) {
         if (!allocator.allocMapping.containsKey(src)) {
-            output.printf("\tsw %s, %d($sp)\n", dest, graph.frame.getOffset(src));
+            if (src.type != Register.registerType.GLOBAL) {
+                output.printf("\tsw %s, %d($sp)\n", dest, graph.frame.getOffset(src));
+            } else {
+                output.printf("\tsw %s, global_%d\n", dest, src.id);
+            }
         }
     }
 
     public void translate(ControlFlowGraph cfg) {
         graph = cfg;
         allocator = graph.allocator;
+        if (!cfg.function.functionName.name.equals("main")) {
+            output.printf("_");
+        }
         output.printf("%s:\n", cfg.function.functionName.name);
         output.printf("\tsub %s, %s, %d\n", MIPSRegister.sp.registerName, MIPSRegister.sp.registerName, graph.frame.size);
         output.printf("\tsw %s, %d(%s)\n", MIPSRegister.ra.registerName, graph.frame.getOffset(MIPSRegister.ra), MIPSRegister.sp.registerName);
         for (Instruction instruction : graph.instruction) {
             if (instruction instanceof LabelInstruction) {
-                output.printf("%s%d:\n", ((LabelInstruction) instruction).label, ((LabelInstruction) instruction).labelIndex);
+                output.printf("_%s%d:\n", ((LabelInstruction) instruction).label, ((LabelInstruction) instruction).labelIndex);
             }
 
             if (instruction instanceof ConditionBranchInstruction) {
                 MIPSRegister a = loadToRead(MIPSRegister.t0, ((ConditionBranchInstruction) instruction).src);
-                output.printf("\tbeqz %s, %s%d\n", a, ((ConditionBranchInstruction) instruction).tar2.label, ((ConditionBranchInstruction) instruction).tar2.labelIndex);
-                output.printf("\tb %s%d\n", ((ConditionBranchInstruction) instruction).tar1.label, ((ConditionBranchInstruction) instruction).tar1.labelIndex);
+                output.printf("\tbeqz %s, _%s%d\n", a, ((ConditionBranchInstruction) instruction).tar2.label, ((ConditionBranchInstruction) instruction).tar2.labelIndex);
+                output.printf("\tb _%s%d\n", ((ConditionBranchInstruction) instruction).tar1.label, ((ConditionBranchInstruction) instruction).tar1.labelIndex);
             }
 
             if (instruction instanceof JumpInstruction) {
-                output.printf("\tb %s%d\n", ((JumpInstruction) instruction).dest.label, ((JumpInstruction) instruction).dest.labelIndex);
+                output.printf("\tb _%s%d\n", ((JumpInstruction) instruction).dest.label, ((JumpInstruction) instruction).dest.labelIndex);
             }
 
             if (instruction instanceof ReturnInstruction) {
@@ -133,7 +140,7 @@ public class MIPSTranslator {
                         MIPSRegister a = loadToRead(MIPSRegister.t0, i.actualParameters.get(j));
                         output.printf("\tsw %s, %d($sp)\n", a, -(i.function.cfg.frame.size - i.function.cfg.frame.getOffset((Register) i.function.parameterOperand.get(j))));
                     }
-                    output.printf("\tjal %s\n", i.function.functionName);
+                    output.printf("\tjal _%s\n", i.function.functionName);
                 } else {
                     if (i.actualParameters.size() == 1) {
                         move(i.actualParameters.get(0), MIPSRegister.a0);
@@ -251,10 +258,13 @@ public class MIPSTranslator {
                 MIPSRegister d = loadToWrite(MIPSRegister.t1, i.dest);
                 MIPSRegister s = loadToRead(MIPSRegister.t0, i.src);
                 if (i.op == UnaryOp.MINUS) {
-                    output.printf("\t%s %s, %s", "neg", d, s);
+                    output.printf("\t%s %s, %s\n", "neg", d, s);
                 }
                 if (i.op == UnaryOp.NOT) {
-                    output.printf("\t%s %s, %s", "not", d, s);
+                    output.printf("\t%s %s, %s, %s\n", "xor", d, s, 1);
+                }
+                if (i.op == UnaryOp.TILDE) {
+                    output.printf("\t%s %s, %s\n", "not", d, s);
                 }
                 store(i.dest, d);
             }
@@ -464,14 +474,14 @@ public class MIPSTranslator {
                 "# the zero in the end of the string will not be counted\n" +
                 "###### Checked ######\n" +
                 "# you don't need to preserve reg before calling it\n" +
-                "func__string.length:\n" +
+                "func__length:\n" +
                 "\tlw $v0, -4($a0)\n" +
                 "\tjr $ra\n" +
                 "\n" +
                 "# string arg in $a0, left in $a1, right in $a2\n" +
                 "###### Checked ######\n" +
                 "# used $a0, $a1, $t0, $t1, $t2, $v1, $v0\n" +
-                "func__string.substring:\n" +
+                "func__substring:\n" +
                 "\tsubu $sp, $sp, 4\n" +
                 "\tsw $ra, 0($sp)\n" +
                 "\n" +
@@ -502,7 +512,7 @@ public class MIPSTranslator {
                 "###### Checked ######\n" +
                 "# 16/5/4 Fixed a serious bug: can not parse negtive number\n" +
                 "# used $v0, $v1\n" +
-                "func__string.parseInt:\n" +
+                "func__parseInt:\n" +
                 "\tsubu $sp, $sp, 16\n" +
                 "\tsw $a0, 0($sp)\n" +
                 "\tsw $t0, 4($sp)\n" +
@@ -559,14 +569,14 @@ public class MIPSTranslator {
                 "# string arg in $a0, pos in $a1\n" +
                 "###### Checked ######\n" +
                 "# used $v0, $v1\n" +
-                "func__string.ord:\n" +
+                "func__ord:\n" +
                 "\tadd $v1, $a0, $a1\n" +
                 "\tlb $v0, 0($v1)\n" +
                 "\tjr $ra\n" +
                 "\n" +
                 "# array arg in $a0\n" +
                 "# used $v0\n" +
-                "func__array.size:\n" +
+                "func__size:\n" +
                 "\tlw $v0, -4($a0)\n" +
                 "\tjr $ra\n" +
                 "\n" +
@@ -778,7 +788,14 @@ public class MIPSTranslator {
             }
         }
         for (StringImmediate stringImmediate : SymbolTable.stringImmediateArrayList) {
-            output.printf(".word %d\n", stringImmediate.literal.length());
+            String literal = stringImmediate.literal;
+            int length = literal.length() - 2;
+            for (int i = 1; i < literal.length() - 1; ++i) {
+                if (literal.charAt(i) == '\\') {
+                    length--;
+                }
+            }
+            output.printf(".word %d\n", length);
             output.printf("string_%s:\n", stringImmediate.id);
             output.printf(".asciiz %s\n.align 2\n", stringImmediate.literal);
         }

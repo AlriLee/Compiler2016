@@ -1,7 +1,9 @@
 package Compiler.AST.Statement;
 
+import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.Statement.Expression.Expression;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.JumpInstruction;
 import Compiler.ControlFlowGraph.Instruction.ReturnInstruction;
 
 import java.util.List;
@@ -33,8 +35,11 @@ public class ReturnStatement implements Statement {
 
     @Override
     public void emit(List<Instruction> instruction) {
-        expr.emit(instruction);
-        expr.load(instruction);
-        instruction.add(new ReturnInstruction(expr.operand));
+        if (expr != null) {
+            expr.emit(instruction);
+            expr.load(instruction);
+            instruction.add(new ReturnInstruction(expr.operand));
+        }
+        instruction.add(new JumpInstruction(FunctionDecl.instance.endOfFunctionDeclLabel));
     }
 }

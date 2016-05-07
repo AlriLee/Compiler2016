@@ -10,6 +10,7 @@ import Compiler.Error.CompileError;
 import Compiler.Listener.FunctionDeclListener;
 import Compiler.Listener.MagASTBuilder;
 import Compiler.Operand.StringImmediate;
+import javafx.util.Pair;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
 import java.util.ArrayList;
@@ -44,7 +45,7 @@ public class SymbolTable {
         //Add built-in functions to the outside-most scope.
 
         // void printInitialInstructions(string str);
-        Symbol printMethodSymbol = Symbol.getSymbol("printInitialInstructions");
+        Symbol printMethodSymbol = Symbol.getSymbol("print");
         addSymbol(printMethodSymbol, new FunctionDecl(
                         new VoidType(),
                         printMethodSymbol,
@@ -89,6 +90,97 @@ public class SymbolTable {
                         new StringType(),
                         toStringSymbol,
                         new VarDeclList(new VarDecl(new IntType(), Symbol.getSymbol("i"))),
+                        null
+                )
+        );
+
+        // string +
+        Symbol stringConcatenateSymbol = Symbol.getSymbol("stringConcatenate");
+        addSymbol(stringConcatenateSymbol, new FunctionDecl(
+                        new StringType(),
+                        stringConcatenateSymbol,
+                        VarDeclList.getVarDeclList(new ArrayList<Pair<String, Type>>() {{
+                            add(new Pair<>("lhs", new StringType()));
+                            add(new Pair<>("rhs", new StringType()));
+                        }}),
+                        null
+                )
+        );
+
+        // string ==
+        Symbol stringIsEqualSymbol = Symbol.getSymbol("stringIsEqual");
+        addSymbol(stringIsEqualSymbol, new FunctionDecl(
+                        new BoolType(),
+                        stringIsEqualSymbol,
+                        VarDeclList.getVarDeclList(new ArrayList<Pair<String, Type>>() {{
+                            add(new Pair<>("lhs", new StringType()));
+                            add(new Pair<>("rhs", new StringType()));
+                        }}),
+                        null
+                )
+        );
+
+        // string !=
+        Symbol stringNeqSymbol = Symbol.getSymbol("stringNeq");
+        addSymbol(stringNeqSymbol, new FunctionDecl(
+                        new BoolType(),
+                        stringNeqSymbol,
+                        VarDeclList.getVarDeclList(new ArrayList<Pair<String, Type>>() {{
+                            add(new Pair<>("lhs", new StringType()));
+                            add(new Pair<>("rhs", new StringType()));
+                        }}),
+                        null
+                )
+        );
+
+        // string <
+        Symbol stringLessSymbol = Symbol.getSymbol("stringLess");
+        addSymbol(stringLessSymbol, new FunctionDecl(
+                        new BoolType(),
+                        stringLessSymbol,
+                        VarDeclList.getVarDeclList(new ArrayList<Pair<String, Type>>() {{
+                            add(new Pair<>("lhs", new StringType()));
+                            add(new Pair<>("rhs", new StringType()));
+                        }}),
+                        null
+                )
+        );
+
+        // string >
+        Symbol stringLargerSymbol = Symbol.getSymbol("stringLarge");
+        addSymbol(stringLargerSymbol, new FunctionDecl(
+                        new BoolType(),
+                        stringLargerSymbol,
+                        VarDeclList.getVarDeclList(new ArrayList<Pair<String, Type>>() {{
+                            add(new Pair<>("lhs", new StringType()));
+                            add(new Pair<>("rhs", new StringType()));
+                        }}),
+                        null
+                )
+        );
+
+        // string <=
+        Symbol stringLeqSymbol = Symbol.getSymbol("stringLeq");
+        addSymbol(stringLeqSymbol, new FunctionDecl(
+                        new BoolType(),
+                        stringLeqSymbol,
+                        VarDeclList.getVarDeclList(new ArrayList<Pair<String, Type>>() {{
+                            add(new Pair<>("lhs", new StringType()));
+                            add(new Pair<>("rhs", new StringType()));
+                        }}),
+                        null
+                )
+        );
+
+        // string >=
+        Symbol stringGeqSymbol = Symbol.getSymbol("stringGeq");
+        addSymbol(stringGeqSymbol, new FunctionDecl(
+                new BoolType(),
+                stringGeqSymbol,
+                VarDeclList.getVarDeclList(new ArrayList<Pair<String, Type>>() {{
+                    add(new Pair<>("lhs", new StringType()));
+                    add(new Pair<>("rhs", new StringType()));
+                }}),
                         null
                 )
         );

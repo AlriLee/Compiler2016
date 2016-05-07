@@ -21,9 +21,9 @@ public class Compiler {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         Collection<Object[]> parameters = new ArrayList<>();
-        for (File file : new File("data/test/compiler/mx/").listFiles()) {
+        for (File file : new File("data/test/final/mx/").listFiles()) {
             if (file.isFile() && file.getName().endsWith(".mx")) {
-                parameters.add(new Object[]{"data/test/compiler/mx/" + file.getName()});
+                parameters.add(new Object[]{"data/test/final/mx/" + file.getName()});
             }
         }
 

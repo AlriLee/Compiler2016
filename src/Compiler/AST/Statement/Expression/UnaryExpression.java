@@ -4,8 +4,10 @@ import Compiler.AST.Type.BoolType;
 import Compiler.AST.Type.IntType;
 import Compiler.ControlFlowGraph.Instruction.BinaryInstruction;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
+import Compiler.ControlFlowGraph.Instruction.StoreInstruction;
 import Compiler.ControlFlowGraph.Instruction.UnaryInstruction;
 import Compiler.Error.CompileError;
+import Compiler.Operand.Address;
 import Compiler.Operand.Immediate;
 import Compiler.Operand.Register;
 
@@ -59,31 +61,55 @@ public class UnaryExpression extends Expression {
         expression.emit(instructions);
         switch (op) {
             case NOT: {
+                expression.load(instructions);
                 operand = new Register();
                 instructions.add(new UnaryInstruction(op, (Register) operand, expression.operand));
                 break;
             }
             case PLUS: {
+                expression.load(instructions);
                 operand = expression.operand;
                 break;
             }
             case MINUS: {
+                expression.load(instructions);
                 operand = new Register();
                 instructions.add(new UnaryInstruction(op, (Register) operand, expression.operand));
                 break;
             }
             case TILDE: {
-
+                expression.load(instructions);
+                operand = new Register();
+                instructions.add(new UnaryInstruction(op, (Register) operand, expression.operand));
                 break;
             }
             case INC: {
-                operand = expression.operand;
-                instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) operand, (Register) operand, new Immediate(1)));
+                if (expression.operand instanceof Address) {
+                    Address address = (Address) expression.operand;
+                    address = new Address(address.baseAddress, address.offSet, address.size);
+                    expression.load(instructions);
+                    operand = expression.operand;
+                    instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) operand, (Register) operand, new Immediate(1)));
+                    instructions.add(new StoreInstruction(address, operand));
+                } else {
+                    expression.load(instructions);
+                    operand = expression.operand;
+                    instructions.add(new BinaryInstruction(BinaryOp.ADD, (Register) operand, (Register) operand, new Immediate(1)));
+                }
                 break;
             }
             case DEC: {
-                operand = expression.operand;
-                instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) operand, (Register) operand, new Immediate(1)));
+                if (expression.operand instanceof Address) {
+                    Address address = (Address) expression.operand;
+                    address = new Address(address.baseAddress, address.offSet, address.size);
+                    expression.load(instructions);
+                    operand = expression.operand;
+                    instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) operand, (Register) operand, new Immediate(1)));
+                    instructions.add(new StoreInstruction(address, operand));
+                } else {
+                    operand = expression.operand;
+                    instructions.add(new BinaryInstruction(BinaryOp.SUB, (Register) operand, (Register) operand, new Immediate(1)));
+                }
                 break;
             }
         }
