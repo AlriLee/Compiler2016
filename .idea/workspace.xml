@@ -1,181 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Back up">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/array-1.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/array-2.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/array-4.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/class-1.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/class-2.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/loop-1.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/loop-2.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/loop-4.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/loop-5.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/oop-1.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/simple-1.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/simple-2.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/simple-4.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/simple-6.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/arithmetic-4.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/array-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/array-2.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/array-4.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/class-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/class-2.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/loop-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/loop-2.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/loop-4.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/loop-5.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/oop-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/sample.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/simple-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/simple-6.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/test.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/array-6.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/array-7.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/array-8.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/class-3.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/class-4.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/class-5.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/class-6.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/class-7.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/function-1.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/function-2.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/function-3.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/loop-3.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/loop-6.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/oop-1.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/simple-7.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/string-2.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/arithmetic-1.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/arithmetic-2.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/arithmetic-3.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/array-3.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/array-5.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/array-6.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/array-7.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/array-8.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/class-3.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/class-4.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/class-5.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/class-6.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/class-7.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/function-1.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/function-2.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/function-3.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/loop-3.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/loop-6.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/sample.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/simple-6.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/simple-7.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/simple-8.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/string-1.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/ans/string-2.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/in/sample.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/arithmetic-1.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/arithmetic-2.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/arithmetic-3.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/arithmetic-4.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/array-1.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/array-2.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/array-3.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/array-4.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/array-5.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/array-6.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/array-7.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/array-8.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/class-1.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/class-2.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/class-3.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/class-4.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/class-5.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/class-6.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/class-7.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/function-1.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/function-2.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/function-3.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/loop-1.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/loop-2.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/loop-3.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/loop-4.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/loop-5.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/loop-6.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/oop-1.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/simple-1.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/simple-2.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/simple-4.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/simple-6.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/simple-7.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/simple-8.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/string-1.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/string-2.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/mx/test.mx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/arithmetic-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/arithmetic-2.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/arithmetic-3.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/array-3.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/array-5.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/array-6.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/array-7.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/array-8.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/class-3.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/class-4.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/class-5.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/class-6.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/class-7.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/function-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/function-2.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/function-3.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/loop-3.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/loop-6.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/simple-2.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/simple-4.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/simple-7.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/simple-8.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/string-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/out/string-2.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/arithmetic-1.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/arithmetic-2.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/arithmetic-3.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/arithmetic-4.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/array-1.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/array-2.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/array-3.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/array-4.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/array-5.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/class-1.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/class-2.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/loop-1.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/loop-2.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/loop-4.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/loop-5.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/sample.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/simple-1.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/simple-2.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/simple-3.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/simple-4.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/simple-5.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/simple-6.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/simple-8.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/string-1.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/test/compiler/s/test.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/FunctionDecl.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Decl/FunctionDecl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/StringConst.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Statement/Expression/StringConst.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Environment/SymbolTable.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Environment/SymbolTable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Main.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Main.class" />
+    <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="Back up 5.6.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Operand/StringImmediate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/Compiler/Compiler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/Compiler/ControlFlowGraphTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/Compiler/IntermediateRepresentationTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlock.java" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/ControlFlowGraph.java" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/ControlFlowGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/Instruction.java" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/Instruction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/UnaryInstruction.java" afterPath="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/UnaryInstruction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java" afterPath="$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java" afterPath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/MIPSRegister.java" afterPath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/MIPSRegister.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Main.java" afterPath="$PROJECT_DIR$/src/Compiler/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Operand/Immediate.java" afterPath="$PROJECT_DIR$/src/Compiler/Operand/Immediate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Operand/Register.java" afterPath="$PROJECT_DIR$/src/Compiler/Operand/Register.java" />
     </list>
     <ignored path="Compiler2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -209,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="104">
-              <caret line="92" column="40" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+              <caret line="90" column="40" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,9 +53,10 @@
         <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#533#534#0" expanded="true" />
+                <marker date="1462550098000" expanded="false" signature="51:245" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -232,8 +65,8 @@
       <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11339">
-              <caret line="783" column="77" selection-start-line="783" selection-start-column="77" selection-end-line="783" selection-end-column="77" />
+            <state relative-caret-position="194">
+              <caret line="70" column="87" selection-start-line="70" selection-start-column="87" selection-end-line="70" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -288,10 +121,10 @@
         <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Register.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#496#497#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -638,7 +471,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="GlobalRegisterAllocator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Environment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ControlFlowGraph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -717,6 +594,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Expression" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1500,7 +1403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462415682626</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Back up 5.6.">
+      <created>1462550106366</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1462550106367</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1593,7 +1503,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/testcase" />
     </ignored-roots>
-    <MESSAGE value="Add *DeclListener." />
     <MESSAGE value="Done with first pass. Begin second pass." />
     <MESSAGE value="Get more understanding on what second pass does." />
     <MESSAGE value="Modify FunctionDeclListener." />
@@ -1618,14 +1527,15 @@
     <MESSAGE value="Back up 5.4." />
     <MESSAGE value="Build interference graph." />
     <MESSAGE value="Back up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Back up." />
+    <MESSAGE value="Back up 5.6." />
+    <option name="LAST_COMMIT_MESSAGE" value="Back up 5.6." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="50" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1989,10 +1899,10 @@
     <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Register.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2035,7 +1945,7 @@
     <entry file="file://$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="92" column="40" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+          <caret line="90" column="40" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2045,17 +1955,18 @@
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Statement/Expression/StringConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+            <marker date="1462550098000" expanded="false" signature="51:245" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11339">
-          <caret line="783" column="77" selection-start-line="783" selection-start-column="77" selection-end-line="783" selection-end-column="77" />
+        <state relative-caret-position="194">
+          <caret line="70" column="87" selection-start-line="70" selection-start-column="87" selection-end-line="70" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
