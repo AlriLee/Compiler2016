@@ -2,164 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="18 cases exceed limit.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagBaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagLexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagListener.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSubExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_addContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_mulDivRemContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AddSub_subContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ArgumentExpressionListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Argument_expressionListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$AssignmentExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_assignContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Assignment_logicalOrContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAndExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_andContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseAnd_equalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOrExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_bitwiseXorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseOr_orContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXorExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_bitwiseAndContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BitwiseXor_xorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BlockStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$BreakStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemDeclList_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ClassMemberDeclarationListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ConstantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_intContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_logicContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_nullContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Constant_stringContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ContinueStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$CreationExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_paraContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Creation_prefixContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimVoid_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimVoid_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimVoid_dContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimVoid_dContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionVoidExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$DimensionVoidExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_voidContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Dimension_voidContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$EqualityExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_equalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_notEqualContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Equality_relationalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ExpressionStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ForStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_returnTypeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDecl_voidContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$FunctionDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$IterationStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$JumpStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicConstantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_falseContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Logic_trueContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAndExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_andContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalAnd_bitwiseOrContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOrExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_logicalAndContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$LogicalOr_orContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRemExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_creationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_divContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_mulContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$MulDivRem_remContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ParameterListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Parameter_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PostfixExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_argumentContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_decreContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_idContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_increContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Postfix_primaryContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrefixExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_minusMinusContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_negativeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_notContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_plusPlusContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_positiveContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_postfixContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Prefix_tildeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$PrimaryExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_constantContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_expressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Primary_idContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ProgramContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$RelationalExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_geqContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_greaterContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_leqContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_lessContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Relational_shiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ReturnStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$SelectionStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Selection_ifElseContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$ShiftExpressionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_addSubContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_leftShiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$Shift_rightShiftContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementListContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_listContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$StatementList_stmtContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArrayContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_dimContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeArray_typeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$TypeContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VarDecl_initContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$VariableDeclarationStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser$WhileStatementContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/MagParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase" afterPath="$PROJECT_DIR$/testcase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/out/pi-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/data/test/final/out/pi-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/array_test1-mahaojun.s" afterPath="$PROJECT_DIR$/data/test/final/s/array_test1-mahaojun.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/array_test2-mahaojun.s" afterPath="$PROJECT_DIR$/data/test/final/s/array_test2-mahaojun.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/basicopt1-5100309127-hetianxing.s" afterPath="$PROJECT_DIR$/data/test/final/s/basicopt1-5100309127-hetianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/bulgarian-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/data/test/final/s/bulgarian-5110379024-wuhang.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/class_test-mahaojun.s" afterPath="$PROJECT_DIR$/data/test/final/s/class_test-mahaojun.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/expr-5110309085-jintianxing.s" afterPath="$PROJECT_DIR$/data/test/final/s/expr-5110309085-jintianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/function_test-huyuncong.s" afterPath="$PROJECT_DIR$/data/test/final/s/function_test-huyuncong.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/hanoi-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/hanoi-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/hashmap-5100309127-hetianxing.s" afterPath="$PROJECT_DIR$/data/test/final/s/hashmap-5100309127-hetianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/heapsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/heapsort-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/horse-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/horse-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/horse2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/horse2-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/horse3-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/horse3-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/lvalue2-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/data/test/final/s/lvalue2-5110379024-wuhang.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/magic-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/magic-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/maxflow-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/maxflow-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/multiarray-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/multiarray-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/pi-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/pi-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/qsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/qsort-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/queens-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/queens-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/spill2-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/spill2-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/statement_test-huyuncong.s" afterPath="$PROJECT_DIR$/data/test/final/s/statement_test-huyuncong.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/string_test-huyuncong.s" afterPath="$PROJECT_DIR$/data/test/final/s/string_test-huyuncong.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/superloop-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/superloop-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/tak-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/tak-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/twinprime-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/twinprime-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/Mag.g4" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/AST/Parser/Mag.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagBaseListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagBaseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagLexer.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagListener.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java" afterPath="$PROJECT_DIR$/src/Compiler/AST/Parser/MagParser.java" />
     </list>
     <ignored path="Compiler2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -189,67 +32,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GlobalRegisterAllocator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="171" column="38" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="initializer##0;class#435:1134" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MagASTBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="828" column="29" selection-start-line="828" selection-start-column="29" selection-end-line="828" selection-end-column="29" />
+            <state relative-caret-position="218">
+              <caret line="829" column="17" selection-start-line="829" selection-start-column="17" selection-end-line="829" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mag.g4" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Parser/Mag.g4">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="72" column="69" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="horse2-5100309153-yanghuan.mx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test/final/mx/horse2-5100309153-yanghuan.mx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="string_test-huyuncong.mx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test/final/mx/string_test-huyuncong.mx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -709,46 +499,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="final" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1663,211 +1413,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Type/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/ASTNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/ExpressionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Prog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/StatementList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/VarDeclList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="40" column="65" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/AllocInstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/StoreInstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/Instruction/UnaryInstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Environment/SymbolTableEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Error/CompileError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/BaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ClassDeclListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/ErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Immediate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Operand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Operand/StringImmediate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Tool/Tool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Interpreter/LLIRInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/MIPSRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Symbol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Compiler/Compiler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1954,13 +1499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/final/mx/maxflow-5100379110-daibo.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="58" column="11" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/ControlFlowGraph/BasicBlock/BasicBlock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1998,25 +1536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/final/mx/prime-5100309153-yanghuan.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-819">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/test/compiler/mx/class-7.mx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/final/mx/string_test-huyuncong.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2025,24 +1548,6 @@
         <state relative-caret-position="120">
           <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/final/mx/horse2-5100309153-yanghuan.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="828" column="29" selection-start-line="828" selection-start-column="29" selection-end-line="828" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2056,11 +1561,261 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="171" column="38" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="38" />
+        <state relative-caret-position="201">
+          <caret line="180" column="37" selection-start-line="180" selection-start-column="37" selection-end-line="180" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##0;class#435:1134" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/array_test1-mahaojun.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/array_test2-mahaojun.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/builtin-5140519064-youyurong.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/basicopt1-5100309127-hetianxing.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/bulgarian-5110379024-wuhang.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1305">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/class_test-mahaojun.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/expr-5110309085-jintianxing.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/function_test-huyuncong.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-667">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/gcd-5090379042-jiaxiao.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/hanoi-5100379110-daibo.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/hashmap-5100309127-hetianxing.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-457">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/heapsort-5100379110-daibo.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/horse2-5100309153-yanghuan.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/horse3-5100309153-yanghuan.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-772">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/horse-5100309153-yanghuan.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-697">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/lvalue2-5110379024-wuhang.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/magic-5100309153-yanghuan.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/manyarguments-5100379110-daibo.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/maxflow-5100379110-daibo.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="11" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/multiarray-5100309153-yanghuan.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-367">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/twinprime-5090379042-jiaxiao.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/tak-5090379042-jiaxiao.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/superloop-5090379042-jiaxiao.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-247">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/string_test-huyuncong.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/statement_test-huyuncong.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/spill2-5100379110-daibo.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15337">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/queens-5100379110-daibo.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/qsort-5100379110-daibo.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/prime-5100309153-yanghuan.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/pi-5090379042-jiaxiao.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="829" column="17" selection-start-line="829" selection-start-column="17" selection-end-line="829" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
