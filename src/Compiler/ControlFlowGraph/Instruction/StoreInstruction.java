@@ -3,6 +3,7 @@ package Compiler.ControlFlowGraph.Instruction;
 import Compiler.Operand.Address;
 import Compiler.Operand.Operand;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -30,11 +31,11 @@ public class StoreInstruction extends Instruction {
 
     @Override
     public List<Operand> getUsedOp() {
-        return Collections.singletonList(src);
+        return Arrays.asList(src, dest.baseAddress);
     }
 
     @Override
     public List<Operand> getDefinedOp() {
-        return Collections.singletonList(dest);
+        return null;
     }
 }

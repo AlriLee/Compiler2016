@@ -493,16 +493,57 @@ func__stringNeq:
 	addu $sp, $sp, 4
 	jr $ra
 main:
-	sub $sp, $sp, 136
+	sub $sp, $sp, 132
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl1023:
-	la $a0, string_665
+_BeginOfFunctionDecl1499:
+	la $a0, string_0
 	jal func__println
-	sw $v0, 132($sp)
+	sw $v0, 128($sp)
 	li $v0, 0
-EndOfFunctionDecl1024:
+	b _EndOfFunctionDecl1500
+_EndOfFunctionDecl1500:
 	lw $ra, 120($sp)
-	add $sp, $sp, 136
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
+	add $sp, $sp, 132
 	jr $ra
 .data
 _end: .asciiz "\n"
@@ -510,6 +551,6 @@ _end: .asciiz "\n"
 _buffer: .space 256
 	.align 2
 .word 12
-string_665:
+string_0:
 .asciiz "hello world!"
 .align 2

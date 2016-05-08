@@ -494,816 +494,597 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 540
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl2034:
 	li $t0, 99
-	sw $t0, global_7161
+	sw $t0, global_50
 	li $t0, 100
-	sw $t0, global_7162
+	sw $t0, global_51
 	li $t0, 101
-	sw $t0, global_7163
+	sw $t0, global_52
 	li $t0, 102
-	sw $t0, global_7164
+	sw $t0, global_53
 	li $t0, 0
-	sw $t0, global_7165
+	sw $t0, global_54
 	jal func__getInt
-	sw $v0, 388($sp)
-	lw $t0, 388($sp)
-	sw $t0, global_7160
+	sw $v0, 472($sp)
+	lw $t0, 472($sp)
+	sw $t0, global_49
 	li $t0, 1
-	sw $t0, 456($sp)
+	move $t3, $t0
 _ForLoop2036:
-	lw $t0, 456($sp)
-	lw $t1, global_7160
-	sle $t1, $t0, $t1
-	sw $t1, 492($sp)
-	lw $t0, 492($sp)
-	beqz $t0, _OutOfFor2049
-	b _ForBody2048
+	lw $t1, global_49
+	sle $t2, $t3, $t1
+	beqz $t2, _OutOfFor2049
 _ForBody2048:
 	li $t0, 1
-	sw $t0, 208($sp)
+	move $t5, $t0
 _ForLoop2038:
-	lw $t0, 208($sp)
-	lw $t1, global_7160
-	sle $t1, $t0, $t1
-	sw $t1, 488($sp)
-	lw $t0, 488($sp)
-	beqz $t0, _OutOfFor2051
-	b _ForBody2050
+	lw $t1, global_49
+	sle $t2, $t5, $t1
+	beqz $t2, _OutOfFor2051
 _ForBody2050:
 	li $t0, 1
-	sw $t0, 192($sp)
+	move $t8, $t0
 _ForLoop2040:
-	lw $t0, 192($sp)
-	lw $t1, global_7160
-	sle $t1, $t0, $t1
-	sw $t1, 404($sp)
-	lw $t0, 404($sp)
-	beqz $t0, _OutOfFor2053
-	b _ForBody2052
+	lw $t1, global_49
+	sle $t2, $t8, $t1
+	beqz $t2, _OutOfFor2053
 _ForBody2052:
 	li $t0, 1
-	sw $t0, 236($sp)
+	move $t4, $t0
 _ForLoop2042:
-	lw $t0, 236($sp)
-	lw $t1, global_7160
-	sle $t1, $t0, $t1
-	sw $t1, 308($sp)
-	lw $t0, 308($sp)
-	beqz $t0, _OutOfFor2055
-	b _ForBody2054
+	lw $t1, global_49
+	sle $t2, $t4, $t1
+	beqz $t2, _OutOfFor2055
 _ForBody2054:
 	li $t0, 1
-	sw $t0, 272($sp)
+	move $t6, $t0
 _ForLoop2044:
-	lw $t0, 272($sp)
-	lw $t1, global_7160
-	sle $t1, $t0, $t1
-	sw $t1, 180($sp)
-	lw $t0, 180($sp)
-	beqz $t0, _OutOfFor2057
-	b _ForBody2056
+	lw $t1, global_49
+	sle $t2, $t6, $t1
+	beqz $t2, _OutOfFor2057
 _ForBody2056:
 	li $t0, 1
-	sw $t0, 284($sp)
+	move $t7, $t0
 _ForLoop2046:
-	lw $t0, 284($sp)
-	lw $t1, global_7160
-	sle $t1, $t0, $t1
-	sw $t1, 400($sp)
-	lw $t0, 400($sp)
-	beqz $t0, _OutOfFor2059
-	b _ForBody2058
+	lw $t1, global_49
+	sle $t2, $t7, $t1
+	beqz $t2, _OutOfFor2059
 _ForBody2058:
-	lw $t0, 456($sp)
-	lw $t1, 208($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 440($sp)
-	lw $t0, 440($sp)
-	beqz $t0, _logicalFalse2064
-	b _logicalTrue2063
+	sne $t2, $t3, $t5
+	beqz $t2, _logicalFalse2064
 _logicalTrue2063:
-	lw $t0, 456($sp)
-	lw $t1, 192($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 160($sp)
-	lw $t0, 160($sp)
-	sw $t0, 532($sp)
+	sne $t2, $t3, $t8
+	move $s0, $t2
 	b _logicalMerge2065
 _logicalFalse2064:
 	li $t0, 0
-	sw $t0, 532($sp)
+	move $s0, $t0
 	b _logicalMerge2065
 _logicalMerge2065:
-	lw $t0, 532($sp)
-	beqz $t0, _logicalFalse2067
-	b _logicalTrue2066
+	beqz $s0, _logicalFalse2067
 _logicalTrue2066:
-	lw $t0, 456($sp)
-	lw $t1, 236($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 464($sp)
-	lw $t0, 464($sp)
-	sw $t0, 228($sp)
+	sne $t2, $t3, $t4
+	move $s1, $t2
 	b _logicalMerge2068
 _logicalFalse2067:
 	li $t0, 0
-	sw $t0, 228($sp)
+	move $s1, $t0
 	b _logicalMerge2068
 _logicalMerge2068:
-	lw $t0, 228($sp)
-	beqz $t0, _logicalFalse2070
-	b _logicalTrue2069
+	beqz $s1, _logicalFalse2070
 _logicalTrue2069:
-	lw $t0, 456($sp)
-	lw $t1, 272($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 436($sp)
-	lw $t0, 436($sp)
-	sw $t0, 244($sp)
+	sne $t2, $t3, $t6
+	move $s2, $t2
 	b _logicalMerge2071
 _logicalFalse2070:
 	li $t0, 0
-	sw $t0, 244($sp)
+	move $s2, $t0
 	b _logicalMerge2071
 _logicalMerge2071:
-	lw $t0, 244($sp)
-	beqz $t0, _logicalFalse2073
-	b _logicalTrue2072
+	beqz $s2, _logicalFalse2073
 _logicalTrue2072:
-	lw $t0, 456($sp)
-	lw $t1, 284($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 512($sp)
-	lw $t0, 512($sp)
-	sw $t0, 276($sp)
+	sne $t2, $t3, $t7
+	move $s3, $t2
 	b _logicalMerge2074
 _logicalFalse2073:
 	li $t0, 0
-	sw $t0, 276($sp)
+	move $s3, $t0
 	b _logicalMerge2074
 _logicalMerge2074:
-	lw $t0, 276($sp)
-	beqz $t0, _logicalFalse2076
-	b _logicalTrue2075
+	beqz $s3, _logicalFalse2076
 _logicalTrue2075:
-	lw $t0, 456($sp)
-	lw $t1, global_7161
-	sne $t1, $t0, $t1
-	sw $t1, 432($sp)
-	lw $t0, 432($sp)
-	sw $t0, 292($sp)
+	lw $t1, global_50
+	sne $t2, $t3, $t1
+	move $s4, $t2
 	b _logicalMerge2077
 _logicalFalse2076:
 	li $t0, 0
-	sw $t0, 292($sp)
+	move $s4, $t0
 	b _logicalMerge2077
 _logicalMerge2077:
-	lw $t0, 292($sp)
-	beqz $t0, _logicalFalse2079
-	b _logicalTrue2078
+	beqz $s4, _logicalFalse2079
 _logicalTrue2078:
-	lw $t0, 456($sp)
-	lw $t1, global_7162
-	sne $t1, $t0, $t1
-	sw $t1, 288($sp)
-	lw $t0, 288($sp)
-	sw $t0, 332($sp)
+	lw $t1, global_51
+	sne $t2, $t3, $t1
+	move $s5, $t2
 	b _logicalMerge2080
 _logicalFalse2079:
 	li $t0, 0
-	sw $t0, 332($sp)
+	move $s5, $t0
 	b _logicalMerge2080
 _logicalMerge2080:
-	lw $t0, 332($sp)
-	beqz $t0, _logicalFalse2082
-	b _logicalTrue2081
+	beqz $s5, _logicalFalse2082
 _logicalTrue2081:
-	lw $t0, 456($sp)
-	lw $t1, global_7163
-	sne $t1, $t0, $t1
-	sw $t1, 172($sp)
-	lw $t0, 172($sp)
-	sw $t0, 336($sp)
+	lw $t1, global_52
+	sne $t2, $t3, $t1
+	move $s6, $t2
 	b _logicalMerge2083
 _logicalFalse2082:
 	li $t0, 0
-	sw $t0, 336($sp)
+	move $s6, $t0
 	b _logicalMerge2083
 _logicalMerge2083:
-	lw $t0, 336($sp)
-	beqz $t0, _logicalFalse2085
-	b _logicalTrue2084
+	beqz $s6, _logicalFalse2085
 _logicalTrue2084:
-	lw $t0, 456($sp)
-	lw $t1, global_7164
-	sne $t1, $t0, $t1
-	sw $t1, 508($sp)
-	lw $t0, 508($sp)
-	sw $t0, 408($sp)
+	lw $t1, global_53
+	sne $t2, $t3, $t1
+	move $s7, $t2
 	b _logicalMerge2086
 _logicalFalse2085:
 	li $t0, 0
-	sw $t0, 408($sp)
+	move $s7, $t0
 	b _logicalMerge2086
 _logicalMerge2086:
-	lw $t0, 408($sp)
-	beqz $t0, _logicalFalse2088
-	b _logicalTrue2087
+	beqz $s7, _logicalFalse2088
 _logicalTrue2087:
-	lw $t0, 208($sp)
-	lw $t1, 192($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $t0, 148($sp)
-	sw $t0, 504($sp)
+	sne $t2, $t5, $t8
+	move $t9, $t2
 	b _logicalMerge2089
 _logicalFalse2088:
 	li $t0, 0
-	sw $t0, 504($sp)
+	move $t9, $t0
 	b _logicalMerge2089
 _logicalMerge2089:
-	lw $t0, 504($sp)
-	beqz $t0, _logicalFalse2091
-	b _logicalTrue2090
+	beqz $t9, _logicalFalse2091
 _logicalTrue2090:
-	lw $t0, 208($sp)
-	lw $t1, 236($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 252($sp)
-	lw $t0, 252($sp)
-	sw $t0, 412($sp)
+	sne $t2, $t5, $t4
+	move $k0, $t2
 	b _logicalMerge2092
 _logicalFalse2091:
 	li $t0, 0
-	sw $t0, 412($sp)
+	move $k0, $t0
 	b _logicalMerge2092
 _logicalMerge2092:
-	lw $t0, 412($sp)
-	beqz $t0, _logicalFalse2094
-	b _logicalTrue2093
+	beqz $k0, _logicalFalse2094
 _logicalTrue2093:
-	lw $t0, 208($sp)
-	lw $t1, 272($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 376($sp)
-	lw $t0, 376($sp)
-	sw $t0, 260($sp)
+	sne $t2, $t5, $t6
+	move $k1, $t2
 	b _logicalMerge2095
 _logicalFalse2094:
 	li $t0, 0
-	sw $t0, 260($sp)
+	move $k1, $t0
 	b _logicalMerge2095
 _logicalMerge2095:
-	lw $t0, 260($sp)
-	beqz $t0, _logicalFalse2097
-	b _logicalTrue2096
+	beqz $k1, _logicalFalse2097
 _logicalTrue2096:
-	lw $t0, 208($sp)
-	lw $t1, 284($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 428($sp)
-	lw $t0, 428($sp)
-	sw $t0, 468($sp)
+	sne $t2, $t5, $t7
+	move $gp, $t2
 	b _logicalMerge2098
 _logicalFalse2097:
 	li $t0, 0
-	sw $t0, 468($sp)
+	move $gp, $t0
 	b _logicalMerge2098
 _logicalMerge2098:
-	lw $t0, 468($sp)
-	beqz $t0, _logicalFalse2100
-	b _logicalTrue2099
+	beqz $gp, _logicalFalse2100
 _logicalTrue2099:
-	lw $t0, 208($sp)
-	lw $t1, global_7161
-	sne $t1, $t0, $t1
-	sw $t1, 232($sp)
-	lw $t0, 232($sp)
-	sw $t0, 340($sp)
+	lw $t1, global_50
+	sne $t2, $t5, $t1
+	move $fp, $t2
 	b _logicalMerge2101
 _logicalFalse2100:
 	li $t0, 0
-	sw $t0, 340($sp)
+	move $fp, $t0
 	b _logicalMerge2101
 _logicalMerge2101:
-	lw $t0, 340($sp)
-	beqz $t0, _logicalFalse2103
-	b _logicalTrue2102
+	beqz $fp, _logicalFalse2103
 _logicalTrue2102:
-	lw $t0, 208($sp)
-	lw $t1, global_7162
-	sne $t1, $t0, $t1
-	sw $t1, 248($sp)
-	lw $t0, 248($sp)
-	sw $t0, 352($sp)
+	lw $t1, global_51
+	sne $t2, $t5, $t1
+	move $t2, $t2
 	b _logicalMerge2104
 _logicalFalse2103:
 	li $t0, 0
-	sw $t0, 352($sp)
+	move $t2, $t0
 	b _logicalMerge2104
 _logicalMerge2104:
-	lw $t0, 352($sp)
-	beqz $t0, _logicalFalse2106
-	b _logicalTrue2105
+	beqz $t2, _logicalFalse2106
 _logicalTrue2105:
-	lw $t0, 208($sp)
-	lw $t1, global_7163
-	sne $t1, $t0, $t1
-	sw $t1, 524($sp)
-	lw $t0, 524($sp)
-	sw $t0, 324($sp)
+	lw $t1, global_52
+	sne $t2, $t5, $t1
+	move $t2, $t2
 	b _logicalMerge2107
 _logicalFalse2106:
 	li $t0, 0
-	sw $t0, 324($sp)
+	move $t2, $t0
 	b _logicalMerge2107
 _logicalMerge2107:
-	lw $t0, 324($sp)
-	beqz $t0, _logicalFalse2109
-	b _logicalTrue2108
+	beqz $t2, _logicalFalse2109
 _logicalTrue2108:
-	lw $t0, 208($sp)
-	lw $t1, global_7164
-	sne $t1, $t0, $t1
-	sw $t1, 360($sp)
-	lw $t0, 360($sp)
-	sw $t0, 280($sp)
+	lw $t1, global_53
+	sne $t2, $t5, $t1
+	move $t2, $t2
 	b _logicalMerge2110
 _logicalFalse2109:
 	li $t0, 0
-	sw $t0, 280($sp)
+	move $t2, $t0
 	b _logicalMerge2110
 _logicalMerge2110:
-	lw $t0, 280($sp)
-	beqz $t0, _logicalFalse2112
-	b _logicalTrue2111
+	beqz $t2, _logicalFalse2112
 _logicalTrue2111:
-	lw $t0, 192($sp)
-	lw $t1, 236($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 196($sp)
-	lw $t0, 196($sp)
-	sw $t0, 328($sp)
+	sne $t2, $t8, $t4
+	move $t2, $t2
 	b _logicalMerge2113
 _logicalFalse2112:
 	li $t0, 0
-	sw $t0, 328($sp)
+	move $t2, $t0
 	b _logicalMerge2113
 _logicalMerge2113:
-	lw $t0, 328($sp)
-	beqz $t0, _logicalFalse2115
-	b _logicalTrue2114
+	beqz $t2, _logicalFalse2115
 _logicalTrue2114:
-	lw $t0, 192($sp)
-	lw $t1, 272($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 484($sp)
-	lw $t0, 484($sp)
-	sw $t0, 472($sp)
+	sne $t2, $t8, $t6
+	move $t2, $t2
 	b _logicalMerge2116
 _logicalFalse2115:
 	li $t0, 0
-	sw $t0, 472($sp)
+	move $t2, $t0
 	b _logicalMerge2116
 _logicalMerge2116:
-	lw $t0, 472($sp)
-	beqz $t0, _logicalFalse2118
-	b _logicalTrue2117
+	beqz $t2, _logicalFalse2118
 _logicalTrue2117:
-	lw $t0, 192($sp)
-	lw $t1, 284($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 144($sp)
-	lw $t0, 144($sp)
-	sw $t0, 480($sp)
+	sne $t2, $t8, $t7
+	move $t2, $t2
 	b _logicalMerge2119
 _logicalFalse2118:
 	li $t0, 0
-	sw $t0, 480($sp)
+	move $t2, $t0
 	b _logicalMerge2119
 _logicalMerge2119:
-	lw $t0, 480($sp)
-	beqz $t0, _logicalFalse2121
-	b _logicalTrue2120
+	beqz $t2, _logicalFalse2121
 _logicalTrue2120:
-	lw $t0, 192($sp)
-	lw $t1, global_7161
-	sne $t1, $t0, $t1
-	sw $t1, 344($sp)
-	lw $t0, 344($sp)
-	sw $t0, 212($sp)
+	lw $t1, global_50
+	sne $t2, $t8, $t1
+	move $t2, $t2
 	b _logicalMerge2122
 _logicalFalse2121:
 	li $t0, 0
-	sw $t0, 212($sp)
+	move $t2, $t0
 	b _logicalMerge2122
 _logicalMerge2122:
-	lw $t0, 212($sp)
-	beqz $t0, _logicalFalse2124
-	b _logicalTrue2123
+	beqz $t2, _logicalFalse2124
 _logicalTrue2123:
-	lw $t0, 192($sp)
-	lw $t1, global_7162
-	sne $t1, $t0, $t1
-	sw $t1, 368($sp)
-	lw $t0, 368($sp)
-	sw $t0, 520($sp)
+	lw $t1, global_51
+	sne $t2, $t8, $t1
+	move $t2, $t2
 	b _logicalMerge2125
 _logicalFalse2124:
 	li $t0, 0
-	sw $t0, 520($sp)
+	move $t2, $t0
 	b _logicalMerge2125
 _logicalMerge2125:
-	lw $t0, 520($sp)
-	beqz $t0, _logicalFalse2127
-	b _logicalTrue2126
+	beqz $t2, _logicalFalse2127
 _logicalTrue2126:
-	lw $t0, 192($sp)
-	lw $t1, global_7163
-	sne $t1, $t0, $t1
-	sw $t1, 256($sp)
-	lw $t0, 256($sp)
-	sw $t0, 356($sp)
+	lw $t1, global_52
+	sne $t2, $t8, $t1
+	move $t2, $t2
 	b _logicalMerge2128
 _logicalFalse2127:
 	li $t0, 0
-	sw $t0, 356($sp)
+	move $t2, $t0
 	b _logicalMerge2128
 _logicalMerge2128:
-	lw $t0, 356($sp)
-	beqz $t0, _logicalFalse2130
-	b _logicalTrue2129
+	beqz $t2, _logicalFalse2130
 _logicalTrue2129:
-	lw $t0, 192($sp)
-	lw $t1, global_7164
-	sne $t1, $t0, $t1
-	sw $t1, 184($sp)
-	lw $t0, 184($sp)
-	sw $t0, 420($sp)
+	lw $t1, global_53
+	sne $t2, $t8, $t1
+	move $t2, $t2
 	b _logicalMerge2131
 _logicalFalse2130:
 	li $t0, 0
-	sw $t0, 420($sp)
+	move $t2, $t0
 	b _logicalMerge2131
 _logicalMerge2131:
-	lw $t0, 420($sp)
-	beqz $t0, _logicalFalse2133
-	b _logicalTrue2132
+	beqz $t2, _logicalFalse2133
 _logicalTrue2132:
-	lw $t0, 236($sp)
-	lw $t1, 272($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 264($sp)
-	lw $t0, 264($sp)
-	sw $t0, 220($sp)
+	sne $t2, $t4, $t6
+	move $t2, $t2
 	b _logicalMerge2134
 _logicalFalse2133:
 	li $t0, 0
-	sw $t0, 220($sp)
+	move $t2, $t0
 	b _logicalMerge2134
 _logicalMerge2134:
-	lw $t0, 220($sp)
-	beqz $t0, _logicalFalse2136
-	b _logicalTrue2135
+	beqz $t2, _logicalFalse2136
 _logicalTrue2135:
-	lw $t0, 236($sp)
-	lw $t1, 284($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 496($sp)
-	lw $t0, 496($sp)
-	sw $t0, 156($sp)
+	sne $t2, $t4, $t7
+	move $t2, $t2
 	b _logicalMerge2137
 _logicalFalse2136:
 	li $t0, 0
-	sw $t0, 156($sp)
+	move $t2, $t0
 	b _logicalMerge2137
 _logicalMerge2137:
-	lw $t0, 156($sp)
-	beqz $t0, _logicalFalse2139
-	b _logicalTrue2138
+	beqz $t2, _logicalFalse2139
 _logicalTrue2138:
-	lw $t0, 236($sp)
-	lw $t1, global_7161
-	sne $t1, $t0, $t1
-	sw $t1, 416($sp)
-	lw $t0, 416($sp)
-	sw $t0, 364($sp)
+	lw $t1, global_50
+	sne $t2, $t4, $t1
+	move $t2, $t2
 	b _logicalMerge2140
 _logicalFalse2139:
 	li $t0, 0
-	sw $t0, 364($sp)
+	move $t2, $t0
 	b _logicalMerge2140
 _logicalMerge2140:
-	lw $t0, 364($sp)
-	beqz $t0, _logicalFalse2142
-	b _logicalTrue2141
+	beqz $t2, _logicalFalse2142
 _logicalTrue2141:
-	lw $t0, 236($sp)
-	lw $t1, global_7162
-	sne $t1, $t0, $t1
-	sw $t1, 448($sp)
-	lw $t0, 448($sp)
-	sw $t0, 424($sp)
+	lw $t1, global_51
+	sne $t2, $t4, $t1
+	move $t2, $t2
 	b _logicalMerge2143
 _logicalFalse2142:
 	li $t0, 0
-	sw $t0, 424($sp)
+	move $t2, $t0
 	b _logicalMerge2143
 _logicalMerge2143:
-	lw $t0, 424($sp)
-	beqz $t0, _logicalFalse2145
-	b _logicalTrue2144
+	beqz $t2, _logicalFalse2145
 _logicalTrue2144:
-	lw $t0, 236($sp)
-	lw $t1, global_7163
-	sne $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, 164($sp)
-	sw $t0, 500($sp)
+	lw $t1, global_52
+	sne $t2, $t4, $t1
+	move $t2, $t2
 	b _logicalMerge2146
 _logicalFalse2145:
 	li $t0, 0
-	sw $t0, 500($sp)
+	move $t2, $t0
 	b _logicalMerge2146
 _logicalMerge2146:
-	lw $t0, 500($sp)
-	beqz $t0, _logicalFalse2148
-	b _logicalTrue2147
+	beqz $t2, _logicalFalse2148
 _logicalTrue2147:
-	lw $t0, 236($sp)
-	lw $t1, global_7164
-	sne $t1, $t0, $t1
-	sw $t1, 452($sp)
-	lw $t0, 452($sp)
-	sw $t0, 268($sp)
+	lw $t1, global_53
+	sne $t2, $t4, $t1
+	move $t2, $t2
 	b _logicalMerge2149
 _logicalFalse2148:
 	li $t0, 0
-	sw $t0, 268($sp)
+	move $t2, $t0
 	b _logicalMerge2149
 _logicalMerge2149:
-	lw $t0, 268($sp)
-	beqz $t0, _logicalFalse2151
-	b _logicalTrue2150
+	beqz $t2, _logicalFalse2151
 _logicalTrue2150:
-	lw $t0, 272($sp)
-	lw $t1, 284($sp)
-	sne $t1, $t0, $t1
-	sw $t1, 392($sp)
-	lw $t0, 392($sp)
-	sw $t0, 204($sp)
+	sne $t2, $t6, $t7
+	move $t2, $t2
 	b _logicalMerge2152
 _logicalFalse2151:
 	li $t0, 0
-	sw $t0, 204($sp)
+	move $t2, $t0
 	b _logicalMerge2152
 _logicalMerge2152:
-	lw $t0, 204($sp)
-	beqz $t0, _logicalFalse2154
-	b _logicalTrue2153
+	beqz $t2, _logicalFalse2154
 _logicalTrue2153:
-	lw $t0, 272($sp)
-	lw $t1, global_7161
-	sne $t1, $t0, $t1
-	sw $t1, 152($sp)
-	lw $t0, 152($sp)
-	sw $t0, 216($sp)
+	lw $t1, global_50
+	sne $t2, $t6, $t1
+	move $t2, $t2
 	b _logicalMerge2155
 _logicalFalse2154:
 	li $t0, 0
-	sw $t0, 216($sp)
+	move $t2, $t0
 	b _logicalMerge2155
 _logicalMerge2155:
-	lw $t0, 216($sp)
-	beqz $t0, _logicalFalse2157
-	b _logicalTrue2156
+	beqz $t2, _logicalFalse2157
 _logicalTrue2156:
-	lw $t0, 272($sp)
-	lw $t1, global_7162
-	sne $t1, $t0, $t1
-	sw $t1, 296($sp)
-	lw $t0, 296($sp)
-	sw $t0, 132($sp)
+	lw $t1, global_51
+	sne $t2, $t6, $t1
+	move $t2, $t2
 	b _logicalMerge2158
 _logicalFalse2157:
 	li $t0, 0
-	sw $t0, 132($sp)
+	move $t2, $t0
 	b _logicalMerge2158
 _logicalMerge2158:
-	lw $t0, 132($sp)
-	beqz $t0, _logicalFalse2160
-	b _logicalTrue2159
+	beqz $t2, _logicalFalse2160
 _logicalTrue2159:
-	lw $t0, 272($sp)
-	lw $t1, global_7163
-	sne $t1, $t0, $t1
-	sw $t1, 380($sp)
-	lw $t0, 380($sp)
-	sw $t0, 460($sp)
+	lw $t1, global_52
+	sne $t2, $t6, $t1
+	move $t2, $t2
 	b _logicalMerge2161
 _logicalFalse2160:
 	li $t0, 0
-	sw $t0, 460($sp)
+	move $t2, $t0
 	b _logicalMerge2161
 _logicalMerge2161:
-	lw $t0, 460($sp)
-	beqz $t0, _logicalFalse2163
-	b _logicalTrue2162
+	beqz $t2, _logicalFalse2163
 _logicalTrue2162:
-	lw $t0, 272($sp)
-	lw $t1, global_7164
-	sne $t1, $t0, $t1
-	sw $t1, 240($sp)
-	lw $t0, 240($sp)
-	sw $t0, 348($sp)
+	lw $t1, global_53
+	sne $t2, $t6, $t1
+	move $t2, $t2
 	b _logicalMerge2164
 _logicalFalse2163:
 	li $t0, 0
-	sw $t0, 348($sp)
+	move $t2, $t0
 	b _logicalMerge2164
 _logicalMerge2164:
-	lw $t0, 348($sp)
-	beqz $t0, _logicalFalse2166
-	b _logicalTrue2165
+	beqz $t2, _logicalFalse2166
 _logicalTrue2165:
-	lw $t0, 284($sp)
-	lw $t1, global_7161
-	sne $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $t0, 140($sp)
-	sw $t0, 300($sp)
+	lw $t1, global_50
+	sne $t2, $t7, $t1
+	move $t2, $t2
 	b _logicalMerge2167
 _logicalFalse2166:
 	li $t0, 0
-	sw $t0, 300($sp)
+	move $t2, $t0
 	b _logicalMerge2167
 _logicalMerge2167:
-	lw $t0, 300($sp)
-	beqz $t0, _logicalFalse2169
-	b _logicalTrue2168
+	beqz $t2, _logicalFalse2169
 _logicalTrue2168:
-	lw $t0, 284($sp)
-	lw $t1, global_7162
-	sne $t1, $t0, $t1
-	sw $t1, 304($sp)
-	lw $t0, 304($sp)
-	sw $t0, 536($sp)
+	lw $t1, global_51
+	sne $t2, $t7, $t1
+	move $t2, $t2
 	b _logicalMerge2170
 _logicalFalse2169:
 	li $t0, 0
-	sw $t0, 536($sp)
+	move $t2, $t0
 	b _logicalMerge2170
 _logicalMerge2170:
-	lw $t0, 536($sp)
-	beqz $t0, _logicalFalse2172
-	b _logicalTrue2171
+	beqz $t2, _logicalFalse2172
 _logicalTrue2171:
-	lw $t0, 284($sp)
-	lw $t1, global_7163
-	sne $t1, $t0, $t1
-	sw $t1, 384($sp)
-	lw $t0, 384($sp)
-	sw $t0, 372($sp)
+	lw $t1, global_52
+	sne $t2, $t7, $t1
+	move $t2, $t2
 	b _logicalMerge2173
 _logicalFalse2172:
 	li $t0, 0
-	sw $t0, 372($sp)
+	move $t2, $t0
 	b _logicalMerge2173
 _logicalMerge2173:
-	lw $t0, 372($sp)
-	beqz $t0, _logicalFalse2175
-	b _logicalTrue2174
+	beqz $t2, _logicalFalse2175
 _logicalTrue2174:
-	lw $t0, 284($sp)
-	lw $t1, global_7164
-	sne $t1, $t0, $t1
-	sw $t1, 200($sp)
-	lw $t0, 200($sp)
-	sw $t0, 128($sp)
+	lw $t1, global_53
+	sne $t2, $t7, $t1
+	move $t2, $t2
 	b _logicalMerge2176
 _logicalFalse2175:
 	li $t0, 0
-	sw $t0, 128($sp)
+	move $t2, $t0
 	b _logicalMerge2176
 _logicalMerge2176:
-	lw $t0, 128($sp)
-	beqz $t0, _logicalFalse2178
-	b _logicalTrue2177
+	beqz $t2, _logicalFalse2178
 _logicalTrue2177:
-	lw $t0, global_7162
-	lw $t1, global_7163
-	sne $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
-	sw $t0, 396($sp)
+	lw $t0, global_51
+	lw $t1, global_52
+	sne $t2, $t0, $t1
+	move $t2, $t2
 	b _logicalMerge2179
 _logicalFalse2178:
 	li $t0, 0
-	sw $t0, 396($sp)
+	move $t2, $t0
 	b _logicalMerge2179
 _logicalMerge2179:
-	lw $t0, 396($sp)
-	beqz $t0, _logicalFalse2181
-	b _logicalTrue2180
+	beqz $t2, _logicalFalse2181
 _logicalTrue2180:
-	lw $t0, global_7161
-	lw $t1, global_7164
-	sne $t1, $t0, $t1
-	sw $t1, 224($sp)
-	lw $t0, 224($sp)
-	sw $t0, 188($sp)
+	lw $t0, global_50
+	lw $t1, global_53
+	sne $t2, $t0, $t1
+	move $t2, $t2
 	b _logicalMerge2182
 _logicalFalse2181:
 	li $t0, 0
-	sw $t0, 188($sp)
+	move $t2, $t0
 	b _logicalMerge2182
 _logicalMerge2182:
-	lw $t0, 188($sp)
-	beqz $t0, _alternative2061
-	b _consequence2060
+	beqz $t2, _alternative2061
 _consequence2060:
-	lw $t0, global_7165
-	sw $t0, 444($sp)
-	lw $t0, global_7165
+	lw $t0, global_54
+	move $t2, $t0
+	lw $t0, global_54
 	li $t1, 1
 	add $t1, $t0, $t1
-	sw $t1, global_7165
+	sw $t1, global_54
 	b _OutOfIf2062
 _alternative2061:
 	b _OutOfIf2062
 _OutOfIf2062:
 	b _continueFor2047
 _continueFor2047:
-	lw $t0, 284($sp)
-	sw $t0, 320($sp)
-	lw $t0, 284($sp)
+	move $t2, $t7
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 284($sp)
+	add $t7, $t7, $t1
 	b _ForLoop2046
 _OutOfFor2059:
 	b _continueFor2045
 _continueFor2045:
-	lw $t0, 272($sp)
-	sw $t0, 476($sp)
-	lw $t0, 272($sp)
+	move $t2, $t6
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 272($sp)
+	add $t6, $t6, $t1
 	b _ForLoop2044
 _OutOfFor2057:
 	b _continueFor2043
 _continueFor2043:
-	lw $t0, 236($sp)
-	sw $t0, 516($sp)
-	lw $t0, 236($sp)
+	move $t2, $t4
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 236($sp)
+	add $t4, $t4, $t1
 	b _ForLoop2042
 _OutOfFor2055:
 	b _continueFor2041
 _continueFor2041:
-	lw $t0, 192($sp)
-	sw $t0, 316($sp)
-	lw $t0, 192($sp)
+	move $t2, $t8
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 192($sp)
+	add $t8, $t8, $t1
 	b _ForLoop2040
 _OutOfFor2053:
 	b _continueFor2039
 _continueFor2039:
-	lw $t0, 208($sp)
-	sw $t0, 528($sp)
-	lw $t0, 208($sp)
+	move $t2, $t5
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 208($sp)
+	add $t5, $t5, $t1
 	b _ForLoop2038
 _OutOfFor2051:
 	b _continueFor2037
 _continueFor2037:
-	lw $t0, 456($sp)
-	sw $t0, 176($sp)
-	lw $t0, 456($sp)
+	move $t2, $t3
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 456($sp)
+	add $t3, $t3, $t1
 	b _ForLoop2036
 _OutOfFor2049:
-	lw $a0, global_7165
+	lw $a0, global_54
 	jal func__toString
-	sw $v0, 312($sp)
-	lw $a0, 312($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 168($sp)
+	move $t2, $v0
 	li $v0, 0
 	b _EndOfFunctionDecl2035
 _EndOfFunctionDecl2035:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 540
 	jr $ra
 .data
@@ -1311,21 +1092,21 @@ _end: .asciiz "\n"
 	.align 2
 _buffer: .space 256
 	.align 2
-global_7160:
+global_49:
 .space 4
 .align 2
-global_7161:
+global_50:
 .space 4
 .align 2
-global_7162:
+global_51:
 .space 4
 .align 2
-global_7163:
+global_52:
 .space 4
 .align 2
-global_7164:
+global_53:
 .space 4
 .align 2
-global_7165:
+global_54:
 .space 4
 .align 2

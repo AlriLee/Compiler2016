@@ -37,120 +37,147 @@ public class GlobalRegisterAllocator {
     }};
     public Map<Register, MIPSRegister> allocMapping;
     public Map<Register, Set<Register>> interferenceGraph;
-    public Set<Register> vertices;
     public Set<Register> liveNow;
+    public Map<Register, Integer> neighbour;
+    public Set<Register> vertices;
 
     public GlobalRegisterAllocator(ControlFlowGraph cfg) {
         allocMapping = new HashMap<>();
         interferenceGraph = new HashMap<>();
+
+        neighbour = new HashMap<>();
         vertices = new HashSet<>();
-        liveNow = new HashSet<>();
 
         for (BasicBlock basicBlock : cfg.basicBlockList) {
-            if (basicBlock.liveAnalysis.liveOut.isEmpty())
-                continue;
+            liveNow = new HashSet<>();
             liveNow.addAll(basicBlock.liveAnalysis.liveOut);
-            for (Instruction instruction : cfg.instruction) {
+            //for (Instruction instruction : cfg.instruction) {
+            for (int i = cfg.instruction.size() - 1; i >= 0; --i) {
+                Instruction instruction = cfg.instruction.get(i);
                 List<Register> definedReg = instruction.getDefinedReg();
                 List<Register> usedReg = instruction.getUsedReg();
                 if (definedReg != null) {
                     for (Register defined : definedReg) {
-                        //System.out.println("definedReg:\n" + defined.toString());
                         for (Register liveNowReg : liveNow) {
                             addEdge(liveNowReg, defined);
                         }
                         liveNow.remove(defined);
-                        //System.out.println("liveNow size after removing: " + liveNow.size());
                     }
                 }
                 if (usedReg != null) {
                     for (Register used : usedReg) {
-                        //System.out.println("usedReg:\n" + used.toString());
                         liveNow.add(used);
-                        //System.out.println("liveNow size after adding: " + liveNow.size());
                     }
                 }
-                //System.out.println("liveNow size: " + liveNow.size());
-                if (allocPhysicalReg(20)) {
-                    System.out.print("Able to alloc vr in physical registers.\n");
-                } else {
-                    System.out.print("Unable to alloc vr.\n");
-                }
             }
+            allocPhysicalReg(20);
         }
     }
 
     public void addEdge(Register u, Register v) {
-        if (!interferenceGraph.containsKey(u)) {
-            interferenceGraph.put(u, new HashSet<>());
+        if (!(u.type == Register.registerType.TEMPERARY && v.type == Register.registerType.TEMPERARY)) {
+            return;
         }
         // A vertice cannot be mapped to itself, otherwise colouring is impossible.
         if (u == v)
             return;
+
+        if (!interferenceGraph.containsKey(u)) {
+            interferenceGraph.put(u, new HashSet<>());
+            vertices.add(u);
+        }
         if (!interferenceGraph.containsKey(v)) {
             interferenceGraph.put(v, new HashSet<>());
+            vertices.add(v);
         }
-        //System.out.println("add edge:\n" + u.toString() + " " + v.toString());
         interferenceGraph.get(u).add(v);
         interferenceGraph.get(v).add(u);
+        neighbour.put(u, interferenceGraph.get(u).size());
+        neighbour.put(v, interferenceGraph.get(v).size());
     }
 
-    public void removeNode(Map.Entry<Register, Set<Register>> node) {
-        for (Register v : node.getValue()) {
-            interferenceGraph.get(v).remove(node.getKey());
+    public void removeNode(Register node) {
+        if (node.type != Register.registerType.TEMPERARY)
+            return;
+        for (Register v: interferenceGraph.get(node)) {
+            if (!vertices.contains(v)) continue;
+            neighbour.put(node, neighbour.get(node) - 1);
+            neighbour.put(v, neighbour.get(v) - 1);
+            if (neighbour.get(v) == 0) {
+                vertices.remove(v);
+            }
         }
-        interferenceGraph.remove(node.getKey());
+        vertices.remove(node);
     }
 
-    public void addNode(Map.Entry<Register, Set<Register>> node) {
-        for (Register v : node.getValue()) {
-            addEdge(node.getKey(), v);
+    public void addNode(Register node) {
+        if (node.type != Register.registerType.TEMPERARY)
+            return;
+        for (Register v: interferenceGraph.get(node)) {
+            neighbour.put(node, neighbour.get(node) + 1);
+            neighbour.put(v, neighbour.get(v) + 1);
+            if (!vertices.contains(v)) {
+                vertices.add(v);
+            }
         }
+        vertices.add(node);
     }
 
-    public boolean colourNode(Map.Entry<Register, Set<Register>> node) {
-        for (MIPSRegister colour : physicalRegister) {
+    public boolean colourNode(Register node) {
+        if (node.type != Register.registerType.TEMPERARY)
+            return false;
+        for (MIPSRegister colour: physicalRegister) {
             boolean used = false;
-            for (Register v: node.getValue()) {
-                if (allocMapping.get(node.getKey()) == colour) {
+            for (Register v: interferenceGraph.get(node)) {
+                if (allocMapping.get(v) == colour) {
                     used = true;
                     break;
                 }
             }
             if (!used) {
-                allocMapping.put(node.getKey(), colour);
+                allocMapping.put(node, colour);
                 return true;
             }
         }
         return false;
     }
 
-    public boolean allocPhysicalReg(long registerNum) {
-        Stack<Map.Entry<Register, Set<Register>>> stack = new Stack<>();
-        while (!interferenceGraph.isEmpty()) {
+    public boolean allocPhysicalReg(int registerNum) {
+        Stack<Register> stack = new Stack<>();
+        while (!vertices.isEmpty()) {
             boolean degreeLTk = false;
-            for (Map.Entry<Register, Set<Register>> n : interferenceGraph.entrySet()) {
-                if (n.getValue().size() < registerNum) {
+            Set<Register> verticesBackUp = new HashSet<>();
+            verticesBackUp.addAll(vertices);
+            for (Register n: verticesBackUp) {
+                if (!vertices.contains(n)) {
+                    continue;
+                }
+                if (neighbour.get(n) <= registerNum) {
                     stack.push(n);
                     degreeLTk = true;
+                    removeNode(n);
                 }
-                removeNode(n);
             }
             if (!degreeLTk) {
-                for (Map.Entry<Register, Set<Register>> n : interferenceGraph.entrySet()) {
+                for (Register n: verticesBackUp) {
+                    if (!vertices.contains(n)) {
+                        continue;
+                    }
                     stack.push(n);
                     removeNode(n);
                 }
             }
         }
+        boolean allocAll = true;
         while (!stack.isEmpty()) {
-            Map.Entry<Register, Set<Register>> node = stack.pop();
+            Register node = stack.pop();
             if (!colourNode(node)) {
-                return false;
+                allocAll = false;
+                continue;
             }
             addNode(node);
         }
-        return true;
+        return allocAll;
     }
 
     public String interferenceGraphToString() {
@@ -163,6 +190,29 @@ public class GlobalRegisterAllocator {
             interferenceGraphEdge += "\n";
         }
         return interferenceGraphEdge;
+    }
+    public String neighbourToString() {
+        String neighbourString = "neighbour:\n";
+        for (Register u: neighbour.keySet()) {
+            neighbourString = neighbourString + u.toString() + "has" + String.valueOf(neighbour.get(u)) + "neighbours\n";
+        }
+        return neighbourString;
+    }
+
+    public String verticesToString() {
+        String ver = "vertices:\n";
+        for (Register u: vertices) {
+            ver = ver + u.toString() + " is in the graph.\n";
+        }
+        return ver;
+    }
+
+    public String registerAllocationToString() {
+        String a = "allocMapping:\n";
+        for (Register u: allocMapping.keySet()) {
+            a = a + u.toString() + " is maped to " + allocMapping.get(u).toString() + "\n";
+        }
+        return a;
     }
 }
 

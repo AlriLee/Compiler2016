@@ -7,10 +7,12 @@ import Compiler.AST.Parser.MagParser;
 import Compiler.AST.Prog;
 import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
+import Compiler.GlobalRegisterAllocator.GlobalRegisterAllocator;
 import Compiler.Listener.ClassDeclListener;
 import Compiler.Listener.ErrorListener;
 import Compiler.Listener.FunctionDeclListener;
 import Compiler.Listener.MagASTBuilder;
+import Compiler.Operand.Register;
 import Compiler.Translator.MIPSTranslator;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -49,16 +51,10 @@ public class Main {
         walker.walk(new FunctionDeclListener(), tree);
         walker.walk(new MagASTBuilder(), tree);
 
+        Register.registers = 0;
+
         SymbolTable.program = (Prog) MagASTBuilder.stack.peek();
         SymbolTable.program.emit();
-        for (Declaration declaration : SymbolTable.program.declarations) {
-            if (declaration instanceof FunctionDecl) {
-                FunctionDecl function = (FunctionDecl) declaration;
-                function.cfg.buildBasicBlock();
-                function.cfg.analyseFrame();
-                //function.cfg.allocator = new GlobalRegisterAllocator(function.cfg);
-            }
-        }
         new MIPSTranslator(new PrintStream(output)).translate();
     }
 }

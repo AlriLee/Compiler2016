@@ -494,31 +494,72 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 136
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl1079:
+_BeginOfFunctionDecl1583:
 	li $t0, 1
-	sw $t0, global_690
+	sw $t0, global_22
 	li $t0, 1
-	sw $t0, global_691
-	lw $t0, global_690
-	lw $t1, global_691
+	sw $t0, global_23
+	lw $t0, global_22
+	lw $t1, global_23
 	seq $t1, $t0, $t1
 	sw $t1, 128($sp)
 	lw $t0, 128($sp)
-	beqz $t0, alternative1082
-	b consequence1081
-consequence1081:
+	beqz $t0, _alternative1586
+	b _consequence1585
+_consequence1585:
 	li $t0, 1
 	sw $t0, 132($sp)
-	b OutOfIf1083
-alternative1082:
+	b _OutOfIf1587
+_alternative1586:
 	li $t0, 2
 	sw $t0, 132($sp)
-	b OutOfIf1083
-OutOfIf1083:
+	b _OutOfIf1587
+_OutOfIf1587:
 	li $v0, 0
-EndOfFunctionDecl1080:
+	b _EndOfFunctionDecl1584
+_EndOfFunctionDecl1584:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 136
 	jr $ra
 .data
@@ -526,9 +567,9 @@ _end: .asciiz "\n"
 	.align 2
 _buffer: .space 256
 	.align 2
-global_690:
+global_22:
 .space 4
 .align 2
-global_691:
+global_23:
 .space 4
 .align 2

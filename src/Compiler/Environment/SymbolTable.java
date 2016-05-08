@@ -188,7 +188,7 @@ public class SymbolTable {
 
     public static SymbolTableEntry addSymbol(Symbol symbol, Type type) {
         if (hashMapStack.peek().containsKey(symbol)) {
-            System.out.println(hashMapStack.peek().get(symbol));
+            //System.out.println(hashMapStack.peek().get(symbol));
             throw new CompileError("Symbol name conflict in the same scope." + symbol.toString(0));
         }
         SymbolTableEntry entry = new SymbolTableEntry(symbol.name, type);

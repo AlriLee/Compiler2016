@@ -492,99 +492,214 @@ func__stringNeq:
 	lw $ra, 0($sp)
 	addu $sp, $sp, 4
 	jr $ra
-getTrue:
+_getTrue:
 	sub $sp, $sp, 128
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl54:
+_BeginOfFunctionDecl82:
 	li $v0, 1
-EndOfFunctionDecl55:
+	b _EndOfFunctionDecl83
+_EndOfFunctionDecl83:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 128
 	jr $ra
-getFalse:
+_getFalse:
 	sub $sp, $sp, 128
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl56:
+_BeginOfFunctionDecl84:
 	li $v0, 0
-EndOfFunctionDecl57:
+	b _EndOfFunctionDecl85
+_EndOfFunctionDecl85:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 128
 	jr $ra
 main:
 	sub $sp, $sp, 172
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl58:
+_BeginOfFunctionDecl86:
 	li $t0, 1
-	sw $t0, 144($sp)
-	jal getTrue
+	move $t2, $t0
+	jal _getTrue
 	sw $v0, 164($sp)
 	lw $t0, 164($sp)
-	beqz $t0, logicalFalse64
-	b logicalTrue63
-logicalTrue63:
-	jal getFalse
+	beqz $t0, _logicalFalse92
+	b _logicalTrue91
+_logicalTrue91:
+	jal _getFalse
 	sw $v0, 156($sp)
 	lw $t0, 156($sp)
-	sw $t0, 160($sp)
-	b logicalMerge65
-logicalFalse64:
+	move $t4, $t0
+	b _logicalMerge93
+_logicalFalse92:
 	li $t0, 0
-	sw $t0, 160($sp)
-	b logicalMerge65
-logicalMerge65:
-	lw $t0, 160($sp)
-	beqz $t0, alternative61
-	b consequence60
-consequence60:
-	lw $t0, 144($sp)
+	move $t4, $t0
+	b _logicalMerge93
+_logicalMerge93:
+	beqz $t4, _alternative89
+	b _consequence88
+_consequence88:
 	li $t1, 2
-	mul $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
-	sw $t0, 144($sp)
-	b OutOfIf62
-alternative61:
-	b OutOfIf62
-OutOfIf62:
-	jal getTrue
-	sw $v0, 140($sp)
-	lw $t0, 140($sp)
-	beqz $t0, logicalFalse70
-	b logicalTrue69
-logicalTrue69:
+	mul $t2, $t2, $t1
+	move $t2, $t2
+	b _OutOfIf90
+_alternative89:
+	b _OutOfIf90
+_OutOfIf90:
+	jal _getTrue
+	move $t3, $v0
+	beqz $t3, _logicalFalse98
+	b _logicalTrue97
+_logicalTrue97:
 	li $t0, 1
-	sw $t0, 148($sp)
-	b logicalMerge71
-logicalFalse70:
-	jal getFalse
-	sw $v0, 128($sp)
-	lw $t0, 128($sp)
-	sw $t0, 148($sp)
-	b logicalMerge71
-logicalMerge71:
-	lw $t0, 148($sp)
-	beqz $t0, alternative67
-	b consequence66
-consequence66:
-	lw $t0, 144($sp)
+	move $t5, $t0
+	b _logicalMerge99
+_logicalFalse98:
+	jal _getFalse
+	move $t3, $v0
+	move $t5, $t3
+	b _logicalMerge99
+_logicalMerge99:
+	beqz $t5, _alternative95
+	b _consequence94
+_consequence94:
 	li $t1, 4
-	mul $t1, $t0, $t1
+	mul $t1, $t2, $t1
 	sw $t1, 168($sp)
 	lw $t0, 168($sp)
-	sw $t0, 144($sp)
-	b OutOfIf68
-alternative67:
-	b OutOfIf68
-OutOfIf68:
-	lw $a0, 144($sp)
+	move $t2, $t0
+	b _OutOfIf96
+_alternative95:
+	b _OutOfIf96
+_OutOfIf96:
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 152($sp)
-	lw $a0, 152($sp)
+	move $t3, $v0
+	move $a0, $t3
 	jal func__println
-	sw $v0, 132($sp)
+	move $t3, $v0
 	li $v0, 0
-EndOfFunctionDecl59:
+	b _EndOfFunctionDecl87
+_EndOfFunctionDecl87:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 172
 	jr $ra
 .data

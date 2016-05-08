@@ -130,7 +130,6 @@ public class ControlFlowGraph {
     public String basicBlockToString() {
         String basicBlockString = "";
         for (int i = 0; i < basicBlockList.size(); ++i) {
-            //System.out.println(basicBlockList.get(i).toString());
             basicBlockString += basicBlockList.get(i).toString();
         }
         return basicBlockString;

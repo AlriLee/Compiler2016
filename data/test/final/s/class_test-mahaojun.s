@@ -493,184 +493,254 @@ func__stringNeq:
 	addu $sp, $sp, 4
 	jr $ra
 _work:
-	sub $sp, $sp, 208
+	sub $sp, $sp, 192
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl399:
-	lw $t1, 204($sp)
+	lw $t1, 188($sp)
 	lw $t0, 4($t1)
-	sw $t0, 192($sp)
-	lw $t0, 192($sp)
+	sw $t0, 128($sp)
+	lw $t0, 128($sp)
 	li $t1, 100
 	sle $t1, $t0, $t1
-	sw $t1, 180($sp)
-	lw $t0, 180($sp)
+	sw $t1, 156($sp)
+	lw $t0, 156($sp)
 	beqz $t0, _alternative404
-	b _consequence403
 _consequence403:
-	lw $a0, 200($sp)
-	la $a1, string_538
+	lw $a0, 184($sp)
+	la $a1, string_2
 	jal func__stringConcatenate
-	sw $v0, 176($sp)
-	lw $t1, 204($sp)
-	lw $t0, 0($t1)
-	sw $t0, 196($sp)
-	lw $a0, 176($sp)
-	lw $a1, 196($sp)
-	jal func__stringConcatenate
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
-	la $a1, string_542
-	jal func__stringConcatenate
-	sw $v0, 132($sp)
-	lw $a0, 132($sp)
-	jal func__println
 	sw $v0, 160($sp)
-	b _OutOfIf405
-_alternative404:
-	lw $a0, 200($sp)
-	la $a1, string_545
+	lw $t1, 188($sp)
+	lw $t2, 0($t1)
+	lw $a0, 160($sp)
+	move $a1, $t2
 	jal func__stringConcatenate
 	sw $v0, 136($sp)
-	lw $t1, 204($sp)
-	lw $t0, 0($t1)
-	sw $t0, 140($sp)
 	lw $a0, 136($sp)
-	lw $a1, 140($sp)
+	la $a1, string_6
 	jal func__stringConcatenate
-	sw $v0, 164($sp)
-	lw $a0, 164($sp)
-	la $a1, string_549
-	jal func__stringConcatenate
-	sw $v0, 172($sp)
-	lw $a0, 172($sp)
+	sw $v0, 144($sp)
+	lw $a0, 144($sp)
 	jal func__println
-	sw $v0, 156($sp)
+	sw $v0, 164($sp)
+	b _OutOfIf405
+_alternative404:
+	lw $a0, 184($sp)
+	la $a1, string_9
+	jal func__stringConcatenate
+	sw $v0, 180($sp)
+	lw $t1, 188($sp)
+	lw $t2, 0($t1)
+	lw $a0, 180($sp)
+	move $a1, $t2
+	jal func__stringConcatenate
+	sw $v0, 168($sp)
+	lw $a0, 168($sp)
+	la $a1, string_13
+	jal func__stringConcatenate
+	sw $v0, 140($sp)
+	lw $a0, 140($sp)
+	jal func__println
+	sw $v0, 152($sp)
 	b _OutOfIf405
 _OutOfIf405:
-	lw $t1, 204($sp)
+	lw $t1, 188($sp)
 	lw $t0, 4($t1)
-	sw $t0, 188($sp)
-	lw $t0, 188($sp)
-	lw $t1, global_531
+	sw $t0, 176($sp)
+	lw $t0, 176($sp)
+	lw $t1, global_203
 	add $t1, $t0, $t1
-	sw $t1, 152($sp)
-	lw $t0, 152($sp)
-	lw $t1, 204($sp)
+	sw $t1, 148($sp)
+	lw $t0, 148($sp)
+	lw $t1, 188($sp)
 	sw $t0, 4($t1)
 _EndOfFunctionDecl400:
 	lw $ra, 120($sp)
-	add $sp, $sp, 208
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
+	add $sp, $sp, 192
 	jr $ra
 main:
-	sub $sp, $sp, 192
+	sub $sp, $sp, 172
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl401:
 	li $t0, 100
-	sw $t0, global_530
+	sw $t0, global_202
 	li $t0, 10
-	sw $t0, global_531
+	sw $t0, global_203
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $a0, 140($sp)
+	sw $t1, 156($sp)
+	lw $a0, 156($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 136($sp)
-	lw $t0, 136($sp)
-	sw $t0, 156($sp)
-	lw $t0, 156($sp)
-	sw $t0, 160($sp)
-	la $t0, string_560
-	lw $t1, 160($sp)
-	sw $t0, 0($t1)
+	sw $v0, 140($sp)
+	lw $t0, 140($sp)
+	sw $t0, 144($sp)
+	lw $t0, 144($sp)
+	move $t3, $t0
+	la $t0, string_24
+	sw $t0, 0($t3)
 	li $t0, 0
-	lw $t1, 160($sp)
-	sw $t0, 4($t1)
+	sw $t0, 4($t3)
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 144($sp)
-	lw $a0, 144($sp)
+	sw $t1, 136($sp)
+	lw $a0, 136($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 148($sp)
-	lw $t0, 148($sp)
-	sw $t0, 152($sp)
+	sw $v0, 152($sp)
 	lw $t0, 152($sp)
-	sw $t0, 176($sp)
-	la $t0, string_567
-	lw $t1, 176($sp)
-	sw $t0, 0($t1)
-	lw $t0, global_530
-	lw $t1, 176($sp)
-	sw $t0, 4($t1)
-	la $t0, string_569
-	sw $t0, -8($sp)
+	sw $t0, 160($sp)
 	lw $t0, 160($sp)
-	sw $t0, -4($sp)
-	jal _work
-	sw $v0, 132($sp)
-	la $t0, string_571
+	move $t2, $t0
+	la $t0, string_31
+	sw $t0, 0($t2)
+	lw $t0, global_202
+	sw $t0, 4($t2)
+	la $t0, string_33
 	sw $t0, -8($sp)
-	lw $t0, 176($sp)
-	sw $t0, -4($sp)
-	jal _work
-	sw $v0, 164($sp)
-	la $t0, string_573
-	sw $t0, -8($sp)
-	lw $t0, 176($sp)
-	sw $t0, -4($sp)
+	sw $t3, -4($sp)
 	jal _work
 	sw $v0, 168($sp)
+	la $t0, string_35
+	sw $t0, -8($sp)
+	sw $t2, -4($sp)
+	jal _work
+	move $t3, $v0
+	la $t0, string_37
+	sw $t0, -8($sp)
+	sw $t2, -4($sp)
+	jal _work
+	sw $v0, 132($sp)
 _EndOfFunctionDecl402:
 	lw $ra, 120($sp)
-	add $sp, $sp, 192
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
+	add $sp, $sp, 172
 	jr $ra
 .data
 _end: .asciiz "\n"
 	.align 2
 _buffer: .space 256
 	.align 2
-global_530:
+global_202:
 .space 4
 .align 2
-global_531:
+global_203:
 .space 4
 .align 2
 .word 2
-string_538:
+string_2:
 .asciiz ", "
 .align 2
 .word 21
-string_542:
+string_6:
 .asciiz " enjoys this work. XD"
 .align 2
 .word 2
-string_545:
+string_9:
 .asciiz ", "
 .align 2
 .word 22
-string_549:
+string_13:
 .asciiz " wants to give up!!!!!"
 .align 2
 .word 14
-string_560:
+string_24:
 .asciiz "the leading TA"
 .align 2
 .word 15
-string_567:
+string_31:
 .asciiz "the striking TA"
 .align 2
 .word 2
-string_569:
+string_33:
 .asciiz "MR"
 .align 2
 .word 4
-string_571:
+string_35:
 .asciiz "Mars"
 .align 2
 .word 4
-string_573:
+string_37:
 .asciiz "Mars"
 .align 2

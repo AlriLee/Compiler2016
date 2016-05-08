@@ -27,7 +27,7 @@ public class LoadInstruction extends Instruction {
 
     @Override
     public List<Operand> getUsedOp() {
-        return Collections.singletonList(src);
+        return Collections.singletonList(src.baseAddress);
     }
 
     @Override

@@ -494,69 +494,97 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 168
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl798:
+_BeginOfFunctionDecl1176:
 	li $t0, 5
-	sw $t0, 148($sp)
+	move $t2, $t0
 	li $t0, 0
-	sw $t0, 132($sp)
+	move $t5, $t0
 	li $t0, 1
-	sw $t0, 140($sp)
-ForLoop800:
-	lw $t0, 140($sp)
-	lw $t1, 148($sp)
-	sle $t1, $t0, $t1
+	move $t4, $t0
+_ForLoop1178:
+	sle $t1, $t4, $t2
 	sw $t1, 160($sp)
 	lw $t0, 160($sp)
-	beqz $t0, OutOfFor805
-	b ForBody804
-ForBody804:
+	beqz $t0, _OutOfFor1183
+	b _ForBody1182
+_ForBody1182:
 	li $t0, 1
-	sw $t0, 136($sp)
-ForLoop802:
-	lw $t0, 136($sp)
-	lw $t1, 148($sp)
-	sle $t1, $t0, $t1
+	move $t6, $t0
+_ForLoop1180:
+	sle $t1, $t6, $t2
 	sw $t1, 152($sp)
 	lw $t0, 152($sp)
-	beqz $t0, OutOfFor807
-	b ForBody806
-ForBody806:
-	lw $t0, 132($sp)
-	lw $t1, 140($sp)
-	add $t1, $t0, $t1
+	beqz $t0, _OutOfFor1185
+	b _ForBody1184
+_ForBody1184:
+	add $t1, $t5, $t4
 	sw $t1, 164($sp)
 	lw $t0, 164($sp)
-	sw $t0, 132($sp)
-continueFor803:
-	lw $t0, 136($sp)
+	move $t5, $t0
+_continueFor1181:
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 136($sp)
-	b ForLoop802
-OutOfFor807:
-	lw $t0, 132($sp)
+	add $t6, $t6, $t1
+	b _ForLoop1180
+_OutOfFor1185:
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 144($sp)
-	lw $t0, 144($sp)
-	sw $t0, 132($sp)
-continueFor801:
-	lw $t0, 140($sp)
+	add $t3, $t5, $t1
+	move $t5, $t3
+_continueFor1179:
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 140($sp)
-	b ForLoop800
-OutOfFor805:
-	lw $a0, 132($sp)
+	add $t4, $t4, $t1
+	b _ForLoop1178
+_OutOfFor1183:
+	move $a0, $t5
 	jal func__toString
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
+	move $t3, $v0
+	move $a0, $t3
 	jal func__print
 	sw $v0, 156($sp)
 	li $v0, 0
-EndOfFunctionDecl799:
+	b _EndOfFunctionDecl1177
+_EndOfFunctionDecl1177:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 168
 	jr $ra
 .data

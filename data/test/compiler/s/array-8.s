@@ -494,8 +494,28 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 204
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl358:
+_BeginOfFunctionDecl526:
 	li $t0, 10
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -518,27 +538,26 @@ BeginOfFunctionDecl358:
 	lw $t0, 160($sp)
 	sw $t0, 184($sp)
 	lw $t0, 184($sp)
-	sw $t0, global_257
+	sw $t0, global_64
 	li $t0, 0
-	sw $t0, global_256
-ForLoop360:
-	lw $t0, global_256
+	sw $t0, global_63
+_ForLoop528:
+	lw $t0, global_63
 	li $t1, 10
 	slt $t1, $t0, $t1
 	sw $t1, 172($sp)
 	lw $t0, 172($sp)
-	beqz $t0, OutOfFor365
-	b ForBody364
-ForBody364:
-	lw $t0, global_256
+	beqz $t0, _OutOfFor533
+	b _ForBody532
+_ForBody532:
+	lw $t0, global_63
 	li $t1, 4
 	mul $t1, $t0, $t1
 	sw $t1, 136($sp)
-	lw $t0, global_257
+	lw $t0, global_64
 	lw $t1, 136($sp)
-	add $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $t0, global_256
+	add $t2, $t0, $t1
+	lw $t0, global_63
 	li $t1, 4
 	mul $t1, $t0, $t1
 	sw $t1, 188($sp)
@@ -550,7 +569,7 @@ ForBody364:
 	li $v0, 9
 	syscall
 	sw $v0, 152($sp)
-	lw $t0, global_256
+	lw $t0, global_63
 	lw $t1, 152($sp)
 	sw $t0, 0($t1)
 	lw $t0, 152($sp)
@@ -560,67 +579,78 @@ ForBody364:
 	lw $t0, 152($sp)
 	sw $t0, 196($sp)
 	lw $t0, 196($sp)
-	lw $t1, 148($sp)
-	sw $t0, 0($t1)
-continueFor361:
-	lw $t0, global_256
+	sw $t0, 0($t2)
+_continueFor529:
+	lw $t0, global_63
 	li $t1, 1
 	add $t1, $t0, $t1
-	sw $t1, global_256
-	b ForLoop360
-OutOfFor365:
-	lw $a0, global_257
+	sw $t1, global_63
+	b _ForLoop528
+_OutOfFor533:
+	lw $a0, global_64
 	jal func__size
 	sw $v0, 144($sp)
 	lw $t0, 144($sp)
-	sw $t0, 192($sp)
+	move $t2, $t0
 	li $t0, 0
-	sw $t0, global_256
-ForLoop362:
-	lw $t0, global_256
+	sw $t0, global_63
+_ForLoop530:
+	lw $t0, global_63
 	li $t1, 10
-	slt $t1, $t0, $t1
-	sw $t1, 168($sp)
-	lw $t0, 168($sp)
-	beqz $t0, OutOfFor367
-	b ForBody366
-ForBody366:
-	lw $t0, global_256
+	slt $t3, $t0, $t1
+	beqz $t3, _OutOfFor535
+	b _ForBody534
+_ForBody534:
+	lw $t0, global_63
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, global_257
-	lw $t1, 164($sp)
-	add $t1, $t0, $t1
-	sw $t1, 176($sp)
-	lw $t1, 176($sp)
-	lw $t0, 0($t1)
-	sw $t0, 156($sp)
-	lw $a0, 156($sp)
+	mul $t3, $t0, $t1
+	lw $t0, global_64
+	add $t3, $t0, $t3
+	lw $t3, 0($t3)
+	move $a0, $t3
 	jal func__size
-	sw $v0, 180($sp)
-	lw $t0, 192($sp)
-	lw $t1, 180($sp)
-	add $t1, $t0, $t1
+	move $t3, $v0
+	add $t1, $t2, $t3
 	sw $t1, 200($sp)
 	lw $t0, 200($sp)
-	sw $t0, 192($sp)
-continueFor363:
-	lw $t0, global_256
+	move $t2, $t0
+_continueFor531:
+	lw $t0, global_63
 	li $t1, 1
 	add $t1, $t0, $t1
-	sw $t1, global_256
-	b ForLoop362
-OutOfFor367:
-	lw $a0, 192($sp)
+	sw $t1, global_63
+	b _ForLoop530
+_OutOfFor535:
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
+	move $t3, $v0
+	move $a0, $t3
 	jal func__print
-	sw $v0, 132($sp)
+	move $t3, $v0
 	li $v0, 0
-EndOfFunctionDecl359:
+	b _EndOfFunctionDecl527
+_EndOfFunctionDecl527:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 204
 	jr $ra
 .data
@@ -628,9 +658,9 @@ _end: .asciiz "\n"
 	.align 2
 _buffer: .space 256
 	.align 2
-global_256:
+global_63:
 .space 4
 .align 2
-global_257:
+global_64:
 .space 4
 .align 2

@@ -62,7 +62,7 @@ public class MIPSTranslator {
     // move from an virtual register to a physical register
     public void move(Operand from, MIPSRegister to) {
         if (allocator.allocMapping.containsKey(from)) {
-            output.printf("\tmove %s, %s\n", allocator.allocMapping.get(from).registerName, to.registerName);
+            output.printf("\tmove %s, %s\n", to.registerName, allocator.allocMapping.get(from).registerName);
         } else {
             if (from instanceof Immediate) {
                 output.printf("\tli %s, %s\n", to, ((Immediate) from).immediate);
@@ -84,7 +84,7 @@ public class MIPSTranslator {
     // move from a physical register to a virtual register
     public void move(MIPSRegister from, Register to) {
         if (allocator.allocMapping.containsKey(to)) {
-            output.printf("\tmove %s, %s\n", from.registerName, allocator.allocMapping.get(to).registerName);
+            output.printf("\tmove %s, %s\n", allocator.allocMapping.get(to).registerName, from.registerName);
         } else {
             if (to.type == Register.registerType.TEMPERARY || to.type == Register.registerType.PARAMETER) {
                 output.printf("\tsw %s, %d($sp)\n", from, graph.frame.getOffset(to));
@@ -112,8 +112,12 @@ public class MIPSTranslator {
         }
         output.printf("%s:\n", cfg.function.functionName.name);
         output.printf("\tsub %s, %s, %d\n", MIPSRegister.sp.registerName, MIPSRegister.sp.registerName, graph.frame.size);
+        for (MIPSRegister r : GlobalRegisterAllocator.physicalRegister) {
+            output.printf("\tsw %s, %d(%s)\n", r.registerName, graph.frame.getOffset(r), MIPSRegister.sp.registerName);
+        }
         output.printf("\tsw %s, %d(%s)\n", MIPSRegister.ra.registerName, graph.frame.getOffset(MIPSRegister.ra), MIPSRegister.sp.registerName);
-        for (Instruction instruction : graph.instruction) {
+        for (int l = 0; l < graph.instruction.size(); ++l) {
+            Instruction instruction = graph.instruction.get(l);
             if (instruction instanceof LabelInstruction) {
                 output.printf("_%s%d:\n", ((LabelInstruction) instruction).label, ((LabelInstruction) instruction).labelIndex);
             }
@@ -121,7 +125,13 @@ public class MIPSTranslator {
             if (instruction instanceof ConditionBranchInstruction) {
                 MIPSRegister a = loadToRead(MIPSRegister.t0, ((ConditionBranchInstruction) instruction).src);
                 output.printf("\tbeqz %s, _%s%d\n", a, ((ConditionBranchInstruction) instruction).tar2.label, ((ConditionBranchInstruction) instruction).tar2.labelIndex);
-                output.printf("\tb _%s%d\n", ((ConditionBranchInstruction) instruction).tar1.label, ((ConditionBranchInstruction) instruction).tar1.labelIndex);
+                if (l + 1 < graph.instruction.size() && graph.instruction.get(l + 1) instanceof LabelInstruction) {
+                    if (((ConditionBranchInstruction) instruction).tar1.labelIndex != ((LabelInstruction) graph.instruction.get(l + 1)).labelIndex) {
+                        output.printf("\tb _%s%d\n", ((ConditionBranchInstruction) instruction).tar1.label, ((ConditionBranchInstruction) instruction).tar1.labelIndex);
+                    }
+                } else {
+                    output.printf("\tb _%s%d\n", ((ConditionBranchInstruction) instruction).tar1.label, ((ConditionBranchInstruction) instruction).tar1.labelIndex);
+                }
             }
 
             if (instruction instanceof JumpInstruction) {
@@ -270,6 +280,9 @@ public class MIPSTranslator {
             }
         }
         output.printf("\tlw %s, %d(%s)\n", MIPSRegister.ra.registerName, graph.frame.getOffset(MIPSRegister.ra), MIPSRegister.sp.registerName);
+        for (MIPSRegister r : GlobalRegisterAllocator.physicalRegister) {
+            output.printf("\tlw %s, %d(%s)\n", r.registerName, graph.frame.getOffset(r), MIPSRegister.sp.registerName);
+        }
         output.printf("\tadd %s, %s, %d\n", MIPSRegister.sp.registerName, MIPSRegister.sp.registerName, graph.frame.size);
         output.printf("\tjr $ra\n");
     }
@@ -769,11 +782,15 @@ public class MIPSTranslator {
                 "\tlw $ra, 0($sp)\n" +
                 "\taddu $sp, $sp, 4\n" +
                 "\tjr $ra\n");
-
         for (Declaration declaration : SymbolTable.program.declarations) {
             if (declaration instanceof FunctionDecl) {
-                ((FunctionDecl) declaration).cfg.buildBasicBlock();
-                translate(((FunctionDecl) declaration).cfg);
+                FunctionDecl function = (FunctionDecl) declaration;
+                function.cfg.buildBasicBlock();
+                function.cfg.analyseFrame();
+                function.cfg.allocator = new GlobalRegisterAllocator(function.cfg);
+//                System.out.println(function.cfg.allocator.interferenceGraphToString());
+//                System.out.println(function.cfg.basicBlockToString());
+                translate(function.cfg);
             }
         }
         output.printf(".data\n" +

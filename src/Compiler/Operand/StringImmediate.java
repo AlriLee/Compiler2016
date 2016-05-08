@@ -12,6 +12,7 @@ public class StringImmediate extends Register {
         super();
         this.literal = literal;
         SymbolTable.stringImmediateArrayList.add(this);
+        type = registerType.STRING;
     }
 
     //public int stringSize() {

@@ -493,49 +493,86 @@ func__stringNeq:
 	addu $sp, $sp, 4
 	jr $ra
 main:
-	sub $sp, $sp, 168
+	sub $sp, $sp, 160
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl1049:
-	la $t0, string_675
-	sw $t0, 132($sp)
+_BeginOfFunctionDecl1539:
+	la $t0, string_0
+	move $t4, $t0
 	li $t0, 0
-	sw $t0, 152($sp)
-ForLoop1051:
-	lw $a0, 132($sp)
+	move $t2, $t0
+_ForLoop1541:
+	move $a0, $t4
 	jal func__length
-	sw $v0, 128($sp)
-	lw $t0, 152($sp)
-	lw $t1, 128($sp)
-	slt $t1, $t0, $t1
+	move $t3, $v0
+	slt $t1, $t2, $t3
 	sw $t1, 156($sp)
 	lw $t0, 156($sp)
-	beqz $t0, OutOfFor1054
-	b ForBody1053
-ForBody1053:
-	lw $a0, 132($sp)
-	lw $a1, 152($sp)
+	beqz $t0, _OutOfFor1544
+	b _ForBody1543
+_ForBody1543:
+	move $a0, $t4
+	move $a1, $t2
 	jal func__ord
-	sw $v0, 140($sp)
-	lw $a0, 140($sp)
+	move $t3, $v0
+	move $a0, $t3
 	jal func__toString
-	sw $v0, 136($sp)
-	lw $a0, 136($sp)
+	move $t3, $v0
+	move $a0, $t3
 	jal func__print
-	sw $v0, 148($sp)
-	la $a0, string_682
+	move $t3, $v0
+	la $a0, string_7
 	jal func__println
-	sw $v0, 144($sp)
-continueFor1052:
-	lw $t0, 152($sp)
+	move $t3, $v0
+_continueFor1542:
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 152($sp)
-	b ForLoop1051
-OutOfFor1054:
+	add $t2, $t2, $t1
+	b _ForLoop1541
+_OutOfFor1544:
 	li $v0, 0
-EndOfFunctionDecl1050:
+	b _EndOfFunctionDecl1540
+_EndOfFunctionDecl1540:
 	lw $ra, 120($sp)
-	add $sp, $sp, 168
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
+	add $sp, $sp, 160
 	jr $ra
 .data
 _end: .asciiz "\n"
@@ -543,10 +580,10 @@ _end: .asciiz "\n"
 _buffer: .space 256
 	.align 2
 .word 20
-string_675:
+string_0:
 .asciiz "too young too simple"
 .align 2
 .word 0
-string_682:
+string_7:
 .asciiz ""
 .align 2

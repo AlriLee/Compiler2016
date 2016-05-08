@@ -494,104 +494,121 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 184
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl858:
+_BeginOfFunctionDecl1264:
 	li $t0, 5
-	sw $t0, 144($sp)
+	move $t4, $t0
 	li $t0, 0
-	sw $t0, 168($sp)
-	lw $t0, 168($sp)
+	move $t2, $t0
 	li $t1, 0
-	sne $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $t0, 140($sp)
-	beqz $t0, logicalFalse864
-	b logicalTrue863
-logicalTrue863:
-	lw $t0, 144($sp)
-	lw $t1, 168($sp)
-	div $t1, $t0, $t1
+	sne $t3, $t2, $t1
+	beqz $t3, _logicalFalse1270
+	b _logicalTrue1269
+_logicalTrue1269:
+	div $t1, $t4, $t2
 	sw $t1, 176($sp)
 	lw $t0, 176($sp)
 	li $t1, 1
-	sne $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
-	sw $t0, 132($sp)
-	b logicalMerge865
-logicalFalse864:
+	sne $t3, $t0, $t1
+	move $t3, $t3
+	b _logicalMerge1271
+_logicalFalse1270:
 	li $t0, 0
-	sw $t0, 132($sp)
-	b logicalMerge865
-logicalMerge865:
-	lw $t0, 132($sp)
-	beqz $t0, alternative861
-	b consequence860
-consequence860:
+	move $t3, $t0
+	b _logicalMerge1271
+_logicalMerge1271:
+	beqz $t3, _alternative1267
+	b _consequence1266
+_consequence1266:
 	li $t0, 10
-	sw $t0, 160($sp)
-	b OutOfIf862
-alternative861:
+	move $t6, $t0
+	b _OutOfIf1268
+_alternative1267:
 	li $t0, 20
-	sw $t0, 160($sp)
-	b OutOfIf862
-OutOfIf862:
-	lw $t0, 160($sp)
+	move $t6, $t0
+	b _OutOfIf1268
+_OutOfIf1268:
 	li $t1, 10
-	seq $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $t0, 148($sp)
-	beqz $t0, logicalFalse870
-	b logicalTrue869
-logicalTrue869:
-	lw $t0, 144($sp)
-	lw $t1, 168($sp)
-	div $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
+	seq $t5, $t6, $t1
+	beqz $t5, _logicalFalse1276
+	b _logicalTrue1275
+_logicalTrue1275:
+	div $t5, $t4, $t2
 	li $t1, 0
-	seq $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $t0, 156($sp)
-	sw $t0, 152($sp)
-	b logicalMerge871
-logicalFalse870:
+	seq $t5, $t5, $t1
+	move $t5, $t5
+	b _logicalMerge1277
+_logicalFalse1276:
 	li $t0, 0
-	sw $t0, 152($sp)
-	b logicalMerge871
-logicalMerge871:
-	lw $t0, 152($sp)
-	beqz $t0, logicalFalse873
-	b logicalTrue872
-logicalTrue872:
-	lw $t0, 144($sp)
+	move $t5, $t0
+	b _logicalMerge1277
+_logicalMerge1277:
+	beqz $t5, _logicalFalse1279
+	b _logicalTrue1278
+_logicalTrue1278:
 	li $t1, 5
-	seq $t1, $t0, $t1
-	sw $t1, 172($sp)
-	lw $t0, 172($sp)
-	sw $t0, 180($sp)
-	b logicalMerge874
-logicalFalse873:
+	seq $t6, $t4, $t1
+	move $t7, $t6
+	b _logicalMerge1280
+_logicalFalse1279:
 	li $t0, 0
-	sw $t0, 180($sp)
-	b logicalMerge874
-logicalMerge874:
-	lw $t0, 180($sp)
-	xor $t1, $t0, 1
-	sw $t1, 164($sp)
-	lw $t0, 164($sp)
-	beqz $t0, alternative867
-	b consequence866
-consequence866:
+	move $t7, $t0
+	b _logicalMerge1280
+_logicalMerge1280:
+	xor $t6, $t7, 1
+	beqz $t6, _alternative1273
+	b _consequence1272
+_consequence1272:
 	li $t0, 30
-	sw $t0, 160($sp)
-	b OutOfIf868
-alternative867:
-	b OutOfIf868
-OutOfIf868:
-	lw $v0, 160($sp)
-EndOfFunctionDecl859:
+	move $t6, $t0
+	b _OutOfIf1274
+_alternative1273:
+	b _OutOfIf1274
+_OutOfIf1274:
+	move $v0, $t6
+	b _EndOfFunctionDecl1265
+_EndOfFunctionDecl1265:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 184
 	jr $ra
 .data

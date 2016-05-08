@@ -268,7 +268,7 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void exitRelational_less(MagParser.Relational_lessContext ctx) {
-        System.out.printf("\n" + ctx.getText() + "\n");
+        //System.out.printf("\n" + ctx.getText() + "\n");
         Expression rhs = (Expression) stack.pop();
         Expression lhs = (Expression) stack.pop();
         if (!(lhs.type instanceof StringType || rhs.type instanceof StringType))

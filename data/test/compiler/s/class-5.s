@@ -494,8 +494,28 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 188
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl496:
+_BeginOfFunctionDecl734:
 	li $t0, 4
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -507,69 +527,71 @@ BeginOfFunctionDecl496:
 	lw $t0, 176($sp)
 	sw $t0, 180($sp)
 	lw $t0, 180($sp)
-	sw $t0, 168($sp)
+	move $t3, $t0
 	li $t0, 10
-	lw $t1, 168($sp)
-	sw $t0, 0($t1)
+	sw $t0, 0($t3)
 	li $t0, 20
-	lw $t1, 168($sp)
-	sw $t0, 4($t1)
-	lw $t1, 168($sp)
-	lw $t0, 0($t1)
+	sw $t0, 4($t3)
+	lw $t0, 0($t3)
 	sw $t0, 152($sp)
-	lw $t1, 168($sp)
-	lw $t0, 4($t1)
-	sw $t0, 144($sp)
+	lw $t2, 4($t3)
 	lw $t0, 152($sp)
-	lw $t1, 144($sp)
-	sgt $t1, $t0, $t1
+	sgt $t1, $t0, $t2
 	sw $t1, 172($sp)
 	lw $t0, 172($sp)
-	lw $t1, 168($sp)
-	sw $t0, 8($t1)
-	lw $t1, 168($sp)
-	lw $t0, 8($t1)
+	sw $t0, 8($t3)
+	lw $t0, 8($t3)
 	sw $t0, 148($sp)
 	lw $t0, 148($sp)
-	beqz $t0, alternative499
-	b consequence498
-consequence498:
+	beqz $t0, _alternative737
+	b _consequence736
+_consequence736:
 	li $t0, 40
-	lw $t1, 168($sp)
-	sw $t0, 12($t1)
-	b OutOfIf500
-alternative499:
+	sw $t0, 12($t3)
+	b _OutOfIf738
+_alternative737:
 	li $t0, 80
-	lw $t1, 168($sp)
-	sw $t0, 12($t1)
-	b OutOfIf500
-OutOfIf500:
-	lw $t1, 168($sp)
-	lw $t0, 0($t1)
-	sw $t0, 164($sp)
-	lw $t1, 168($sp)
-	lw $t0, 4($t1)
+	sw $t0, 12($t3)
+	b _OutOfIf738
+_OutOfIf738:
+	lw $t2, 0($t3)
+	lw $t0, 4($t3)
 	sw $t0, 136($sp)
-	lw $t0, 164($sp)
 	lw $t1, 136($sp)
-	add $t1, $t0, $t1
-	sw $t1, 184($sp)
-	lw $t1, 168($sp)
-	lw $t0, 12($t1)
-	sw $t0, 156($sp)
-	lw $t0, 184($sp)
-	lw $t1, 156($sp)
-	add $t1, $t0, $t1
+	add $t4, $t2, $t1
+	lw $t2, 12($t3)
+	add $t1, $t4, $t2
 	sw $t1, 140($sp)
 	lw $a0, 140($sp)
 	jal func__toString
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__print
 	sw $v0, 160($sp)
 	li $v0, 0
-EndOfFunctionDecl497:
+	b _EndOfFunctionDecl735
+_EndOfFunctionDecl735:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 188
 	jr $ra
 .data

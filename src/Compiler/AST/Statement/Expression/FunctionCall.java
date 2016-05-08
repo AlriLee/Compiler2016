@@ -32,7 +32,7 @@ public class FunctionCall extends Expression {
         type = functionDecl.returnType;
 
         if (functionBody instanceof ClassAccess) {
-            System.out.printf(((ClassAccess) functionBody).className.toString(0));
+            //System.out.printf(((ClassAccess) functionBody).className.toString(0));
             arguments = new ExpressionList(((ClassAccess) functionBody).className, arguments);
         }
     }
@@ -45,7 +45,7 @@ public class FunctionCall extends Expression {
         }
 
         if (functionBody instanceof ClassAccess) {
-            System.out.printf(((ClassAccess) functionBody).className.toString(0));
+            //System.out.printf(((ClassAccess) functionBody).className.toString(0));
             arguments = new ExpressionList(((ClassAccess) functionBody).className, arguments);
         }
 

@@ -494,30 +494,67 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 140
+	sw $t2, 40($sp)
+	sw $t3, 44($sp)
+	sw $t4, 48($sp)
+	sw $t5, 52($sp)
+	sw $t6, 56($sp)
+	sw $t7, 60($sp)
+	sw $s0, 64($sp)
+	sw $s1, 68($sp)
+	sw $s2, 72($sp)
+	sw $s3, 76($sp)
+	sw $s4, 80($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $s7, 92($sp)
+	sw $t8, 96($sp)
+	sw $t9, 100($sp)
+	sw $k0, 104($sp)
+	sw $k1, 108($sp)
+	sw $gp, 112($sp)
+	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-BeginOfFunctionDecl672:
+_BeginOfFunctionDecl994:
 	li $t0, 10
-	sw $t0, 128($sp)
-WhileLoop674:
-	lw $t0, 128($sp)
+	move $t2, $t0
+_WhileLoop996:
 	li $t1, 0
-	sgt $t1, $t0, $t1
+	sgt $t1, $t2, $t1
 	sw $t1, 132($sp)
 	lw $t0, 132($sp)
-	beqz $t0, OutOfWhile676
-	b WhileBody675
-WhileBody675:
-	lw $t0, 128($sp)
-	sw $t0, 136($sp)
-	lw $t0, 128($sp)
+	beqz $t0, _OutOfWhile998
+	b _WhileBody997
+_WhileBody997:
+	sw $t2, 136($sp)
 	li $t1, 1
-	sub $t1, $t0, $t1
-	sw $t1, 128($sp)
-	b WhileLoop674
-OutOfWhile676:
+	sub $t2, $t2, $t1
+	b _WhileLoop996
+_OutOfWhile998:
 	li $v0, 0
-EndOfFunctionDecl673:
+	b _EndOfFunctionDecl995
+_EndOfFunctionDecl995:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
+	lw $t3, 44($sp)
+	lw $t4, 48($sp)
+	lw $t5, 52($sp)
+	lw $t6, 56($sp)
+	lw $t7, 60($sp)
+	lw $s0, 64($sp)
+	lw $s1, 68($sp)
+	lw $s2, 72($sp)
+	lw $s3, 76($sp)
+	lw $s4, 80($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $s7, 92($sp)
+	lw $t8, 96($sp)
+	lw $t9, 100($sp)
+	lw $k0, 104($sp)
+	lw $k1, 108($sp)
+	lw $gp, 112($sp)
+	lw $fp, 124($sp)
 	add $sp, $sp, 140
 	jr $ra
 .data
