@@ -220,18 +220,6 @@ public class MagBaseListener implements MagListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLogicalAnd_bitwiseOr(MagParser.LogicalAnd_bitwiseOrContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitLogicalAnd_bitwiseOr(MagParser.LogicalAnd_bitwiseOrContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterLogicalAnd_and(MagParser.LogicalAnd_andContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -239,6 +227,18 @@ public class MagBaseListener implements MagListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLogicalAnd_and(MagParser.LogicalAnd_andContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLogicalAnd_bitwiseOr(MagParser.LogicalAnd_bitwiseOrContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLogicalAnd_bitwiseOr(MagParser.LogicalAnd_bitwiseOrContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

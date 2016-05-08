@@ -793,7 +793,8 @@ public class MIPSTranslator {
         for (Declaration declaration : SymbolTable.program.declarations) {
             if (declaration instanceof FunctionDecl) {
                 FunctionDecl function = (FunctionDecl) declaration;
-                if (function.functionName.name.equals("improve") || function.functionName.name.equals("calc")) {
+
+                if (function.functionName.name.equals("improve") || function.functionName.name.equals("calc") || function.functionName.name.equals("check")) {
                     banned = true;
                 }
             }

@@ -198,18 +198,6 @@ public interface MagListener extends ParseTreeListener {
 	 */
 	void exitLogicalOr_logicalAnd(MagParser.LogicalOr_logicalAndContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code logicalAnd_bitwiseOr}
-	 * labeled alternative in {@link MagParser#logicalAndExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterLogicalAnd_bitwiseOr(MagParser.LogicalAnd_bitwiseOrContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code logicalAnd_bitwiseOr}
-	 * labeled alternative in {@link MagParser#logicalAndExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitLogicalAnd_bitwiseOr(MagParser.LogicalAnd_bitwiseOrContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code logicalAnd_and}
 	 * labeled alternative in {@link MagParser#logicalAndExpression}.
 	 * @param ctx the parse tree
@@ -221,6 +209,18 @@ public interface MagListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLogicalAnd_and(MagParser.LogicalAnd_andContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code logicalAnd_bitwiseOr}
+	 * labeled alternative in {@link MagParser#logicalAndExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterLogicalAnd_bitwiseOr(MagParser.LogicalAnd_bitwiseOrContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code logicalAnd_bitwiseOr}
+	 * labeled alternative in {@link MagParser#logicalAndExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitLogicalAnd_bitwiseOr(MagParser.LogicalAnd_bitwiseOrContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code bitwiseOr_bitwiseXor}
 	 * labeled alternative in {@link MagParser#bitwiseOrExpression}.
