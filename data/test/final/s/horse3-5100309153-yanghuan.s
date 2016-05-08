@@ -559,23 +559,32 @@ _ForBody0:
 	sw $t1, 176($sp)
 	lw $t0, global_463
 	lw $t1, 176($sp)
-	add $t2, $t0, $t1
+	add $t1, $t0, $t1
+	sw $t1, 140($sp)
 	lw $t0, 196($sp)
 	li $t1, 4
-	mul $t3, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 136($sp)
+	lw $t0, 136($sp)
 	li $t1, 4
-	add $t3, $t3, $t1
-	move $a0, $t3
+	add $t1, $t0, $t1
+	sw $t1, 136($sp)
+	lw $a0, 136($sp)
 	li $v0, 9
 	syscall
-	move $t3, $v0
+	sw $v0, 164($sp)
 	lw $t0, 196($sp)
-	sw $t0, 0($t3)
+	lw $t1, 164($sp)
+	sw $t0, 0($t1)
+	lw $t0, 164($sp)
 	li $t1, 4
-	add $t3, $t3, $t1
-	sw $t3, 148($sp)
+	add $t1, $t0, $t1
+	sw $t1, 164($sp)
+	lw $t0, 164($sp)
+	sw $t0, 148($sp)
 	lw $t0, 148($sp)
-	sw $t0, 0($t2)
+	lw $t1, 140($sp)
+	sw $t0, 0($t1)
 	li $t0, 0
 	sw $t0, global_465
 _ForLoop187:
@@ -599,9 +608,11 @@ _ForBody2:
 	sw $t0, 188($sp)
 	lw $t0, global_465
 	li $t1, 4
-	mul $t2, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 132($sp)
 	lw $t0, 188($sp)
-	add $t1, $t0, $t2
+	lw $t1, 132($sp)
+	add $t1, $t0, $t1
 	sw $t1, 156($sp)
 	li $t0, 0
 	lw $t1, 156($sp)
@@ -755,88 +766,131 @@ _logicalTrue10:
 	jal _check
 	sw $v0, 140($sp)
 	lw $t0, 140($sp)
-	move $t5, $t0
+	sw $t0, 136($sp)
 	b _logicalMerge12
 _logicalFalse11:
 	li $t0, 0
-	move $t5, $t0
+	sw $t0, 136($sp)
 	b _logicalMerge12
 _logicalMerge12:
-	beqz $t5, _logicalFalse14
+	lw $t0, 136($sp)
+	beqz $t0, _logicalFalse14
 _logicalTrue13:
 	lw $t0, 232($sp)
 	li $t1, 4
-	mul $t2, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 212($sp)
 	lw $t0, global_463
-	add $t2, $t0, $t2
-	lw $t3, 0($t2)
+	lw $t1, 212($sp)
+	add $t1, $t0, $t1
+	sw $t1, 204($sp)
+	lw $t1, 204($sp)
+	lw $t0, 0($t1)
+	sw $t0, 180($sp)
 	lw $t0, 236($sp)
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t3, $t3, $t2
+	mul $t1, $t0, $t1
+	sw $t1, 196($sp)
+	lw $t0, 180($sp)
+	lw $t1, 196($sp)
+	add $t1, $t0, $t1
+	sw $t1, 228($sp)
 	li $t0, 1
-	neg $t2, $t0
-	lw $t3, 0($t3)
-	seq $t2, $t3, $t2
-	move $t4, $t2
+	neg $t1, $t0
+	sw $t1, 216($sp)
+	lw $t1, 228($sp)
+	lw $t0, 0($t1)
+	sw $t0, 224($sp)
+	lw $t0, 224($sp)
+	lw $t1, 216($sp)
+	seq $t1, $t0, $t1
+	sw $t1, 176($sp)
+	lw $t0, 176($sp)
+	sw $t0, 168($sp)
 	b _logicalMerge15
 _logicalFalse14:
 	li $t0, 0
-	move $t4, $t0
+	sw $t0, 168($sp)
 	b _logicalMerge15
 _logicalMerge15:
-	beqz $t4, _alternative8
+	lw $t0, 168($sp)
+	beqz $t0, _alternative8
 _consequence7:
 	lw $t0, global_458
-	move $t2, $t0
+	sw $t0, 164($sp)
 	lw $t0, global_458
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_458
 	lw $t0, global_458
 	li $t1, 4
-	mul $t2, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 172($sp)
 	lw $t0, global_456
-	add $t2, $t0, $t2
+	lw $t1, 172($sp)
+	add $t1, $t0, $t1
+	sw $t1, 144($sp)
 	lw $t0, 232($sp)
-	sw $t0, 0($t2)
+	lw $t1, 144($sp)
+	sw $t0, 0($t1)
 	lw $t0, global_458
 	li $t1, 4
-	mul $t2, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 200($sp)
 	lw $t0, global_457
-	add $t2, $t0, $t2
+	lw $t1, 200($sp)
+	add $t1, $t0, $t1
+	sw $t1, 188($sp)
 	lw $t0, 236($sp)
-	sw $t0, 0($t2)
+	lw $t1, 188($sp)
+	sw $t0, 0($t1)
 	lw $t0, 232($sp)
 	li $t1, 4
-	mul $t2, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 160($sp)
 	lw $t0, global_463
-	add $t2, $t0, $t2
-	lw $t3, 0($t2)
+	lw $t1, 160($sp)
+	add $t1, $t0, $t1
+	sw $t1, 184($sp)
+	lw $t1, 184($sp)
+	lw $t0, 0($t1)
+	sw $t0, 152($sp)
 	lw $t0, 236($sp)
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $t3, $t2
+	mul $t1, $t0, $t1
+	sw $t1, 132($sp)
+	lw $t0, 152($sp)
+	lw $t1, 132($sp)
+	add $t1, $t0, $t1
+	sw $t1, 192($sp)
 	lw $t0, global_460
 	li $t1, 1
-	add $t3, $t0, $t1
-	sw $t3, 0($t2)
+	add $t1, $t0, $t1
+	sw $t1, 148($sp)
+	lw $t0, 148($sp)
+	lw $t1, 192($sp)
+	sw $t0, 0($t1)
 	lw $t0, 232($sp)
 	lw $t1, global_452
-	seq $t2, $t0, $t1
-	beqz $t2, _logicalFalse20
+	seq $t1, $t0, $t1
+	sw $t1, 208($sp)
+	lw $t0, 208($sp)
+	beqz $t0, _logicalFalse20
 _logicalTrue19:
 	lw $t0, 236($sp)
 	lw $t1, global_453
-	seq $t2, $t0, $t1
-	move $t2, $t2
+	seq $t1, $t0, $t1
+	sw $t1, 220($sp)
+	lw $t0, 220($sp)
+	sw $t0, 156($sp)
 	b _logicalMerge21
 _logicalFalse20:
 	li $t0, 0
-	move $t2, $t0
+	sw $t0, 156($sp)
 	b _logicalMerge21
 _logicalMerge21:
-	beqz $t2, _alternative17
+	lw $t0, 156($sp)
+	beqz $t0, _alternative17
 _consequence16:
 	li $t0, 1
 	sw $t0, global_459
@@ -1034,18 +1088,22 @@ _ForBody24:
 	add $t1, $t0, $t1
 	sw $t1, 284($sp)
 	lw $t1, 284($sp)
-	lw $t2, 0($t1)
+	lw $t0, 0($t1)
+	sw $t0, 408($sp)
 	lw $t0, global_465
 	li $t1, 4
 	mul $t1, $t0, $t1
 	sw $t1, 324($sp)
+	lw $t0, 408($sp)
 	lw $t1, 324($sp)
-	add $t1, $t2, $t1
+	add $t1, $t0, $t1
 	sw $t1, 304($sp)
 	li $t0, 1
-	neg $t2, $t0
+	neg $t1, $t0
+	sw $t1, 400($sp)
+	lw $t0, 400($sp)
 	lw $t1, 304($sp)
-	sw $t2, 0($t1)
+	sw $t0, 0($t1)
 _continueFor192:
 	lw $t0, global_465
 	sw $t0, 216($sp)
@@ -1071,24 +1129,28 @@ _OutOfFor23:
 	sw $t1, 264($sp)
 	lw $t0, global_461
 	lw $t1, 264($sp)
-	add $t2, $t0, $t1
+	add $t1, $t0, $t1
+	sw $t1, 428($sp)
 	li $t0, 2
 	neg $t1, $t0
 	sw $t1, 272($sp)
 	lw $t0, 272($sp)
-	sw $t0, 0($t2)
+	lw $t1, 428($sp)
+	sw $t0, 0($t1)
 	li $t0, 0
 	li $t1, 4
 	mul $t1, $t0, $t1
 	sw $t1, 528($sp)
 	lw $t0, global_462
 	lw $t1, 528($sp)
-	add $t2, $t0, $t1
+	add $t1, $t0, $t1
+	sw $t1, 444($sp)
 	li $t0, 1
 	neg $t1, $t0
 	sw $t1, 348($sp)
 	lw $t0, 348($sp)
-	sw $t0, 0($t2)
+	lw $t1, 444($sp)
+	sw $t0, 0($t1)
 	li $t0, 1
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1098,9 +1160,11 @@ _OutOfFor23:
 	add $t1, $t0, $t1
 	sw $t1, 220($sp)
 	li $t0, 2
-	neg $t2, $t0
+	neg $t1, $t0
+	sw $t1, 336($sp)
+	lw $t0, 336($sp)
 	lw $t1, 220($sp)
-	sw $t2, 0($t1)
+	sw $t0, 0($t1)
 	li $t0, 1
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1132,9 +1196,11 @@ _OutOfFor23:
 	add $t1, $t0, $t1
 	sw $t1, 484($sp)
 	li $t0, 1
-	neg $t2, $t0
+	neg $t1, $t0
+	sw $t1, 156($sp)
+	lw $t0, 156($sp)
 	lw $t1, 484($sp)
-	sw $t2, 0($t1)
+	sw $t0, 0($t1)
 	li $t0, 3
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1166,9 +1232,11 @@ _OutOfFor23:
 	add $t1, $t0, $t1
 	sw $t1, 364($sp)
 	li $t0, 1
-	neg $t2, $t0
+	neg $t1, $t0
+	sw $t1, 352($sp)
+	lw $t0, 352($sp)
 	lw $t1, 364($sp)
-	sw $t2, 0($t1)
+	sw $t0, 0($t1)
 	li $t0, 4
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1178,9 +1246,11 @@ _OutOfFor23:
 	add $t1, $t0, $t1
 	sw $t1, 372($sp)
 	li $t0, 2
-	neg $t2, $t0
+	neg $t1, $t0
+	sw $t1, 192($sp)
+	lw $t0, 192($sp)
 	lw $t1, 372($sp)
-	sw $t2, 0($t1)
+	sw $t0, 0($t1)
 	li $t0, 5
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1190,9 +1260,11 @@ _OutOfFor23:
 	add $t1, $t0, $t1
 	sw $t1, 196($sp)
 	li $t0, 1
-	neg $t2, $t0
+	neg $t1, $t0
+	sw $t1, 448($sp)
+	lw $t0, 448($sp)
 	lw $t1, 196($sp)
-	sw $t2, 0($t1)
+	sw $t0, 0($t1)
 	li $t0, 5
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1224,9 +1296,11 @@ _OutOfFor23:
 	add $t1, $t0, $t1
 	sw $t1, 316($sp)
 	li $t0, 2
-	neg $t2, $t0
+	neg $t1, $t0
+	sw $t1, 440($sp)
+	lw $t0, 440($sp)
 	lw $t1, 316($sp)
-	sw $t2, 0($t1)
+	sw $t0, 0($t1)
 	li $t0, 7
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1292,13 +1366,15 @@ _WhileBody26:
 	add $t1, $t0, $t1
 	sw $t1, 468($sp)
 	lw $t1, 468($sp)
-	lw $t2, 0($t1)
+	lw $t0, 0($t1)
+	sw $t0, 140($sp)
 	lw $t0, global_455
 	li $t1, 4
 	mul $t1, $t0, $t1
 	sw $t1, 148($sp)
+	lw $t0, 140($sp)
 	lw $t1, 148($sp)
-	add $t1, $t2, $t1
+	add $t1, $t0, $t1
 	sw $t1, 280($sp)
 	lw $t1, 280($sp)
 	lw $t0, 0($t1)
@@ -1328,19 +1404,27 @@ _ForBody28:
 	sw $t0, 416($sp)
 	lw $t0, global_454
 	lw $t1, 416($sp)
-	add $t2, $t0, $t1
+	add $t1, $t0, $t1
+	sw $t1, 524($sp)
 	lw $t0, global_465
 	li $t1, 4
-	mul $t3, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 328($sp)
 	lw $t0, global_462
-	add $t3, $t0, $t3
-	lw $t0, 0($t3)
+	lw $t1, 328($sp)
+	add $t1, $t0, $t1
+	sw $t1, 236($sp)
+	lw $t1, 236($sp)
+	lw $t0, 0($t1)
 	sw $t0, 396($sp)
 	lw $t0, global_455
 	lw $t1, 396($sp)
-	add $t3, $t0, $t1
-	sw $t2, -8($sp)
-	sw $t3, -4($sp)
+	add $t1, $t0, $t1
+	sw $t1, 404($sp)
+	lw $t0, 524($sp)
+	sw $t0, -8($sp)
+	lw $t0, 404($sp)
+	sw $t0, -4($sp)
 	jal _addList
 	sw $v0, 204($sp)
 _continueFor195:
@@ -1388,11 +1472,15 @@ _consequence33:
 	add $t1, $t0, $t1
 	sw $t1, 476($sp)
 	lw $t1, 476($sp)
-	lw $t2, 0($t1)
+	lw $t0, 0($t1)
+	sw $t0, 292($sp)
 	lw $t0, global_453
 	li $t1, 4
-	mul $t3, $t0, $t1
-	add $t1, $t2, $t3
+	mul $t1, $t0, $t1
+	sw $t1, 296($sp)
+	lw $t0, 292($sp)
+	lw $t1, 296($sp)
+	add $t1, $t0, $t1
 	sw $t1, 152($sp)
 	lw $t1, 152($sp)
 	lw $t0, 0($t1)

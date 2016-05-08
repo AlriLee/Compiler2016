@@ -996,7 +996,6 @@ _consequence19:
 	mul $t3, $t5, $t1
 	add $t3, $t2, $t3
 	lw $t3, 0($t3)
-	move $t3, $t3
 	li $t1, 4
 	mul $t4, $t5, $t1
 	add $t6, $t2, $t4
@@ -1386,7 +1385,6 @@ _BeginOfFunctionDecl54:
 	sw $t0, 0($t3)
 	li $t1, 4
 	add $t3, $t3, $t1
-	move $t3, $t3
 	sw $t3, global_50
 	lw $t0, global_52
 	lw $t1, global_51

@@ -562,7 +562,6 @@ _ForBody0:
 	sw $t0, 0($t3)
 	li $t1, 4
 	add $t3, $t3, $t1
-	move $t3, $t3
 	sw $t3, 0($t5)
 _continueFor49:
 	move $t3, $t2
@@ -647,7 +646,6 @@ _logicalTrue19:
 _logicalFalse20:
 	li $t1, 90
 	slt $t3, $t2, $t1
-	move $t3, $t3
 	b _logicalMerge21
 _logicalMerge21:
 	beqz $t3, _alternative17
@@ -661,7 +659,6 @@ _consequence16:
 	mul $t5, $s0, $t1
 	li $t1, 100
 	rem $t5, $t5, $t1
-	move $t5, $t5
 	add $t6, $t2, $t6
 	li $t1, 4
 	mul $t6, $t6, $t1

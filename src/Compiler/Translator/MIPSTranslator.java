@@ -62,7 +62,9 @@ public class MIPSTranslator {
     // move from an virtual register to a physical register
     public void move(Operand from, MIPSRegister to) {
         if (allocator.allocMapping.containsKey(from)) {
-            output.printf("\tmove %s, %s\n", to.registerName, allocator.allocMapping.get(from).registerName);
+            if (to.registerName != allocator.allocMapping.get(from).registerName) {
+                output.printf("\tmove %s, %s\n", to.registerName, allocator.allocMapping.get(from).registerName);
+            }
         } else {
             if (from instanceof Immediate) {
                 output.printf("\tli %s, %s\n", to, ((Immediate) from).immediate);
@@ -84,7 +86,9 @@ public class MIPSTranslator {
     // move from a physical register to a virtual register
     public void move(MIPSRegister from, Register to) {
         if (allocator.allocMapping.containsKey(to)) {
-            output.printf("\tmove %s, %s\n", allocator.allocMapping.get(to).registerName, from.registerName);
+            if (allocator.allocMapping.get(to).registerName != from.registerName) {
+                output.printf("\tmove %s, %s\n", allocator.allocMapping.get(to).registerName, from.registerName);
+            }
         } else {
             if (to.type == Register.registerType.TEMPERARY || to.type == Register.registerType.PARAMETER) {
                 output.printf("\tsw %s, %d($sp)\n", from, graph.frame.getOffset(to));

@@ -104,7 +104,7 @@ public class Compiler {
         }
 
         if (all > limit) {
-//            fail(all + " / " + limit + "Limit exceeded!");
+            fail(all + " / " + limit + "Limit exceeded!");
         }
     }
 }

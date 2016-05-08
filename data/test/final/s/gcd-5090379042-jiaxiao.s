@@ -599,16 +599,28 @@ _BeginOfFunctionDecl57:
 	li $t0, 1
 	sw $t0, -4($sp)
 	jal _gcd
-	sw $v0, 152($sp)
-	lw $a0, 152($sp)
+	sw $v0, 148($sp)
+	lw $a0, 148($sp)
 	jal func__toString
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
+	sw $v0, 144($sp)
+	lw $a0, 144($sp)
 	jal func__println
-	sw $v0, 160($sp)
+	sw $v0, 136($sp)
 	li $t0, 34986
 	sw $t0, -8($sp)
 	li $t0, 3087
+	sw $t0, -4($sp)
+	jal _gcd
+	sw $v0, 156($sp)
+	lw $a0, 156($sp)
+	jal func__toString
+	sw $v0, 152($sp)
+	lw $a0, 152($sp)
+	jal func__println
+	sw $v0, 128($sp)
+	li $t0, 2907
+	sw $t0, -8($sp)
+	li $t0, 1539
 	sw $t0, -4($sp)
 	jal _gcd
 	sw $v0, 140($sp)
@@ -617,19 +629,7 @@ _BeginOfFunctionDecl57:
 	sw $v0, 132($sp)
 	lw $a0, 132($sp)
 	jal func__println
-	sw $v0, 156($sp)
-	li $t0, 2907
-	sw $t0, -8($sp)
-	li $t0, 1539
-	sw $t0, -4($sp)
-	jal _gcd
-	sw $v0, 136($sp)
-	lw $a0, 136($sp)
-	jal func__toString
-	sw $v0, 148($sp)
-	lw $a0, 148($sp)
-	jal func__println
-	sw $v0, 144($sp)
+	sw $v0, 160($sp)
 	li $v0, 0
 	b _EndOfFunctionDecl58
 _EndOfFunctionDecl58:
