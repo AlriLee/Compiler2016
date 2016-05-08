@@ -498,14 +498,10 @@ _work:
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl91:
 	lw $t1, 188($sp)
-	lw $t0, 4($t1)
-	sw $t0, 164($sp)
-	lw $t0, 164($sp)
+	lw $t2, 4($t1)
 	li $t1, 100
-	sle $t1, $t0, $t1
-	sw $t1, 176($sp)
-	lw $t0, 176($sp)
-	beqz $t0, _alternative1
+	sle $t2, $t2, $t1
+	beqz $t2, _alternative1
 _consequence0:
 	lw $a0, 184($sp)
 	la $a1, string_2
@@ -517,46 +513,41 @@ _consequence0:
 	move $a0, $t2
 	lw $a1, 152($sp)
 	jal func__stringConcatenate
-	sw $v0, 168($sp)
-	lw $a0, 168($sp)
+	move $t2, $v0
+	move $a0, $t2
 	la $a1, string_6
 	jal func__stringConcatenate
-	sw $v0, 132($sp)
-	lw $a0, 132($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 156($sp)
+	move $t2, $v0
 	b _OutOfIf2
 _alternative1:
 	lw $a0, 184($sp)
 	la $a1, string_9
 	jal func__stringConcatenate
-	move $t2, $v0
+	sw $v0, 160($sp)
 	lw $t1, 188($sp)
-	lw $t0, 0($t1)
-	sw $t0, 148($sp)
-	move $a0, $t2
-	lw $a1, 148($sp)
+	lw $t2, 0($t1)
+	lw $a0, 160($sp)
+	move $a1, $t2
 	jal func__stringConcatenate
-	sw $v0, 172($sp)
-	lw $a0, 172($sp)
+	move $t2, $v0
+	move $a0, $t2
 	la $a1, string_13
 	jal func__stringConcatenate
-	sw $v0, 136($sp)
-	lw $a0, 136($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 140($sp)
+	move $t2, $v0
 	b _OutOfIf2
 _OutOfIf2:
 	lw $t1, 188($sp)
-	lw $t0, 4($t1)
-	sw $t0, 180($sp)
-	lw $t0, 180($sp)
+	lw $t2, 4($t1)
 	lw $t1, global_203
-	add $t1, $t0, $t1
-	sw $t1, 144($sp)
-	lw $t0, 144($sp)
+	add $t2, $t2, $t1
 	lw $t1, 188($sp)
-	sw $t0, 4($t1)
+	sw $t2, 4($t1)
 _EndOfFunctionDecl92:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
@@ -574,16 +565,11 @@ _BeginOfFunctionDecl93:
 	sw $t0, global_203
 	li $t0, 2
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 160($sp)
-	lw $a0, 160($sp)
+	mul $t2, $t0, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 144($sp)
-	lw $t0, 144($sp)
-	sw $t0, 148($sp)
-	lw $t0, 148($sp)
-	move $t2, $t0
+	move $t2, $v0
 	la $t0, string_24
 	sw $t0, 0($t2)
 	li $t0, 0
@@ -619,7 +605,7 @@ _BeginOfFunctionDecl93:
 	lw $t0, 168($sp)
 	sw $t0, -4($sp)
 	jal _work
-	sw $v0, 132($sp)
+	move $t2, $v0
 _EndOfFunctionDecl94:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)

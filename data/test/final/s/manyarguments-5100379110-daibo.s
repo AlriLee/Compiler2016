@@ -494,70 +494,46 @@ func__stringNeq:
 	jr $ra
 _a:
 	sub $sp, $sp, 244
+	sw $t2, 40($sp)
 _BeginOfFunctionDecl108:
 	lw $t0, 184($sp)
 	lw $t1, 188($sp)
-	add $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $t0, 132($sp)
+	add $t2, $t0, $t1
 	lw $t1, 192($sp)
-	add $t1, $t0, $t1
-	sw $t1, 144($sp)
-	lw $t0, 144($sp)
+	add $t2, $t2, $t1
 	lw $t1, 196($sp)
-	add $t1, $t0, $t1
-	sw $t1, 180($sp)
-	lw $t0, 180($sp)
+	add $t2, $t2, $t1
 	lw $t1, 200($sp)
-	add $t1, $t0, $t1
-	sw $t1, 176($sp)
-	lw $t0, 176($sp)
+	add $t2, $t2, $t1
 	lw $t1, 204($sp)
-	add $t1, $t0, $t1
-	sw $t1, 152($sp)
-	lw $t0, 152($sp)
+	add $t2, $t2, $t1
 	lw $t1, 208($sp)
-	add $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
+	add $t2, $t2, $t1
 	lw $t1, 212($sp)
-	add $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, 164($sp)
+	add $t2, $t2, $t1
 	lw $t1, 216($sp)
-	add $t1, $t0, $t1
-	sw $t1, 160($sp)
-	lw $t0, 160($sp)
+	add $t2, $t2, $t1
 	lw $t1, 220($sp)
-	add $t1, $t0, $t1
-	sw $t1, 168($sp)
-	lw $t0, 168($sp)
+	add $t2, $t2, $t1
 	lw $t1, 224($sp)
-	add $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $t0, 140($sp)
+	add $t2, $t2, $t1
 	lw $t1, 228($sp)
-	add $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $t0, 148($sp)
+	add $t2, $t2, $t1
 	lw $t1, 232($sp)
-	add $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $t0, 156($sp)
+	add $t2, $t2, $t1
 	lw $t1, 236($sp)
-	add $t1, $t0, $t1
-	sw $t1, 172($sp)
-	lw $t0, 172($sp)
+	add $t2, $t2, $t1
 	lw $t1, 240($sp)
-	add $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $v0, 136($sp)
+	add $t2, $t2, $t1
+	move $v0, $t2
 	b _EndOfFunctionDecl109
 _EndOfFunctionDecl109:
+	lw $t2, 40($sp)
 	add $sp, $sp, 244
 	jr $ra
 main:
 	sub $sp, $sp, 140
+	sw $t2, 40($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl110:
 	li $t0, 1
@@ -591,17 +567,18 @@ _BeginOfFunctionDecl110:
 	li $t0, 15
 	sw $t0, -4($sp)
 	jal _a
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 132($sp)
-	lw $a0, 132($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 136($sp)
+	move $t2, $v0
 	li $v0, 0
 	b _EndOfFunctionDecl111
 _EndOfFunctionDecl111:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
 	add $sp, $sp, 140
 	jr $ra
 .data

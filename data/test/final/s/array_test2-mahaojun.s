@@ -501,50 +501,32 @@ main:
 _BeginOfFunctionDecl44:
 	li $t0, 4
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 172($sp)
-	lw $t0, 172($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 172($sp)
-	lw $a0, 172($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 200($sp)
+	move $t2, $v0
 	li $t0, 4
-	lw $t1, 200($sp)
-	sw $t0, 0($t1)
-	lw $t0, 200($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 200($sp)
-	lw $t0, 200($sp)
-	sw $t0, 352($sp)
-	lw $t0, 352($sp)
-	sw $t0, global_52
+	add $t2, $t2, $t1
+	sw $t2, global_52
 	li $t0, 4
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 396($sp)
-	lw $t0, 396($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 396($sp)
-	lw $a0, 396($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 140($sp)
+	move $t2, $v0
 	li $t0, 4
-	lw $t1, 140($sp)
-	sw $t0, 0($t1)
-	lw $t0, 140($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $t0, 140($sp)
-	sw $t0, 228($sp)
-	lw $t0, 228($sp)
-	move $t3, $t0
+	add $t2, $t2, $t1
+	move $t3, $t2
 	li $t0, 0
 	li $t1, 4
 	mul $t2, $t0, $t1

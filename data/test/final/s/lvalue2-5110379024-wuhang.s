@@ -500,50 +500,31 @@ main:
 _BeginOfFunctionDecl74:
 	li $t0, 4
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $a0, 128($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 160($sp)
+	move $t2, $v0
 	li $t0, 4
-	lw $t1, 160($sp)
-	sw $t0, 0($t1)
-	lw $t0, 160($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 160($sp)
-	lw $t0, 160($sp)
-	sw $t0, 140($sp)
-	lw $t0, 140($sp)
-	sw $t0, global_198
+	add $t2, $t2, $t1
+	sw $t2, global_198
 	li $t0, 4
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $t0, 132($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $a0, 132($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 148($sp)
+	move $t2, $v0
 	li $t0, 4
-	lw $t1, 148($sp)
-	sw $t0, 0($t1)
-	lw $t0, 148($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $t0, 148($sp)
-	sw $t0, 164($sp)
-	lw $t0, 164($sp)
-	move $t2, $t0
+	add $t2, $t2, $t1
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -555,21 +536,16 @@ _BeginOfFunctionDecl74:
 	sw $t2, global_198
 	li $t0, 2
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 144($sp)
+	mul $t2, $t0, $t1
 	lw $t0, global_198
-	lw $t1, 144($sp)
-	add $t1, $t0, $t1
-	sw $t1, 172($sp)
-	lw $t1, 172($sp)
-	lw $t0, 0($t1)
-	sw $t0, 156($sp)
-	lw $a0, 156($sp)
+	add $t2, $t0, $t2
+	lw $t2, 0($t2)
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 176($sp)
-	lw $a0, 176($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 136($sp)
+	move $t2, $v0
 _EndOfFunctionDecl75:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)

@@ -500,17 +500,10 @@ _exchange:
 _BeginOfFunctionDecl54:
 	lw $t0, 172($sp)
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 156($sp)
+	mul $t2, $t0, $t1
 	lw $t0, global_97
-	lw $t1, 156($sp)
-	add $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $t1, 140($sp)
-	lw $t0, 0($t1)
-	sw $t0, 144($sp)
-	lw $t0, 144($sp)
-	move $t2, $t0
+	add $t2, $t0, $t2
+	lw $t2, 0($t2)
 	lw $t0, 172($sp)
 	li $t1, 4
 	mul $t3, $t0, $t1
@@ -547,14 +540,9 @@ _makeHeap:
 _BeginOfFunctionDecl56:
 	lw $t0, global_96
 	li $t1, 1
-	sub $t1, $t0, $t1
-	sw $t1, 240($sp)
-	lw $t0, 240($sp)
+	sub $t2, $t0, $t1
 	li $t1, 2
-	div $t1, $t0, $t1
-	sw $t1, 244($sp)
-	lw $t0, 244($sp)
-	move $t2, $t0
+	div $t2, $t2, $t1
 	li $t0, 0
 	move $t5, $t0
 	move $t3, $t5
@@ -658,9 +646,8 @@ _adjustHeap:
 	sw $t3, 44($sp)
 _BeginOfFunctionDecl58:
 	li $t0, 0
-	sw $t0, 208($sp)
-	lw $t0, 208($sp)
-	move $t5, $t0
+	move $t2, $t0
+	move $t5, $t2
 	sw $t5, 136($sp)
 _WhileLoop65:
 	lw $t0, 136($sp)
@@ -846,10 +833,8 @@ _ForBody22:
 	sw $v0, 176($sp)
 _continueFor67:
 	li $t1, 1
-	add $t1, $t4, $t1
-	sw $t1, 192($sp)
-	lw $t0, 192($sp)
-	move $t4, $t0
+	add $t2, $t4, $t1
+	move $t4, $t2
 	b _ForLoop66
 _OutOfFor23:
 	li $v0, 0
@@ -869,35 +854,25 @@ main:
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl62:
 	jal func__getString
-	sw $v0, 140($sp)
-	lw $a0, 140($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__parseInt
-	sw $v0, 204($sp)
-	lw $t0, 204($sp)
-	sw $t0, global_96
+	move $t2, $v0
+	sw $t2, global_96
 	lw $t0, global_96
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $t0, 156($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $a0, 156($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 160($sp)
+	move $t2, $v0
 	lw $t0, global_96
-	lw $t1, 160($sp)
-	sw $t0, 0($t1)
-	lw $t0, 160($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 160($sp)
-	lw $t0, 160($sp)
-	sw $t0, 144($sp)
-	lw $t0, 144($sp)
-	sw $t0, global_97
+	add $t2, $t2, $t1
+	sw $t2, global_97
 	li $t0, 0
 	move $t2, $t0
 _ForLoop68:
@@ -919,16 +894,13 @@ _ForBody24:
 	sw $t2, 0($t1)
 _continueFor69:
 	li $t1, 1
-	add $t1, $t2, $t1
-	sw $t1, 176($sp)
-	lw $t0, 176($sp)
-	move $t2, $t0
+	add $t2, $t2, $t1
 	b _ForLoop68
 _OutOfFor25:
 	jal _makeHeap
-	sw $v0, 208($sp)
+	move $t2, $v0
 	jal _heapSort
-	sw $v0, 180($sp)
+	move $t2, $v0
 	li $t0, 0
 	move $t2, $t0
 _ForLoop70:
@@ -962,10 +934,7 @@ _ForBody26:
 	move $t3, $v0
 _continueFor71:
 	li $t1, 1
-	add $t1, $t2, $t1
-	sw $t1, 216($sp)
-	lw $t0, 216($sp)
-	move $t2, $t0
+	add $t2, $t2, $t1
 	b _ForLoop70
 _OutOfFor27:
 	la $a0, string_145

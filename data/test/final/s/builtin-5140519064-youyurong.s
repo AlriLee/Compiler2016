@@ -494,87 +494,79 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 208
+	sw $t2, 40($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl64:
 	li $t0, 3
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 184($sp)
-	lw $t0, 184($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 184($sp)
-	lw $a0, 184($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 164($sp)
+	move $t2, $v0
 	li $t0, 3
-	lw $t1, 164($sp)
-	sw $t0, 0($t1)
-	lw $t0, 164($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, 164($sp)
-	sw $t0, 192($sp)
-	lw $t0, 192($sp)
-	sw $t0, 196($sp)
-	lw $a0, 196($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	jal func__size
-	sw $v0, 168($sp)
-	lw $a0, 168($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 160($sp)
+	move $t2, $v0
 	la $a0, string_3
-	lw $a1, 160($sp)
+	move $a1, $t2
 	jal func__stringConcatenate
-	sw $v0, 140($sp)
-	lw $a0, 140($sp)
+	move $t2, $v0
+	move $a0, $t2
 	la $a1, string_7
 	jal func__stringConcatenate
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__print
-	sw $v0, 204($sp)
+	move $t2, $v0
 	la $a0, string_10
 	jal func__println
-	sw $v0, 188($sp)
+	move $t2, $v0
 	la $a0, string_12
 	jal func__length
-	sw $v0, 200($sp)
-	lw $a0, 200($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 144($sp)
-	lw $a0, 144($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__print
-	sw $v0, 176($sp)
+	move $t2, $v0
 	jal func__getInt
-	sw $v0, 152($sp)
+	move $t2, $v0
 	la $a0, string_16
 	li $a1, 0
-	lw $a2, 152($sp)
+	move $a2, $t2
 	jal func__substring
-	sw $v0, 148($sp)
-	lw $a0, 148($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 172($sp)
+	move $t2, $v0
 	la $a0, string_20
 	jal func__parseInt
-	sw $v0, 132($sp)
-	lw $a0, 132($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 136($sp)
-	lw $a0, 136($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 156($sp)
+	move $t2, $v0
 	la $a0, string_24
 	li $a1, 5
 	jal func__ord
-	sw $v0, 180($sp)
-	lw $v0, 180($sp)
+	move $t2, $v0
+	move $v0, $t2
 	b _EndOfFunctionDecl65
 _EndOfFunctionDecl65:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
 	add $sp, $sp, 208
 	jr $ra
 .data

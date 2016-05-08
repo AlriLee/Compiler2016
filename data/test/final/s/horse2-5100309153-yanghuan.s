@@ -494,29 +494,26 @@ func__stringNeq:
 	jr $ra
 _check:
 	sub $sp, $sp, 148
+	sw $t2, 40($sp)
 _BeginOfFunctionDecl72:
 	lw $t0, 140($sp)
 	lw $t1, 144($sp)
-	slt $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $t0, 132($sp)
-	beqz $t0, _logicalFalse1
+	slt $t2, $t0, $t1
+	beqz $t2, _logicalFalse1
 _logicalTrue0:
 	lw $t0, 140($sp)
 	li $t1, 0
-	sge $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
-	sw $t0, 136($sp)
+	sge $t2, $t0, $t1
 	b _logicalMerge2
 _logicalFalse1:
 	li $t0, 0
-	sw $t0, 136($sp)
+	move $t2, $t0
 	b _logicalMerge2
 _logicalMerge2:
-	lw $v0, 136($sp)
+	move $v0, $t2
 	b _EndOfFunctionDecl73
 _EndOfFunctionDecl73:
+	lw $t2, 40($sp)
 	add $sp, $sp, 148
 	jr $ra
 main:
@@ -544,9 +541,7 @@ main:
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl74:
 	jal func__getInt
-	sw $v0, 1420($sp)
-	lw $t0, 1420($sp)
-	move $t2, $t0
+	move $t2, $v0
 	li $t0, 0
 	move $s0, $t0
 	move $s2, $s0

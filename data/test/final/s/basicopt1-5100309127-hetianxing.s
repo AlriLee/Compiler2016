@@ -506,27 +506,18 @@ main:
 _BeginOfFunctionDecl46:
 	li $t0, 100
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 180($sp)
-	lw $t0, 180($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 180($sp)
-	lw $a0, 180($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 128($sp)
+	move $t2, $v0
 	li $t0, 100
-	lw $t1, 128($sp)
-	sw $t0, 0($t1)
-	lw $t0, 128($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
-	sw $t0, 284($sp)
-	lw $t0, 284($sp)
-	move $t5, $t0
+	add $t2, $t2, $t1
+	move $t5, $t2
 	li $t0, 0
 	move $t7, $t0
 _ForLoop48:

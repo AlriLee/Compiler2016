@@ -501,27 +501,18 @@ main:
 _BeginOfFunctionDecl38:
 	li $t0, 4
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 144($sp)
-	lw $t0, 144($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 144($sp)
-	lw $a0, 144($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 172($sp)
+	move $t2, $v0
 	li $t0, 4
-	lw $t1, 172($sp)
-	sw $t0, 0($t1)
-	lw $t0, 172($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 172($sp)
-	lw $t0, 172($sp)
-	sw $t0, 176($sp)
-	lw $t0, 176($sp)
-	sw $t0, global_13
+	add $t2, $t2, $t1
+	sw $t2, global_13
 	lw $a0, global_13
 	jal func__size
 	move $t2, $v0
@@ -543,9 +534,8 @@ _BeginOfFunctionDecl38:
 	add $t1, $t0, $t1
 	sw $t1, 252($sp)
 	lw $t0, 252($sp)
-	sw $t0, 140($sp)
-	lw $t0, 140($sp)
-	sw $t0, 132($sp)
+	move $t2, $t0
+	sw $t2, 132($sp)
 	li $t0, 0
 	move $t2, $t0
 _ForLoop40:

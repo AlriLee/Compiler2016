@@ -494,18 +494,17 @@ func__stringNeq:
 	jr $ra
 _getHash:
 	sub $sp, $sp, 140
+	sw $t2, 40($sp)
 _BeginOfFunctionDecl41:
 	lw $t0, 136($sp)
 	li $t1, 237
-	mul $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
+	mul $t2, $t0, $t1
 	lw $t1, global_45
-	rem $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $v0, 132($sp)
+	rem $t2, $t2, $t1
+	move $v0, $t2
 	b _EndOfFunctionDecl42
 _EndOfFunctionDecl42:
+	lw $t2, 40($sp)
 	add $sp, $sp, 140
 	jr $ra
 _put:
@@ -520,9 +519,7 @@ _BeginOfFunctionDecl43:
 	lw $t0, 264($sp)
 	sw $t0, -4($sp)
 	jal _getHash
-	sw $v0, 248($sp)
-	lw $t0, 248($sp)
-	move $t2, $t0
+	move $t2, $v0
 	li $t1, 4
 	mul $t3, $t2, $t1
 	lw $t0, global_46
@@ -649,20 +646,12 @@ _BeginOfFunctionDecl45:
 	lw $t0, 164($sp)
 	sw $t0, -4($sp)
 	jal _getHash
-	sw $v0, 132($sp)
-	lw $t0, 132($sp)
+	move $t2, $v0
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 136($sp)
+	mul $t2, $t2, $t1
 	lw $t0, global_46
-	lw $t1, 136($sp)
-	add $t1, $t0, $t1
-	sw $t1, 152($sp)
-	lw $t1, 152($sp)
-	lw $t0, 0($t1)
-	sw $t0, 140($sp)
-	lw $t0, 140($sp)
-	move $t2, $t0
+	add $t2, $t0, $t2
+	lw $t2, 0($t2)
 _WhileLoop50:
 	lw $t3, 0($t2)
 	lw $t1, 164($sp)
@@ -671,10 +660,7 @@ _WhileLoop50:
 	lw $t0, 156($sp)
 	beqz $t0, _OutOfWhile9
 _WhileBody8:
-	lw $t0, 8($t2)
-	sw $t0, 144($sp)
-	lw $t0, 144($sp)
-	move $t2, $t0
+	lw $t2, 8($t2)
 	b _WhileLoop50
 _OutOfWhile9:
 	lw $t0, 4($t2)
@@ -698,27 +684,18 @@ _BeginOfFunctionDecl47:
 	sw $t0, global_45
 	li $t0, 100
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, 164($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $a0, 164($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 136($sp)
+	move $t2, $v0
 	li $t0, 100
-	lw $t1, 136($sp)
-	sw $t0, 0($t1)
-	lw $t0, 136($sp)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
-	sw $t0, 200($sp)
-	lw $t0, 200($sp)
-	sw $t0, global_46
+	add $t2, $t2, $t1
+	sw $t2, global_46
 	li $t0, 0
 	move $t2, $t0
 _ForLoop51:

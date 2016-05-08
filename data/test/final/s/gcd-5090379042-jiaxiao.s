@@ -494,18 +494,15 @@ func__stringNeq:
 	jr $ra
 _gcd:
 	sub $sp, $sp, 152
+	sw $t2, 40($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl55:
 	lw $t0, 144($sp)
 	lw $t1, 148($sp)
-	rem $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $t0, 140($sp)
+	rem $t2, $t0, $t1
 	li $t1, 0
-	seq $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
-	beqz $t0, _alternative1
+	seq $t2, $t2, $t1
+	beqz $t2, _alternative1
 _consequence0:
 	lw $v0, 148($sp)
 	b _EndOfFunctionDecl56
@@ -513,25 +510,25 @@ _consequence0:
 _alternative1:
 	lw $t0, 144($sp)
 	lw $t1, 148($sp)
-	rem $t1, $t0, $t1
-	sw $t1, 128($sp)
+	rem $t2, $t0, $t1
 	lw $t0, 148($sp)
 	sw $t0, -8($sp)
-	lw $t0, 128($sp)
-	sw $t0, -4($sp)
+	sw $t2, -4($sp)
 	jal _gcd
-	sw $v0, 132($sp)
-	lw $v0, 132($sp)
+	move $t2, $v0
+	move $v0, $t2
 	b _EndOfFunctionDecl56
 	b _OutOfIf2
 _OutOfIf2:
 	b _EndOfFunctionDecl56
 _EndOfFunctionDecl56:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
 	add $sp, $sp, 152
 	jr $ra
 main:
 	sub $sp, $sp, 164
+	sw $t2, 40($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl57:
 	li $t0, 10
@@ -539,41 +536,42 @@ _BeginOfFunctionDecl57:
 	li $t0, 1
 	sw $t0, -4($sp)
 	jal _gcd
-	sw $v0, 160($sp)
-	lw $a0, 160($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 144($sp)
-	lw $a0, 144($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 152($sp)
+	move $t2, $v0
 	li $t0, 34986
 	sw $t0, -8($sp)
 	li $t0, 3087
 	sw $t0, -4($sp)
 	jal _gcd
-	sw $v0, 148($sp)
-	lw $a0, 148($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 140($sp)
+	move $t2, $v0
 	li $t0, 2907
 	sw $t0, -8($sp)
 	li $t0, 1539
 	sw $t0, -4($sp)
 	jal _gcd
-	sw $v0, 156($sp)
-	lw $a0, 156($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__toString
-	sw $v0, 132($sp)
-	lw $a0, 132($sp)
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	sw $v0, 136($sp)
+	move $t2, $v0
 	li $v0, 0
 	b _EndOfFunctionDecl58
 _EndOfFunctionDecl58:
 	lw $ra, 120($sp)
+	lw $t2, 40($sp)
 	add $sp, $sp, 164
 	jr $ra
 .data

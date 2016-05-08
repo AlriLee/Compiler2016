@@ -1,5 +1,6 @@
 package Compiler.GlobalRegisterAllocator;
 
+import Compiler.AST.Type.IntType;
 import Compiler.ControlFlowGraph.BasicBlock.BasicBlock;
 import Compiler.ControlFlowGraph.ControlFlowGraph;
 import Compiler.ControlFlowGraph.Instruction.Instruction;
@@ -50,6 +51,25 @@ public class GlobalRegisterAllocator {
         neighbour = new HashMap<>();
         vertices = new HashSet<>();
         mipsRegisterInUse = new HashSet<>();
+
+        for (BasicBlock basicBlock : cfg.basicBlockList) {
+            for (Instruction instruction : basicBlock.blockInstruction) {
+                for (Register register : instruction.getUsedReg()) {
+                    if (register.type == Register.registerType.TEMPERARY) {
+                        vertices.add(register);
+                    }
+                }
+                for (Register register : instruction.getDefinedReg()) {
+                    if (register.type == Register.registerType.TEMPERARY) {
+                        vertices.add(register);
+                    }
+                }
+            }
+        }
+        for (Register register : vertices) {
+            interferenceGraph.put(register, new HashSet<>());
+            neighbour.put(register, 0);
+        }
 
         for (BasicBlock basicBlock : cfg.basicBlockList) {
             liveNow = new HashSet<>();
