@@ -74,7 +74,6 @@ public class GlobalRegisterAllocator {
         for (BasicBlock basicBlock : cfg.basicBlockList) {
             liveNow = new HashSet<>();
             liveNow.addAll(basicBlock.liveAnalysis.liveOut);
-            //for (Instruction instruction : cfg.instruction) {
             for (int i = cfg.instruction.size() - 1; i >= 0; --i) {
                 Instruction instruction = cfg.instruction.get(i);
                 List<Register> definedReg = instruction.getDefinedReg();

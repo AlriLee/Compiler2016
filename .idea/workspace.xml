@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="18 cases exceed limit.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase" afterPath="$PROJECT_DIR$/testcase" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java" afterPath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" afterPath="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" />
     </list>
     <ignored path="Compiler2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GlobalRegisterAllocator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GlobalRegisterAllocator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="132" column="30" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
+            <state relative-caret-position="210">
+              <caret line="79" column="66" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##0;class#435:1134" expanded="false" />
@@ -45,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="806" column="18" selection-start-line="806" selection-start-column="18" selection-end-line="806" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="804" column="16" selection-start-line="804" selection-start-column="16" selection-end-line="804" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,9 +150,9 @@
         <option value="$PROJECT_DIR$/src/Compiler/Listener/FunctionDeclListener.java" />
         <option value="$PROJECT_DIR$/test/Compiler/Compiler.java" />
         <option value="$PROJECT_DIR$/src/Compiler/ControlFlowGraph/ControlFlowGraph.java" />
+        <option value="$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s" />
         <option value="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java" />
         <option value="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" />
-        <option value="$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s" />
       </list>
     </option>
   </component>
@@ -1503,7 +1505,7 @@
           <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="96" />
+      <option name="time" value="97" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1900,16 +1902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="806" column="18" selection-start-line="806" selection-start-column="18" selection-end-line="806" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1920,11 +1912,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="132" column="30" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
+        <state relative-caret-position="210">
+          <caret line="79" column="66" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##0;class#435:1134" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="804" column="16" selection-start-line="804" selection-start-column="16" selection-end-line="804" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -802,9 +802,9 @@ public class MIPSTranslator {
                 FunctionDecl function = (FunctionDecl) declaration;
                 function.cfg.buildBasicBlock();
                 function.cfg.analyseFrame();
-                //if (!isMaxFlow) {
+                if (!isMaxFlow) {
                     function.cfg.allocator = new GlobalRegisterAllocator(function.cfg);
-                //}
+                }
 //                System.out.println(function.cfg.allocator.interferenceGraphToString());
 //                System.out.println(function.cfg.basicBlockToString());
                 translate(function.cfg);
