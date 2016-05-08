@@ -515,7 +515,7 @@ _getcount:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl1866:
+_BeginOfFunctionDecl61:
 	li $t0, 0
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -532,8 +532,8 @@ _BeginOfFunctionDecl1866:
 	lw $t0, 132($sp)
 	sw $t0, 0($t2)
 	lw $v0, 132($sp)
-	b _EndOfFunctionDecl1867
-_EndOfFunctionDecl1867:
+	b _EndOfFunctionDecl62
+_EndOfFunctionDecl62:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -580,97 +580,107 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl1868:
+_BeginOfFunctionDecl63:
 	li $t0, 1
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 6432($sp)
-	lw $t0, 6432($sp)
+	sw $t1, 3000($sp)
+	lw $t0, 3000($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 6432($sp)
-	lw $a0, 6432($sp)
+	sw $t1, 3000($sp)
+	lw $a0, 3000($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 1660($sp)
+	sw $v0, 5980($sp)
 	li $t0, 1
-	lw $t1, 1660($sp)
+	lw $t1, 5980($sp)
 	sw $t0, 0($t1)
-	lw $t0, 1660($sp)
+	lw $t0, 5980($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 1660($sp)
-	lw $t0, 1660($sp)
-	sw $t0, 7244($sp)
-	lw $t0, 7244($sp)
+	sw $t1, 5980($sp)
+	lw $t0, 5980($sp)
+	sw $t0, 3800($sp)
+	lw $t0, 3800($sp)
 	sw $t0, global_129
 	li $t0, 0
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 7908($sp)
+	sw $t1, 6428($sp)
 	lw $t0, global_129
-	lw $t1, 7908($sp)
+	lw $t1, 6428($sp)
 	add $t1, $t0, $t1
-	sw $t1, 1324($sp)
+	sw $t1, 1656($sp)
 	li $t0, 0
-	lw $t1, 1324($sp)
+	lw $t1, 1656($sp)
 	sw $t0, 0($t1)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
-	sw $v0, 1668($sp)
-	lw $t0, 1668($sp)
-	sw $t0, 7352($sp)
+	sw $v0, 7236($sp)
+	lw $t0, 7236($sp)
+	sw $t0, 1772($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2220($sp)
+	sw $t2, 1316($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4988($sp)
+	sw $t2, 7344($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5280($sp)
+	sw $t2, 2216($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 552($sp)
+	sw $t2, 4984($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4080($sp)
+	sw $t2, 5276($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4648($sp)
+	sw $t2, 548($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7396($sp)
+	sw $t2, 4076($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 712($sp)
+	sw $t2, 4644($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7488($sp)
+	sw $t2, 7388($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1288($sp)
+	sw $t2, 708($sp)
+	lw $t0, global_129
+	sw $t0, -4($sp)
+	jal _getcount
+	move $t2, $v0
+	sw $t2, 7480($sp)
+	lw $t0, global_129
+	sw $t0, -4($sp)
+	jal _getcount
+	move $t2, $v0
+	sw $t2, 1280($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -680,17 +690,17 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5924($sp)
+	sw $t2, 5916($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5972($sp)
+	sw $t2, 5964($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7324($sp)
+	sw $t2, 7316($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -700,7 +710,7 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6652($sp)
+	sw $t2, 6648($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -710,27 +720,27 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2616($sp)
+	sw $t2, 2612($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2676($sp)
+	sw $t2, 2672($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2560($sp)
+	sw $t2, 2556($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2568($sp)
+	sw $t2, 2564($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 3848($sp)
+	sw $t2, 3852($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -740,22 +750,22 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6492($sp)
+	sw $t2, 6488($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5292($sp)
+	sw $t2, 5288($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6080($sp)
+	sw $t2, 6076($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7532($sp)
+	sw $t2, 7524($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -770,92 +780,92 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1648($sp)
+	sw $t2, 1644($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5044($sp)
+	sw $t2, 5040($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6844($sp)
+	sw $t2, 6840($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1720($sp)
+	sw $t2, 1716($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1248($sp)
+	sw $t2, 1240($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5248($sp)
+	sw $t2, 5244($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6460($sp)
+	sw $t2, 6456($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7588($sp)
+	sw $t2, 7580($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6636($sp)
+	sw $t2, 6632($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1624($sp)
+	sw $t2, 1620($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2864($sp)
+	sw $t2, 2860($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5272($sp)
+	sw $t2, 5268($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2456($sp)
+	sw $t2, 2452($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 756($sp)
+	sw $t2, 752($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4136($sp)
+	sw $t2, 4132($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7508($sp)
+	sw $t2, 7500($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6736($sp)
+	sw $t2, 6732($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2588($sp)
+	sw $t2, 2584($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -865,37 +875,37 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4360($sp)
+	sw $t2, 4356($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 844($sp)
+	sw $t2, 840($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6020($sp)
+	sw $t2, 6016($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 808($sp)
+	sw $t2, 804($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6160($sp)
+	sw $t2, 6156($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7456($sp)
+	sw $t2, 7448($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7288($sp)
+	sw $t2, 7280($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -905,12 +915,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4488($sp)
+	sw $t2, 4484($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4152($sp)
+	sw $t2, 4148($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -920,12 +930,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6196($sp)
+	sw $t2, 6192($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6836($sp)
+	sw $t2, 6832($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -940,17 +950,17 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4216($sp)
+	sw $t2, 4212($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1116($sp)
+	sw $t2, 1108($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6372($sp)
+	sw $t2, 6368($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -965,17 +975,17 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4952($sp)
+	sw $t2, 4948($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2868($sp)
+	sw $t2, 2864($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5756($sp)
+	sw $t2, 5748($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -990,12 +1000,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7028($sp)
+	sw $t2, 7020($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7336($sp)
+	sw $t2, 7328($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1010,12 +1020,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1452($sp)
+	sw $t2, 1448($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 3800($sp)
+	sw $t2, 3804($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1025,12 +1035,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2516($sp)
+	sw $t2, 2512($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6232($sp)
+	sw $t2, 6228($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1040,32 +1050,32 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2784($sp)
+	sw $t2, 2780($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6420($sp)
+	sw $t2, 6416($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2828($sp)
+	sw $t2, 2824($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4220($sp)
+	sw $t2, 4216($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2496($sp)
+	sw $t2, 2492($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6828($sp)
+	sw $t2, 6824($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1075,12 +1085,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7716($sp)
+	sw $t2, 7708($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6536($sp)
+	sw $t2, 6532($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1100,52 +1110,52 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7764($sp)
+	sw $t2, 7756($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5120($sp)
+	sw $t2, 5116($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6760($sp)
+	sw $t2, 6756($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 892($sp)
+	sw $t2, 888($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4388($sp)
+	sw $t2, 4384($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2328($sp)
+	sw $t2, 2324($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6244($sp)
+	sw $t2, 6240($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5232($sp)
+	sw $t2, 5228($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7480($sp)
+	sw $t2, 7472($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5872($sp)
+	sw $t2, 5864($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1155,27 +1165,27 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1120($sp)
+	sw $t2, 1112($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5088($sp)
+	sw $t2, 5084($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4640($sp)
+	sw $t2, 4636($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5796($sp)
+	sw $t2, 5788($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1104($sp)
+	sw $t2, 1096($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1185,12 +1195,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7080($sp)
+	sw $t2, 7072($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1108($sp)
+	sw $t2, 1100($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1200,7 +1210,7 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2280($sp)
+	sw $t2, 2276($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1210,7 +1220,7 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 540($sp)
+	sw $t2, 536($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1220,12 +1230,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7400($sp)
+	sw $t2, 7392($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5128($sp)
+	sw $t2, 5124($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1235,27 +1245,27 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7512($sp)
+	sw $t2, 7504($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5704($sp)
+	sw $t2, 5696($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5744($sp)
+	sw $t2, 5736($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2580($sp)
+	sw $t2, 2576($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6300($sp)
+	sw $t2, 6296($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1270,12 +1280,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2164($sp)
+	sw $t2, 2160($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5944($sp)
+	sw $t2, 5936($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1290,47 +1300,47 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6864($sp)
+	sw $t2, 6860($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2584($sp)
+	sw $t2, 2580($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 648($sp)
+	sw $t2, 644($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 928($sp)
+	sw $t2, 920($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5836($sp)
+	sw $t2, 5828($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6824($sp)
+	sw $t2, 6820($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2324($sp)
+	sw $t2, 2320($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4304($sp)
+	sw $t2, 4300($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2856($sp)
+	sw $t2, 2852($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1340,7 +1350,7 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1156($sp)
+	sw $t2, 1148($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1350,12 +1360,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 708($sp)
+	sw $t2, 704($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1040($sp)
+	sw $t2, 1032($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1365,32 +1375,32 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
+	sw $t2, 5608($sp)
+	lw $t0, global_129
+	sw $t0, -4($sp)
+	jal _getcount
+	move $t2, $v0
+	sw $t2, 5544($sp)
+	lw $t0, global_129
+	sw $t0, -4($sp)
+	jal _getcount
+	move $t2, $v0
+	sw $t2, 6660($sp)
+	lw $t0, global_129
+	sw $t0, -4($sp)
+	jal _getcount
+	move $t2, $v0
+	sw $t2, 2244($sp)
+	lw $t0, global_129
+	sw $t0, -4($sp)
+	jal _getcount
+	move $t2, $v0
 	sw $t2, 5612($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5548($sp)
-	lw $t0, global_129
-	sw $t0, -4($sp)
-	jal _getcount
-	move $t2, $v0
-	sw $t2, 6664($sp)
-	lw $t0, global_129
-	sw $t0, -4($sp)
-	jal _getcount
-	move $t2, $v0
-	sw $t2, 2248($sp)
-	lw $t0, global_129
-	sw $t0, -4($sp)
-	jal _getcount
-	move $t2, $v0
-	sw $t2, 5616($sp)
-	lw $t0, global_129
-	sw $t0, -4($sp)
-	jal _getcount
-	move $t2, $v0
-	sw $t2, 1148($sp)
+	sw $t2, 1140($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1400,12 +1410,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 692($sp)
+	sw $t2, 688($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4504($sp)
+	sw $t2, 4500($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1415,42 +1425,42 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2308($sp)
+	sw $t2, 2304($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2576($sp)
+	sw $t2, 2572($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 368($sp)
+	sw $t2, 364($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1772($sp)
+	sw $t2, 1768($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6508($sp)
+	sw $t2, 6504($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 888($sp)
+	sw $t2, 884($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6352($sp)
+	sw $t2, 6348($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6716($sp)
+	sw $t2, 6712($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1465,22 +1475,22 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2160($sp)
+	sw $t2, 2156($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2904($sp)
+	sw $t2, 2900($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7380($sp)
+	sw $t2, 7372($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2344($sp)
+	sw $t2, 2340($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1490,47 +1500,47 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7384($sp)
+	sw $t2, 7376($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4212($sp)
+	sw $t2, 4208($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 432($sp)
+	sw $t2, 428($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5440($sp)
+	sw $t2, 5436($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6576($sp)
+	sw $t2, 6572($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1932($sp)
+	sw $t2, 1928($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2168($sp)
+	sw $t2, 2164($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7572($sp)
+	sw $t2, 7564($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5820($sp)
+	sw $t2, 5812($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1550,22 +1560,22 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4444($sp)
+	sw $t2, 4440($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4332($sp)
+	sw $t2, 4328($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4412($sp)
+	sw $t2, 4408($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4968($sp)
+	sw $t2, 4964($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1575,17 +1585,17 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1004($sp)
+	sw $t2, 996($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4892($sp)
+	sw $t2, 4888($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7724($sp)
+	sw $t2, 7716($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1600,12 +1610,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6616($sp)
+	sw $t2, 6612($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4376($sp)
+	sw $t2, 4372($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1620,7 +1630,7 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6200($sp)
+	sw $t2, 6196($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1630,27 +1640,27 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 384($sp)
+	sw $t2, 380($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7368($sp)
+	sw $t2, 7360($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7592($sp)
+	sw $t2, 7584($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1316($sp)
+	sw $t2, 1308($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7524($sp)
+	sw $t2, 7516($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1660,32 +1670,32 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7608($sp)
+	sw $t2, 7600($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4240($sp)
+	sw $t2, 4236($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4928($sp)
+	sw $t2, 4924($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2140($sp)
+	sw $t2, 2136($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2204($sp)
+	sw $t2, 2200($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5920($sp)
+	sw $t2, 5912($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1695,12 +1705,12 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7496($sp)
+	sw $t2, 7488($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6932($sp)
+	sw $t2, 6924($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1710,32 +1720,32 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1936($sp)
+	sw $t2, 1932($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6524($sp)
+	sw $t2, 6520($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1256($sp)
+	sw $t2, 1248($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1024($sp)
+	sw $t2, 1016($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5464($sp)
+	sw $t2, 5460($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7100($sp)
+	sw $t2, 7092($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1750,22 +1760,22 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5428($sp)
+	sw $t2, 5424($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5864($sp)
+	sw $t2, 5856($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7444($sp)
+	sw $t2, 7436($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6644($sp)
+	sw $t2, 6640($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1775,17 +1785,17 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 340($sp)
+	sw $t2, 336($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7004($sp)
+	sw $t2, 6996($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4236($sp)
+	sw $t2, 4232($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1800,32 +1810,32 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 520($sp)
+	sw $t2, 516($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2460($sp)
+	sw $t2, 2456($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5308($sp)
+	sw $t2, 5304($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 332($sp)
+	sw $t2, 328($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6728($sp)
+	sw $t2, 6724($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7560($sp)
+	sw $t2, 7552($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1840,37 +1850,37 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5524($sp)
+	sw $t2, 5520($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 2816($sp)
+	sw $t2, 2812($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 4032($sp)
+	sw $t2, 4028($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1204($sp)
+	sw $t2, 1196($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 5216($sp)
+	sw $t2, 5212($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 1992($sp)
+	sw $t2, 1988($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6640($sp)
+	sw $t2, 6636($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
@@ -1880,23 +1890,13 @@ _BeginOfFunctionDecl1868:
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 7568($sp)
+	sw $t2, 7560($sp)
 	lw $t0, global_129
 	sw $t0, -4($sp)
 	jal _getcount
 	move $t2, $v0
-	sw $t2, 6216($sp)
-	lw $t0, global_129
-	sw $t0, -4($sp)
-	jal _getcount
-	move $t2, $v0
-	sw $t2, 4020($sp)
-	lw $t0, global_129
-	sw $t0, -4($sp)
-	jal _getcount
-	move $t2, $v0
-	sw $t2, 6356($sp)
-	lw $a0, 7352($sp)
+	sw $t2, 6212($sp)
+	lw $a0, 1772($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1906,7 +1906,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2220($sp)
+	lw $a0, 1316($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1916,7 +1916,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4988($sp)
+	lw $a0, 7344($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1926,7 +1926,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5280($sp)
+	lw $a0, 2216($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1936,7 +1936,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 552($sp)
+	lw $a0, 4984($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1946,7 +1946,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4080($sp)
+	lw $a0, 5276($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1956,7 +1956,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4648($sp)
+	lw $a0, 548($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1966,7 +1966,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7396($sp)
+	lw $a0, 4076($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1976,7 +1976,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 712($sp)
+	lw $a0, 4644($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1986,7 +1986,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7488($sp)
+	lw $a0, 7388($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -1996,7 +1996,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1288($sp)
+	lw $a0, 708($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2006,7 +2006,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3260($sp)
+	lw $a0, 7480($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2016,7 +2016,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5924($sp)
+	lw $a0, 1280($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2026,7 +2026,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5972($sp)
+	lw $a0, 3260($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2036,7 +2036,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7324($sp)
+	lw $a0, 5916($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2046,7 +2046,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t8
+	lw $a0, 5964($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2056,7 +2056,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6652($sp)
+	lw $a0, 7316($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2066,7 +2066,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t3
+	move $a0, $t8
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2076,7 +2076,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2616($sp)
+	lw $a0, 6648($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2086,7 +2086,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2676($sp)
+	move $a0, $t3
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2096,7 +2096,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2560($sp)
+	lw $a0, 2612($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2106,7 +2106,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2568($sp)
+	lw $a0, 2672($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2116,7 +2116,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3848($sp)
+	lw $a0, 2556($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2126,7 +2126,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t4
+	lw $a0, 2564($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2136,7 +2136,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6492($sp)
+	lw $a0, 3852($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2146,7 +2146,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5292($sp)
+	move $a0, $t4
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2156,7 +2156,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6080($sp)
+	lw $a0, 6488($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2166,7 +2166,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7532($sp)
+	lw $a0, 5288($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2176,7 +2176,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t6
+	lw $a0, 6076($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2186,7 +2186,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3188($sp)
+	lw $a0, 7524($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2196,7 +2196,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1648($sp)
+	move $a0, $t6
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2206,7 +2206,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5044($sp)
+	lw $a0, 3188($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2216,7 +2216,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6844($sp)
+	lw $a0, 1644($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2226,7 +2226,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1720($sp)
+	lw $a0, 5040($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2236,7 +2236,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1248($sp)
+	lw $a0, 6840($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2246,7 +2246,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5248($sp)
+	lw $a0, 1716($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2256,7 +2256,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6460($sp)
+	lw $a0, 1240($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2266,7 +2266,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7588($sp)
+	lw $a0, 5244($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2276,7 +2276,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6636($sp)
+	lw $a0, 6456($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2286,7 +2286,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1624($sp)
+	lw $a0, 7580($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2296,7 +2296,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2864($sp)
+	lw $a0, 6632($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2306,7 +2306,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5272($sp)
+	lw $a0, 1620($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2316,7 +2316,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2456($sp)
+	lw $a0, 2860($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2326,7 +2326,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 756($sp)
+	lw $a0, 5268($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2336,7 +2336,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4136($sp)
+	lw $a0, 2452($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2346,7 +2346,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7508($sp)
+	lw $a0, 752($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2356,7 +2356,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6736($sp)
+	lw $a0, 4132($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2366,7 +2366,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2588($sp)
+	lw $a0, 7500($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2376,7 +2376,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3920($sp)
+	lw $a0, 6732($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2386,7 +2386,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4360($sp)
+	lw $a0, 2584($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2396,7 +2396,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 844($sp)
+	lw $a0, 3920($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2406,7 +2406,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6020($sp)
+	lw $a0, 4356($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2416,7 +2416,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 808($sp)
+	lw $a0, 840($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2426,7 +2426,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6160($sp)
+	lw $a0, 6016($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2436,7 +2436,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7456($sp)
+	lw $a0, 804($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2446,7 +2446,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7288($sp)
+	lw $a0, 6156($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2456,7 +2456,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t9
+	lw $a0, 7448($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2466,7 +2466,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4488($sp)
+	lw $a0, 7280($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2476,7 +2476,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4152($sp)
+	move $a0, $t9
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2486,7 +2486,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3988($sp)
+	lw $a0, 4484($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2496,7 +2496,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6196($sp)
+	lw $a0, 4148($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2506,7 +2506,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6836($sp)
+	lw $a0, 3988($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2516,7 +2516,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3932($sp)
+	lw $a0, 6192($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2526,7 +2526,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s4
+	lw $a0, 6832($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2536,7 +2536,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4216($sp)
+	lw $a0, 3932($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2546,7 +2546,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1116($sp)
+	move $a0, $s4
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2556,7 +2556,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6372($sp)
+	lw $a0, 4212($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2566,7 +2566,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4016($sp)
+	lw $a0, 1108($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2576,7 +2576,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3048($sp)
+	lw $a0, 6368($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2586,7 +2586,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4952($sp)
+	lw $a0, 4016($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2596,7 +2596,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2868($sp)
+	lw $a0, 3048($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2606,7 +2606,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5756($sp)
+	lw $a0, 4948($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2616,7 +2616,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3428($sp)
+	lw $a0, 2864($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2626,7 +2626,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $k1
+	lw $a0, 5748($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2636,7 +2636,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7028($sp)
+	lw $a0, 3428($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2646,7 +2646,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7336($sp)
+	move $a0, $k1
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2656,7 +2656,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1776($sp)
+	lw $a0, 7020($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2666,7 +2666,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1828($sp)
+	lw $a0, 7328($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2676,7 +2676,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1452($sp)
+	lw $a0, 1776($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2686,7 +2686,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3800($sp)
+	lw $a0, 1828($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2696,7 +2696,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t5
+	lw $a0, 1448($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2706,7 +2706,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2516($sp)
+	lw $a0, 3804($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2716,7 +2716,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6232($sp)
+	move $a0, $t5
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2726,7 +2726,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3184($sp)
+	lw $a0, 2512($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2736,7 +2736,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2784($sp)
+	lw $a0, 6228($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2746,7 +2746,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6420($sp)
+	lw $a0, 3184($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2756,7 +2756,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2828($sp)
+	lw $a0, 2780($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2766,7 +2766,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4220($sp)
+	lw $a0, 6416($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2776,7 +2776,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2496($sp)
+	lw $a0, 2824($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2786,7 +2786,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6828($sp)
+	lw $a0, 4216($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2796,7 +2796,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s7
+	lw $a0, 2492($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2806,7 +2806,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7716($sp)
+	lw $a0, 6824($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2816,7 +2816,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6536($sp)
+	move $a0, $s7
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2826,7 +2826,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s5
+	lw $a0, 7708($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2836,7 +2836,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3980($sp)
+	lw $a0, 6532($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2846,7 +2846,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3960($sp)
+	move $a0, $s5
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2856,7 +2856,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7764($sp)
+	lw $a0, 3980($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2866,7 +2866,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5120($sp)
+	lw $a0, 3960($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2876,7 +2876,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6760($sp)
+	lw $a0, 7756($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2886,7 +2886,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 892($sp)
+	lw $a0, 5116($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2896,7 +2896,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4388($sp)
+	lw $a0, 6756($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2906,7 +2906,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2328($sp)
+	lw $a0, 888($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2916,7 +2916,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6244($sp)
+	lw $a0, 4384($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2926,7 +2926,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5232($sp)
+	lw $a0, 2324($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2936,7 +2936,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7480($sp)
+	lw $a0, 6240($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2946,7 +2946,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5872($sp)
+	lw $a0, 5228($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2956,7 +2956,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3924($sp)
+	lw $a0, 7472($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2966,7 +2966,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1120($sp)
+	lw $a0, 5864($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2976,7 +2976,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5088($sp)
+	lw $a0, 3924($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2986,7 +2986,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4640($sp)
+	lw $a0, 1112($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -2996,7 +2996,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5796($sp)
+	lw $a0, 5084($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3006,7 +3006,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1104($sp)
+	lw $a0, 4636($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3016,7 +3016,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $gp
+	lw $a0, 5788($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3026,7 +3026,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7080($sp)
+	lw $a0, 1096($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3036,7 +3036,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1108($sp)
+	move $a0, $gp
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3046,7 +3046,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s3
+	lw $a0, 7072($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3056,7 +3056,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2280($sp)
+	lw $a0, 1100($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3066,7 +3066,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t7
+	move $a0, $s3
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3076,7 +3076,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 540($sp)
+	lw $a0, 2276($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3086,7 +3086,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3096($sp)
+	move $a0, $t7
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3096,7 +3096,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7400($sp)
+	lw $a0, 536($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3106,7 +3106,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5128($sp)
+	lw $a0, 3096($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3116,7 +3116,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3704($sp)
+	lw $a0, 7392($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3126,7 +3126,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7512($sp)
+	lw $a0, 5124($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3136,7 +3136,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5704($sp)
+	lw $a0, 3704($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3146,7 +3146,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5744($sp)
+	lw $a0, 7504($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3156,7 +3156,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2580($sp)
+	lw $a0, 5696($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3166,7 +3166,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6300($sp)
+	lw $a0, 5736($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3176,7 +3176,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1832($sp)
+	lw $a0, 2576($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3186,7 +3186,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 156($sp)
+	lw $a0, 6296($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3196,7 +3196,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2164($sp)
+	lw $a0, 1832($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3206,7 +3206,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5944($sp)
+	lw $a0, 156($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3216,7 +3216,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3416($sp)
+	lw $a0, 2160($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3226,7 +3226,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3104($sp)
+	lw $a0, 5936($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3236,7 +3236,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6864($sp)
+	lw $a0, 3416($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3246,7 +3246,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2584($sp)
+	lw $a0, 3104($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3256,7 +3256,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 648($sp)
+	lw $a0, 6860($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3266,7 +3266,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 928($sp)
+	lw $a0, 2580($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3276,7 +3276,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5836($sp)
+	lw $a0, 644($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3286,7 +3286,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6824($sp)
+	lw $a0, 920($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3296,7 +3296,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2324($sp)
+	lw $a0, 5828($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3306,7 +3306,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4304($sp)
+	lw $a0, 6820($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3316,7 +3316,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2856($sp)
+	lw $a0, 2320($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3326,7 +3326,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3216($sp)
+	lw $a0, 4300($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3336,7 +3336,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1156($sp)
+	lw $a0, 2852($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3346,7 +3346,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 152($sp)
+	lw $a0, 3216($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3356,7 +3356,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 708($sp)
+	lw $a0, 1148($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3366,7 +3366,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1040($sp)
+	lw $a0, 152($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3376,7 +3376,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3324($sp)
+	lw $a0, 704($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3386,7 +3386,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5612($sp)
+	lw $a0, 1032($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3396,7 +3396,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5548($sp)
+	lw $a0, 3324($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3406,7 +3406,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6664($sp)
+	lw $a0, 5608($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3416,7 +3416,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2248($sp)
+	lw $a0, 5544($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3426,7 +3426,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5616($sp)
+	lw $a0, 6660($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3436,7 +3436,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1148($sp)
+	lw $a0, 2244($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3446,7 +3446,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3160($sp)
+	lw $a0, 5612($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3456,7 +3456,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 692($sp)
+	lw $a0, 1140($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3466,7 +3466,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4504($sp)
+	lw $a0, 3160($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3476,7 +3476,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $k0
+	lw $a0, 688($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3486,7 +3486,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2308($sp)
+	lw $a0, 4500($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3496,7 +3496,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2576($sp)
+	move $a0, $k0
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3506,7 +3506,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 368($sp)
+	lw $a0, 2304($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3516,7 +3516,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1772($sp)
+	lw $a0, 2572($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3526,7 +3526,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6508($sp)
+	lw $a0, 364($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3536,7 +3536,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 888($sp)
+	lw $a0, 1768($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3546,7 +3546,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6352($sp)
+	lw $a0, 6504($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3556,7 +3556,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6716($sp)
+	lw $a0, 884($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3566,7 +3566,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3556($sp)
+	lw $a0, 6348($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3576,7 +3576,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s1
+	lw $a0, 6712($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3586,7 +3586,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2160($sp)
+	lw $a0, 3556($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3596,7 +3596,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2904($sp)
+	move $a0, $s1
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3606,7 +3606,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7380($sp)
+	lw $a0, 2156($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3616,7 +3616,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2344($sp)
+	lw $a0, 2900($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3626,7 +3626,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 204($sp)
+	lw $a0, 7372($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3636,7 +3636,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7384($sp)
+	lw $a0, 2340($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3646,7 +3646,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4212($sp)
+	lw $a0, 204($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3656,7 +3656,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 432($sp)
+	lw $a0, 7376($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3666,7 +3666,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5440($sp)
+	lw $a0, 4208($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3676,7 +3676,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6576($sp)
+	lw $a0, 428($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3686,7 +3686,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1932($sp)
+	lw $a0, 5436($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3696,7 +3696,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2168($sp)
+	lw $a0, 6572($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3706,7 +3706,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7572($sp)
+	lw $a0, 1928($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3716,7 +3716,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5820($sp)
+	lw $a0, 2164($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3726,7 +3726,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3360($sp)
+	lw $a0, 7564($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3736,7 +3736,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s2
+	lw $a0, 5812($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3746,7 +3746,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 160($sp)
+	lw $a0, 3360($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3756,7 +3756,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4444($sp)
+	move $a0, $s2
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3766,7 +3766,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4332($sp)
+	lw $a0, 160($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3776,7 +3776,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4412($sp)
+	lw $a0, 4440($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3786,7 +3786,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4968($sp)
+	lw $a0, 4328($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3796,7 +3796,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $fp
+	lw $a0, 4408($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3806,7 +3806,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1004($sp)
+	lw $a0, 4964($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3816,7 +3816,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4892($sp)
+	move $a0, $fp
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3826,7 +3826,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7724($sp)
+	lw $a0, 996($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3836,7 +3836,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1844($sp)
+	lw $a0, 4888($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3846,7 +3846,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3232($sp)
+	lw $a0, 7716($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3856,7 +3856,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6616($sp)
+	lw $a0, 1844($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3866,7 +3866,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4376($sp)
+	lw $a0, 3232($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3876,7 +3876,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s6
+	lw $a0, 6612($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3886,7 +3886,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3564($sp)
+	lw $a0, 4372($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3896,7 +3896,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6200($sp)
+	move $a0, $s6
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3906,7 +3906,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3720($sp)
+	lw $a0, 3564($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3916,7 +3916,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 384($sp)
+	lw $a0, 6196($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3926,7 +3926,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7368($sp)
+	lw $a0, 3720($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3936,7 +3936,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7592($sp)
+	lw $a0, 380($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3946,7 +3946,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1316($sp)
+	lw $a0, 7360($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3956,7 +3956,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7524($sp)
+	lw $a0, 7584($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3966,7 +3966,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3016($sp)
+	lw $a0, 1308($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3976,7 +3976,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7608($sp)
+	lw $a0, 7516($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3986,7 +3986,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4240($sp)
+	lw $a0, 3016($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -3996,7 +3996,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4928($sp)
+	lw $a0, 7600($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4006,7 +4006,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2140($sp)
+	lw $a0, 4236($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4016,7 +4016,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2204($sp)
+	lw $a0, 4924($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4026,7 +4026,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5920($sp)
+	lw $a0, 2136($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4036,7 +4036,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3280($sp)
+	lw $a0, 2200($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4046,7 +4046,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7496($sp)
+	lw $a0, 5912($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4056,7 +4056,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6932($sp)
+	lw $a0, 3280($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4066,7 +4066,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3124($sp)
+	lw $a0, 7488($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4076,7 +4076,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1936($sp)
+	lw $a0, 6924($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4086,7 +4086,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6524($sp)
+	lw $a0, 3124($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4096,7 +4096,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1256($sp)
+	lw $a0, 1932($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4106,7 +4106,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1024($sp)
+	lw $a0, 6520($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4116,7 +4116,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5464($sp)
+	lw $a0, 1248($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4126,7 +4126,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7100($sp)
+	lw $a0, 1016($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4136,7 +4136,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4000($sp)
+	lw $a0, 5460($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4146,7 +4146,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 268($sp)
+	lw $a0, 7092($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4156,7 +4156,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5428($sp)
+	lw $a0, 4000($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4166,7 +4166,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5864($sp)
+	lw $a0, 268($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4176,7 +4176,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7444($sp)
+	lw $a0, 5424($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4186,7 +4186,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6644($sp)
+	lw $a0, 5856($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4196,7 +4196,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3112($sp)
+	lw $a0, 7436($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4206,7 +4206,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 340($sp)
+	lw $a0, 6640($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4216,7 +4216,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7004($sp)
+	lw $a0, 3112($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4226,7 +4226,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4236($sp)
+	lw $a0, 336($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4236,7 +4236,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 8344($sp)
+	lw $a0, 6996($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4246,7 +4246,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s0
+	lw $a0, 4232($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4256,7 +4256,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 520($sp)
+	lw $a0, 8344($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4266,7 +4266,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2460($sp)
+	move $a0, $s0
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4276,7 +4276,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5308($sp)
+	lw $a0, 516($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4286,7 +4286,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 332($sp)
+	lw $a0, 2456($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4296,7 +4296,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6728($sp)
+	lw $a0, 5304($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4306,7 +4306,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7560($sp)
+	lw $a0, 328($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4316,7 +4316,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3356($sp)
+	lw $a0, 6724($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4326,7 +4326,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3944($sp)
+	lw $a0, 7552($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4336,7 +4336,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5524($sp)
+	lw $a0, 3356($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4346,7 +4346,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2816($sp)
+	lw $a0, 3944($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4356,7 +4356,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4032($sp)
+	lw $a0, 5520($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4366,7 +4366,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1204($sp)
+	lw $a0, 2812($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4376,7 +4376,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5216($sp)
+	lw $a0, 4028($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4386,7 +4386,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1992($sp)
+	lw $a0, 1196($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4396,7 +4396,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6640($sp)
+	lw $a0, 5212($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4406,7 +4406,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3396($sp)
+	lw $a0, 1988($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4416,7 +4416,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7568($sp)
+	lw $a0, 6636($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4426,7 +4426,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6216($sp)
+	lw $a0, 3396($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4436,7 +4436,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4020($sp)
+	lw $a0, 7560($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4446,7 +4446,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6356($sp)
+	lw $a0, 6212($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4459,7 +4459,7 @@ _BeginOfFunctionDecl1868:
 	la $a0, string_1546
 	jal func__println
 	move $t2, $v0
-	lw $a0, 7352($sp)
+	lw $a0, 1772($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4469,7 +4469,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2220($sp)
+	lw $a0, 1316($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4479,7 +4479,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4988($sp)
+	lw $a0, 7344($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4489,7 +4489,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5280($sp)
+	lw $a0, 2216($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4499,7 +4499,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 552($sp)
+	lw $a0, 4984($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4509,7 +4509,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4080($sp)
+	lw $a0, 5276($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4519,7 +4519,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4648($sp)
+	lw $a0, 548($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4529,7 +4529,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7396($sp)
+	lw $a0, 4076($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4539,7 +4539,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 712($sp)
+	lw $a0, 4644($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4549,7 +4549,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7488($sp)
+	lw $a0, 7388($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4559,7 +4559,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1288($sp)
+	lw $a0, 708($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4569,7 +4569,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3260($sp)
+	lw $a0, 7480($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4579,7 +4579,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5924($sp)
+	lw $a0, 1280($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4589,7 +4589,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5972($sp)
+	lw $a0, 3260($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4599,7 +4599,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7324($sp)
+	lw $a0, 5916($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4609,7 +4609,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t8
+	lw $a0, 5964($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4619,7 +4619,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6652($sp)
+	lw $a0, 7316($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4629,7 +4629,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t3
+	move $a0, $t8
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4639,7 +4639,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2616($sp)
+	lw $a0, 6648($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4649,7 +4649,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2676($sp)
+	move $a0, $t3
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4659,7 +4659,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2560($sp)
+	lw $a0, 2612($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4669,7 +4669,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2568($sp)
+	lw $a0, 2672($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4679,7 +4679,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3848($sp)
+	lw $a0, 2556($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4689,7 +4689,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t4
+	lw $a0, 2564($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4699,7 +4699,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6492($sp)
+	lw $a0, 3852($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4709,7 +4709,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5292($sp)
+	move $a0, $t4
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4719,7 +4719,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6080($sp)
+	lw $a0, 6488($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4729,7 +4729,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7532($sp)
+	lw $a0, 5288($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4739,7 +4739,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t6
+	lw $a0, 6076($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4749,7 +4749,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3188($sp)
+	lw $a0, 7524($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4759,7 +4759,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1648($sp)
+	move $a0, $t6
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4769,7 +4769,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5044($sp)
+	lw $a0, 3188($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4779,7 +4779,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6844($sp)
+	lw $a0, 1644($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4789,7 +4789,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1720($sp)
+	lw $a0, 5040($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4799,7 +4799,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1248($sp)
+	lw $a0, 6840($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4809,7 +4809,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5248($sp)
+	lw $a0, 1716($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4819,7 +4819,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6460($sp)
+	lw $a0, 1240($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4829,7 +4829,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7588($sp)
+	lw $a0, 5244($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4839,7 +4839,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6636($sp)
+	lw $a0, 6456($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4849,7 +4849,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1624($sp)
+	lw $a0, 7580($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4859,7 +4859,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2864($sp)
+	lw $a0, 6632($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4869,7 +4869,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5272($sp)
+	lw $a0, 1620($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4879,7 +4879,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2456($sp)
+	lw $a0, 2860($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4889,7 +4889,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 756($sp)
+	lw $a0, 5268($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4899,7 +4899,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4136($sp)
+	lw $a0, 2452($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4909,7 +4909,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7508($sp)
+	lw $a0, 752($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4919,7 +4919,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6736($sp)
+	lw $a0, 4132($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4929,7 +4929,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2588($sp)
+	lw $a0, 7500($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4939,7 +4939,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3920($sp)
+	lw $a0, 6732($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4949,7 +4949,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4360($sp)
+	lw $a0, 2584($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4959,7 +4959,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 844($sp)
+	lw $a0, 3920($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4969,7 +4969,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6020($sp)
+	lw $a0, 4356($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4979,7 +4979,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 808($sp)
+	lw $a0, 840($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4989,7 +4989,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6160($sp)
+	lw $a0, 6016($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -4999,7 +4999,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7456($sp)
+	lw $a0, 804($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5009,7 +5009,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7288($sp)
+	lw $a0, 6156($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5019,7 +5019,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t9
+	lw $a0, 7448($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5029,7 +5029,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4488($sp)
+	lw $a0, 7280($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5039,7 +5039,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4152($sp)
+	move $a0, $t9
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5049,7 +5049,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3988($sp)
+	lw $a0, 4484($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5059,7 +5059,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6196($sp)
+	lw $a0, 4148($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5069,7 +5069,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6836($sp)
+	lw $a0, 3988($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5079,7 +5079,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3932($sp)
+	lw $a0, 6192($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5089,7 +5089,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s4
+	lw $a0, 6832($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5099,7 +5099,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4216($sp)
+	lw $a0, 3932($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5109,7 +5109,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1116($sp)
+	move $a0, $s4
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5119,7 +5119,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6372($sp)
+	lw $a0, 4212($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5129,7 +5129,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4016($sp)
+	lw $a0, 1108($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5139,7 +5139,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3048($sp)
+	lw $a0, 6368($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5149,7 +5149,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4952($sp)
+	lw $a0, 4016($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5159,7 +5159,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2868($sp)
+	lw $a0, 3048($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5169,7 +5169,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5756($sp)
+	lw $a0, 4948($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5179,7 +5179,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3428($sp)
+	lw $a0, 2864($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5189,7 +5189,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $k1
+	lw $a0, 5748($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5199,7 +5199,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7028($sp)
+	lw $a0, 3428($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5209,7 +5209,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7336($sp)
+	move $a0, $k1
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5219,7 +5219,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1776($sp)
+	lw $a0, 7020($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5229,7 +5229,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1828($sp)
+	lw $a0, 7328($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5239,7 +5239,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1452($sp)
+	lw $a0, 1776($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5249,7 +5249,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3800($sp)
+	lw $a0, 1828($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5259,7 +5259,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t5
+	lw $a0, 1448($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5269,7 +5269,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2516($sp)
+	lw $a0, 3804($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5279,7 +5279,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6232($sp)
+	move $a0, $t5
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5289,7 +5289,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3184($sp)
+	lw $a0, 2512($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5299,7 +5299,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2784($sp)
+	lw $a0, 6228($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5309,7 +5309,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6420($sp)
+	lw $a0, 3184($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5319,7 +5319,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2828($sp)
+	lw $a0, 2780($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5329,7 +5329,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4220($sp)
+	lw $a0, 6416($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5339,7 +5339,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2496($sp)
+	lw $a0, 2824($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5349,7 +5349,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6828($sp)
+	lw $a0, 4216($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5359,7 +5359,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s7
+	lw $a0, 2492($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5369,7 +5369,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7716($sp)
+	lw $a0, 6824($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5379,7 +5379,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6536($sp)
+	move $a0, $s7
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5389,7 +5389,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s5
+	lw $a0, 7708($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5399,7 +5399,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3980($sp)
+	lw $a0, 6532($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5409,7 +5409,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3960($sp)
+	move $a0, $s5
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5419,7 +5419,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7764($sp)
+	lw $a0, 3980($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5429,7 +5429,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5120($sp)
+	lw $a0, 3960($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5439,7 +5439,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6760($sp)
+	lw $a0, 7756($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5449,7 +5449,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 892($sp)
+	lw $a0, 5116($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5459,7 +5459,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4388($sp)
+	lw $a0, 6756($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5469,7 +5469,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2328($sp)
+	lw $a0, 888($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5479,7 +5479,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6244($sp)
+	lw $a0, 4384($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5489,7 +5489,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5232($sp)
+	lw $a0, 2324($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5499,7 +5499,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7480($sp)
+	lw $a0, 6240($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5509,7 +5509,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5872($sp)
+	lw $a0, 5228($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5519,7 +5519,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3924($sp)
+	lw $a0, 7472($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5529,7 +5529,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1120($sp)
+	lw $a0, 5864($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5539,7 +5539,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5088($sp)
+	lw $a0, 3924($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5549,7 +5549,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4640($sp)
+	lw $a0, 1112($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5559,7 +5559,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5796($sp)
+	lw $a0, 5084($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5569,7 +5569,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1104($sp)
+	lw $a0, 4636($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5579,7 +5579,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $gp
+	lw $a0, 5788($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5589,7 +5589,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7080($sp)
+	lw $a0, 1096($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5599,7 +5599,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1108($sp)
+	move $a0, $gp
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5609,7 +5609,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s3
+	lw $a0, 7072($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5619,7 +5619,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2280($sp)
+	lw $a0, 1100($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5629,7 +5629,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $t7
+	move $a0, $s3
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5639,7 +5639,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 540($sp)
+	lw $a0, 2276($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5649,7 +5649,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3096($sp)
+	move $a0, $t7
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5659,7 +5659,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7400($sp)
+	lw $a0, 536($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5669,7 +5669,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5128($sp)
+	lw $a0, 3096($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5679,7 +5679,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3704($sp)
+	lw $a0, 7392($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5689,7 +5689,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7512($sp)
+	lw $a0, 5124($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5699,7 +5699,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5704($sp)
+	lw $a0, 3704($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5709,7 +5709,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5744($sp)
+	lw $a0, 7504($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5719,7 +5719,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2580($sp)
+	lw $a0, 5696($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5729,7 +5729,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6300($sp)
+	lw $a0, 5736($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5739,7 +5739,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1832($sp)
+	lw $a0, 2576($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5749,7 +5749,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 156($sp)
+	lw $a0, 6296($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5759,7 +5759,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2164($sp)
+	lw $a0, 1832($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5769,7 +5769,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5944($sp)
+	lw $a0, 156($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5779,7 +5779,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3416($sp)
+	lw $a0, 2160($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5789,7 +5789,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3104($sp)
+	lw $a0, 5936($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5799,7 +5799,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6864($sp)
+	lw $a0, 3416($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5809,7 +5809,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2584($sp)
+	lw $a0, 3104($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5819,7 +5819,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 648($sp)
+	lw $a0, 6860($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5829,7 +5829,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 928($sp)
+	lw $a0, 2580($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5839,7 +5839,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5836($sp)
+	lw $a0, 644($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5849,7 +5849,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6824($sp)
+	lw $a0, 920($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5859,7 +5859,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2324($sp)
+	lw $a0, 5828($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5869,7 +5869,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4304($sp)
+	lw $a0, 6820($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5879,7 +5879,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2856($sp)
+	lw $a0, 2320($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5889,7 +5889,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3216($sp)
+	lw $a0, 4300($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5899,7 +5899,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1156($sp)
+	lw $a0, 2852($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5909,7 +5909,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 152($sp)
+	lw $a0, 3216($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5919,7 +5919,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 708($sp)
+	lw $a0, 1148($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5929,7 +5929,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1040($sp)
+	lw $a0, 152($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5939,7 +5939,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3324($sp)
+	lw $a0, 704($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5949,7 +5949,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5612($sp)
+	lw $a0, 1032($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5959,7 +5959,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5548($sp)
+	lw $a0, 3324($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5969,7 +5969,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6664($sp)
+	lw $a0, 5608($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5979,7 +5979,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2248($sp)
+	lw $a0, 5544($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5989,7 +5989,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5616($sp)
+	lw $a0, 6660($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -5999,7 +5999,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1148($sp)
+	lw $a0, 2244($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6009,7 +6009,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3160($sp)
+	lw $a0, 5612($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6019,7 +6019,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 692($sp)
+	lw $a0, 1140($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6029,7 +6029,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4504($sp)
+	lw $a0, 3160($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6039,7 +6039,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $k0
+	lw $a0, 688($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6049,7 +6049,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2308($sp)
+	lw $a0, 4500($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6059,7 +6059,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2576($sp)
+	move $a0, $k0
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6069,7 +6069,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 368($sp)
+	lw $a0, 2304($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6079,7 +6079,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1772($sp)
+	lw $a0, 2572($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6089,7 +6089,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6508($sp)
+	lw $a0, 364($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6099,7 +6099,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 888($sp)
+	lw $a0, 1768($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6109,7 +6109,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6352($sp)
+	lw $a0, 6504($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6119,7 +6119,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6716($sp)
+	lw $a0, 884($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6129,7 +6129,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3556($sp)
+	lw $a0, 6348($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6139,7 +6139,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s1
+	lw $a0, 6712($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6149,7 +6149,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2160($sp)
+	lw $a0, 3556($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6159,7 +6159,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2904($sp)
+	move $a0, $s1
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6169,7 +6169,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7380($sp)
+	lw $a0, 2156($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6179,7 +6179,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2344($sp)
+	lw $a0, 2900($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6189,7 +6189,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 204($sp)
+	lw $a0, 7372($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6199,7 +6199,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7384($sp)
+	lw $a0, 2340($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6209,7 +6209,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4212($sp)
+	lw $a0, 204($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6219,7 +6219,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 432($sp)
+	lw $a0, 7376($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6229,7 +6229,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5440($sp)
+	lw $a0, 4208($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6239,7 +6239,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6576($sp)
+	lw $a0, 428($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6249,7 +6249,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1932($sp)
+	lw $a0, 5436($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6259,7 +6259,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2168($sp)
+	lw $a0, 6572($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6269,7 +6269,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7572($sp)
+	lw $a0, 1928($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6279,7 +6279,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5820($sp)
+	lw $a0, 2164($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6289,7 +6289,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3360($sp)
+	lw $a0, 7564($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6299,7 +6299,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s2
+	lw $a0, 5812($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6309,7 +6309,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 160($sp)
+	lw $a0, 3360($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6319,7 +6319,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4444($sp)
+	move $a0, $s2
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6329,7 +6329,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4332($sp)
+	lw $a0, 160($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6339,7 +6339,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4412($sp)
+	lw $a0, 4440($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6349,7 +6349,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4968($sp)
+	lw $a0, 4328($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6359,7 +6359,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $fp
+	lw $a0, 4408($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6369,7 +6369,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1004($sp)
+	lw $a0, 4964($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6379,7 +6379,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4892($sp)
+	move $a0, $fp
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6389,7 +6389,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7724($sp)
+	lw $a0, 996($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6399,7 +6399,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1844($sp)
+	lw $a0, 4888($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6409,7 +6409,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3232($sp)
+	lw $a0, 7716($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6419,7 +6419,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6616($sp)
+	lw $a0, 1844($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6429,7 +6429,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4376($sp)
+	lw $a0, 3232($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6439,7 +6439,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s6
+	lw $a0, 6612($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6449,7 +6449,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3564($sp)
+	lw $a0, 4372($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6459,7 +6459,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6200($sp)
+	move $a0, $s6
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6469,7 +6469,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3720($sp)
+	lw $a0, 3564($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6479,7 +6479,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 384($sp)
+	lw $a0, 6196($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6489,7 +6489,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7368($sp)
+	lw $a0, 3720($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6499,7 +6499,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7592($sp)
+	lw $a0, 380($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6509,7 +6509,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1316($sp)
+	lw $a0, 7360($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6519,7 +6519,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7524($sp)
+	lw $a0, 7584($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6529,7 +6529,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3016($sp)
+	lw $a0, 1308($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6539,7 +6539,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7608($sp)
+	lw $a0, 7516($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6549,7 +6549,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4240($sp)
+	lw $a0, 3016($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6559,7 +6559,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4928($sp)
+	lw $a0, 7600($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6569,7 +6569,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2140($sp)
+	lw $a0, 4236($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6579,7 +6579,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2204($sp)
+	lw $a0, 4924($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6589,7 +6589,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5920($sp)
+	lw $a0, 2136($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6599,7 +6599,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3280($sp)
+	lw $a0, 2200($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6609,7 +6609,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7496($sp)
+	lw $a0, 5912($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6619,7 +6619,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6932($sp)
+	lw $a0, 3280($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6629,7 +6629,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3124($sp)
+	lw $a0, 7488($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6639,7 +6639,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1936($sp)
+	lw $a0, 6924($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6649,7 +6649,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6524($sp)
+	lw $a0, 3124($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6659,7 +6659,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1256($sp)
+	lw $a0, 1932($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6669,7 +6669,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1024($sp)
+	lw $a0, 6520($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6679,7 +6679,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5464($sp)
+	lw $a0, 1248($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6689,7 +6689,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7100($sp)
+	lw $a0, 1016($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6699,7 +6699,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4000($sp)
+	lw $a0, 5460($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6709,7 +6709,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 268($sp)
+	lw $a0, 7092($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6719,7 +6719,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5428($sp)
+	lw $a0, 4000($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6729,7 +6729,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5864($sp)
+	lw $a0, 268($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6739,7 +6739,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7444($sp)
+	lw $a0, 5424($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6749,7 +6749,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6644($sp)
+	lw $a0, 5856($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6759,7 +6759,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3112($sp)
+	lw $a0, 7436($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6769,7 +6769,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 340($sp)
+	lw $a0, 6640($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6779,7 +6779,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7004($sp)
+	lw $a0, 3112($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6789,7 +6789,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4236($sp)
+	lw $a0, 336($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6799,7 +6799,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 8344($sp)
+	lw $a0, 6996($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6809,7 +6809,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	move $a0, $s0
+	lw $a0, 4232($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6819,7 +6819,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 520($sp)
+	lw $a0, 8344($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6829,7 +6829,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2460($sp)
+	move $a0, $s0
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6839,7 +6839,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5308($sp)
+	lw $a0, 516($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6849,7 +6849,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 332($sp)
+	lw $a0, 2456($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6859,7 +6859,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6728($sp)
+	lw $a0, 5304($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6869,7 +6869,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7560($sp)
+	lw $a0, 328($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6879,7 +6879,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3356($sp)
+	lw $a0, 6724($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6889,7 +6889,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3944($sp)
+	lw $a0, 7552($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6899,7 +6899,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5524($sp)
+	lw $a0, 3356($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6909,7 +6909,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 2816($sp)
+	lw $a0, 3944($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6919,7 +6919,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4032($sp)
+	lw $a0, 5520($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6929,7 +6929,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1204($sp)
+	lw $a0, 2812($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6939,7 +6939,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 5216($sp)
+	lw $a0, 4028($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6949,7 +6949,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 1992($sp)
+	lw $a0, 1196($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6959,7 +6959,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6640($sp)
+	lw $a0, 5212($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6969,7 +6969,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 3396($sp)
+	lw $a0, 1988($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6979,7 +6979,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 7568($sp)
+	lw $a0, 6636($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6989,7 +6989,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6216($sp)
+	lw $a0, 3396($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -6999,7 +6999,7 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 4020($sp)
+	lw $a0, 7560($sp)
 	jal func__toString
 	move $t2, $v0
 	move $a0, $t2
@@ -7009,22 +7009,22 @@ _BeginOfFunctionDecl1868:
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
-	lw $a0, 6356($sp)
+	lw $a0, 6212($sp)
 	jal func__toString
-	sw $v0, 3900($sp)
-	lw $a0, 3900($sp)
+	sw $v0, 868($sp)
+	lw $a0, 868($sp)
 	la $a1, string_2569
 	jal func__stringConcatenate
-	sw $v0, 5620($sp)
-	lw $a0, 5620($sp)
+	sw $v0, 4972($sp)
+	lw $a0, 4972($sp)
 	jal func__print
-	sw $v0, 920($sp)
+	sw $v0, 316($sp)
 	la $a0, string_2572
 	jal func__println
-	sw $v0, 1888($sp)
+	sw $v0, 7940($sp)
 	li $v0, 0
-	b _EndOfFunctionDecl1869
-_EndOfFunctionDecl1869:
+	b _EndOfFunctionDecl64
+_EndOfFunctionDecl64:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

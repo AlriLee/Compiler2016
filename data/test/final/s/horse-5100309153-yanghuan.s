@@ -515,7 +515,7 @@ _origin:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl801:
+_BeginOfFunctionDecl66:
 	lw $t0, 196($sp)
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -541,14 +541,14 @@ _BeginOfFunctionDecl801:
 	sw $t0, global_176
 	li $t0, 0
 	sw $t0, global_177
-_ForLoop809:
+_ForLoop74:
 	lw $t0, global_177
 	lw $t1, 196($sp)
 	slt $t1, $t0, $t1
 	sw $t1, 148($sp)
 	lw $t0, 148($sp)
-	beqz $t0, _OutOfFor819
-_ForBody818:
+	beqz $t0, _OutOfFor1
+_ForBody0:
 	lw $t0, global_177
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -577,14 +577,14 @@ _ForBody818:
 	sw $t0, 0($t2)
 	li $t0, 0
 	sw $t0, global_178
-_ForLoop811:
+_ForLoop76:
 	lw $t0, global_178
 	lw $t1, 196($sp)
 	slt $t1, $t0, $t1
 	sw $t1, 160($sp)
 	lw $t0, 160($sp)
-	beqz $t0, _OutOfFor821
-_ForBody820:
+	beqz $t0, _OutOfFor3
+_ForBody2:
 	lw $t0, global_177
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -605,27 +605,27 @@ _ForBody820:
 	li $t0, 0
 	lw $t1, 140($sp)
 	sw $t0, 0($t1)
-_continueFor812:
+_continueFor77:
 	lw $t0, global_178
 	sw $t0, 192($sp)
 	lw $t0, global_178
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_178
-	b _ForLoop811
-_OutOfFor821:
-	b _continueFor810
-_continueFor810:
+	b _ForLoop76
+_OutOfFor3:
+	b _continueFor75
+_continueFor75:
 	lw $t0, global_177
 	sw $t0, 156($sp)
 	lw $t0, global_177
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_177
-	b _ForLoop809
-_OutOfFor819:
-	b _EndOfFunctionDecl802
-_EndOfFunctionDecl802:
+	b _ForLoop74
+_OutOfFor1:
+	b _EndOfFunctionDecl67
+_EndOfFunctionDecl67:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -672,29 +672,29 @@ _check:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl803:
+_BeginOfFunctionDecl68:
 	lw $t0, 140($sp)
 	lw $t1, 144($sp)
 	slt $t1, $t0, $t1
 	sw $t1, 128($sp)
 	lw $t0, 128($sp)
-	beqz $t0, _logicalFalse823
-_logicalTrue822:
+	beqz $t0, _logicalFalse5
+_logicalTrue4:
 	lw $t0, 140($sp)
 	li $t1, 0
 	sge $t1, $t0, $t1
 	sw $t1, 136($sp)
 	lw $t0, 136($sp)
 	sw $t0, 132($sp)
-	b _logicalMerge824
-_logicalFalse823:
+	b _logicalMerge6
+_logicalFalse5:
 	li $t0, 0
 	sw $t0, 132($sp)
-	b _logicalMerge824
-_logicalMerge824:
+	b _logicalMerge6
+_logicalMerge6:
 	lw $v0, 132($sp)
-	b _EndOfFunctionDecl804
-_EndOfFunctionDecl804:
+	b _EndOfFunctionDecl69
+_EndOfFunctionDecl69:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -741,7 +741,7 @@ _addList:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl805:
+_BeginOfFunctionDecl70:
 	lw $t0, 232($sp)
 	sw $t0, -8($sp)
 	lw $t0, global_163
@@ -749,8 +749,8 @@ _BeginOfFunctionDecl805:
 	jal _check
 	sw $v0, 224($sp)
 	lw $t0, 224($sp)
-	beqz $t0, _logicalFalse829
-_logicalTrue828:
+	beqz $t0, _logicalFalse11
+_logicalTrue10:
 	lw $t0, 236($sp)
 	sw $t0, -8($sp)
 	lw $t0, global_163
@@ -759,14 +759,14 @@ _logicalTrue828:
 	sw $v0, 160($sp)
 	lw $t0, 160($sp)
 	move $t3, $t0
-	b _logicalMerge830
-_logicalFalse829:
+	b _logicalMerge12
+_logicalFalse11:
 	li $t0, 0
 	move $t3, $t0
-	b _logicalMerge830
-_logicalMerge830:
-	beqz $t3, _logicalFalse832
-_logicalTrue831:
+	b _logicalMerge12
+_logicalMerge12:
+	beqz $t3, _logicalFalse14
+_logicalTrue13:
 	lw $t0, 232($sp)
 	li $t1, 4
 	mul $t2, $t0, $t1
@@ -782,14 +782,14 @@ _logicalTrue831:
 	lw $t2, 0($t2)
 	seq $t2, $t2, $t4
 	move $t5, $t2
-	b _logicalMerge833
-_logicalFalse832:
+	b _logicalMerge15
+_logicalFalse14:
 	li $t0, 0
 	move $t5, $t0
-	b _logicalMerge833
-_logicalMerge833:
-	beqz $t5, _alternative826
-_consequence825:
+	b _logicalMerge15
+_logicalMerge15:
+	beqz $t5, _alternative8
+_consequence7:
 	lw $t0, global_173
 	li $t1, 1
 	add $t2, $t0, $t1
@@ -825,32 +825,32 @@ _consequence825:
 	lw $t0, 232($sp)
 	lw $t1, global_167
 	seq $t2, $t0, $t1
-	beqz $t2, _logicalFalse838
-_logicalTrue837:
+	beqz $t2, _logicalFalse20
+_logicalTrue19:
 	lw $t0, 236($sp)
 	lw $t1, global_168
 	seq $t2, $t0, $t1
 	move $t2, $t2
-	b _logicalMerge839
-_logicalFalse838:
+	b _logicalMerge21
+_logicalFalse20:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge839
-_logicalMerge839:
-	beqz $t2, _alternative835
-_consequence834:
+	b _logicalMerge21
+_logicalMerge21:
+	beqz $t2, _alternative17
+_consequence16:
 	li $t0, 1
 	sw $t0, global_174
-	b _OutOfIf836
-_alternative835:
-	b _OutOfIf836
-_OutOfIf836:
-	b _OutOfIf827
-_alternative826:
-	b _OutOfIf827
-_OutOfIf827:
-	b _EndOfFunctionDecl806
-_EndOfFunctionDecl806:
+	b _OutOfIf18
+_alternative17:
+	b _OutOfIf18
+_OutOfIf18:
+	b _OutOfIf9
+_alternative8:
+	b _OutOfIf9
+_OutOfIf9:
+	b _EndOfFunctionDecl71
+_EndOfFunctionDecl71:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -897,7 +897,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl807:
+_BeginOfFunctionDecl72:
 	li $t0, 12000
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -962,24 +962,24 @@ _BeginOfFunctionDecl807:
 	sw $t0, global_167
 	li $t0, 0
 	sw $t0, global_177
-_ForLoop813:
+_ForLoop78:
 	lw $t0, global_177
 	lw $t1, global_163
 	slt $t1, $t0, $t1
 	sw $t1, 172($sp)
 	lw $t0, 172($sp)
-	beqz $t0, _OutOfFor841
-_ForBody840:
+	beqz $t0, _OutOfFor23
+_ForBody22:
 	li $t0, 0
 	sw $t0, global_178
-_ForLoop815:
+_ForLoop80:
 	lw $t0, global_178
 	lw $t1, global_163
 	slt $t1, $t0, $t1
 	sw $t1, 252($sp)
 	lw $t0, 252($sp)
-	beqz $t0, _OutOfFor843
-_ForBody842:
+	beqz $t0, _OutOfFor25
+_ForBody24:
 	lw $t0, global_177
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1001,34 +1001,34 @@ _ForBody842:
 	sw $t1, 188($sp)
 	lw $t0, 188($sp)
 	sw $t0, 0($t2)
-_continueFor816:
+_continueFor81:
 	lw $t0, global_178
 	sw $t0, 200($sp)
 	lw $t0, global_178
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_178
-	b _ForLoop815
-_OutOfFor843:
-	b _continueFor814
-_continueFor814:
+	b _ForLoop80
+_OutOfFor25:
+	b _continueFor79
+_continueFor79:
 	lw $t0, global_177
 	sw $t0, 240($sp)
 	lw $t0, global_177
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_177
-	b _ForLoop813
-_OutOfFor841:
-	b _WhileLoop817
-_WhileLoop817:
+	b _ForLoop78
+_OutOfFor23:
+	b _WhileLoop82
+_WhileLoop82:
 	lw $t0, global_164
 	lw $t1, global_173
 	sle $t1, $t0, $t1
 	sw $t1, 372($sp)
 	lw $t0, 372($sp)
-	beqz $t0, _OutOfWhile845
-_WhileBody844:
+	beqz $t0, _OutOfWhile27
+_WhileBody26:
 	lw $t0, global_164
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1176,28 +1176,28 @@ _WhileBody844:
 	seq $t1, $t0, $t1
 	sw $t1, 152($sp)
 	lw $t0, 152($sp)
-	beqz $t0, _alternative847
-_consequence846:
-	b _OutOfWhile845
-	b _OutOfIf848
-_alternative847:
-	b _OutOfIf848
-_OutOfIf848:
+	beqz $t0, _alternative29
+_consequence28:
+	b _OutOfWhile27
+	b _OutOfIf30
+_alternative29:
+	b _OutOfIf30
+_OutOfIf30:
 	lw $t0, global_164
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, 384($sp)
 	lw $t0, 384($sp)
 	sw $t0, global_164
-	b _WhileLoop817
-_OutOfWhile845:
+	b _WhileLoop82
+_OutOfWhile27:
 	lw $t0, global_174
 	li $t1, 1
 	seq $t1, $t0, $t1
 	sw $t1, 184($sp)
 	lw $t0, 184($sp)
-	beqz $t0, _alternative850
-_consequence849:
+	beqz $t0, _alternative32
+_consequence31:
 	lw $t0, global_167
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -1224,16 +1224,16 @@ _consequence849:
 	lw $a0, 312($sp)
 	jal func__println
 	sw $v0, 180($sp)
-	b _OutOfIf851
-_alternative850:
+	b _OutOfIf33
+_alternative32:
 	la $a0, string_133
 	jal func__print
 	sw $v0, 392($sp)
-	b _OutOfIf851
-_OutOfIf851:
+	b _OutOfIf33
+_OutOfIf33:
 	li $v0, 0
-	b _EndOfFunctionDecl808
-_EndOfFunctionDecl808:
+	b _EndOfFunctionDecl73
+_EndOfFunctionDecl73:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

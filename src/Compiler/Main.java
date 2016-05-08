@@ -3,6 +3,7 @@ package Compiler;
 import Compiler.AST.Parser.MagLexer;
 import Compiler.AST.Parser.MagParser;
 import Compiler.AST.Prog;
+import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
 import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
 import Compiler.Listener.ClassDeclListener;
@@ -49,6 +50,7 @@ public class Main {
         walker.walk(new MagASTBuilder(), tree);
 
         Register.registers = 0;
+        LabelInstruction.labelCount = 0;
 
         SymbolTable.program = (Prog) MagASTBuilder.stack.peek();
         SymbolTable.program.emit();

@@ -515,7 +515,7 @@ _gcd:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl557:
+_BeginOfFunctionDecl55:
 	lw $t0, 144($sp)
 	lw $t1, 148($sp)
 	rem $t1, $t0, $t1
@@ -525,12 +525,12 @@ _BeginOfFunctionDecl557:
 	seq $t1, $t0, $t1
 	sw $t1, 128($sp)
 	lw $t0, 128($sp)
-	beqz $t0, _alternative562
-_consequence561:
+	beqz $t0, _alternative1
+_consequence0:
 	lw $v0, 148($sp)
-	b _EndOfFunctionDecl558
-	b _OutOfIf563
-_alternative562:
+	b _EndOfFunctionDecl56
+	b _OutOfIf2
+_alternative1:
 	lw $t0, 144($sp)
 	lw $t1, 148($sp)
 	rem $t1, $t0, $t1
@@ -542,11 +542,11 @@ _alternative562:
 	jal _gcd
 	sw $v0, 140($sp)
 	lw $v0, 140($sp)
-	b _EndOfFunctionDecl558
-	b _OutOfIf563
-_OutOfIf563:
-	b _EndOfFunctionDecl558
-_EndOfFunctionDecl558:
+	b _EndOfFunctionDecl56
+	b _OutOfIf2
+_OutOfIf2:
+	b _EndOfFunctionDecl56
+_EndOfFunctionDecl56:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -593,7 +593,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl559:
+_BeginOfFunctionDecl57:
 	li $t0, 10
 	sw $t0, -8($sp)
 	li $t0, 1
@@ -631,8 +631,8 @@ _BeginOfFunctionDecl559:
 	jal func__println
 	sw $v0, 144($sp)
 	li $v0, 0
-	b _EndOfFunctionDecl560
-_EndOfFunctionDecl560:
+	b _EndOfFunctionDecl58
+_EndOfFunctionDecl58:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

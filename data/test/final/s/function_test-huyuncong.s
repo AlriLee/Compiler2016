@@ -515,33 +515,33 @@ _merge:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl490:
+_BeginOfFunctionDecl43:
 	li $t0, 0
 	lw $t1, 236($sp)
 	seq $t1, $t0, $t1
 	sw $t1, 232($sp)
 	lw $t0, 232($sp)
-	beqz $t0, _alternative503
-_consequence502:
+	beqz $t0, _alternative1
+_consequence0:
 	lw $v0, 240($sp)
-	b _EndOfFunctionDecl491
-	b _OutOfIf504
-_alternative503:
-	b _OutOfIf504
-_OutOfIf504:
+	b _EndOfFunctionDecl44
+	b _OutOfIf2
+_alternative1:
+	b _OutOfIf2
+_OutOfIf2:
 	li $t0, 0
 	lw $t1, 240($sp)
 	seq $t1, $t0, $t1
 	sw $t1, 140($sp)
 	lw $t0, 140($sp)
-	beqz $t0, _alternative506
-_consequence505:
+	beqz $t0, _alternative4
+_consequence3:
 	lw $v0, 236($sp)
-	b _EndOfFunctionDecl491
-	b _OutOfIf507
-_alternative506:
-	b _OutOfIf507
-_OutOfIf507:
+	b _EndOfFunctionDecl44
+	b _OutOfIf5
+_alternative4:
+	b _OutOfIf5
+_OutOfIf5:
 	lw $t0, 236($sp)
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -563,18 +563,18 @@ _OutOfIf507:
 	slt $t1, $t2, $t1
 	sw $t1, 164($sp)
 	lw $t0, 164($sp)
-	beqz $t0, _alternative509
-_consequence508:
+	beqz $t0, _alternative7
+_consequence6:
 	lw $t0, 236($sp)
 	sw $t0, 208($sp)
 	lw $t0, 240($sp)
 	sw $t0, 236($sp)
 	lw $t0, 208($sp)
 	sw $t0, 240($sp)
-	b _OutOfIf510
-_alternative509:
-	b _OutOfIf510
-_OutOfIf510:
+	b _OutOfIf8
+_alternative7:
+	b _OutOfIf8
+_OutOfIf8:
 	lw $t0, 236($sp)
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -638,8 +638,8 @@ _OutOfIf510:
 	add $t2, $t0, $t1
 	sw $t3, 0($t2)
 	lw $v0, 236($sp)
-	b _EndOfFunctionDecl491
-_EndOfFunctionDecl491:
+	b _EndOfFunctionDecl44
+_EndOfFunctionDecl44:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -686,7 +686,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl492:
+_BeginOfFunctionDecl45:
 	jal func__getInt
 	sw $v0, 244($sp)
 	lw $t0, 244($sp)
@@ -779,11 +779,11 @@ _BeginOfFunctionDecl492:
 	sw $t0, global_794
 	li $t0, 1
 	move $t2, $t0
-_ForLoop494:
+_ForLoop47:
 	lw $t1, global_789
 	sle $t3, $t2, $t1
-	beqz $t3, _OutOfFor512
-_ForBody511:
+	beqz $t3, _OutOfFor10
+_ForBody9:
 	li $t1, 4
 	mul $t1, $t2, $t1
 	sw $t1, 396($sp)
@@ -809,19 +809,19 @@ _ForBody511:
 	li $t0, 0
 	lw $t1, 356($sp)
 	sw $t0, 0($t1)
-_continueFor495:
+_continueFor48:
 	move $t3, $t2
 	li $t1, 1
 	add $t2, $t2, $t1
-	b _ForLoop494
-_OutOfFor512:
+	b _ForLoop47
+_OutOfFor10:
 	li $t0, 1
 	move $t2, $t0
-_ForLoop496:
+_ForLoop49:
 	lw $t1, global_790
 	sle $t3, $t2, $t1
-	beqz $t3, _OutOfFor514
-_ForBody513:
+	beqz $t3, _OutOfFor12
+_ForBody11:
 	lw $t1, global_789
 	add $t1, $t2, $t1
 	sw $t1, 304($sp)
@@ -862,12 +862,12 @@ _ForBody513:
 	add $t3, $t0, $t3
 	li $t0, 0
 	sw $t0, 0($t3)
-_continueFor497:
+_continueFor50:
 	sw $t2, 308($sp)
 	li $t1, 1
 	add $t2, $t2, $t1
-	b _ForLoop496
-_OutOfFor514:
+	b _ForLoop49
+_OutOfFor12:
 	li $t0, 1
 	move $t4, $t0
 	lw $t0, global_789
@@ -878,45 +878,45 @@ _OutOfFor514:
 	move $t5, $t0
 	li $t0, 2
 	move $t2, $t0
-_ForLoop498:
+_ForLoop51:
 	lw $t1, global_789
 	sle $t3, $t2, $t1
-	beqz $t3, _OutOfFor516
-_ForBody515:
+	beqz $t3, _OutOfFor14
+_ForBody13:
 	sw $t4, -8($sp)
 	sw $t2, -4($sp)
 	jal _merge
 	sw $v0, 344($sp)
 	lw $t0, 344($sp)
 	move $t4, $t0
-_continueFor499:
+_continueFor52:
 	sw $t2, 364($sp)
 	li $t1, 1
 	add $t2, $t2, $t1
-	b _ForLoop498
-_OutOfFor516:
+	b _ForLoop51
+_OutOfFor14:
 	lw $t0, global_789
 	li $t1, 2
 	add $t2, $t0, $t1
 	move $t2, $t2
-_ForLoop500:
+_ForLoop53:
 	lw $t0, global_789
 	lw $t1, global_790
 	add $t3, $t0, $t1
 	sle $t3, $t2, $t3
-	beqz $t3, _OutOfFor518
-_ForBody517:
+	beqz $t3, _OutOfFor16
+_ForBody15:
 	sw $t5, -8($sp)
 	sw $t2, -4($sp)
 	jal _merge
 	move $t3, $v0
 	move $t5, $t3
-_continueFor501:
+_continueFor54:
 	move $t3, $t2
 	li $t1, 1
 	add $t2, $t2, $t1
-	b _ForLoop500
-_OutOfFor518:
+	b _ForLoop53
+_OutOfFor16:
 	li $t1, 4
 	mul $t1, $t4, $t1
 	sw $t1, 340($sp)
@@ -967,8 +967,8 @@ _OutOfFor518:
 	jal func__println
 	move $t3, $v0
 	li $v0, 0
-	b _EndOfFunctionDecl493
-_EndOfFunctionDecl493:
+	b _EndOfFunctionDecl46
+_EndOfFunctionDecl46:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

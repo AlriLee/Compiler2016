@@ -18,9 +18,9 @@ public class Prog implements ASTNode {
         declarations = new LinkedList<Declaration>();
     }
 
-    public Prog(List<Declaration> d) {
+    /*public Prog(List<Declaration> d) {
         declarations = d;
-    }
+    }*/
 
     @Override
     public String toString(int d) {

@@ -515,14 +515,14 @@ _cd:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl602:
+_BeginOfFunctionDecl41:
 	lw $t0, 188($sp)
 	li $t1, 1
 	seq $t1, $t0, $t1
 	sw $t1, 180($sp)
 	lw $t0, 180($sp)
-	beqz $t0, _alternative607
-_consequence606:
+	beqz $t0, _alternative1
+_consequence0:
 	la $a0, string_1
 	lw $a1, 192($sp)
 	jal func__stringConcatenate
@@ -544,8 +544,8 @@ _consequence606:
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, 204($sp)
-	b _OutOfIf608
-_alternative607:
+	b _OutOfIf2
+_alternative1:
 	lw $t0, 188($sp)
 	li $t1, 1
 	sub $t1, $t0, $t1
@@ -603,11 +603,11 @@ _alternative607:
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, 204($sp)
-	b _OutOfIf608
-_OutOfIf608:
+	b _OutOfIf2
+_OutOfIf2:
 	lw $v0, 204($sp)
-	b _EndOfFunctionDecl603
-_EndOfFunctionDecl603:
+	b _EndOfFunctionDecl42
+_EndOfFunctionDecl42:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -654,7 +654,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl604:
+_BeginOfFunctionDecl43:
 	la $t0, string_21
 	move $t5, $t0
 	la $t0, string_22
@@ -682,8 +682,8 @@ _BeginOfFunctionDecl604:
 	jal func__println
 	sw $v0, 160($sp)
 	li $v0, 0
-	b _EndOfFunctionDecl605
-_EndOfFunctionDecl605:
+	b _EndOfFunctionDecl44
+_EndOfFunctionDecl44:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

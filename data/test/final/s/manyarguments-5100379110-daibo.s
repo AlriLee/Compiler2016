@@ -515,12 +515,12 @@ _a:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl1337:
+_BeginOfFunctionDecl108:
 	lw $t0, 184($sp)
 	lw $t1, 188($sp)
 	add $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $t0, 140($sp)
+	sw $t1, 180($sp)
+	lw $t0, 180($sp)
 	lw $t1, 192($sp)
 	add $t1, $t0, $t1
 	sw $t1, 148($sp)
@@ -531,50 +531,50 @@ _BeginOfFunctionDecl1337:
 	lw $t0, 136($sp)
 	lw $t1, 200($sp)
 	add $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
-	lw $t1, 204($sp)
-	add $t1, $t0, $t1
-	sw $t1, 176($sp)
-	lw $t0, 176($sp)
-	lw $t1, 208($sp)
-	add $t1, $t0, $t1
 	sw $t1, 144($sp)
 	lw $t0, 144($sp)
+	lw $t1, 204($sp)
+	add $t1, $t0, $t1
+	sw $t1, 132($sp)
+	lw $t0, 132($sp)
+	lw $t1, 208($sp)
+	add $t1, $t0, $t1
+	sw $t1, 128($sp)
+	lw $t0, 128($sp)
 	lw $t1, 212($sp)
-	add $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $t0, 156($sp)
-	lw $t1, 216($sp)
-	add $t1, $t0, $t1
-	sw $t1, 160($sp)
-	lw $t0, 160($sp)
-	lw $t1, 220($sp)
-	add $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, 164($sp)
-	lw $t1, 224($sp)
-	add $t1, $t0, $t1
-	sw $t1, 180($sp)
-	lw $t0, 180($sp)
-	lw $t1, 228($sp)
-	add $t1, $t0, $t1
-	sw $t1, 168($sp)
-	lw $t0, 168($sp)
-	lw $t1, 232($sp)
 	add $t1, $t0, $t1
 	sw $t1, 172($sp)
 	lw $t0, 172($sp)
-	lw $t1, 236($sp)
+	lw $t1, 216($sp)
+	add $t1, $t0, $t1
+	sw $t1, 140($sp)
+	lw $t0, 140($sp)
+	lw $t1, 220($sp)
 	add $t1, $t0, $t1
 	sw $t1, 152($sp)
 	lw $t0, 152($sp)
+	lw $t1, 224($sp)
+	add $t1, $t0, $t1
+	sw $t1, 156($sp)
+	lw $t0, 156($sp)
+	lw $t1, 228($sp)
+	add $t1, $t0, $t1
+	sw $t1, 160($sp)
+	lw $t0, 160($sp)
+	lw $t1, 232($sp)
+	add $t1, $t0, $t1
+	sw $t1, 176($sp)
+	lw $t0, 176($sp)
+	lw $t1, 236($sp)
+	add $t1, $t0, $t1
+	sw $t1, 164($sp)
+	lw $t0, 164($sp)
 	lw $t1, 240($sp)
 	add $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $v0, 132($sp)
-	b _EndOfFunctionDecl1338
-_EndOfFunctionDecl1338:
+	sw $t1, 168($sp)
+	lw $v0, 168($sp)
+	b _EndOfFunctionDecl109
+_EndOfFunctionDecl109:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -621,7 +621,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl1339:
+_BeginOfFunctionDecl110:
 	li $t0, 1
 	sw $t0, -60($sp)
 	li $t0, 2
@@ -653,16 +653,16 @@ _BeginOfFunctionDecl1339:
 	li $t0, 15
 	sw $t0, -4($sp)
 	jal _a
+	sw $v0, 136($sp)
+	lw $a0, 136($sp)
+	jal func__toString
 	sw $v0, 128($sp)
 	lw $a0, 128($sp)
-	jal func__toString
-	sw $v0, 132($sp)
-	lw $a0, 132($sp)
 	jal func__println
-	sw $v0, 136($sp)
+	sw $v0, 132($sp)
 	li $v0, 0
-	b _EndOfFunctionDecl1340
-_EndOfFunctionDecl1340:
+	b _EndOfFunctionDecl111
+_EndOfFunctionDecl111:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

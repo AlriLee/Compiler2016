@@ -570,8 +570,8 @@ _ForLoop40:
 	jal func__size
 	move $t3, $v0
 	slt $t3, $t2, $t3
-	beqz $t3, _OutOfFor47
-_ForBody46:
+	beqz $t3, _OutOfFor1
+_ForBody0:
 	li $t1, 4
 	mul $t3, $t2, $t1
 	lw $t0, global_13
@@ -590,7 +590,7 @@ _continueFor41:
 	li $t1, 1
 	add $t2, $t2, $t1
 	b _ForLoop40
-_OutOfFor47:
+_OutOfFor1:
 	li $t0, 0
 	move $t2, $t0
 _ForLoop42:
@@ -598,8 +598,8 @@ _ForLoop42:
 	jal func__size
 	move $t3, $v0
 	slt $t3, $t2, $t3
-	beqz $t3, _OutOfFor49
-_ForBody48:
+	beqz $t3, _OutOfFor3
+_ForBody2:
 	li $t1, 4
 	mul $t3, $t2, $t1
 	lw $t0, global_13
@@ -616,7 +616,7 @@ _continueFor43:
 	li $t1, 1
 	add $t2, $t2, $t1
 	b _ForLoop42
-_OutOfFor49:
+_OutOfFor3:
 	la $a0, string_27
 	jal func__println
 	move $t2, $v0
@@ -629,8 +629,8 @@ _ForLoop44:
 	jal func__size
 	move $t3, $v0
 	slt $t3, $t2, $t3
-	beqz $t3, _OutOfFor51
-_ForBody50:
+	beqz $t3, _OutOfFor5
+_ForBody4:
 	li $t1, 4
 	mul $t3, $t2, $t1
 	lw $t0, global_13
@@ -647,7 +647,7 @@ _continueFor45:
 	li $t1, 1
 	add $t2, $t2, $t1
 	b _ForLoop44
-_OutOfFor51:
+_OutOfFor5:
 	b _EndOfFunctionDecl39
 _EndOfFunctionDecl39:
 	lw $ra, 120($sp)

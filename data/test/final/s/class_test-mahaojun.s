@@ -515,7 +515,7 @@ _work:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl399:
+_BeginOfFunctionDecl91:
 	lw $t1, 188($sp)
 	lw $t0, 4($t1)
 	sw $t0, 148($sp)
@@ -524,8 +524,8 @@ _BeginOfFunctionDecl399:
 	sle $t1, $t0, $t1
 	sw $t1, 144($sp)
 	lw $t0, 144($sp)
-	beqz $t0, _alternative404
-_consequence403:
+	beqz $t0, _alternative1
+_consequence0:
 	lw $a0, 184($sp)
 	la $a1, string_2
 	jal func__stringConcatenate
@@ -544,8 +544,8 @@ _consequence403:
 	lw $a0, 164($sp)
 	jal func__println
 	sw $v0, 132($sp)
-	b _OutOfIf405
-_alternative404:
+	b _OutOfIf2
+_alternative1:
 	lw $a0, 184($sp)
 	la $a1, string_9
 	jal func__stringConcatenate
@@ -564,8 +564,8 @@ _alternative404:
 	lw $a0, 180($sp)
 	jal func__println
 	sw $v0, 176($sp)
-	b _OutOfIf405
-_OutOfIf405:
+	b _OutOfIf2
+_OutOfIf2:
 	lw $t1, 188($sp)
 	lw $t0, 4($t1)
 	sw $t0, 172($sp)
@@ -576,7 +576,7 @@ _OutOfIf405:
 	lw $t0, 140($sp)
 	lw $t1, 188($sp)
 	sw $t0, 4($t1)
-_EndOfFunctionDecl400:
+_EndOfFunctionDecl92:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -623,7 +623,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl401:
+_BeginOfFunctionDecl93:
 	li $t0, 100
 	sw $t0, global_202
 	li $t0, 10
@@ -675,7 +675,7 @@ _BeginOfFunctionDecl401:
 	sw $t2, -4($sp)
 	jal _work
 	sw $v0, 168($sp)
-_EndOfFunctionDecl402:
+_EndOfFunctionDecl94:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

@@ -515,7 +515,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl226:
+_BeginOfFunctionDecl64:
 	li $t0, 3
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -592,8 +592,8 @@ _BeginOfFunctionDecl226:
 	jal func__ord
 	sw $v0, 140($sp)
 	lw $v0, 140($sp)
-	b _EndOfFunctionDecl227
-_EndOfFunctionDecl227:
+	b _EndOfFunctionDecl65
+_EndOfFunctionDecl65:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

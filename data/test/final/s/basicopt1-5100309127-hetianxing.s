@@ -515,7 +515,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl146:
+_BeginOfFunctionDecl46:
 	li $t0, 100
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -541,11 +541,11 @@ _BeginOfFunctionDecl146:
 	move $t4, $t0
 	li $t0, 0
 	move $t2, $t0
-_ForLoop148:
+_ForLoop48:
 	li $t1, 100
 	slt $t3, $t2, $t1
-	beqz $t3, _OutOfFor163
-_ForBody162:
+	beqz $t3, _OutOfFor1
+_ForBody0:
 	li $t1, 4
 	mul $t3, $t2, $t1
 	add $t5, $t4, $t3
@@ -564,28 +564,28 @@ _ForBody162:
 	add $t3, $t3, $t1
 	move $t3, $t3
 	sw $t3, 0($t5)
-_continueFor149:
+_continueFor49:
 	move $t3, $t2
 	li $t1, 1
 	add $t2, $t2, $t1
-	b _ForLoop148
-_OutOfFor163:
+	b _ForLoop48
+_OutOfFor1:
 	li $t0, 0
 	move $t7, $t0
 	li $t0, 0
 	move $t2, $t0
-_ForLoop150:
+_ForLoop50:
 	li $t1, 100
 	slt $t3, $t2, $t1
-	beqz $t3, _OutOfFor165
-_ForBody164:
+	beqz $t3, _OutOfFor3
+_ForBody2:
 	li $t0, 0
 	move $s0, $t0
-_ForLoop152:
+_ForLoop52:
 	li $t1, 100
 	slt $t3, $s0, $t1
-	beqz $t3, _OutOfFor167
-_ForBody166:
+	beqz $t3, _OutOfFor5
+_ForBody4:
 	li $t1, 4
 	mul $t3, $t2, $t1
 	add $t3, $t4, $t3
@@ -595,63 +595,63 @@ _ForBody166:
 	add $t3, $t5, $t3
 	li $t0, 0
 	sw $t0, 0($t3)
-_continueFor153:
+_continueFor53:
 	move $t3, $s0
 	li $t1, 1
 	add $s0, $s0, $t1
-	b _ForLoop152
-_OutOfFor167:
-	b _continueFor151
-_continueFor151:
+	b _ForLoop52
+_OutOfFor5:
+	b _continueFor51
+_continueFor51:
 	move $t3, $t2
 	li $t1, 1
 	add $t2, $t2, $t1
-	b _ForLoop150
-_OutOfFor165:
+	b _ForLoop50
+_OutOfFor3:
 	li $t0, 0
 	move $t2, $t0
-_ForLoop154:
+_ForLoop54:
 	li $t1, 100
 	slt $t3, $t2, $t1
-	beqz $t3, _OutOfFor169
-_ForBody168:
+	beqz $t3, _OutOfFor7
+_ForBody6:
 	li $t1, 20
 	sgt $t3, $t2, $t1
-	beqz $t3, _logicalFalse174
-_logicalTrue173:
+	beqz $t3, _logicalFalse12
+_logicalTrue11:
 	li $t1, 80
 	slt $t3, $t2, $t1
 	move $s1, $t3
-	b _logicalMerge175
-_logicalFalse174:
+	b _logicalMerge13
+_logicalFalse12:
 	li $t0, 0
 	move $s1, $t0
-	b _logicalMerge175
-_logicalMerge175:
-	beqz $s1, _alternative171
-_consequence170:
+	b _logicalMerge13
+_logicalMerge13:
+	beqz $s1, _alternative9
+_consequence8:
 	li $t0, 0
 	move $s0, $t0
-_ForLoop156:
+_ForLoop56:
 	li $t1, 100
 	slt $t3, $s0, $t1
-	beqz $t3, _OutOfFor177
-_ForBody176:
+	beqz $t3, _OutOfFor15
+_ForBody14:
 	li $t1, 5
 	sgt $t3, $s0, $t1
-	beqz $t3, _logicalFalse182
-_logicalTrue181:
+	beqz $t3, _logicalFalse20
+_logicalTrue19:
 	li $t0, 1
 	move $t3, $t0
-	b _logicalMerge183
-_logicalFalse182:
+	b _logicalMerge21
+_logicalFalse20:
 	li $t1, 90
 	slt $t3, $t2, $t1
 	move $t3, $t3
-	b _logicalMerge183
-_logicalMerge183:
-	beqz $t3, _alternative179
-_consequence178:
+	b _logicalMerge21
+_logicalMerge21:
+	beqz $t3, _alternative17
+_consequence16:
 	li $t1, 4
 	mul $t5, $s0, $t1
 	li $t1, 100
@@ -683,42 +683,42 @@ _consequence178:
 	div $t6, $t6, $t1
 	add $t6, $s0, $t6
 	sw $t6, 0($t5)
-	b _OutOfIf180
-_alternative179:
-	b _OutOfIf180
-_OutOfIf180:
-	b _continueFor157
-_continueFor157:
+	b _OutOfIf18
+_alternative17:
+	b _OutOfIf18
+_OutOfIf18:
+	b _continueFor57
+_continueFor57:
 	move $t5, $s0
 	li $t1, 1
 	add $s0, $s0, $t1
-	b _ForLoop156
-_OutOfFor177:
-	b _OutOfIf172
-_alternative171:
-	b _OutOfIf172
-_OutOfIf172:
-	b _continueFor155
-_continueFor155:
+	b _ForLoop56
+_OutOfFor15:
+	b _OutOfIf10
+_alternative9:
+	b _OutOfIf10
+_OutOfIf10:
+	b _continueFor55
+_continueFor55:
 	move $t5, $t2
 	li $t1, 1
 	add $t2, $t2, $t1
-	b _ForLoop154
-_OutOfFor169:
+	b _ForLoop54
+_OutOfFor7:
 	li $t0, 0
 	move $t2, $t0
-_ForLoop158:
+_ForLoop58:
 	li $t1, 100
 	slt $t5, $t2, $t1
-	beqz $t5, _OutOfFor185
-_ForBody184:
+	beqz $t5, _OutOfFor23
+_ForBody22:
 	li $t0, 0
 	move $s0, $t0
-_ForLoop160:
+_ForLoop60:
 	li $t1, 100
 	slt $t5, $s0, $t1
-	beqz $t5, _OutOfFor187
-_ForBody186:
+	beqz $t5, _OutOfFor25
+_ForBody24:
 	li $t1, 4
 	mul $t5, $t2, $t1
 	add $t5, $t4, $t5
@@ -729,26 +729,26 @@ _ForBody186:
 	lw $t5, 0($t5)
 	add $t5, $t7, $t5
 	move $t7, $t5
-_continueFor161:
+_continueFor61:
 	move $t5, $s0
 	li $t1, 1
 	add $s0, $s0, $t1
-	b _ForLoop160
-_OutOfFor187:
-	b _continueFor159
-_continueFor159:
+	b _ForLoop60
+_OutOfFor25:
+	b _continueFor59
+_continueFor59:
 	move $t5, $t2
 	li $t1, 1
 	add $t2, $t2, $t1
-	b _ForLoop158
-_OutOfFor185:
+	b _ForLoop58
+_OutOfFor23:
 	move $a0, $t7
 	jal func__toString
 	move $t5, $v0
 	move $a0, $t5
 	jal func__println
 	move $t5, $v0
-_EndOfFunctionDecl147:
+_EndOfFunctionDecl47:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

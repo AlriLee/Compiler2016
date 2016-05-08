@@ -515,16 +515,39 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl1173:
+_BeginOfFunctionDecl74:
 	li $t0, 4
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $t0, 132($sp)
+	sw $t1, 152($sp)
+	lw $t0, 152($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $a0, 132($sp)
+	sw $t1, 152($sp)
+	lw $a0, 152($sp)
+	li $v0, 9
+	syscall
+	sw $v0, 156($sp)
+	li $t0, 4
+	lw $t1, 156($sp)
+	sw $t0, 0($t1)
+	lw $t0, 156($sp)
+	li $t1, 4
+	add $t1, $t0, $t1
+	sw $t1, 156($sp)
+	lw $t0, 156($sp)
+	sw $t0, 176($sp)
+	lw $t0, 176($sp)
+	sw $t0, global_198
+	li $t0, 4
+	li $t1, 4
+	mul $t1, $t0, $t1
+	sw $t1, 128($sp)
+	lw $t0, 128($sp)
+	li $t1, 4
+	add $t1, $t0, $t1
+	sw $t1, 128($sp)
+	lw $a0, 128($sp)
 	li $v0, 9
 	syscall
 	sw $v0, 172($sp)
@@ -536,43 +559,18 @@ _BeginOfFunctionDecl1173:
 	add $t1, $t0, $t1
 	sw $t1, 172($sp)
 	lw $t0, 172($sp)
+	sw $t0, 164($sp)
+	lw $t0, 164($sp)
 	sw $t0, 168($sp)
+	li $t0, 2
+	li $t1, 4
+	mul $t2, $t0, $t1
+	lw $t0, 168($sp)
+	add $t2, $t0, $t2
+	li $t0, 2
+	sw $t0, 0($t2)
 	lw $t0, 168($sp)
 	sw $t0, global_198
-	li $t0, 4
-	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $t0, 148($sp)
-	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $a0, 148($sp)
-	li $v0, 9
-	syscall
-	sw $v0, 164($sp)
-	li $t0, 4
-	lw $t1, 164($sp)
-	sw $t0, 0($t1)
-	lw $t0, 164($sp)
-	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, 164($sp)
-	sw $t0, 156($sp)
-	lw $t0, 156($sp)
-	move $t2, $t0
-	li $t0, 2
-	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 176($sp)
-	lw $t1, 176($sp)
-	add $t1, $t2, $t1
-	sw $t1, 140($sp)
-	li $t0, 2
-	lw $t1, 140($sp)
-	sw $t0, 0($t1)
-	sw $t2, global_198
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
@@ -580,17 +578,17 @@ _BeginOfFunctionDecl1173:
 	lw $t0, global_198
 	lw $t1, 144($sp)
 	add $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t1, 136($sp)
+	sw $t1, 148($sp)
+	lw $t1, 148($sp)
 	lw $t0, 0($t1)
-	sw $t0, 128($sp)
-	lw $a0, 128($sp)
+	sw $t0, 180($sp)
+	lw $a0, 180($sp)
 	jal func__toString
-	sw $v0, 152($sp)
-	lw $a0, 152($sp)
+	sw $v0, 132($sp)
+	lw $a0, 132($sp)
 	jal func__println
-	sw $v0, 180($sp)
-_EndOfFunctionDecl1174:
+	sw $v0, 136($sp)
+_EndOfFunctionDecl75:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

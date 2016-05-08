@@ -515,7 +515,7 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl2034:
+_BeginOfFunctionDecl56:
 	li $t0, 99
 	sw $t0, global_50
 	li $t0, 100
@@ -527,534 +527,534 @@ _BeginOfFunctionDecl2034:
 	li $t0, 0
 	sw $t0, global_54
 	jal func__getInt
-	sw $v0, 472($sp)
-	lw $t0, 472($sp)
+	sw $v0, 176($sp)
+	lw $t0, 176($sp)
 	sw $t0, global_49
 	li $t0, 1
-	move $t3, $t0
-_ForLoop2036:
-	lw $t1, global_49
-	sle $t2, $t3, $t1
-	beqz $t2, _OutOfFor2049
-_ForBody2048:
-	li $t0, 1
-	move $t5, $t0
-_ForLoop2038:
-	lw $t1, global_49
-	sle $t2, $t5, $t1
-	beqz $t2, _OutOfFor2051
-_ForBody2050:
-	li $t0, 1
-	move $t8, $t0
-_ForLoop2040:
-	lw $t1, global_49
-	sle $t2, $t8, $t1
-	beqz $t2, _OutOfFor2053
-_ForBody2052:
-	li $t0, 1
 	move $t4, $t0
-_ForLoop2042:
+_ForLoop58:
 	lw $t1, global_49
 	sle $t2, $t4, $t1
-	beqz $t2, _OutOfFor2055
-_ForBody2054:
-	li $t0, 1
-	move $t6, $t0
-_ForLoop2044:
-	lw $t1, global_49
-	sle $t2, $t6, $t1
-	beqz $t2, _OutOfFor2057
-_ForBody2056:
+	beqz $t2, _OutOfFor1
+_ForBody0:
 	li $t0, 1
 	move $t7, $t0
-_ForLoop2046:
+_ForLoop60:
 	lw $t1, global_49
 	sle $t2, $t7, $t1
-	beqz $t2, _OutOfFor2059
-_ForBody2058:
-	sne $t2, $t3, $t5
-	beqz $t2, _logicalFalse2064
-_logicalTrue2063:
-	sne $t2, $t3, $t8
+	beqz $t2, _OutOfFor3
+_ForBody2:
+	li $t0, 1
+	move $t3, $t0
+_ForLoop62:
+	lw $t1, global_49
+	sle $t2, $t3, $t1
+	beqz $t2, _OutOfFor5
+_ForBody4:
+	li $t0, 1
+	move $t5, $t0
+_ForLoop64:
+	lw $t1, global_49
+	sle $t2, $t5, $t1
+	beqz $t2, _OutOfFor7
+_ForBody6:
+	li $t0, 1
+	move $t8, $t0
+_ForLoop66:
+	lw $t1, global_49
+	sle $t2, $t8, $t1
+	beqz $t2, _OutOfFor9
+_ForBody8:
+	li $t0, 1
+	move $t6, $t0
+_ForLoop68:
+	lw $t1, global_49
+	sle $t2, $t6, $t1
+	beqz $t2, _OutOfFor11
+_ForBody10:
+	sne $t2, $t4, $t7
+	beqz $t2, _logicalFalse16
+_logicalTrue15:
+	sne $t2, $t4, $t3
 	move $s0, $t2
-	b _logicalMerge2065
-_logicalFalse2064:
+	b _logicalMerge17
+_logicalFalse16:
 	li $t0, 0
 	move $s0, $t0
-	b _logicalMerge2065
-_logicalMerge2065:
-	beqz $s0, _logicalFalse2067
-_logicalTrue2066:
-	sne $t2, $t3, $t4
+	b _logicalMerge17
+_logicalMerge17:
+	beqz $s0, _logicalFalse19
+_logicalTrue18:
+	sne $t2, $t4, $t5
 	move $s1, $t2
-	b _logicalMerge2068
-_logicalFalse2067:
+	b _logicalMerge20
+_logicalFalse19:
 	li $t0, 0
 	move $s1, $t0
-	b _logicalMerge2068
-_logicalMerge2068:
-	beqz $s1, _logicalFalse2070
-_logicalTrue2069:
-	sne $t2, $t3, $t6
+	b _logicalMerge20
+_logicalMerge20:
+	beqz $s1, _logicalFalse22
+_logicalTrue21:
+	sne $t2, $t4, $t8
 	move $s2, $t2
-	b _logicalMerge2071
-_logicalFalse2070:
+	b _logicalMerge23
+_logicalFalse22:
 	li $t0, 0
 	move $s2, $t0
-	b _logicalMerge2071
-_logicalMerge2071:
-	beqz $s2, _logicalFalse2073
-_logicalTrue2072:
-	sne $t2, $t3, $t7
+	b _logicalMerge23
+_logicalMerge23:
+	beqz $s2, _logicalFalse25
+_logicalTrue24:
+	sne $t2, $t4, $t6
 	move $s3, $t2
-	b _logicalMerge2074
-_logicalFalse2073:
+	b _logicalMerge26
+_logicalFalse25:
 	li $t0, 0
 	move $s3, $t0
-	b _logicalMerge2074
-_logicalMerge2074:
-	beqz $s3, _logicalFalse2076
-_logicalTrue2075:
+	b _logicalMerge26
+_logicalMerge26:
+	beqz $s3, _logicalFalse28
+_logicalTrue27:
 	lw $t1, global_50
-	sne $t2, $t3, $t1
+	sne $t2, $t4, $t1
 	move $s4, $t2
-	b _logicalMerge2077
-_logicalFalse2076:
+	b _logicalMerge29
+_logicalFalse28:
 	li $t0, 0
 	move $s4, $t0
-	b _logicalMerge2077
-_logicalMerge2077:
-	beqz $s4, _logicalFalse2079
-_logicalTrue2078:
+	b _logicalMerge29
+_logicalMerge29:
+	beqz $s4, _logicalFalse31
+_logicalTrue30:
 	lw $t1, global_51
-	sne $t2, $t3, $t1
+	sne $t2, $t4, $t1
 	move $s5, $t2
-	b _logicalMerge2080
-_logicalFalse2079:
+	b _logicalMerge32
+_logicalFalse31:
 	li $t0, 0
 	move $s5, $t0
-	b _logicalMerge2080
-_logicalMerge2080:
-	beqz $s5, _logicalFalse2082
-_logicalTrue2081:
+	b _logicalMerge32
+_logicalMerge32:
+	beqz $s5, _logicalFalse34
+_logicalTrue33:
 	lw $t1, global_52
-	sne $t2, $t3, $t1
+	sne $t2, $t4, $t1
 	move $s6, $t2
-	b _logicalMerge2083
-_logicalFalse2082:
+	b _logicalMerge35
+_logicalFalse34:
 	li $t0, 0
 	move $s6, $t0
-	b _logicalMerge2083
-_logicalMerge2083:
-	beqz $s6, _logicalFalse2085
-_logicalTrue2084:
+	b _logicalMerge35
+_logicalMerge35:
+	beqz $s6, _logicalFalse37
+_logicalTrue36:
 	lw $t1, global_53
-	sne $t2, $t3, $t1
+	sne $t2, $t4, $t1
 	move $s7, $t2
-	b _logicalMerge2086
-_logicalFalse2085:
+	b _logicalMerge38
+_logicalFalse37:
 	li $t0, 0
 	move $s7, $t0
-	b _logicalMerge2086
-_logicalMerge2086:
-	beqz $s7, _logicalFalse2088
-_logicalTrue2087:
-	sne $t2, $t5, $t8
+	b _logicalMerge38
+_logicalMerge38:
+	beqz $s7, _logicalFalse40
+_logicalTrue39:
+	sne $t2, $t7, $t3
 	move $t9, $t2
-	b _logicalMerge2089
-_logicalFalse2088:
+	b _logicalMerge41
+_logicalFalse40:
 	li $t0, 0
 	move $t9, $t0
-	b _logicalMerge2089
-_logicalMerge2089:
-	beqz $t9, _logicalFalse2091
-_logicalTrue2090:
-	sne $t2, $t5, $t4
+	b _logicalMerge41
+_logicalMerge41:
+	beqz $t9, _logicalFalse43
+_logicalTrue42:
+	sne $t2, $t7, $t5
 	move $k0, $t2
-	b _logicalMerge2092
-_logicalFalse2091:
+	b _logicalMerge44
+_logicalFalse43:
 	li $t0, 0
 	move $k0, $t0
-	b _logicalMerge2092
-_logicalMerge2092:
-	beqz $k0, _logicalFalse2094
-_logicalTrue2093:
-	sne $t2, $t5, $t6
+	b _logicalMerge44
+_logicalMerge44:
+	beqz $k0, _logicalFalse46
+_logicalTrue45:
+	sne $t2, $t7, $t8
 	move $k1, $t2
-	b _logicalMerge2095
-_logicalFalse2094:
+	b _logicalMerge47
+_logicalFalse46:
 	li $t0, 0
 	move $k1, $t0
-	b _logicalMerge2095
-_logicalMerge2095:
-	beqz $k1, _logicalFalse2097
-_logicalTrue2096:
-	sne $t2, $t5, $t7
+	b _logicalMerge47
+_logicalMerge47:
+	beqz $k1, _logicalFalse49
+_logicalTrue48:
+	sne $t2, $t7, $t6
 	move $gp, $t2
-	b _logicalMerge2098
-_logicalFalse2097:
+	b _logicalMerge50
+_logicalFalse49:
 	li $t0, 0
 	move $gp, $t0
-	b _logicalMerge2098
-_logicalMerge2098:
-	beqz $gp, _logicalFalse2100
-_logicalTrue2099:
+	b _logicalMerge50
+_logicalMerge50:
+	beqz $gp, _logicalFalse52
+_logicalTrue51:
 	lw $t1, global_50
-	sne $t2, $t5, $t1
+	sne $t2, $t7, $t1
 	move $fp, $t2
-	b _logicalMerge2101
-_logicalFalse2100:
+	b _logicalMerge53
+_logicalFalse52:
 	li $t0, 0
 	move $fp, $t0
-	b _logicalMerge2101
-_logicalMerge2101:
-	beqz $fp, _logicalFalse2103
-_logicalTrue2102:
+	b _logicalMerge53
+_logicalMerge53:
+	beqz $fp, _logicalFalse55
+_logicalTrue54:
+	lw $t1, global_51
+	sne $t2, $t7, $t1
+	move $t2, $t2
+	b _logicalMerge56
+_logicalFalse55:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge56
+_logicalMerge56:
+	beqz $t2, _logicalFalse58
+_logicalTrue57:
+	lw $t1, global_52
+	sne $t2, $t7, $t1
+	move $t2, $t2
+	b _logicalMerge59
+_logicalFalse58:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge59
+_logicalMerge59:
+	beqz $t2, _logicalFalse61
+_logicalTrue60:
+	lw $t1, global_53
+	sne $t2, $t7, $t1
+	move $t2, $t2
+	b _logicalMerge62
+_logicalFalse61:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge62
+_logicalMerge62:
+	beqz $t2, _logicalFalse64
+_logicalTrue63:
+	sne $t2, $t3, $t5
+	move $t2, $t2
+	b _logicalMerge65
+_logicalFalse64:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge65
+_logicalMerge65:
+	beqz $t2, _logicalFalse67
+_logicalTrue66:
+	sne $t2, $t3, $t8
+	move $t2, $t2
+	b _logicalMerge68
+_logicalFalse67:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge68
+_logicalMerge68:
+	beqz $t2, _logicalFalse70
+_logicalTrue69:
+	sne $t2, $t3, $t6
+	move $t2, $t2
+	b _logicalMerge71
+_logicalFalse70:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge71
+_logicalMerge71:
+	beqz $t2, _logicalFalse73
+_logicalTrue72:
+	lw $t1, global_50
+	sne $t2, $t3, $t1
+	move $t2, $t2
+	b _logicalMerge74
+_logicalFalse73:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge74
+_logicalMerge74:
+	beqz $t2, _logicalFalse76
+_logicalTrue75:
+	lw $t1, global_51
+	sne $t2, $t3, $t1
+	move $t2, $t2
+	b _logicalMerge77
+_logicalFalse76:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge77
+_logicalMerge77:
+	beqz $t2, _logicalFalse79
+_logicalTrue78:
+	lw $t1, global_52
+	sne $t2, $t3, $t1
+	move $t2, $t2
+	b _logicalMerge80
+_logicalFalse79:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge80
+_logicalMerge80:
+	beqz $t2, _logicalFalse82
+_logicalTrue81:
+	lw $t1, global_53
+	sne $t2, $t3, $t1
+	move $t2, $t2
+	b _logicalMerge83
+_logicalFalse82:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge83
+_logicalMerge83:
+	beqz $t2, _logicalFalse85
+_logicalTrue84:
+	sne $t2, $t5, $t8
+	move $t2, $t2
+	b _logicalMerge86
+_logicalFalse85:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge86
+_logicalMerge86:
+	beqz $t2, _logicalFalse88
+_logicalTrue87:
+	sne $t2, $t5, $t6
+	move $t2, $t2
+	b _logicalMerge89
+_logicalFalse88:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge89
+_logicalMerge89:
+	beqz $t2, _logicalFalse91
+_logicalTrue90:
+	lw $t1, global_50
+	sne $t2, $t5, $t1
+	move $t2, $t2
+	b _logicalMerge92
+_logicalFalse91:
+	li $t0, 0
+	move $t2, $t0
+	b _logicalMerge92
+_logicalMerge92:
+	beqz $t2, _logicalFalse94
+_logicalTrue93:
 	lw $t1, global_51
 	sne $t2, $t5, $t1
 	move $t2, $t2
-	b _logicalMerge2104
-_logicalFalse2103:
+	b _logicalMerge95
+_logicalFalse94:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2104
-_logicalMerge2104:
-	beqz $t2, _logicalFalse2106
-_logicalTrue2105:
+	b _logicalMerge95
+_logicalMerge95:
+	beqz $t2, _logicalFalse97
+_logicalTrue96:
 	lw $t1, global_52
 	sne $t2, $t5, $t1
 	move $t2, $t2
-	b _logicalMerge2107
-_logicalFalse2106:
+	b _logicalMerge98
+_logicalFalse97:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2107
-_logicalMerge2107:
-	beqz $t2, _logicalFalse2109
-_logicalTrue2108:
+	b _logicalMerge98
+_logicalMerge98:
+	beqz $t2, _logicalFalse100
+_logicalTrue99:
 	lw $t1, global_53
 	sne $t2, $t5, $t1
 	move $t2, $t2
-	b _logicalMerge2110
-_logicalFalse2109:
+	b _logicalMerge101
+_logicalFalse100:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2110
-_logicalMerge2110:
-	beqz $t2, _logicalFalse2112
-_logicalTrue2111:
-	sne $t2, $t8, $t4
-	move $t2, $t2
-	b _logicalMerge2113
-_logicalFalse2112:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2113
-_logicalMerge2113:
-	beqz $t2, _logicalFalse2115
-_logicalTrue2114:
+	b _logicalMerge101
+_logicalMerge101:
+	beqz $t2, _logicalFalse103
+_logicalTrue102:
 	sne $t2, $t8, $t6
 	move $t2, $t2
-	b _logicalMerge2116
-_logicalFalse2115:
+	b _logicalMerge104
+_logicalFalse103:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2116
-_logicalMerge2116:
-	beqz $t2, _logicalFalse2118
-_logicalTrue2117:
-	sne $t2, $t8, $t7
-	move $t2, $t2
-	b _logicalMerge2119
-_logicalFalse2118:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2119
-_logicalMerge2119:
-	beqz $t2, _logicalFalse2121
-_logicalTrue2120:
+	b _logicalMerge104
+_logicalMerge104:
+	beqz $t2, _logicalFalse106
+_logicalTrue105:
 	lw $t1, global_50
 	sne $t2, $t8, $t1
 	move $t2, $t2
-	b _logicalMerge2122
-_logicalFalse2121:
+	b _logicalMerge107
+_logicalFalse106:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2122
-_logicalMerge2122:
-	beqz $t2, _logicalFalse2124
-_logicalTrue2123:
+	b _logicalMerge107
+_logicalMerge107:
+	beqz $t2, _logicalFalse109
+_logicalTrue108:
 	lw $t1, global_51
 	sne $t2, $t8, $t1
 	move $t2, $t2
-	b _logicalMerge2125
-_logicalFalse2124:
+	b _logicalMerge110
+_logicalFalse109:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2125
-_logicalMerge2125:
-	beqz $t2, _logicalFalse2127
-_logicalTrue2126:
+	b _logicalMerge110
+_logicalMerge110:
+	beqz $t2, _logicalFalse112
+_logicalTrue111:
 	lw $t1, global_52
 	sne $t2, $t8, $t1
 	move $t2, $t2
-	b _logicalMerge2128
-_logicalFalse2127:
+	b _logicalMerge113
+_logicalFalse112:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2128
-_logicalMerge2128:
-	beqz $t2, _logicalFalse2130
-_logicalTrue2129:
+	b _logicalMerge113
+_logicalMerge113:
+	beqz $t2, _logicalFalse115
+_logicalTrue114:
 	lw $t1, global_53
 	sne $t2, $t8, $t1
 	move $t2, $t2
-	b _logicalMerge2131
-_logicalFalse2130:
+	b _logicalMerge116
+_logicalFalse115:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2131
-_logicalMerge2131:
-	beqz $t2, _logicalFalse2133
-_logicalTrue2132:
-	sne $t2, $t4, $t6
-	move $t2, $t2
-	b _logicalMerge2134
-_logicalFalse2133:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2134
-_logicalMerge2134:
-	beqz $t2, _logicalFalse2136
-_logicalTrue2135:
-	sne $t2, $t4, $t7
-	move $t2, $t2
-	b _logicalMerge2137
-_logicalFalse2136:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2137
-_logicalMerge2137:
-	beqz $t2, _logicalFalse2139
-_logicalTrue2138:
-	lw $t1, global_50
-	sne $t2, $t4, $t1
-	move $t2, $t2
-	b _logicalMerge2140
-_logicalFalse2139:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2140
-_logicalMerge2140:
-	beqz $t2, _logicalFalse2142
-_logicalTrue2141:
-	lw $t1, global_51
-	sne $t2, $t4, $t1
-	move $t2, $t2
-	b _logicalMerge2143
-_logicalFalse2142:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2143
-_logicalMerge2143:
-	beqz $t2, _logicalFalse2145
-_logicalTrue2144:
-	lw $t1, global_52
-	sne $t2, $t4, $t1
-	move $t2, $t2
-	b _logicalMerge2146
-_logicalFalse2145:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2146
-_logicalMerge2146:
-	beqz $t2, _logicalFalse2148
-_logicalTrue2147:
-	lw $t1, global_53
-	sne $t2, $t4, $t1
-	move $t2, $t2
-	b _logicalMerge2149
-_logicalFalse2148:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2149
-_logicalMerge2149:
-	beqz $t2, _logicalFalse2151
-_logicalTrue2150:
-	sne $t2, $t6, $t7
-	move $t2, $t2
-	b _logicalMerge2152
-_logicalFalse2151:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2152
-_logicalMerge2152:
-	beqz $t2, _logicalFalse2154
-_logicalTrue2153:
+	b _logicalMerge116
+_logicalMerge116:
+	beqz $t2, _logicalFalse118
+_logicalTrue117:
 	lw $t1, global_50
 	sne $t2, $t6, $t1
 	move $t2, $t2
-	b _logicalMerge2155
-_logicalFalse2154:
+	b _logicalMerge119
+_logicalFalse118:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2155
-_logicalMerge2155:
-	beqz $t2, _logicalFalse2157
-_logicalTrue2156:
+	b _logicalMerge119
+_logicalMerge119:
+	beqz $t2, _logicalFalse121
+_logicalTrue120:
 	lw $t1, global_51
 	sne $t2, $t6, $t1
 	move $t2, $t2
-	b _logicalMerge2158
-_logicalFalse2157:
+	b _logicalMerge122
+_logicalFalse121:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2158
-_logicalMerge2158:
-	beqz $t2, _logicalFalse2160
-_logicalTrue2159:
+	b _logicalMerge122
+_logicalMerge122:
+	beqz $t2, _logicalFalse124
+_logicalTrue123:
 	lw $t1, global_52
 	sne $t2, $t6, $t1
 	move $t2, $t2
-	b _logicalMerge2161
-_logicalFalse2160:
+	b _logicalMerge125
+_logicalFalse124:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2161
-_logicalMerge2161:
-	beqz $t2, _logicalFalse2163
-_logicalTrue2162:
+	b _logicalMerge125
+_logicalMerge125:
+	beqz $t2, _logicalFalse127
+_logicalTrue126:
 	lw $t1, global_53
 	sne $t2, $t6, $t1
 	move $t2, $t2
-	b _logicalMerge2164
-_logicalFalse2163:
+	b _logicalMerge128
+_logicalFalse127:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2164
-_logicalMerge2164:
-	beqz $t2, _logicalFalse2166
-_logicalTrue2165:
-	lw $t1, global_50
-	sne $t2, $t7, $t1
-	move $t2, $t2
-	b _logicalMerge2167
-_logicalFalse2166:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2167
-_logicalMerge2167:
-	beqz $t2, _logicalFalse2169
-_logicalTrue2168:
-	lw $t1, global_51
-	sne $t2, $t7, $t1
-	move $t2, $t2
-	b _logicalMerge2170
-_logicalFalse2169:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2170
-_logicalMerge2170:
-	beqz $t2, _logicalFalse2172
-_logicalTrue2171:
-	lw $t1, global_52
-	sne $t2, $t7, $t1
-	move $t2, $t2
-	b _logicalMerge2173
-_logicalFalse2172:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2173
-_logicalMerge2173:
-	beqz $t2, _logicalFalse2175
-_logicalTrue2174:
-	lw $t1, global_53
-	sne $t2, $t7, $t1
-	move $t2, $t2
-	b _logicalMerge2176
-_logicalFalse2175:
-	li $t0, 0
-	move $t2, $t0
-	b _logicalMerge2176
-_logicalMerge2176:
-	beqz $t2, _logicalFalse2178
-_logicalTrue2177:
+	b _logicalMerge128
+_logicalMerge128:
+	beqz $t2, _logicalFalse130
+_logicalTrue129:
 	lw $t0, global_51
 	lw $t1, global_52
 	sne $t2, $t0, $t1
 	move $t2, $t2
-	b _logicalMerge2179
-_logicalFalse2178:
+	b _logicalMerge131
+_logicalFalse130:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2179
-_logicalMerge2179:
-	beqz $t2, _logicalFalse2181
-_logicalTrue2180:
+	b _logicalMerge131
+_logicalMerge131:
+	beqz $t2, _logicalFalse133
+_logicalTrue132:
 	lw $t0, global_50
 	lw $t1, global_53
 	sne $t2, $t0, $t1
 	move $t2, $t2
-	b _logicalMerge2182
-_logicalFalse2181:
+	b _logicalMerge134
+_logicalFalse133:
 	li $t0, 0
 	move $t2, $t0
-	b _logicalMerge2182
-_logicalMerge2182:
-	beqz $t2, _alternative2061
-_consequence2060:
+	b _logicalMerge134
+_logicalMerge134:
+	beqz $t2, _alternative13
+_consequence12:
 	lw $t0, global_54
 	move $t2, $t0
 	lw $t0, global_54
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_54
-	b _OutOfIf2062
-_alternative2061:
-	b _OutOfIf2062
-_OutOfIf2062:
-	b _continueFor2047
-_continueFor2047:
-	move $t2, $t7
-	li $t1, 1
-	add $t7, $t7, $t1
-	b _ForLoop2046
-_OutOfFor2059:
-	b _continueFor2045
-_continueFor2045:
+	b _OutOfIf14
+_alternative13:
+	b _OutOfIf14
+_OutOfIf14:
+	b _continueFor69
+_continueFor69:
 	move $t2, $t6
 	li $t1, 1
 	add $t6, $t6, $t1
-	b _ForLoop2044
-_OutOfFor2057:
-	b _continueFor2043
-_continueFor2043:
-	move $t2, $t4
-	li $t1, 1
-	add $t4, $t4, $t1
-	b _ForLoop2042
-_OutOfFor2055:
-	b _continueFor2041
-_continueFor2041:
+	b _ForLoop68
+_OutOfFor11:
+	b _continueFor67
+_continueFor67:
 	move $t2, $t8
 	li $t1, 1
 	add $t8, $t8, $t1
-	b _ForLoop2040
-_OutOfFor2053:
-	b _continueFor2039
-_continueFor2039:
+	b _ForLoop66
+_OutOfFor9:
+	b _continueFor65
+_continueFor65:
 	move $t2, $t5
 	li $t1, 1
 	add $t5, $t5, $t1
-	b _ForLoop2038
-_OutOfFor2051:
-	b _continueFor2037
-_continueFor2037:
+	b _ForLoop64
+_OutOfFor7:
+	b _continueFor63
+_continueFor63:
 	move $t2, $t3
 	li $t1, 1
 	add $t3, $t3, $t1
-	b _ForLoop2036
-_OutOfFor2049:
+	b _ForLoop62
+_OutOfFor5:
+	b _continueFor61
+_continueFor61:
+	move $t2, $t7
+	li $t1, 1
+	add $t7, $t7, $t1
+	b _ForLoop60
+_OutOfFor3:
+	b _continueFor59
+_continueFor59:
+	move $t2, $t4
+	li $t1, 1
+	add $t4, $t4, $t1
+	b _ForLoop58
+_OutOfFor1:
 	lw $a0, global_54
 	jal func__toString
 	move $t2, $v0
@@ -1062,8 +1062,8 @@ _OutOfFor2049:
 	jal func__println
 	move $t2, $v0
 	li $v0, 0
-	b _EndOfFunctionDecl2035
-_EndOfFunctionDecl2035:
+	b _EndOfFunctionDecl57
+_EndOfFunctionDecl57:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

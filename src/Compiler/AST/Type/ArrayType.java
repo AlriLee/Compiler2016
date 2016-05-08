@@ -55,10 +55,6 @@ public class ArrayType implements Type {
         );
     }
 
-    public void changeSize(Expression as) {
-        arraySize = as;
-    }
-
     @Override
     public Type getMemberType(Symbol memberSymbol) {
         if (members.containsKey(memberSymbol)) {

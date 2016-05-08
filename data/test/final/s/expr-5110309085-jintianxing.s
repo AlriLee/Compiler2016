@@ -515,14 +515,14 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl444:
+_BeginOfFunctionDecl41:
 	li $t0, 1
 	sw $t0, global_52
 	li $t0, 1
 	sw $t0, global_53
 	li $t0, 1
 	sw $t0, global_54
-_WhileLoop446:
+_WhileLoop43:
 	li $t0, 1
 	li $t1, 29
 	sll $t1, $t0, $t1
@@ -532,8 +532,8 @@ _WhileLoop446:
 	slt $t1, $t0, $t1
 	sw $t1, 676($sp)
 	lw $t0, 676($sp)
-	beqz $t0, _logicalFalse450
-_logicalTrue449:
+	beqz $t0, _logicalFalse3
+_logicalTrue2:
 	li $t0, 1
 	li $t1, 29
 	sll $t1, $t0, $t1
@@ -547,14 +547,14 @@ _logicalTrue449:
 	sw $t1, 892($sp)
 	lw $t0, 892($sp)
 	move $s0, $t0
-	b _logicalMerge451
-_logicalFalse450:
+	b _logicalMerge4
+_logicalFalse3:
 	li $t0, 0
 	move $s0, $t0
-	b _logicalMerge451
-_logicalMerge451:
-	beqz $s0, _OutOfWhile448
-_WhileBody447:
+	b _logicalMerge4
+_logicalMerge4:
+	beqz $s0, _OutOfWhile1
+_WhileBody0:
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t2, $t0, $t1
@@ -2073,8 +2073,8 @@ _WhileBody447:
 	add $t2, $t2, $t3
 	sub $t2, $s1, $t2
 	sw $t2, global_54
-	b _WhileLoop446
-_OutOfWhile448:
+	b _WhileLoop43
+_OutOfWhile1:
 	lw $a0, global_52
 	jal func__toString
 	move $t2, $v0
@@ -2104,8 +2104,8 @@ _OutOfWhile448:
 	jal func__println
 	move $t2, $v0
 	li $v0, 0
-	b _EndOfFunctionDecl445
-_EndOfFunctionDecl445:
+	b _EndOfFunctionDecl42
+_EndOfFunctionDecl42:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

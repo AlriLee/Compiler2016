@@ -515,66 +515,66 @@ _tak:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl2221:
+_BeginOfFunctionDecl173:
 	lw $t0, 168($sp)
 	lw $t1, 164($sp)
 	slt $t1, $t0, $t1
-	sw $t1, 132($sp)
-	lw $t0, 132($sp)
-	beqz $t0, _alternative2226
-_consequence2225:
+	sw $t1, 148($sp)
+	lw $t0, 148($sp)
+	beqz $t0, _alternative1
+_consequence0:
 	lw $t0, 164($sp)
 	li $t1, 1
 	sub $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $t0, 156($sp)
+	sw $t1, 152($sp)
+	lw $t0, 152($sp)
 	sw $t0, -12($sp)
 	lw $t0, 168($sp)
 	sw $t0, -8($sp)
 	lw $t0, 172($sp)
 	sw $t0, -4($sp)
 	jal _tak
-	move $t2, $v0
-	lw $t0, 168($sp)
-	li $t1, 1
-	sub $t3, $t0, $t1
-	sw $t3, -12($sp)
-	lw $t0, 172($sp)
-	sw $t0, -8($sp)
-	lw $t0, 164($sp)
-	sw $t0, -4($sp)
-	jal _tak
-	sw $v0, 160($sp)
-	lw $t0, 172($sp)
-	li $t1, 1
-	sub $t3, $t0, $t1
-	sw $t3, -12($sp)
-	lw $t0, 164($sp)
-	sw $t0, -8($sp)
-	lw $t0, 168($sp)
-	sw $t0, -4($sp)
-	jal _tak
 	move $t3, $v0
+	lw $t0, 168($sp)
+	li $t1, 1
+	sub $t2, $t0, $t1
 	sw $t2, -12($sp)
-	lw $t0, 160($sp)
+	lw $t0, 172($sp)
 	sw $t0, -8($sp)
-	sw $t3, -4($sp)
+	lw $t0, 164($sp)
+	sw $t0, -4($sp)
 	jal _tak
-	sw $v0, 152($sp)
+	sw $v0, 156($sp)
+	lw $t0, 172($sp)
+	li $t1, 1
+	sub $t2, $t0, $t1
+	sw $t2, -12($sp)
+	lw $t0, 164($sp)
+	sw $t0, -8($sp)
+	lw $t0, 168($sp)
+	sw $t0, -4($sp)
+	jal _tak
+	move $t2, $v0
+	sw $t3, -12($sp)
+	lw $t0, 156($sp)
+	sw $t0, -8($sp)
+	sw $t2, -4($sp)
+	jal _tak
+	sw $v0, 140($sp)
 	li $t0, 1
-	lw $t1, 152($sp)
+	lw $t1, 140($sp)
 	add $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $v0, 148($sp)
-	b _EndOfFunctionDecl2222
-	b _OutOfIf2227
-_alternative2226:
+	sw $t1, 160($sp)
+	lw $v0, 160($sp)
+	b _EndOfFunctionDecl174
+	b _OutOfIf2
+_alternative1:
 	lw $v0, 172($sp)
-	b _EndOfFunctionDecl2222
-	b _OutOfIf2227
-_OutOfIf2227:
-	b _EndOfFunctionDecl2222
-_EndOfFunctionDecl2222:
+	b _EndOfFunctionDecl174
+	b _OutOfIf2
+_OutOfIf2:
+	b _EndOfFunctionDecl174
+_EndOfFunctionDecl174:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
@@ -621,32 +621,32 @@ main:
 	sw $gp, 112($sp)
 	sw $fp, 124($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl2223:
+_BeginOfFunctionDecl175:
 	jal func__getInt
-	sw $v0, 156($sp)
-	lw $t0, 156($sp)
+	sw $v0, 144($sp)
+	lw $t0, 144($sp)
 	move $t2, $t0
 	jal func__getInt
 	move $t3, $v0
-	sw $t3, 152($sp)
+	move $t4, $t3
 	jal func__getInt
-	move $t3, $v0
-	move $t3, $t3
+	sw $v0, 160($sp)
+	lw $t0, 160($sp)
+	move $t3, $t0
 	sw $t2, -12($sp)
-	lw $t0, 152($sp)
-	sw $t0, -8($sp)
+	sw $t4, -8($sp)
 	sw $t3, -4($sp)
 	jal _tak
-	sw $v0, 160($sp)
-	lw $a0, 160($sp)
+	sw $v0, 136($sp)
+	lw $a0, 136($sp)
 	jal func__toString
-	sw $v0, 128($sp)
-	lw $a0, 128($sp)
+	sw $v0, 156($sp)
+	lw $a0, 156($sp)
 	jal func__println
-	sw $v0, 132($sp)
+	sw $v0, 140($sp)
 	li $v0, 0
-	b _EndOfFunctionDecl2224
-_EndOfFunctionDecl2224:
+	b _EndOfFunctionDecl176
+_EndOfFunctionDecl176:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)

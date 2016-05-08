@@ -36,6 +36,7 @@ public class MIPSRegister {
     public static MIPSRegister sp = new MIPSRegister("$sp");
     public static MIPSRegister ra = new MIPSRegister("$ra");
     public static MIPSRegister fp = new MIPSRegister("$fp");
+
     public String registerName;
     public MIPSRegister(String rn) {
         registerName = rn;
