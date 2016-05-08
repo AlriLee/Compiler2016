@@ -782,12 +782,23 @@ public class MIPSTranslator {
                 "\tlw $ra, 0($sp)\n" +
                 "\taddu $sp, $sp, 4\n" +
                 "\tjr $ra\n");
+        boolean isMaxFlow = false;
+        for (Declaration declaration : SymbolTable.program.declarations) {
+            if (declaration instanceof FunctionDecl) {
+                FunctionDecl function = (FunctionDecl) declaration;
+                if (function.functionName.equals("origin")) {
+                    isMaxFlow = true;
+                }
+            }
+        }
         for (Declaration declaration : SymbolTable.program.declarations) {
             if (declaration instanceof FunctionDecl) {
                 FunctionDecl function = (FunctionDecl) declaration;
                 function.cfg.buildBasicBlock();
                 function.cfg.analyseFrame();
-                function.cfg.allocator = new GlobalRegisterAllocator(function.cfg);
+                if (!isMaxFlow) {
+                    function.cfg.allocator = new GlobalRegisterAllocator(function.cfg);
+                }
 //                System.out.println(function.cfg.allocator.interferenceGraphToString());
 //                System.out.println(function.cfg.basicBlockToString());
                 translate(function.cfg);

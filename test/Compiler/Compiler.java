@@ -26,7 +26,6 @@ public class Compiler {
                 parameters.add(new Object[]{"data/test/final/mx/" + file.getName()});
             }
         }
-
         return parameters;
     }
 
