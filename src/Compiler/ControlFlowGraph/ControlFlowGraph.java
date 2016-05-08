@@ -2,10 +2,7 @@ package Compiler.ControlFlowGraph;
 
 import Compiler.AST.Decl.FunctionDecl;
 import Compiler.ControlFlowGraph.BasicBlock.BasicBlock;
-import Compiler.ControlFlowGraph.Instruction.ConditionBranchInstruction;
-import Compiler.ControlFlowGraph.Instruction.Instruction;
-import Compiler.ControlFlowGraph.Instruction.JumpInstruction;
-import Compiler.ControlFlowGraph.Instruction.LabelInstruction;
+import Compiler.ControlFlowGraph.Instruction.*;
 import Compiler.Error.CompileError;
 import Compiler.GlobalRegisterAllocator.GlobalRegisterAllocator;
 import Compiler.GlobalRegisterAllocator.MIPSRegister;
@@ -24,12 +21,15 @@ public class ControlFlowGraph {
     public GlobalRegisterAllocator allocator;
     public Frame frame;
 
+    public boolean isLeafFunction; // does it call other functions?
+
     public ControlFlowGraph(FunctionDecl f) {
         instruction = new ArrayList<>();
         basicBlockList = new ArrayList<>();
         function = f;
         allocator = new GlobalRegisterAllocator(this);
         frame = new Frame();
+        isLeafFunction = true;
     }
 
     public void analyseFrame() {
@@ -72,6 +72,9 @@ public class ControlFlowGraph {
         boolean hasEnd = true;
         for (int i = 0; i < instruction.size(); ++i) {
             ins = instruction.get(i);
+            if (ins instanceof CallInstruction) { // if there is any callInstruction in this CFG, then the function of this CFG is a leafFunction
+                isLeafFunction = false;
+            }
             if (ins instanceof LabelInstruction) {
                 reachable = true;
                 if (!hasEnd) {

@@ -41,12 +41,15 @@ public class GlobalRegisterAllocator {
     public Map<Register, Integer> neighbour;
     public Set<Register> vertices;
 
+    public Set<MIPSRegister> mipsRegisterInUse;
+
     public GlobalRegisterAllocator(ControlFlowGraph cfg) {
         allocMapping = new HashMap<>();
         interferenceGraph = new HashMap<>();
 
         neighbour = new HashMap<>();
         vertices = new HashSet<>();
+        mipsRegisterInUse = new HashSet<>();
 
         for (BasicBlock basicBlock : cfg.basicBlockList) {
             liveNow = new HashSet<>();
@@ -136,6 +139,7 @@ public class GlobalRegisterAllocator {
             }
             if (!used) {
                 allocMapping.put(node, colour);
+                mipsRegisterInUse.add(colour);
                 return true;
             }
         }

@@ -116,10 +116,11 @@ public class MIPSTranslator {
         }
         output.printf("%s:\n", cfg.function.functionName.name);
         output.printf("\tsub %s, %s, %d\n", MIPSRegister.sp.registerName, MIPSRegister.sp.registerName, graph.frame.size);
-        for (MIPSRegister r : GlobalRegisterAllocator.physicalRegister) {
+        for (MIPSRegister r : allocator.mipsRegisterInUse) {
             output.printf("\tsw %s, %d(%s)\n", r.registerName, graph.frame.getOffset(r), MIPSRegister.sp.registerName);
         }
-        output.printf("\tsw %s, %d(%s)\n", MIPSRegister.ra.registerName, graph.frame.getOffset(MIPSRegister.ra), MIPSRegister.sp.registerName);
+        if (!graph.isLeafFunction)
+            output.printf("\tsw %s, %d(%s)\n", MIPSRegister.ra.registerName, graph.frame.getOffset(MIPSRegister.ra), MIPSRegister.sp.registerName);
         for (int l = 0; l < graph.instruction.size(); ++l) {
             Instruction instruction = graph.instruction.get(l);
             if (instruction instanceof LabelInstruction) {
@@ -283,8 +284,9 @@ public class MIPSTranslator {
                 store(i.dest, d);
             }
         }
-        output.printf("\tlw %s, %d(%s)\n", MIPSRegister.ra.registerName, graph.frame.getOffset(MIPSRegister.ra), MIPSRegister.sp.registerName);
-        for (MIPSRegister r : GlobalRegisterAllocator.physicalRegister) {
+        if (!graph.isLeafFunction)
+            output.printf("\tlw %s, %d(%s)\n", MIPSRegister.ra.registerName, graph.frame.getOffset(MIPSRegister.ra), MIPSRegister.sp.registerName);
+        for (MIPSRegister r : allocator.mipsRegisterInUse) {
             output.printf("\tlw %s, %d(%s)\n", r.registerName, graph.frame.getOffset(r), MIPSRegister.sp.registerName);
         }
         output.printf("\tadd %s, %s, %d\n", MIPSRegister.sp.registerName, MIPSRegister.sp.registerName, graph.frame.size);

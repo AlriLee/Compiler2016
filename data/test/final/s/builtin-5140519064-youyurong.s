@@ -494,127 +494,87 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 208
-	sw $t2, 40($sp)
-	sw $t3, 44($sp)
-	sw $t4, 48($sp)
-	sw $t5, 52($sp)
-	sw $t6, 56($sp)
-	sw $t7, 60($sp)
-	sw $s0, 64($sp)
-	sw $s1, 68($sp)
-	sw $s2, 72($sp)
-	sw $s3, 76($sp)
-	sw $s4, 80($sp)
-	sw $s5, 84($sp)
-	sw $s6, 88($sp)
-	sw $s7, 92($sp)
-	sw $t8, 96($sp)
-	sw $t9, 100($sp)
-	sw $k0, 104($sp)
-	sw $k1, 108($sp)
-	sw $gp, 112($sp)
-	sw $fp, 124($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl64:
 	li $t0, 3
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $t0, 148($sp)
+	sw $t1, 184($sp)
+	lw $t0, 184($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $a0, 148($sp)
+	sw $t1, 184($sp)
+	lw $a0, 184($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 128($sp)
+	sw $v0, 164($sp)
 	li $t0, 3
-	lw $t1, 128($sp)
+	lw $t1, 164($sp)
 	sw $t0, 0($t1)
-	lw $t0, 128($sp)
+	lw $t0, 164($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
-	sw $t0, 152($sp)
-	lw $t0, 152($sp)
-	sw $t0, 144($sp)
-	lw $a0, 144($sp)
+	sw $t1, 164($sp)
+	lw $t0, 164($sp)
+	sw $t0, 192($sp)
+	lw $t0, 192($sp)
+	sw $t0, 196($sp)
+	lw $a0, 196($sp)
 	jal func__size
-	sw $v0, 204($sp)
-	lw $a0, 204($sp)
-	jal func__toString
 	sw $v0, 168($sp)
-	la $a0, string_3
-	lw $a1, 168($sp)
-	jal func__stringConcatenate
-	sw $v0, 172($sp)
-	lw $a0, 172($sp)
-	la $a1, string_7
-	jal func__stringConcatenate
-	sw $v0, 176($sp)
-	lw $a0, 176($sp)
-	jal func__print
-	sw $v0, 192($sp)
-	la $a0, string_10
-	jal func__println
-	sw $v0, 180($sp)
-	la $a0, string_12
-	jal func__length
-	sw $v0, 156($sp)
-	lw $a0, 156($sp)
+	lw $a0, 168($sp)
 	jal func__toString
 	sw $v0, 160($sp)
-	lw $a0, 160($sp)
+	la $a0, string_3
+	lw $a1, 160($sp)
+	jal func__stringConcatenate
+	sw $v0, 140($sp)
+	lw $a0, 140($sp)
+	la $a1, string_7
+	jal func__stringConcatenate
+	sw $v0, 128($sp)
+	lw $a0, 128($sp)
 	jal func__print
+	sw $v0, 204($sp)
+	la $a0, string_10
+	jal func__println
+	sw $v0, 188($sp)
+	la $a0, string_12
+	jal func__length
 	sw $v0, 200($sp)
+	lw $a0, 200($sp)
+	jal func__toString
+	sw $v0, 144($sp)
+	lw $a0, 144($sp)
+	jal func__print
+	sw $v0, 176($sp)
 	jal func__getInt
-	sw $v0, 132($sp)
+	sw $v0, 152($sp)
 	la $a0, string_16
 	li $a1, 0
-	lw $a2, 132($sp)
+	lw $a2, 152($sp)
 	jal func__substring
+	sw $v0, 148($sp)
+	lw $a0, 148($sp)
+	jal func__println
+	sw $v0, 172($sp)
+	la $a0, string_20
+	jal func__parseInt
+	sw $v0, 132($sp)
+	lw $a0, 132($sp)
+	jal func__toString
 	sw $v0, 136($sp)
 	lw $a0, 136($sp)
 	jal func__println
-	sw $v0, 188($sp)
-	la $a0, string_20
-	jal func__parseInt
-	sw $v0, 196($sp)
-	lw $a0, 196($sp)
-	jal func__toString
-	sw $v0, 164($sp)
-	lw $a0, 164($sp)
-	jal func__println
-	sw $v0, 184($sp)
+	sw $v0, 156($sp)
 	la $a0, string_24
 	li $a1, 5
 	jal func__ord
-	sw $v0, 140($sp)
-	lw $v0, 140($sp)
+	sw $v0, 180($sp)
+	lw $v0, 180($sp)
 	b _EndOfFunctionDecl65
 _EndOfFunctionDecl65:
 	lw $ra, 120($sp)
-	lw $t2, 40($sp)
-	lw $t3, 44($sp)
-	lw $t4, 48($sp)
-	lw $t5, 52($sp)
-	lw $t6, 56($sp)
-	lw $t7, 60($sp)
-	lw $s0, 64($sp)
-	lw $s1, 68($sp)
-	lw $s2, 72($sp)
-	lw $s3, 76($sp)
-	lw $s4, 80($sp)
-	lw $s5, 84($sp)
-	lw $s6, 88($sp)
-	lw $s7, 92($sp)
-	lw $t8, 96($sp)
-	lw $t9, 100($sp)
-	lw $k0, 104($sp)
-	lw $k1, 108($sp)
-	lw $gp, 112($sp)
-	lw $fp, 124($sp)
 	add $sp, $sp, 208
 	jr $ra
 .data
