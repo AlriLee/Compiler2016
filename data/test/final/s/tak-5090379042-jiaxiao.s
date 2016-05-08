@@ -494,67 +494,88 @@ func__stringNeq:
 	jr $ra
 _tak:
 	sub $sp, $sp, 176
-	sw $t4, 48($sp)
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl173
 _BeginOfFunctionDecl173:
+#	$0 = slt $119 $118
 	lw $t0, 168($sp)
 	lw $t1, 164($sp)
 	slt $t2, $t0, $t1
+#	br $0 %consequence0 %alternative1
 	beqz $t2, _alternative1
+#	%consequence0
 _consequence0:
+#	$2 = sub $118 1
 	lw $t0, 164($sp)
 	li $t1, 1
 	sub $t2, $t0, $t1
+#	$3 = call tak $2 $119 $120
 	sw $t2, -12($sp)
 	lw $t0, 168($sp)
 	sw $t0, -8($sp)
 	lw $t0, 172($sp)
 	sw $t0, -4($sp)
 	jal _tak
-	move $t2, $v0
+	move $t3, $v0
+#	$4 = sub $119 1
 	lw $t0, 168($sp)
 	li $t1, 1
 	sub $t1, $t0, $t1
-	sw $t1, 152($sp)
-	lw $t0, 152($sp)
+	sw $t1, 144($sp)
+#	$5 = call tak $4 $120 $118
+	lw $t0, 144($sp)
 	sw $t0, -12($sp)
 	lw $t0, 172($sp)
 	sw $t0, -8($sp)
 	lw $t0, 164($sp)
 	sw $t0, -4($sp)
 	jal _tak
-	move $t4, $v0
+	sw $v0, 152($sp)
+#	$6 = sub $120 1
 	lw $t0, 172($sp)
 	li $t1, 1
-	sub $t3, $t0, $t1
-	sw $t3, -12($sp)
+	sub $t2, $t0, $t1
+#	$7 = call tak $6 $118 $119
+	sw $t2, -12($sp)
 	lw $t0, 164($sp)
 	sw $t0, -8($sp)
 	lw $t0, 168($sp)
 	sw $t0, -4($sp)
 	jal _tak
-	move $t3, $v0
-	sw $t2, -12($sp)
-	sw $t4, -8($sp)
-	sw $t3, -4($sp)
+	move $t2, $v0
+#	$8 = call tak $3 $5 $7
+	sw $t3, -12($sp)
+	lw $t0, 152($sp)
+	sw $t0, -8($sp)
+	sw $t2, -4($sp)
 	jal _tak
 	move $t2, $v0
+#	$1 = add 1 $8
 	li $t0, 1
 	add $t2, $t0, $t2
+#	ret $1
 	move $v0, $t2
+#	jump %EndOfFunctionDecl174
 	b _EndOfFunctionDecl174
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%alternative1
 _alternative1:
+#	ret $120
 	lw $v0, 172($sp)
+#	jump %EndOfFunctionDecl174
 	b _EndOfFunctionDecl174
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%OutOfIf2
 _OutOfIf2:
+#	jump %EndOfFunctionDecl174
 	b _EndOfFunctionDecl174
+#	%EndOfFunctionDecl174
 _EndOfFunctionDecl174:
 	lw $ra, 120($sp)
-	lw $t4, 48($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
 	add $sp, $sp, 176
@@ -564,29 +585,45 @@ main:
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl175
 _BeginOfFunctionDecl175:
+#	$10 = call getInt
 	jal func__getInt
 	move $t2, $v0
+#	$121 = move $10
 	move $t3, $t2
+#	$12 = call getInt
 	jal func__getInt
-	move $t2, $v0
-	sw $t2, 160($sp)
+	sw $v0, 152($sp)
+#	$122 = move $12
+	lw $t0, 152($sp)
+	move $t2, $t0
+#	$14 = call getInt
 	jal func__getInt
-	move $t2, $v0
-	sw $t3, -12($sp)
+	sw $v0, 160($sp)
+#	$123 = move $14
 	lw $t0, 160($sp)
-	sw $t0, -8($sp)
-	sw $t2, -4($sp)
+	sw $t0, 156($sp)
+#	$15 = call tak $121 $122 $123
+	sw $t3, -12($sp)
+	sw $t2, -8($sp)
+	lw $t0, 156($sp)
+	sw $t0, -4($sp)
 	jal _tak
 	move $t2, $v0
+#	$16 = call toString $15
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	nullcall println $16
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	ret 0
 	li $v0, 0
+#	jump %EndOfFunctionDecl176
 	b _EndOfFunctionDecl176
+#	%EndOfFunctionDecl176
 _EndOfFunctionDecl176:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)

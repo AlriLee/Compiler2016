@@ -500,166 +500,245 @@ main:
 	sw $t5, 52($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl41
 _BeginOfFunctionDecl41:
+#	$31 = move 15000
 	li $t0, 15000
 	sw $t0, global_31
+#	$2 = mul 15001 4
 	li $t0, 15001
 	li $t1, 4
 	mul $t2, $t0, $t1
+#	$2 = add $2 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$1 = alloc $2
 	move $a0, $t2
 	li $v0, 9
 	syscall
 	move $t2, $v0
+#	store 4 $1 15001 0
 	li $t0, 15001
 	sw $t0, 0($t2)
+#	$1 = add $1 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$0 = move $1
+#	$32 = move $0
 	sw $t2, global_32
+#	$33 = move 0
 	li $t0, 0
 	sw $t0, global_33
+#	$34 = move 1
 	li $t0, 1
-	sw $t0, 172($sp)
+	move $t2, $t0
+#	%ForLoop43
 _ForLoop43:
-	lw $t0, 172($sp)
+#	$4 = sle $34 $31
 	lw $t1, global_31
-	sle $t2, $t0, $t1
-	beqz $t2, _OutOfFor1
+	sle $t3, $t2, $t1
+#	br $4 %ForBody0 %OutOfFor1
+	beqz $t3, _OutOfFor1
+#	%ForBody0
 _ForBody0:
-	lw $t0, 172($sp)
+#	$6 = mul $34 4
 	li $t1, 4
-	mul $t2, $t0, $t1
+	mul $t3, $t2, $t1
+#	$7 = add $32 $6
 	lw $t0, global_32
-	add $t2, $t0, $t2
+	add $t3, $t0, $t3
+#	store 4 $7 1 0
 	li $t0, 1
-	sw $t0, 0($t2)
+	sw $t0, 0($t3)
+#	%continueFor44
 _continueFor44:
-	lw $t0, 172($sp)
-	move $t2, $t0
-	lw $t0, 172($sp)
+#	$8 = move $34
+	move $t3, $t2
+#	$34 = add $34 1
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 172($sp)
+	add $t2, $t2, $t1
+#	jump %ForLoop43
 	b _ForLoop43
+#	%OutOfFor1
 _OutOfFor1:
+#	$34 = move 2
 	li $t0, 2
-	sw $t0, 172($sp)
-_ForLoop45:
-	lw $t0, 172($sp)
-	lw $t1, global_31
-	sle $t2, $t0, $t1
-	beqz $t2, _OutOfFor3
-_ForBody2:
-	lw $t0, 172($sp)
-	li $t1, 4
-	mul $t2, $t0, $t1
-	lw $t0, global_32
-	add $t2, $t0, $t2
-	lw $t2, 0($t2)
-	beqz $t2, _alternative5
-_consequence4:
-	li $t0, 2
-	move $t3, $t0
-	lw $t0, 172($sp)
-	li $t1, 3
-	sgt $t2, $t0, $t1
-	beqz $t2, _logicalFalse11
-_logicalTrue10:
-	lw $t0, 172($sp)
-	li $t1, 2
-	sub $t2, $t0, $t1
-	li $t1, 4
-	mul $t2, $t2, $t1
-	lw $t0, global_32
-	add $t2, $t0, $t2
-	lw $t2, 0($t2)
-	move $t5, $t2
-	b _logicalMerge12
-_logicalFalse11:
-	li $t0, 0
-	move $t5, $t0
-	b _logicalMerge12
-_logicalMerge12:
-	beqz $t5, _alternative8
-_consequence7:
-	lw $t0, global_33
 	move $t2, $t0
+#	%ForLoop45
+_ForLoop45:
+#	$10 = sle $34 $31
+	lw $t1, global_31
+	sle $t1, $t2, $t1
+	sw $t1, 248($sp)
+#	br $10 %ForBody2 %OutOfFor3
+	lw $t0, 248($sp)
+	beqz $t0, _OutOfFor3
+#	%ForBody2
+_ForBody2:
+#	$11 = mul $34 4
+	li $t1, 4
+	mul $t3, $t2, $t1
+#	$12 = add $32 $11
+	lw $t0, global_32
+	add $t3, $t0, $t3
+#	$13 = load 4 $12 0
+	lw $t0, 0($t3)
+	sw $t0, 252($sp)
+#	br $13 %consequence4 %alternative5
+	lw $t0, 252($sp)
+	beqz $t0, _alternative5
+#	%consequence4
+_consequence4:
+#	$35 = move 2
+	li $t0, 2
+	move $t4, $t0
+#	$15 = sgt $34 3
+	li $t1, 3
+	sgt $t3, $t2, $t1
+#	br $15 %logicalTrue10 %logicalFalse11
+	beqz $t3, _logicalFalse11
+#	%logicalTrue10
+_logicalTrue10:
+#	$16 = sub $34 2
+	li $t1, 2
+	sub $t3, $t2, $t1
+#	$17 = mul $16 4
+	li $t1, 4
+	mul $t3, $t3, $t1
+#	$18 = add $32 $17
+	lw $t0, global_32
+	add $t3, $t0, $t3
+#	$19 = load 4 $18 0
+	lw $t3, 0($t3)
+#	$14 = move $19
+#	jump %logicalMerge12
+	b _logicalMerge12
+#	%logicalFalse11
+_logicalFalse11:
+#	$14 = move 0
+	li $t0, 0
+	move $t3, $t0
+#	jump %logicalMerge12
+	b _logicalMerge12
+#	%logicalMerge12
+_logicalMerge12:
+#	br $14 %consequence7 %alternative8
+	beqz $t3, _alternative8
+#	%consequence7
+_consequence7:
+#	$20 = move $33
+	lw $t0, global_33
+	move $t5, $t0
+#	$33 = add $33 1
 	lw $t0, global_33
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_33
-	lw $t0, 172($sp)
+#	$21 = sub $34 2
 	li $t1, 2
-	sub $t2, $t0, $t1
-	move $a0, $t2
+	sub $t5, $t2, $t1
+#	$22 = call toString $21
+	move $a0, $t5
 	jal func__toString
-	move $t2, $v0
-	move $a0, $t2
+	move $t5, $v0
+#	$24 = call stringConcatenate $22 " "
+	move $a0, $t5
 	la $a1, string_23
 	jal func__stringConcatenate
-	move $t2, $v0
-	lw $a0, 172($sp)
+	move $t5, $v0
+#	$25 = call toString $34
+	move $a0, $t2
 	jal func__toString
-	move $t4, $v0
-	move $a0, $t2
-	move $a1, $t4
+	move $t6, $v0
+#	$26 = call stringConcatenate $24 $25
+	move $a0, $t5
+	move $a1, $t6
 	jal func__stringConcatenate
-	move $t2, $v0
-	move $a0, $t2
+	move $t5, $v0
+#	nullcall println $26
+	move $a0, $t5
 	jal func__println
-	move $t2, $v0
+	move $t5, $v0
+#	jump %OutOfIf9
 	b _OutOfIf9
+#	%alternative8
 _alternative8:
+#	jump %OutOfIf9
 	b _OutOfIf9
+#	%OutOfIf9
 _OutOfIf9:
+#	jump %WhileLoop47
 	b _WhileLoop47
+#	%WhileLoop47
 _WhileLoop47:
-	lw $t0, 172($sp)
-	mul $t2, $t0, $t3
+#	$29 = mul $34 $35
+	mul $t5, $t2, $t4
+#	$28 = sle $29 $31
 	lw $t1, global_31
-	sle $t2, $t2, $t1
-	beqz $t2, _OutOfWhile14
+	sle $t5, $t5, $t1
+#	br $28 %WhileBody13 %OutOfWhile14
+	beqz $t5, _OutOfWhile14
+#	%WhileBody13
 _WhileBody13:
-	lw $t0, 172($sp)
-	mul $t2, $t0, $t3
+#	$31 = mul $34 $35
+	mul $t5, $t2, $t4
+#	$32 = mul $31 4
 	li $t1, 4
-	mul $t2, $t2, $t1
+	mul $t5, $t5, $t1
+#	$33 = add $32 $32
 	lw $t0, global_32
-	add $t2, $t0, $t2
+	add $t5, $t0, $t5
+#	store 4 $33 0 0
 	li $t0, 0
-	sw $t0, 0($t2)
-	move $t2, $t3
+	sw $t0, 0($t5)
+#	$34 = move $35
+	move $t5, $t4
+#	$35 = add $35 1
 	li $t1, 1
-	add $t3, $t3, $t1
+	add $t4, $t4, $t1
+#	jump %WhileLoop47
 	b _WhileLoop47
+#	%OutOfWhile14
 _OutOfWhile14:
+#	jump %OutOfIf6
 	b _OutOfIf6
+#	%alternative5
 _alternative5:
+#	jump %OutOfIf6
 	b _OutOfIf6
+#	%OutOfIf6
 _OutOfIf6:
+#	jump %continueFor46
 	b _continueFor46
+#	%continueFor46
 _continueFor46:
-	lw $t0, 172($sp)
-	move $t2, $t0
-	lw $t0, 172($sp)
+#	$35 = move $34
+	move $t5, $t2
+#	$34 = add $34 1
 	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 172($sp)
+	add $t2, $t2, $t1
+#	jump %ForLoop45
 	b _ForLoop45
+#	%OutOfFor3
 _OutOfFor3:
+#	$37 = call toString $33
 	lw $a0, global_33
 	jal func__toString
-	move $t2, $v0
+	move $t5, $v0
+#	$38 = call stringConcatenate "Total: " $37
 	la $a0, string_36
-	move $a1, $t2
+	move $a1, $t5
 	jal func__stringConcatenate
-	move $t2, $v0
-	move $a0, $t2
+	move $t5, $v0
+#	nullcall println $38
+	move $a0, $t5
 	jal func__println
-	move $t2, $v0
+	move $t5, $v0
+#	ret 0
 	li $v0, 0
+#	jump %EndOfFunctionDecl42
 	b _EndOfFunctionDecl42
+#	%EndOfFunctionDecl42
 _EndOfFunctionDecl42:
 	lw $ra, 120($sp)
 	lw $t4, 48($sp)

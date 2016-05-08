@@ -515,540 +515,971 @@ main:
 	sw $s4, 80($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl56
 _BeginOfFunctionDecl56:
+#	$50 = move 99
 	li $t0, 99
 	sw $t0, global_50
+#	$51 = move 100
 	li $t0, 100
 	sw $t0, global_51
+#	$52 = move 101
 	li $t0, 101
 	sw $t0, global_52
+#	$53 = move 102
 	li $t0, 102
 	sw $t0, global_53
+#	$54 = move 0
 	li $t0, 0
 	sw $t0, global_54
+#	$1 = call getInt
 	jal func__getInt
 	move $t2, $v0
+#	$49 = move $1
 	sw $t2, global_49
-	li $t0, 1
-	move $t2, $t0
-_ForLoop58:
-	lw $t1, global_49
-	sle $t3, $t2, $t1
-	beqz $t3, _OutOfFor1
-_ForBody0:
-	li $t0, 1
-	move $t5, $t0
-_ForLoop60:
-	lw $t1, global_49
-	sle $t3, $t5, $t1
-	beqz $t3, _OutOfFor3
-_ForBody2:
-	li $t0, 1
-	sw $t0, 296($sp)
-_ForLoop62:
-	lw $t0, 296($sp)
-	lw $t1, global_49
-	sle $t3, $t0, $t1
-	beqz $t3, _OutOfFor5
-_ForBody4:
+#	$55 = move 1
 	li $t0, 1
 	move $t4, $t0
-_ForLoop64:
+#	%ForLoop58
+_ForLoop58:
+#	$3 = sle $55 $49
 	lw $t1, global_49
-	sle $t3, $t4, $t1
-	beqz $t3, _OutOfFor7
-_ForBody6:
+	sle $t2, $t4, $t1
+#	br $3 %ForBody0 %OutOfFor1
+	beqz $t2, _OutOfFor1
+#	%ForBody0
+_ForBody0:
+#	$56 = move 1
 	li $t0, 1
-	move $t7, $t0
-_ForLoop66:
+	move $s5, $t0
+#	%ForLoop60
+_ForLoop60:
+#	$5 = sle $56 $49
 	lw $t1, global_49
-	sle $t3, $t7, $t1
-	beqz $t3, _OutOfFor9
-_ForBody8:
+	sle $t2, $s5, $t1
+#	br $5 %ForBody2 %OutOfFor3
+	beqz $t2, _OutOfFor3
+#	%ForBody2
+_ForBody2:
+#	$57 = move 1
+	li $t0, 1
+	move $t3, $t0
+#	%ForLoop62
+_ForLoop62:
+#	$7 = sle $57 $49
+	lw $t1, global_49
+	sle $t2, $t3, $t1
+#	br $7 %ForBody4 %OutOfFor5
+	beqz $t2, _OutOfFor5
+#	%ForBody4
+_ForBody4:
+#	$58 = move 1
+	li $t0, 1
+	move $t5, $t0
+#	%ForLoop64
+_ForLoop64:
+#	$9 = sle $58 $49
+	lw $t1, global_49
+	sle $t2, $t5, $t1
+#	br $9 %ForBody6 %OutOfFor7
+	beqz $t2, _OutOfFor7
+#	%ForBody6
+_ForBody6:
+#	$59 = move 1
 	li $t0, 1
 	move $t6, $t0
-_ForLoop68:
+#	%ForLoop66
+_ForLoop66:
+#	$11 = sle $59 $49
 	lw $t1, global_49
-	sle $t3, $t6, $t1
-	beqz $t3, _OutOfFor11
+	sle $t2, $t6, $t1
+#	br $11 %ForBody8 %OutOfFor9
+	beqz $t2, _OutOfFor9
+#	%ForBody8
+_ForBody8:
+#	$60 = move 1
+	li $t0, 1
+	move $t7, $t0
+#	%ForLoop68
+_ForLoop68:
+#	$13 = sle $60 $49
+	lw $t1, global_49
+	sle $t2, $t7, $t1
+#	br $13 %ForBody10 %OutOfFor11
+	beqz $t2, _OutOfFor11
+#	%ForBody10
 _ForBody10:
-	sne $t3, $t2, $t5
-	beqz $t3, _logicalFalse16
+#	$54 = sne $55 $56
+	sne $t2, $t4, $s5
+#	br $54 %logicalTrue15 %logicalFalse16
+	beqz $t2, _logicalFalse16
+#	%logicalTrue15
 _logicalTrue15:
-	lw $t1, 296($sp)
-	sne $t3, $t2, $t1
-	move $s0, $t3
+#	$55 = sne $55 $57
+	sne $t2, $t4, $t3
+#	$53 = move $55
+	move $s0, $t2
+#	jump %logicalMerge17
 	b _logicalMerge17
+#	%logicalFalse16
 _logicalFalse16:
+#	$53 = move 0
 	li $t0, 0
 	move $s0, $t0
+#	jump %logicalMerge17
 	b _logicalMerge17
+#	%logicalMerge17
 _logicalMerge17:
+#	br $53 %logicalTrue18 %logicalFalse19
 	beqz $s0, _logicalFalse19
+#	%logicalTrue18
 _logicalTrue18:
-	sne $t3, $t2, $t4
-	move $s1, $t3
+#	$56 = sne $55 $58
+	sne $t2, $t4, $t5
+#	$52 = move $56
+	move $s1, $t2
+#	jump %logicalMerge20
 	b _logicalMerge20
+#	%logicalFalse19
 _logicalFalse19:
+#	$52 = move 0
 	li $t0, 0
 	move $s1, $t0
+#	jump %logicalMerge20
 	b _logicalMerge20
+#	%logicalMerge20
 _logicalMerge20:
+#	br $52 %logicalTrue21 %logicalFalse22
 	beqz $s1, _logicalFalse22
+#	%logicalTrue21
 _logicalTrue21:
-	sne $t3, $t2, $t7
-	move $s2, $t3
+#	$57 = sne $55 $59
+	sne $t2, $t4, $t6
+#	$51 = move $57
+	move $s2, $t2
+#	jump %logicalMerge23
 	b _logicalMerge23
+#	%logicalFalse22
 _logicalFalse22:
+#	$51 = move 0
 	li $t0, 0
 	move $s2, $t0
+#	jump %logicalMerge23
 	b _logicalMerge23
+#	%logicalMerge23
 _logicalMerge23:
+#	br $51 %logicalTrue24 %logicalFalse25
 	beqz $s2, _logicalFalse25
+#	%logicalTrue24
 _logicalTrue24:
-	sne $t3, $t2, $t6
-	move $s3, $t3
+#	$58 = sne $55 $60
+	sne $t2, $t4, $t7
+#	$50 = move $58
+	move $s3, $t2
+#	jump %logicalMerge26
 	b _logicalMerge26
+#	%logicalFalse25
 _logicalFalse25:
+#	$50 = move 0
 	li $t0, 0
 	move $s3, $t0
+#	jump %logicalMerge26
 	b _logicalMerge26
+#	%logicalMerge26
 _logicalMerge26:
+#	br $50 %logicalTrue27 %logicalFalse28
 	beqz $s3, _logicalFalse28
+#	%logicalTrue27
 _logicalTrue27:
+#	$59 = sne $55 $50
 	lw $t1, global_50
-	sne $t3, $t2, $t1
-	move $s4, $t3
+	sne $t2, $t4, $t1
+#	$49 = move $59
+	move $s4, $t2
+#	jump %logicalMerge29
 	b _logicalMerge29
+#	%logicalFalse28
 _logicalFalse28:
+#	$49 = move 0
 	li $t0, 0
 	move $s4, $t0
+#	jump %logicalMerge29
 	b _logicalMerge29
+#	%logicalMerge29
 _logicalMerge29:
+#	br $49 %logicalTrue30 %logicalFalse31
 	beqz $s4, _logicalFalse31
+#	%logicalTrue30
 _logicalTrue30:
+#	$60 = sne $55 $51
 	lw $t1, global_51
-	sne $t3, $t2, $t1
-	move $s5, $t3
+	sne $t2, $t4, $t1
+#	$48 = move $60
+#	jump %logicalMerge32
 	b _logicalMerge32
+#	%logicalFalse31
 _logicalFalse31:
+#	$48 = move 0
 	li $t0, 0
-	move $s5, $t0
+	move $t2, $t0
+#	jump %logicalMerge32
 	b _logicalMerge32
+#	%logicalMerge32
 _logicalMerge32:
-	beqz $s5, _logicalFalse34
+#	br $48 %logicalTrue33 %logicalFalse34
+	beqz $t2, _logicalFalse34
+#	%logicalTrue33
 _logicalTrue33:
+#	$61 = sne $55 $52
 	lw $t1, global_52
-	sne $t3, $t2, $t1
-	move $s6, $t3
+	sne $s6, $t4, $t1
+#	$47 = move $61
+	move $s7, $s6
+#	jump %logicalMerge35
 	b _logicalMerge35
+#	%logicalFalse34
 _logicalFalse34:
-	li $t0, 0
-	move $s6, $t0
-	b _logicalMerge35
-_logicalMerge35:
-	beqz $s6, _logicalFalse37
-_logicalTrue36:
-	lw $t1, global_53
-	sne $t3, $t2, $t1
-	move $s7, $t3
-	b _logicalMerge38
-_logicalFalse37:
+#	$47 = move 0
 	li $t0, 0
 	move $s7, $t0
+#	jump %logicalMerge35
+	b _logicalMerge35
+#	%logicalMerge35
+_logicalMerge35:
+#	br $47 %logicalTrue36 %logicalFalse37
+	beqz $s7, _logicalFalse37
+#	%logicalTrue36
+_logicalTrue36:
+#	$62 = sne $55 $53
+	lw $t1, global_53
+	sne $s6, $t4, $t1
+#	$46 = move $62
+	move $t8, $s6
+#	jump %logicalMerge38
 	b _logicalMerge38
-_logicalMerge38:
-	beqz $s7, _logicalFalse40
-_logicalTrue39:
-	lw $t1, 296($sp)
-	sne $t3, $t5, $t1
-	move $t8, $t3
-	b _logicalMerge41
-_logicalFalse40:
+#	%logicalFalse37
+_logicalFalse37:
+#	$46 = move 0
 	li $t0, 0
 	move $t8, $t0
+#	jump %logicalMerge38
+	b _logicalMerge38
+#	%logicalMerge38
+_logicalMerge38:
+#	br $46 %logicalTrue39 %logicalFalse40
+	beqz $t8, _logicalFalse40
+#	%logicalTrue39
+_logicalTrue39:
+#	$63 = sne $56 $57
+	sne $s6, $s5, $t3
+#	$45 = move $63
+#	jump %logicalMerge41
 	b _logicalMerge41
+#	%logicalFalse40
+_logicalFalse40:
+#	$45 = move 0
+	li $t0, 0
+	move $s6, $t0
+#	jump %logicalMerge41
+	b _logicalMerge41
+#	%logicalMerge41
 _logicalMerge41:
-	beqz $t8, _logicalFalse43
+#	br $45 %logicalTrue42 %logicalFalse43
+	beqz $s6, _logicalFalse43
+#	%logicalTrue42
 _logicalTrue42:
-	sne $t3, $t5, $t4
-	move $t9, $t3
+#	$64 = sne $56 $58
+	sne $t9, $s5, $t5
+#	$44 = move $64
+#	jump %logicalMerge44
 	b _logicalMerge44
+#	%logicalFalse43
 _logicalFalse43:
+#	$44 = move 0
 	li $t0, 0
 	move $t9, $t0
+#	jump %logicalMerge44
 	b _logicalMerge44
+#	%logicalMerge44
 _logicalMerge44:
+#	br $44 %logicalTrue45 %logicalFalse46
 	beqz $t9, _logicalFalse46
+#	%logicalTrue45
 _logicalTrue45:
-	sne $t3, $t5, $t7
-	move $k0, $t3
+#	$65 = sne $56 $59
+	sne $k0, $s5, $t6
+#	$43 = move $65
+	move $k1, $k0
+#	jump %logicalMerge47
 	b _logicalMerge47
+#	%logicalFalse46
 _logicalFalse46:
-	li $t0, 0
-	move $k0, $t0
-	b _logicalMerge47
-_logicalMerge47:
-	beqz $k0, _logicalFalse49
-_logicalTrue48:
-	sne $t3, $t5, $t6
-	move $k1, $t3
-	b _logicalMerge50
-_logicalFalse49:
+#	$43 = move 0
 	li $t0, 0
 	move $k1, $t0
+#	jump %logicalMerge47
+	b _logicalMerge47
+#	%logicalMerge47
+_logicalMerge47:
+#	br $43 %logicalTrue48 %logicalFalse49
+	beqz $k1, _logicalFalse49
+#	%logicalTrue48
+_logicalTrue48:
+#	$66 = sne $56 $60
+	sne $k0, $s5, $t7
+#	$42 = move $66
+	move $gp, $k0
+#	jump %logicalMerge50
 	b _logicalMerge50
-_logicalMerge50:
-	beqz $k1, _logicalFalse52
-_logicalTrue51:
-	lw $t1, global_50
-	sne $t3, $t5, $t1
-	move $gp, $t3
-	b _logicalMerge53
-_logicalFalse52:
+#	%logicalFalse49
+_logicalFalse49:
+#	$42 = move 0
 	li $t0, 0
 	move $gp, $t0
+#	jump %logicalMerge50
+	b _logicalMerge50
+#	%logicalMerge50
+_logicalMerge50:
+#	br $42 %logicalTrue51 %logicalFalse52
+	beqz $gp, _logicalFalse52
+#	%logicalTrue51
+_logicalTrue51:
+#	$67 = sne $56 $50
+	lw $t1, global_50
+	sne $k0, $s5, $t1
+#	$41 = move $67
+	move $fp, $k0
+#	jump %logicalMerge53
 	b _logicalMerge53
-_logicalMerge53:
-	beqz $gp, _logicalFalse55
-_logicalTrue54:
-	lw $t1, global_51
-	sne $t3, $t5, $t1
-	move $fp, $t3
-	b _logicalMerge56
-_logicalFalse55:
+#	%logicalFalse52
+_logicalFalse52:
+#	$41 = move 0
 	li $t0, 0
 	move $fp, $t0
+#	jump %logicalMerge53
+	b _logicalMerge53
+#	%logicalMerge53
+_logicalMerge53:
+#	br $41 %logicalTrue54 %logicalFalse55
+	beqz $fp, _logicalFalse55
+#	%logicalTrue54
+_logicalTrue54:
+#	$68 = sne $56 $51
+	lw $t1, global_51
+	sne $k0, $s5, $t1
+#	$40 = move $68
+#	jump %logicalMerge56
 	b _logicalMerge56
+#	%logicalFalse55
+_logicalFalse55:
+#	$40 = move 0
+	li $t0, 0
+	move $k0, $t0
+#	jump %logicalMerge56
+	b _logicalMerge56
+#	%logicalMerge56
 _logicalMerge56:
-	beqz $fp, _logicalFalse58
+#	br $40 %logicalTrue57 %logicalFalse58
+	beqz $k0, _logicalFalse58
+#	%logicalTrue57
 _logicalTrue57:
+#	$69 = sne $56 $52
 	lw $t1, global_52
-	sne $t3, $t5, $t1
+	sne $k0, $s5, $t1
+#	$39 = move $69
+#	jump %logicalMerge59
 	b _logicalMerge59
+#	%logicalFalse58
 _logicalFalse58:
+#	$39 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge59
 	b _logicalMerge59
+#	%logicalMerge59
 _logicalMerge59:
-	beqz $t3, _logicalFalse61
+#	br $39 %logicalTrue60 %logicalFalse61
+	beqz $k0, _logicalFalse61
+#	%logicalTrue60
 _logicalTrue60:
+#	$70 = sne $56 $53
 	lw $t1, global_53
-	sne $t3, $t5, $t1
+	sne $k0, $s5, $t1
+#	$38 = move $70
+#	jump %logicalMerge62
 	b _logicalMerge62
+#	%logicalFalse61
 _logicalFalse61:
+#	$38 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge62
 	b _logicalMerge62
+#	%logicalMerge62
 _logicalMerge62:
-	beqz $t3, _logicalFalse64
+#	br $38 %logicalTrue63 %logicalFalse64
+	beqz $k0, _logicalFalse64
+#	%logicalTrue63
 _logicalTrue63:
-	lw $t0, 296($sp)
-	sne $t3, $t0, $t4
+#	$71 = sne $57 $58
+	sne $k0, $t3, $t5
+#	$37 = move $71
+#	jump %logicalMerge65
 	b _logicalMerge65
+#	%logicalFalse64
 _logicalFalse64:
+#	$37 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge65
 	b _logicalMerge65
+#	%logicalMerge65
 _logicalMerge65:
-	beqz $t3, _logicalFalse67
+#	br $37 %logicalTrue66 %logicalFalse67
+	beqz $k0, _logicalFalse67
+#	%logicalTrue66
 _logicalTrue66:
-	lw $t0, 296($sp)
-	sne $t3, $t0, $t7
+#	$72 = sne $57 $59
+	sne $k0, $t3, $t6
+#	$36 = move $72
+#	jump %logicalMerge68
 	b _logicalMerge68
+#	%logicalFalse67
 _logicalFalse67:
+#	$36 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge68
 	b _logicalMerge68
+#	%logicalMerge68
 _logicalMerge68:
-	beqz $t3, _logicalFalse70
+#	br $36 %logicalTrue69 %logicalFalse70
+	beqz $k0, _logicalFalse70
+#	%logicalTrue69
 _logicalTrue69:
-	lw $t0, 296($sp)
-	sne $t3, $t0, $t6
+#	$73 = sne $57 $60
+	sne $k0, $t3, $t7
+#	$35 = move $73
+#	jump %logicalMerge71
 	b _logicalMerge71
+#	%logicalFalse70
 _logicalFalse70:
+#	$35 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge71
 	b _logicalMerge71
+#	%logicalMerge71
 _logicalMerge71:
-	beqz $t3, _logicalFalse73
+#	br $35 %logicalTrue72 %logicalFalse73
+	beqz $k0, _logicalFalse73
+#	%logicalTrue72
 _logicalTrue72:
-	lw $t0, 296($sp)
+#	$74 = sne $57 $50
 	lw $t1, global_50
-	sne $t3, $t0, $t1
+	sne $k0, $t3, $t1
+#	$34 = move $74
+#	jump %logicalMerge74
 	b _logicalMerge74
+#	%logicalFalse73
 _logicalFalse73:
+#	$34 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge74
 	b _logicalMerge74
+#	%logicalMerge74
 _logicalMerge74:
-	beqz $t3, _logicalFalse76
+#	br $34 %logicalTrue75 %logicalFalse76
+	beqz $k0, _logicalFalse76
+#	%logicalTrue75
 _logicalTrue75:
-	lw $t0, 296($sp)
+#	$75 = sne $57 $51
 	lw $t1, global_51
-	sne $t3, $t0, $t1
+	sne $k0, $t3, $t1
+#	$33 = move $75
+#	jump %logicalMerge77
 	b _logicalMerge77
+#	%logicalFalse76
 _logicalFalse76:
+#	$33 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge77
 	b _logicalMerge77
+#	%logicalMerge77
 _logicalMerge77:
-	beqz $t3, _logicalFalse79
+#	br $33 %logicalTrue78 %logicalFalse79
+	beqz $k0, _logicalFalse79
+#	%logicalTrue78
 _logicalTrue78:
-	lw $t0, 296($sp)
+#	$76 = sne $57 $52
 	lw $t1, global_52
-	sne $t3, $t0, $t1
+	sne $k0, $t3, $t1
+#	$32 = move $76
+#	jump %logicalMerge80
 	b _logicalMerge80
+#	%logicalFalse79
 _logicalFalse79:
+#	$32 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge80
 	b _logicalMerge80
+#	%logicalMerge80
 _logicalMerge80:
-	beqz $t3, _logicalFalse82
+#	br $32 %logicalTrue81 %logicalFalse82
+	beqz $k0, _logicalFalse82
+#	%logicalTrue81
 _logicalTrue81:
-	lw $t0, 296($sp)
+#	$77 = sne $57 $53
 	lw $t1, global_53
-	sne $t3, $t0, $t1
+	sne $k0, $t3, $t1
+#	$31 = move $77
+#	jump %logicalMerge83
 	b _logicalMerge83
+#	%logicalFalse82
 _logicalFalse82:
+#	$31 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge83
 	b _logicalMerge83
+#	%logicalMerge83
 _logicalMerge83:
-	beqz $t3, _logicalFalse85
+#	br $31 %logicalTrue84 %logicalFalse85
+	beqz $k0, _logicalFalse85
+#	%logicalTrue84
 _logicalTrue84:
-	sne $t3, $t4, $t7
+#	$78 = sne $58 $59
+	sne $k0, $t5, $t6
+#	$30 = move $78
+#	jump %logicalMerge86
 	b _logicalMerge86
+#	%logicalFalse85
 _logicalFalse85:
+#	$30 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge86
 	b _logicalMerge86
+#	%logicalMerge86
 _logicalMerge86:
-	beqz $t3, _logicalFalse88
+#	br $30 %logicalTrue87 %logicalFalse88
+	beqz $k0, _logicalFalse88
+#	%logicalTrue87
 _logicalTrue87:
-	sne $t3, $t4, $t6
+#	$79 = sne $58 $60
+	sne $k0, $t5, $t7
+#	$29 = move $79
+#	jump %logicalMerge89
 	b _logicalMerge89
+#	%logicalFalse88
 _logicalFalse88:
+#	$29 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge89
 	b _logicalMerge89
+#	%logicalMerge89
 _logicalMerge89:
-	beqz $t3, _logicalFalse91
+#	br $29 %logicalTrue90 %logicalFalse91
+	beqz $k0, _logicalFalse91
+#	%logicalTrue90
 _logicalTrue90:
+#	$80 = sne $58 $50
 	lw $t1, global_50
-	sne $t3, $t4, $t1
+	sne $k0, $t5, $t1
+#	$28 = move $80
+#	jump %logicalMerge92
 	b _logicalMerge92
+#	%logicalFalse91
 _logicalFalse91:
+#	$28 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge92
 	b _logicalMerge92
+#	%logicalMerge92
 _logicalMerge92:
-	beqz $t3, _logicalFalse94
+#	br $28 %logicalTrue93 %logicalFalse94
+	beqz $k0, _logicalFalse94
+#	%logicalTrue93
 _logicalTrue93:
+#	$81 = sne $58 $51
 	lw $t1, global_51
-	sne $t3, $t4, $t1
+	sne $k0, $t5, $t1
+#	$27 = move $81
+#	jump %logicalMerge95
 	b _logicalMerge95
+#	%logicalFalse94
 _logicalFalse94:
+#	$27 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge95
 	b _logicalMerge95
+#	%logicalMerge95
 _logicalMerge95:
-	beqz $t3, _logicalFalse97
+#	br $27 %logicalTrue96 %logicalFalse97
+	beqz $k0, _logicalFalse97
+#	%logicalTrue96
 _logicalTrue96:
+#	$82 = sne $58 $52
 	lw $t1, global_52
-	sne $t3, $t4, $t1
+	sne $k0, $t5, $t1
+#	$26 = move $82
+#	jump %logicalMerge98
 	b _logicalMerge98
+#	%logicalFalse97
 _logicalFalse97:
+#	$26 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge98
 	b _logicalMerge98
+#	%logicalMerge98
 _logicalMerge98:
-	beqz $t3, _logicalFalse100
+#	br $26 %logicalTrue99 %logicalFalse100
+	beqz $k0, _logicalFalse100
+#	%logicalTrue99
 _logicalTrue99:
+#	$83 = sne $58 $53
 	lw $t1, global_53
-	sne $t3, $t4, $t1
+	sne $k0, $t5, $t1
+#	$25 = move $83
+#	jump %logicalMerge101
 	b _logicalMerge101
+#	%logicalFalse100
 _logicalFalse100:
+#	$25 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge101
 	b _logicalMerge101
+#	%logicalMerge101
 _logicalMerge101:
-	beqz $t3, _logicalFalse103
+#	br $25 %logicalTrue102 %logicalFalse103
+	beqz $k0, _logicalFalse103
+#	%logicalTrue102
 _logicalTrue102:
-	sne $t3, $t7, $t6
+#	$84 = sne $59 $60
+	sne $k0, $t6, $t7
+#	$24 = move $84
+#	jump %logicalMerge104
 	b _logicalMerge104
+#	%logicalFalse103
 _logicalFalse103:
+#	$24 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge104
 	b _logicalMerge104
+#	%logicalMerge104
 _logicalMerge104:
-	beqz $t3, _logicalFalse106
+#	br $24 %logicalTrue105 %logicalFalse106
+	beqz $k0, _logicalFalse106
+#	%logicalTrue105
 _logicalTrue105:
+#	$85 = sne $59 $50
 	lw $t1, global_50
-	sne $t3, $t7, $t1
+	sne $k0, $t6, $t1
+#	$23 = move $85
+#	jump %logicalMerge107
 	b _logicalMerge107
+#	%logicalFalse106
 _logicalFalse106:
+#	$23 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge107
 	b _logicalMerge107
+#	%logicalMerge107
 _logicalMerge107:
-	beqz $t3, _logicalFalse109
+#	br $23 %logicalTrue108 %logicalFalse109
+	beqz $k0, _logicalFalse109
+#	%logicalTrue108
 _logicalTrue108:
+#	$86 = sne $59 $51
 	lw $t1, global_51
-	sne $t3, $t7, $t1
+	sne $k0, $t6, $t1
+#	$22 = move $86
+#	jump %logicalMerge110
 	b _logicalMerge110
+#	%logicalFalse109
 _logicalFalse109:
+#	$22 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge110
 	b _logicalMerge110
+#	%logicalMerge110
 _logicalMerge110:
-	beqz $t3, _logicalFalse112
+#	br $22 %logicalTrue111 %logicalFalse112
+	beqz $k0, _logicalFalse112
+#	%logicalTrue111
 _logicalTrue111:
+#	$87 = sne $59 $52
 	lw $t1, global_52
-	sne $t3, $t7, $t1
+	sne $k0, $t6, $t1
+#	$21 = move $87
+#	jump %logicalMerge113
 	b _logicalMerge113
+#	%logicalFalse112
 _logicalFalse112:
+#	$21 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge113
 	b _logicalMerge113
+#	%logicalMerge113
 _logicalMerge113:
-	beqz $t3, _logicalFalse115
+#	br $21 %logicalTrue114 %logicalFalse115
+	beqz $k0, _logicalFalse115
+#	%logicalTrue114
 _logicalTrue114:
+#	$88 = sne $59 $53
 	lw $t1, global_53
-	sne $t3, $t7, $t1
+	sne $k0, $t6, $t1
+#	$20 = move $88
+#	jump %logicalMerge116
 	b _logicalMerge116
+#	%logicalFalse115
 _logicalFalse115:
+#	$20 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge116
 	b _logicalMerge116
+#	%logicalMerge116
 _logicalMerge116:
-	beqz $t3, _logicalFalse118
+#	br $20 %logicalTrue117 %logicalFalse118
+	beqz $k0, _logicalFalse118
+#	%logicalTrue117
 _logicalTrue117:
+#	$89 = sne $60 $50
 	lw $t1, global_50
-	sne $t3, $t6, $t1
+	sne $k0, $t7, $t1
+#	$19 = move $89
+#	jump %logicalMerge119
 	b _logicalMerge119
+#	%logicalFalse118
 _logicalFalse118:
+#	$19 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge119
 	b _logicalMerge119
+#	%logicalMerge119
 _logicalMerge119:
-	beqz $t3, _logicalFalse121
+#	br $19 %logicalTrue120 %logicalFalse121
+	beqz $k0, _logicalFalse121
+#	%logicalTrue120
 _logicalTrue120:
+#	$90 = sne $60 $51
 	lw $t1, global_51
-	sne $t3, $t6, $t1
+	sne $k0, $t7, $t1
+#	$18 = move $90
+#	jump %logicalMerge122
 	b _logicalMerge122
+#	%logicalFalse121
 _logicalFalse121:
+#	$18 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge122
 	b _logicalMerge122
+#	%logicalMerge122
 _logicalMerge122:
-	beqz $t3, _logicalFalse124
+#	br $18 %logicalTrue123 %logicalFalse124
+	beqz $k0, _logicalFalse124
+#	%logicalTrue123
 _logicalTrue123:
+#	$91 = sne $60 $52
 	lw $t1, global_52
-	sne $t3, $t6, $t1
+	sne $k0, $t7, $t1
+#	$17 = move $91
+#	jump %logicalMerge125
 	b _logicalMerge125
+#	%logicalFalse124
 _logicalFalse124:
+#	$17 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge125
 	b _logicalMerge125
+#	%logicalMerge125
 _logicalMerge125:
-	beqz $t3, _logicalFalse127
+#	br $17 %logicalTrue126 %logicalFalse127
+	beqz $k0, _logicalFalse127
+#	%logicalTrue126
 _logicalTrue126:
+#	$92 = sne $60 $53
 	lw $t1, global_53
-	sne $t3, $t6, $t1
+	sne $k0, $t7, $t1
+#	$16 = move $92
+#	jump %logicalMerge128
 	b _logicalMerge128
+#	%logicalFalse127
 _logicalFalse127:
+#	$16 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge128
 	b _logicalMerge128
+#	%logicalMerge128
 _logicalMerge128:
-	beqz $t3, _logicalFalse130
+#	br $16 %logicalTrue129 %logicalFalse130
+	beqz $k0, _logicalFalse130
+#	%logicalTrue129
 _logicalTrue129:
+#	$93 = sne $51 $52
 	lw $t0, global_51
 	lw $t1, global_52
-	sne $t3, $t0, $t1
+	sne $k0, $t0, $t1
+#	$15 = move $93
+#	jump %logicalMerge131
 	b _logicalMerge131
+#	%logicalFalse130
 _logicalFalse130:
+#	$15 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge131
 	b _logicalMerge131
+#	%logicalMerge131
 _logicalMerge131:
-	beqz $t3, _logicalFalse133
+#	br $15 %logicalTrue132 %logicalFalse133
+	beqz $k0, _logicalFalse133
+#	%logicalTrue132
 _logicalTrue132:
+#	$94 = sne $50 $53
 	lw $t0, global_50
 	lw $t1, global_53
-	sne $t3, $t0, $t1
+	sne $k0, $t0, $t1
+#	$14 = move $94
+#	jump %logicalMerge134
 	b _logicalMerge134
+#	%logicalFalse133
 _logicalFalse133:
+#	$14 = move 0
 	li $t0, 0
-	move $t3, $t0
+	move $k0, $t0
+#	jump %logicalMerge134
 	b _logicalMerge134
+#	%logicalMerge134
 _logicalMerge134:
-	beqz $t3, _alternative13
+#	br $14 %consequence12 %alternative13
+	beqz $k0, _alternative13
+#	%consequence12
 _consequence12:
+#	$95 = move $54
 	lw $t0, global_54
-	move $t3, $t0
+	move $k0, $t0
+#	$54 = add $54 1
 	lw $t0, global_54
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_54
+#	jump %OutOfIf14
 	b _OutOfIf14
+#	%alternative13
 _alternative13:
+#	jump %OutOfIf14
 	b _OutOfIf14
+#	%OutOfIf14
 _OutOfIf14:
+#	jump %continueFor69
 	b _continueFor69
+#	%continueFor69
 _continueFor69:
-	move $t3, $t6
-	li $t1, 1
-	add $t6, $t6, $t1
-	b _ForLoop68
-_OutOfFor11:
-	b _continueFor67
-_continueFor67:
-	move $t3, $t7
+#	$96 = move $60
+	move $k0, $t7
+#	$60 = add $60 1
 	li $t1, 1
 	add $t7, $t7, $t1
+#	jump %ForLoop68
+	b _ForLoop68
+#	%OutOfFor11
+_OutOfFor11:
+#	jump %continueFor67
+	b _continueFor67
+#	%continueFor67
+_continueFor67:
+#	$97 = move $59
+	move $k0, $t6
+#	$59 = add $59 1
+	li $t1, 1
+	add $t6, $t6, $t1
+#	jump %ForLoop66
 	b _ForLoop66
+#	%OutOfFor9
 _OutOfFor9:
+#	jump %continueFor65
 	b _continueFor65
+#	%continueFor65
 _continueFor65:
-	move $t3, $t4
-	li $t1, 1
-	add $t4, $t4, $t1
-	b _ForLoop64
-_OutOfFor7:
-	b _continueFor63
-_continueFor63:
-	lw $t0, 296($sp)
-	move $t3, $t0
-	lw $t0, 296($sp)
-	li $t1, 1
-	add $t1, $t0, $t1
-	sw $t1, 296($sp)
-	b _ForLoop62
-_OutOfFor5:
-	b _continueFor61
-_continueFor61:
-	move $t3, $t5
+#	$98 = move $58
+	move $k0, $t5
+#	$58 = add $58 1
 	li $t1, 1
 	add $t5, $t5, $t1
-	b _ForLoop60
-_OutOfFor3:
-	b _continueFor59
-_continueFor59:
-	move $t3, $t2
+#	jump %ForLoop64
+	b _ForLoop64
+#	%OutOfFor7
+_OutOfFor7:
+#	jump %continueFor63
+	b _continueFor63
+#	%continueFor63
+_continueFor63:
+#	$99 = move $57
+	move $k0, $t3
+#	$57 = add $57 1
 	li $t1, 1
-	add $t2, $t2, $t1
+	add $t3, $t3, $t1
+#	jump %ForLoop62
+	b _ForLoop62
+#	%OutOfFor5
+_OutOfFor5:
+#	jump %continueFor61
+	b _continueFor61
+#	%continueFor61
+_continueFor61:
+#	$100 = move $56
+	move $k0, $s5
+#	$56 = add $56 1
+	li $t1, 1
+	add $s5, $s5, $t1
+#	jump %ForLoop60
+	b _ForLoop60
+#	%OutOfFor3
+_OutOfFor3:
+#	jump %continueFor59
+	b _continueFor59
+#	%continueFor59
+_continueFor59:
+#	$101 = move $55
+	move $k0, $t4
+#	$55 = add $55 1
+	li $t1, 1
+	add $t4, $t4, $t1
+#	jump %ForLoop58
 	b _ForLoop58
+#	%OutOfFor1
 _OutOfFor1:
+#	$102 = call toString $54
 	lw $a0, global_54
 	jal func__toString
-	move $t3, $v0
-	move $a0, $t3
+	move $k0, $v0
+#	nullcall println $102
+	move $a0, $k0
 	jal func__println
-	move $t3, $v0
+	move $k0, $v0
+#	ret 0
 	li $v0, 0
+#	jump %EndOfFunctionDecl57
 	b _EndOfFunctionDecl57
+#	%EndOfFunctionDecl57
 _EndOfFunctionDecl57:
 	lw $ra, 120($sp)
 	lw $s0, 64($sp)
