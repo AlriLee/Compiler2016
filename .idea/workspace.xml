@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="18 cases exceed limit.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Translator/MIPSTranslator.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Translator/MIPSTranslator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase" afterPath="$PROJECT_DIR$/testcase" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/out/string_test-huyuncong.out" afterPath="$PROJECT_DIR$/data/test/final/out/string_test-huyuncong.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/horse2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/horse2-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/multiarray-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/multiarray-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/qsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/qsort-5100379110-daibo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/queens-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/queens-5100379110-daibo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/spill2-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/spill2-5100379110-daibo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/statement_test-huyuncong.s" afterPath="$PROJECT_DIR$/data/test/final/s/statement_test-huyuncong.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/string_test-huyuncong.s" afterPath="$PROJECT_DIR$/data/test/final/s/string_test-huyuncong.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/superloop-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/superloop-5090379042-jiaxiao.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/tak-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/tak-5090379042-jiaxiao.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/twinprime-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/twinprime-5090379042-jiaxiao.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" afterPath="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" />
     </list>
     <ignored path="Compiler2016.iws" />
@@ -60,11 +73,21 @@
       <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="794" column="107" selection-start-line="794" selection-start-column="107" selection-end-line="794" selection-end-column="107" />
+            <state relative-caret-position="245">
+              <caret line="794" column="153" selection-start-line="794" selection-start-column="153" selection-end-line="794" selection-end-column="153" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="horse2-5100309153-yanghuan.mx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/test/final/mx/horse2-5100309153-yanghuan.mx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -655,7 +678,7 @@
       <recent name="$PROJECT_DIR$/src/Compiler" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Compiler.testPass">
+  <component name="RunManager" selected="JUnit.Compiler (3)">
     <configuration default="false" name="Compiler.testPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -734,32 +757,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Compiler (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Compiler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Compiler2016" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Compiler" />
-      <option name="MAIN_CLASS_NAME" value="Compiler.Compiler" />
-      <option name="METHOD_NAME" value="testPass" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" value="[18]" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="Compiler.testPass (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -776,6 +773,32 @@
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" value="[21]" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Compiler (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Compiler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Compiler2016" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Compiler" />
+      <option name="MAIN_CLASS_NAME" value="Compiler.Compiler" />
+      <option name="METHOD_NAME" value="testPass" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" value="[13]" />
       <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -1002,16 +1025,16 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.Compiler.testPass" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.Compiler" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.Compiler (1)" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Compiler (2)" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Compiler.testPass (1)" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Compiler.testPass (1)" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Compiler (3)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Compiler.testPass" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Compiler" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Compiler.testPass (1)" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.Compiler (1)" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Compiler (2)" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Compiler (3)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Compiler.testPass" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Compiler" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Compiler.testPass (1)" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Compiler (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -1376,17 +1399,14 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Compiler - 2016.05.08 at 17h 09m 23s.xml">
-      <configuration name="Compiler" configurationId="JUnit" />
+    <history-entry file="Compiler_(3) - 2016.05.08 at 20h 12m 35s.xml">
+      <configuration name="Compiler (3)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Compiler - 2016.05.08 at 17h 13m 42s.xml">
-      <configuration name="Compiler" configurationId="JUnit" />
+    <history-entry file="Compiler_(3) - 2016.05.08 at 20h 12m 50s.xml">
+      <configuration name="Compiler (3)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Compiler - 2016.05.08 at 17h 19m 14s.xml">
-      <configuration name="Compiler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Compiler - 2016.05.08 at 17h 20m 11s.xml">
-      <configuration name="Compiler" configurationId="JUnit" />
+    <history-entry file="Compiler_(3) - 2016.05.08 at 20h 14m 43s.xml">
+      <configuration name="Compiler (3)" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Compiler_testPass - 2016.05.08 at 16h 53m 45s.xml">
       <configuration name="Compiler.testPass" configurationId="JUnit" />
@@ -1398,6 +1418,9 @@
       <configuration name="Compiler.testPass" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Compiler_testPass - 2016.05.08 at 17h 13m 18s.xml">
+      <configuration name="Compiler.testPass" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Compiler_testPass - 2016.05.08 at 20h 05m 28s.xml">
       <configuration name="Compiler.testPass" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Compiler_testPass_(1) - 2016.05.08 at 17h 00m 19s.xml">
@@ -1439,7 +1462,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3319209" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33050847" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1710,13 +1733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/final/mx/horse2-5100309153-yanghuan.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/AST/Decl/FunctionDecl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -1877,14 +1893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -1904,10 +1912,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/final/mx/horse2-5100309153-yanghuan.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="794" column="107" selection-start-line="794" selection-start-column="107" selection-end-line="794" selection-end-column="107" />
+        <state relative-caret-position="245">
+          <caret line="794" column="153" selection-start-line="794" selection-start-column="153" selection-end-line="794" selection-end-column="153" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

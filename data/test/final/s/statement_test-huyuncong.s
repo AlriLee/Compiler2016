@@ -509,103 +509,103 @@ _BeginOfFunctionDecl38:
 	li $t0, 0
 	sw $t0, global_2588
 	jal func__getInt
-	sw $v0, 208($sp)
-	lw $t0, 208($sp)
-	sw $t0, global_2587
+	move $t2, $v0
+	sw $t2, global_2587
 	lw $t0, global_2587
 	li $t1, 5
 	add $t2, $t0, $t1
 	li $t1, 4
 	mul $t1, $t2, $t1
-	sw $t1, 344($sp)
+	sw $t1, 332($sp)
+	lw $t0, 332($sp)
+	li $t1, 4
+	add $t1, $t0, $t1
+	sw $t1, 332($sp)
+	lw $a0, 332($sp)
+	li $v0, 9
+	syscall
+	sw $v0, 344($sp)
+	lw $t1, 344($sp)
+	sw $t2, 0($t1)
 	lw $t0, 344($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
 	sw $t1, 344($sp)
-	lw $a0, 344($sp)
-	li $v0, 9
-	syscall
-	move $t3, $v0
-	sw $t2, 0($t3)
-	li $t1, 4
-	add $t3, $t3, $t1
-	sw $t3, 232($sp)
-	lw $t0, 232($sp)
-	sw $t0, global_2589
+	lw $t0, 344($sp)
+	move $t2, $t0
+	sw $t2, global_2589
 	li $t0, 0
-	move $t3, $t0
+	sw $t0, 280($sp)
 _WhileLoop40:
+	lw $t0, 280($sp)
 	lw $t1, global_2587
-	sle $t2, $t3, $t1
+	sle $t2, $t0, $t1
 	beqz $t2, _OutOfWhile1
 _WhileBody0:
-	move $t2, $t3
+	lw $t0, 280($sp)
+	move $t2, $t0
+	lw $t0, 280($sp)
 	li $t1, 1
-	add $t3, $t3, $t1
-	li $t1, 4
-	mul $t1, $t2, $t1
-	sw $t1, 152($sp)
-	lw $t0, global_2589
-	lw $t1, 152($sp)
 	add $t1, $t0, $t1
-	sw $t1, 156($sp)
+	sw $t1, 280($sp)
+	li $t1, 4
+	mul $t2, $t2, $t1
+	lw $t0, global_2589
+	add $t2, $t0, $t2
 	li $t0, 1
-	lw $t1, 156($sp)
-	sw $t0, 0($t1)
+	sw $t0, 0($t2)
 	b _WhileLoop40
 _OutOfWhile1:
 	lw $t0, global_2587
 	li $t1, 5
 	add $t2, $t0, $t1
 	li $t1, 4
-	mul $t1, $t2, $t1
-	sw $t1, 444($sp)
+	mul $t3, $t2, $t1
+	li $t1, 4
+	add $t3, $t3, $t1
+	move $a0, $t3
+	li $v0, 9
+	syscall
+	sw $v0, 444($sp)
+	lw $t1, 444($sp)
+	sw $t2, 0($t1)
 	lw $t0, 444($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
 	sw $t1, 444($sp)
-	lw $a0, 444($sp)
-	li $v0, 9
-	syscall
-	sw $v0, 268($sp)
-	lw $t1, 268($sp)
-	sw $t2, 0($t1)
-	lw $t0, 268($sp)
-	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 268($sp)
-	lw $t0, 268($sp)
-	sw $t0, 292($sp)
-	lw $t0, 292($sp)
-	move $t6, $t0
+	lw $t0, 444($sp)
+	move $t2, $t0
+	move $t3, $t2
 	lw $t0, global_2587
 	li $t1, 5
-	add $t3, $t0, $t1
+	add $t2, $t0, $t1
 	li $t1, 4
-	mul $t2, $t3, $t1
+	mul $t4, $t2, $t1
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $a0, $t2
+	add $t4, $t4, $t1
+	move $a0, $t4
 	li $v0, 9
 	syscall
-	move $t2, $v0
-	sw $t3, 0($t2)
+	move $t4, $v0
+	sw $t2, 0($t4)
 	li $t1, 4
-	add $t2, $t2, $t1
-	sw $t2, 212($sp)
+	add $t4, $t4, $t1
+	move $t2, $t4
+	move $s0, $t2
 	li $t0, 1
 	li $t1, 4
 	mul $t2, $t0, $t1
-	add $t2, $t6, $t2
+	add $t2, $t3, $t2
 	li $t0, 1
 	sw $t0, 0($t2)
 	li $t0, 2
-	move $t3, $t0
+	sw $t0, 280($sp)
 _ForLoop41:
 	b _ForBody2
 _ForBody2:
+	lw $t0, 280($sp)
 	lw $t1, global_2587
-	sgt $t2, $t3, $t1
+	sgt $t2, $t0, $t1
 	beqz $t2, _alternative5
 _consequence4:
 	b _OutOfFor3
@@ -613,8 +613,9 @@ _consequence4:
 _alternative5:
 	b _OutOfIf6
 _OutOfIf6:
+	lw $t0, 280($sp)
 	li $t1, 4
-	mul $t2, $t3, $t1
+	mul $t2, $t0, $t1
 	lw $t0, global_2589
 	add $t2, $t0, $t2
 	lw $t2, 0($t2)
@@ -627,33 +628,35 @@ _consequence7:
 	lw $t0, global_2588
 	li $t1, 4
 	mul $t2, $t0, $t1
-	lw $t0, 212($sp)
-	add $t2, $t0, $t2
-	sw $t3, 0($t2)
+	add $t2, $s0, $t2
+	lw $t0, 280($sp)
+	sw $t0, 0($t2)
+	lw $t0, 280($sp)
 	li $t1, 4
-	mul $t2, $t3, $t1
-	add $t4, $t6, $t2
+	mul $t2, $t0, $t1
+	add $t2, $t3, $t2
+	lw $t0, 280($sp)
 	li $t1, 1
-	sub $t2, $t3, $t1
-	sw $t2, 0($t4)
+	sub $t4, $t0, $t1
+	sw $t4, 0($t2)
 	b _OutOfIf9
 _alternative8:
 	b _OutOfIf9
 _OutOfIf9:
-	move $t5, $t3
+	lw $t0, 280($sp)
+	move $t7, $t0
 	li $t0, 1
-	move $s1, $t0
+	move $t5, $t0
 _ForLoop43:
 	lw $t1, global_2588
-	sle $t2, $s1, $t1
+	sle $t2, $t5, $t1
 	beqz $t2, _logicalFalse13
 _logicalTrue12:
 	li $t1, 4
-	mul $t2, $s1, $t1
-	lw $t0, 212($sp)
-	add $t2, $t0, $t2
+	mul $t2, $t5, $t1
+	add $t2, $s0, $t2
 	lw $t2, 0($t2)
-	mul $t2, $t5, $t2
+	mul $t2, $t7, $t2
 	lw $t1, global_2587
 	sle $t2, $t2, $t1
 	move $s2, $t2
@@ -666,11 +669,10 @@ _logicalMerge14:
 	beqz $s2, _OutOfFor11
 _ForBody10:
 	li $t1, 4
-	mul $t2, $s1, $t1
-	lw $t0, 212($sp)
-	add $t2, $t0, $t2
+	mul $t2, $t5, $t1
+	add $t2, $s0, $t2
 	lw $t2, 0($t2)
-	mul $t2, $t5, $t2
+	mul $t2, $t7, $t2
 	move $s3, $t2
 	lw $t1, global_2587
 	sgt $t2, $s3, $t1
@@ -688,66 +690,62 @@ _OutOfIf17:
 	li $t0, 0
 	sw $t0, 0($t2)
 	li $t1, 4
-	mul $t2, $s1, $t1
-	lw $t0, 212($sp)
-	add $t2, $t0, $t2
+	mul $t2, $t5, $t1
+	add $t2, $s0, $t2
 	lw $t2, 0($t2)
-	rem $t2, $t5, $t2
+	rem $t2, $t7, $t2
 	li $t1, 0
 	seq $t2, $t2, $t1
 	beqz $t2, _alternative19
 _consequence18:
 	li $t1, 4
 	mul $t2, $s3, $t1
-	add $s0, $t6, $t2
+	add $t4, $t3, $t2
+	li $t1, 4
+	mul $t2, $t7, $t1
+	add $t6, $t3, $t2
 	li $t1, 4
 	mul $t2, $t5, $t1
-	add $t4, $t6, $t2
-	li $t1, 4
-	mul $t2, $s1, $t1
-	lw $t0, 212($sp)
-	add $t7, $t0, $t2
-	lw $t2, 0($t4)
-	lw $t4, 0($t7)
-	mul $t2, $t2, $t4
-	sw $t2, 0($s0)
+	add $t2, $s0, $t2
+	lw $t6, 0($t6)
+	lw $t2, 0($t2)
+	mul $t2, $t6, $t2
+	sw $t2, 0($t4)
 	b _OutOfFor11
 	b _OutOfIf20
 _alternative19:
 	li $t1, 4
-	mul $t2, $s1, $t1
-	lw $t0, 212($sp)
-	add $t2, $t0, $t2
+	mul $t2, $t5, $t1
+	add $t2, $s0, $t2
 	lw $t2, 0($t2)
-	mul $t2, $t5, $t2
+	mul $t2, $t7, $t2
 	li $t1, 4
 	mul $t2, $t2, $t1
-	add $t7, $t6, $t2
+	add $t4, $t3, $t2
+	li $t1, 4
+	mul $t2, $t7, $t1
+	add $t6, $t3, $t2
 	li $t1, 4
 	mul $t2, $t5, $t1
-	add $t4, $t6, $t2
-	li $t1, 4
-	mul $t2, $s1, $t1
-	lw $t0, 212($sp)
-	add $t2, $t0, $t2
+	add $t2, $s0, $t2
 	lw $t2, 0($t2)
 	li $t1, 1
-	sub $t2, $t2, $t1
-	lw $t4, 0($t4)
-	mul $t2, $t4, $t2
-	sw $t2, 0($t7)
+	sub $s1, $t2, $t1
+	lw $t2, 0($t6)
+	mul $t2, $t2, $s1
+	sw $t2, 0($t4)
 	b _OutOfIf20
 _OutOfIf20:
 	b _continueFor44
 _continueFor44:
-	move $t2, $s1
+	move $t2, $t5
 	li $t1, 1
-	add $s1, $s1, $t1
+	add $t5, $t5, $t1
 	b _ForLoop43
 _OutOfFor11:
 	li $t1, 4
-	mul $t2, $t5, $t1
-	add $t2, $t6, $t2
+	mul $t2, $t7, $t1
+	add $t2, $t3, $t2
 	lw $t2, 0($t2)
 	move $a0, $t2
 	jal func__toString
@@ -756,8 +754,10 @@ _OutOfFor11:
 	jal func__println
 	move $t2, $v0
 _continueFor42:
+	lw $t0, 280($sp)
 	li $t1, 1
-	add $t3, $t3, $t1
+	add $t1, $t0, $t1
+	sw $t1, 280($sp)
 	b _ForLoop41
 _OutOfFor3:
 	li $v0, 0
