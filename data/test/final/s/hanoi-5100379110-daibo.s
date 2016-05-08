@@ -587,9 +587,9 @@ _EndOfFunctionDecl42:
 	jr $ra
 main:
 	sub $sp, $sp, 164
-	sw $t4, 48($sp)
-	sw $t2, 40($sp)
 	sw $t3, 44($sp)
+	sw $t2, 40($sp)
+	sw $t4, 48($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl43:
 	la $t0, string_21
@@ -597,14 +597,14 @@ _BeginOfFunctionDecl43:
 	la $t0, string_22
 	sw $t0, 160($sp)
 	la $t0, string_23
-	move $t3, $t0
+	move $t2, $t0
 	jal func__getInt
-	move $t2, $v0
-	sw $t2, -20($sp)
+	move $t3, $v0
+	sw $t3, -20($sp)
 	sw $t4, -16($sp)
 	lw $t0, 160($sp)
 	sw $t0, -12($sp)
-	sw $t3, -8($sp)
+	sw $t2, -8($sp)
 	li $t0, 0
 	sw $t0, -4($sp)
 	jal _cd
@@ -619,9 +619,9 @@ _BeginOfFunctionDecl43:
 	b _EndOfFunctionDecl44
 _EndOfFunctionDecl44:
 	lw $ra, 120($sp)
-	lw $t4, 48($sp)
-	lw $t2, 40($sp)
 	lw $t3, 44($sp)
+	lw $t2, 40($sp)
+	lw $t4, 48($sp)
 	add $sp, $sp, 164
 	jr $ra
 .data

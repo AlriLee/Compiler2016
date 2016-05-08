@@ -494,9 +494,10 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 264
-	sw $t4, 48($sp)
-	sw $t2, 40($sp)
 	sw $t3, 44($sp)
+	sw $t2, 40($sp)
+	sw $t5, 52($sp)
+	sw $t4, 48($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl38:
 	li $t0, 4
@@ -517,25 +518,22 @@ _BeginOfFunctionDecl38:
 	jal func__size
 	move $t2, $v0
 	li $t1, 4
-	mul $t1, $t2, $t1
-	sw $t1, 212($sp)
-	lw $t0, 212($sp)
+	mul $t3, $t2, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 212($sp)
-	lw $a0, 212($sp)
+	add $t3, $t3, $t1
+	move $a0, $t3
 	li $v0, 9
 	syscall
-	sw $v0, 252($sp)
-	lw $t1, 252($sp)
+	sw $v0, 244($sp)
+	lw $t1, 244($sp)
 	sw $t2, 0($t1)
-	lw $t0, 252($sp)
+	lw $t0, 244($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 252($sp)
-	lw $t0, 252($sp)
+	sw $t1, 244($sp)
+	lw $t0, 244($sp)
 	move $t2, $t0
-	sw $t2, 132($sp)
+	move $t4, $t2
 	li $t0, 0
 	move $t2, $t0
 _ForLoop40:
@@ -553,13 +551,12 @@ _ForBody0:
 	sw $t0, 0($t3)
 	li $t1, 4
 	mul $t3, $t2, $t1
-	lw $t0, 132($sp)
-	add $t3, $t0, $t3
+	add $t3, $t4, $t3
 	jal func__getInt
-	move $t4, $v0
-	sw $t4, 0($t3)
+	move $t5, $v0
+	sw $t5, 0($t3)
 _continueFor41:
-	move $t3, $t2
+	sw $t2, 256($sp)
 	li $t1, 1
 	add $t2, $t2, $t1
 	b _ForLoop40
@@ -592,17 +589,19 @@ _continueFor43:
 _OutOfFor3:
 	la $a0, string_27
 	jal func__println
-	move $t2, $v0
-	lw $t0, 132($sp)
-	sw $t0, global_13
+	sw $v0, 204($sp)
+	sw $t4, global_13
 	li $t0, 0
 	move $t2, $t0
 _ForLoop44:
 	lw $a0, global_13
 	jal func__size
-	move $t3, $v0
-	slt $t3, $t2, $t3
-	beqz $t3, _OutOfFor5
+	sw $v0, 260($sp)
+	lw $t1, 260($sp)
+	slt $t1, $t2, $t1
+	sw $t1, 252($sp)
+	lw $t0, 252($sp)
+	beqz $t0, _OutOfFor5
 _ForBody4:
 	li $t1, 4
 	mul $t3, $t2, $t1
@@ -616,7 +615,7 @@ _ForBody4:
 	jal func__print
 	move $t3, $v0
 _continueFor45:
-	move $t3, $t2
+	sw $t2, 248($sp)
 	li $t1, 1
 	add $t2, $t2, $t1
 	b _ForLoop44
@@ -624,9 +623,10 @@ _OutOfFor5:
 	b _EndOfFunctionDecl39
 _EndOfFunctionDecl39:
 	lw $ra, 120($sp)
-	lw $t4, 48($sp)
-	lw $t2, 40($sp)
 	lw $t3, 44($sp)
+	lw $t2, 40($sp)
+	lw $t5, 52($sp)
+	lw $t4, 48($sp)
 	add $sp, $sp, 264
 	jr $ra
 .data

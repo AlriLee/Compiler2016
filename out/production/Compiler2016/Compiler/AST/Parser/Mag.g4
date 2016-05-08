@@ -70,8 +70,8 @@ logicalOrExpression
 	;
 
 logicalAndExpression
-	:	bitwiseOrExpression # logicalAnd_bitwiseOr
-	|	logicalAndExpression '&&' bitwiseOrExpression #logicalAnd_and
+    :	bitwiseOrExpression '&&' logicalAndExpression #logicalAnd_and
+	|	bitwiseOrExpression # logicalAnd_bitwiseOr
 	;
 
 bitwiseOrExpression

@@ -510,8 +510,8 @@ _EndOfFunctionDecl73:
 	jr $ra
 main:
 	sub $sp, $sp, 520
-	sw $t2, 40($sp)
 	sw $t3, 44($sp)
+	sw $t2, 40($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl74:
 	li $t0, 4
@@ -554,24 +554,23 @@ _ForBody0:
 	li $t1, 4
 	mul $t2, $t0, $t1
 	lw $t0, global_169
-	add $t2, $t0, $t2
+	add $t1, $t0, $t2
+	sw $t1, 436($sp)
 	li $t0, 11
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 448($sp)
-	lw $t0, 448($sp)
+	mul $t2, $t0, $t1
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 448($sp)
-	lw $a0, 448($sp)
+	add $t2, $t2, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	move $t3, $v0
+	move $t2, $v0
 	li $t0, 11
-	sw $t0, 0($t3)
+	sw $t0, 0($t2)
 	li $t1, 4
-	add $t3, $t3, $t1
-	sw $t3, 0($t2)
+	add $t2, $t2, $t1
+	lw $t1, 436($sp)
+	sw $t2, 0($t1)
 _continueFor77:
 	lw $t0, global_170
 	move $t2, $t0
@@ -602,13 +601,13 @@ _ForBody4:
 	mul $t2, $t0, $t1
 	lw $t0, global_169
 	add $t2, $t0, $t2
-	lw $t2, 0($t2)
+	lw $t0, 0($t2)
+	sw $t0, 412($sp)
 	lw $t0, global_171
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 308($sp)
-	lw $t1, 308($sp)
-	add $t2, $t2, $t1
+	mul $t2, $t0, $t1
+	lw $t0, 412($sp)
+	add $t2, $t0, $t2
 	li $t0, 888
 	sw $t0, 0($t2)
 _continueFor81:
@@ -646,14 +645,14 @@ _ForBody6:
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 324($sp)
-	lw $a0, 324($sp)
+	sw $t1, 364($sp)
+	lw $a0, 364($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 272($sp)
-	lw $t0, 272($sp)
-	sw $t0, 440($sp)
-	lw $t0, 440($sp)
+	sw $v0, 332($sp)
+	lw $t0, 332($sp)
+	sw $t0, 292($sp)
+	lw $t0, 292($sp)
 	sw $t0, 0($t2)
 	lw $t0, global_170
 	li $t1, 4
@@ -663,8 +662,8 @@ _ForBody6:
 	lw $t2, 0($t2)
 	li $t0, 1
 	neg $t1, $t0
-	sw $t1, 420($sp)
-	lw $t0, 420($sp)
+	sw $t1, 448($sp)
+	lw $t0, 448($sp)
 	sw $t0, 0($t2)
 _continueFor83:
 	lw $t0, global_170
@@ -681,11 +680,11 @@ _OutOfFor7:
 	lw $t0, global_169
 	add $t2, $t0, $t2
 	lw $t0, 0($t2)
-	sw $t0, 400($sp)
+	sw $t0, 408($sp)
 	li $t0, 9
 	li $t1, 4
 	mul $t2, $t0, $t1
-	lw $t0, 400($sp)
+	lw $t0, 408($sp)
 	add $t2, $t0, $t2
 	lw $t2, 0($t2)
 	sw $t2, -4($sp)
@@ -716,19 +715,17 @@ _ForBody10:
 	lw $t0, global_171
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 356($sp)
-	lw $t1, 356($sp)
+	sw $t1, 444($sp)
+	lw $t1, 444($sp)
 	add $t2, $t2, $t1
 	lw $t0, global_170
 	li $t1, 10
 	mul $t1, $t0, $t1
-	sw $t1, 280($sp)
-	lw $t0, 280($sp)
+	sw $t1, 476($sp)
+	lw $t0, 476($sp)
 	lw $t1, global_171
-	add $t1, $t0, $t1
-	sw $t1, 436($sp)
-	lw $t0, 436($sp)
-	sw $t0, 0($t2)
+	add $t3, $t0, $t1
+	sw $t3, 0($t2)
 _continueFor87:
 	lw $t0, global_171
 	move $t2, $t0
@@ -769,13 +766,13 @@ _ForBody14:
 	mul $t2, $t0, $t1
 	lw $t0, global_169
 	add $t2, $t0, $t2
-	lw $t0, 0($t2)
-	sw $t0, 428($sp)
+	lw $t2, 0($t2)
 	lw $t0, global_171
 	li $t1, 4
-	mul $t2, $t0, $t1
-	lw $t0, 428($sp)
-	add $t2, $t0, $t2
+	mul $t1, $t0, $t1
+	sw $t1, 232($sp)
+	lw $t1, 232($sp)
+	add $t2, $t2, $t1
 	lw $t2, 0($t2)
 	sw $t2, -4($sp)
 	jal _printNum
@@ -804,13 +801,13 @@ _OutOfFor13:
 	mul $t2, $t0, $t1
 	lw $t0, global_169
 	add $t2, $t0, $t2
-	lw $t0, 0($t2)
-	sw $t0, 300($sp)
+	lw $t2, 0($t2)
 	li $t0, 10
 	li $t1, 4
-	mul $t2, $t0, $t1
-	lw $t0, 300($sp)
-	add $t2, $t0, $t2
+	mul $t1, $t0, $t1
+	sw $t1, 208($sp)
+	lw $t1, 208($sp)
+	add $t2, $t2, $t1
 	li $t0, 0
 	sw $t0, 0($t2)
 	li $t0, 2
@@ -822,8 +819,8 @@ _OutOfFor13:
 	li $t0, 10
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 508($sp)
-	lw $t1, 508($sp)
+	sw $t1, 356($sp)
+	lw $t1, 356($sp)
 	add $t2, $t2, $t1
 	lw $t2, 0($t2)
 	sw $t2, -4($sp)
@@ -834,12 +831,12 @@ _OutOfFor13:
 	mul $t2, $t0, $t1
 	lw $t0, global_172
 	add $t2, $t0, $t2
-	lw $t2, 0($t2)
+	lw $t0, 0($t2)
+	sw $t0, 484($sp)
 	li $t0, 2
-	neg $t1, $t0
-	sw $t1, 512($sp)
-	lw $t0, 512($sp)
-	sw $t0, 0($t2)
+	neg $t2, $t0
+	lw $t1, 484($sp)
+	sw $t2, 0($t1)
 	li $t0, 2
 	li $t1, 4
 	mul $t2, $t0, $t1
@@ -849,8 +846,8 @@ _OutOfFor13:
 	li $t0, 10
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 192($sp)
-	lw $t1, 192($sp)
+	sw $t1, 352($sp)
+	lw $t1, 352($sp)
 	add $t2, $t2, $t1
 	lw $t2, 0($t2)
 	li $t1, 4
@@ -858,10 +855,10 @@ _OutOfFor13:
 	lw $t0, global_172
 	add $t2, $t0, $t2
 	lw $t0, 0($t2)
-	sw $t0, 352($sp)
+	sw $t0, 464($sp)
 	li $t0, 10
 	neg $t2, $t0
-	lw $t1, 352($sp)
+	lw $t1, 464($sp)
 	sw $t2, 0($t1)
 	li $t0, 0
 	li $t1, 4
@@ -887,8 +884,8 @@ _OutOfFor13:
 	b _EndOfFunctionDecl75
 _EndOfFunctionDecl75:
 	lw $ra, 120($sp)
-	lw $t2, 40($sp)
 	lw $t3, 44($sp)
+	lw $t2, 40($sp)
 	add $sp, $sp, 520
 	jr $ra
 .data

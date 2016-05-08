@@ -494,14 +494,14 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 384
+	sw $t3, 44($sp)
+	sw $t2, 40($sp)
+	sw $t7, 60($sp)
+	sw $s1, 68($sp)
+	sw $t5, 52($sp)
 	sw $s0, 64($sp)
 	sw $t4, 48($sp)
 	sw $t6, 56($sp)
-	sw $s1, 68($sp)
-	sw $t2, 40($sp)
-	sw $t7, 60($sp)
-	sw $t5, 52($sp)
-	sw $t3, 44($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl46:
 	li $t0, 100
@@ -519,87 +519,87 @@ _BeginOfFunctionDecl46:
 	add $t2, $t2, $t1
 	move $t5, $t2
 	li $t0, 0
-	move $t7, $t0
+	move $t2, $t0
 _ForLoop48:
 	li $t1, 100
-	slt $t2, $t7, $t1
-	beqz $t2, _OutOfFor1
+	slt $t3, $t2, $t1
+	beqz $t3, _OutOfFor1
 _ForBody0:
 	li $t1, 4
-	mul $t2, $t7, $t1
-	add $t3, $t5, $t2
+	mul $t3, $t2, $t1
+	add $t4, $t5, $t3
 	li $t0, 100
 	li $t1, 4
-	mul $t2, $t0, $t1
+	mul $t3, $t0, $t1
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $a0, $t2
+	add $t3, $t3, $t1
+	move $a0, $t3
 	li $v0, 9
 	syscall
-	move $t2, $v0
+	move $t3, $v0
 	li $t0, 100
-	sw $t0, 0($t2)
+	sw $t0, 0($t3)
 	li $t1, 4
-	add $t2, $t2, $t1
-	sw $t2, 0($t3)
+	add $t3, $t3, $t1
+	sw $t3, 0($t4)
 _continueFor49:
-	move $t2, $t7
+	move $t3, $t2
 	li $t1, 1
-	add $t7, $t7, $t1
+	add $t2, $t2, $t1
 	b _ForLoop48
 _OutOfFor1:
 	li $t0, 0
-	move $t6, $t0
+	sw $t0, 180($sp)
 	li $t0, 0
-	move $t7, $t0
+	move $t2, $t0
 _ForLoop50:
 	li $t1, 100
-	slt $t2, $t7, $t1
-	beqz $t2, _OutOfFor3
+	slt $t3, $t2, $t1
+	beqz $t3, _OutOfFor3
 _ForBody2:
 	li $t0, 0
-	move $t3, $t0
+	move $t6, $t0
 _ForLoop52:
 	li $t1, 100
-	slt $t2, $t3, $t1
-	beqz $t2, _OutOfFor5
+	slt $t3, $t6, $t1
+	beqz $t3, _OutOfFor5
 _ForBody4:
 	li $t1, 4
-	mul $t2, $t7, $t1
-	add $t2, $t5, $t2
-	lw $t4, 0($t2)
+	mul $t3, $t2, $t1
+	add $t3, $t5, $t3
+	lw $t3, 0($t3)
 	li $t1, 4
-	mul $t2, $t3, $t1
-	add $t2, $t4, $t2
+	mul $t4, $t6, $t1
+	add $t3, $t3, $t4
 	li $t0, 0
-	sw $t0, 0($t2)
+	sw $t0, 0($t3)
 _continueFor53:
-	move $t2, $t3
+	move $t3, $t6
 	li $t1, 1
-	add $t3, $t3, $t1
+	add $t6, $t6, $t1
 	b _ForLoop52
 _OutOfFor5:
 	b _continueFor51
 _continueFor51:
-	move $t2, $t7
+	move $t3, $t2
 	li $t1, 1
-	add $t7, $t7, $t1
+	add $t2, $t2, $t1
 	b _ForLoop50
 _OutOfFor3:
 	li $t0, 0
-	move $t7, $t0
+	move $t2, $t0
 _ForLoop54:
 	li $t1, 100
-	slt $t2, $t7, $t1
-	beqz $t2, _OutOfFor7
+	slt $t3, $t2, $t1
+	beqz $t3, _OutOfFor7
 _ForBody6:
 	li $t1, 20
-	sgt $t2, $t7, $t1
-	beqz $t2, _logicalFalse12
+	sgt $t3, $t2, $t1
+	beqz $t3, _logicalFalse12
 _logicalTrue11:
 	li $t1, 80
-	slt $t2, $t7, $t1
-	move $s0, $t2
+	slt $t3, $t2, $t1
+	move $s0, $t3
 	b _logicalMerge13
 _logicalFalse12:
 	li $t0, 0
@@ -609,66 +609,65 @@ _logicalMerge13:
 	beqz $s0, _alternative9
 _consequence8:
 	li $t0, 0
-	move $t3, $t0
+	move $t6, $t0
 _ForLoop56:
 	li $t1, 100
-	slt $t2, $t3, $t1
-	beqz $t2, _OutOfFor15
+	slt $t3, $t6, $t1
+	beqz $t3, _OutOfFor15
 _ForBody14:
 	li $t1, 5
-	sgt $t2, $t3, $t1
-	beqz $t2, _logicalFalse20
+	sgt $t3, $t6, $t1
+	beqz $t3, _logicalFalse20
 _logicalTrue19:
 	li $t0, 1
 	move $s1, $t0
 	b _logicalMerge21
 _logicalFalse20:
 	li $t1, 90
-	slt $t2, $t7, $t1
-	move $s1, $t2
+	slt $t3, $t2, $t1
+	move $s1, $t3
 	b _logicalMerge21
 _logicalMerge21:
 	beqz $s1, _alternative17
 _consequence16:
 	li $t1, 4
-	mul $t2, $t3, $t1
+	mul $t3, $t6, $t1
 	li $t1, 100
-	div $t2, $t2, $t1
-	move $t4, $t2
+	div $t3, $t3, $t1
 	li $t1, 4
-	mul $t2, $t3, $t1
+	mul $t4, $t6, $t1
 	li $t1, 100
-	rem $t2, $t2, $t1
-	add $t4, $t7, $t4
+	rem $t4, $t4, $t1
+	add $t3, $t2, $t3
 	li $t1, 4
-	mul $t4, $t4, $t1
-	add $t4, $t5, $t4
-	lw $t4, 0($t4)
+	mul $t3, $t3, $t1
+	add $t3, $t5, $t3
+	lw $t7, 0($t3)
 	li $t1, 4
-	mul $t2, $t2, $t1
-	add $t4, $t4, $t2
+	mul $t3, $t4, $t1
+	add $t4, $t7, $t3
 	li $t0, 100
 	li $t1, 1
-	sub $t2, $t0, $t1
+	sub $t3, $t0, $t1
 	li $t1, 1
-	add $t2, $t2, $t1
+	add $t3, $t3, $t1
 	li $t1, 1
-	sub $t2, $t2, $t1
+	sub $t3, $t3, $t1
 	li $t1, 1
-	add $t2, $t2, $t1
+	add $t3, $t3, $t1
 	li $t1, 2
-	div $t2, $t2, $t1
-	add $t2, $t3, $t2
-	sw $t2, 0($t4)
+	div $t3, $t3, $t1
+	add $t3, $t6, $t3
+	sw $t3, 0($t4)
 	b _OutOfIf18
 _alternative17:
 	b _OutOfIf18
 _OutOfIf18:
 	b _continueFor57
 _continueFor57:
-	move $t2, $t3
+	move $t3, $t6
 	li $t1, 1
-	add $t3, $t3, $t1
+	add $t6, $t6, $t1
 	b _ForLoop56
 _OutOfFor15:
 	b _OutOfIf10
@@ -677,64 +676,65 @@ _alternative9:
 _OutOfIf10:
 	b _continueFor55
 _continueFor55:
-	move $t2, $t7
+	move $t3, $t2
 	li $t1, 1
-	add $t7, $t7, $t1
+	add $t2, $t2, $t1
 	b _ForLoop54
 _OutOfFor7:
 	li $t0, 0
-	move $t7, $t0
+	move $t2, $t0
 _ForLoop58:
 	li $t1, 100
-	slt $t2, $t7, $t1
-	beqz $t2, _OutOfFor23
+	slt $t3, $t2, $t1
+	beqz $t3, _OutOfFor23
 _ForBody22:
 	li $t0, 0
-	move $t3, $t0
+	move $t6, $t0
 _ForLoop60:
 	li $t1, 100
-	slt $t2, $t3, $t1
-	beqz $t2, _OutOfFor25
+	slt $t3, $t6, $t1
+	beqz $t3, _OutOfFor25
 _ForBody24:
 	li $t1, 4
-	mul $t2, $t7, $t1
-	add $t2, $t5, $t2
-	lw $t4, 0($t2)
+	mul $t3, $t2, $t1
+	add $t3, $t5, $t3
+	lw $t3, 0($t3)
 	li $t1, 4
-	mul $t2, $t3, $t1
-	add $t2, $t4, $t2
-	lw $t2, 0($t2)
-	add $t2, $t6, $t2
-	move $t6, $t2
+	mul $t4, $t6, $t1
+	add $t3, $t3, $t4
+	lw $t3, 0($t3)
+	lw $t0, 180($sp)
+	add $t3, $t0, $t3
+	sw $t3, 180($sp)
 _continueFor61:
-	move $t2, $t3
+	move $t3, $t6
 	li $t1, 1
-	add $t3, $t3, $t1
+	add $t6, $t6, $t1
 	b _ForLoop60
 _OutOfFor25:
 	b _continueFor59
 _continueFor59:
-	move $t2, $t7
+	move $t3, $t2
 	li $t1, 1
-	add $t7, $t7, $t1
+	add $t2, $t2, $t1
 	b _ForLoop58
 _OutOfFor23:
-	move $a0, $t6
+	lw $a0, 180($sp)
 	jal func__toString
-	move $t2, $v0
-	move $a0, $t2
+	move $t3, $v0
+	move $a0, $t3
 	jal func__println
-	move $t2, $v0
+	move $t3, $v0
 _EndOfFunctionDecl47:
 	lw $ra, 120($sp)
+	lw $t3, 44($sp)
+	lw $t2, 40($sp)
+	lw $t7, 60($sp)
+	lw $s1, 68($sp)
+	lw $t5, 52($sp)
 	lw $s0, 64($sp)
 	lw $t4, 48($sp)
 	lw $t6, 56($sp)
-	lw $s1, 68($sp)
-	lw $t2, 40($sp)
-	lw $t7, 60($sp)
-	lw $t5, 52($sp)
-	lw $t3, 44($sp)
 	add $sp, $sp, 384
 	jr $ra
 .data

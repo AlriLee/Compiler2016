@@ -494,14 +494,14 @@ func__stringNeq:
 	jr $ra
 main:
 	sub $sp, $sp, 3208
+	sw $t3, 44($sp)
+	sw $t2, 40($sp)
+	sw $t7, 60($sp)
+	sw $s1, 68($sp)
+	sw $t5, 52($sp)
 	sw $s0, 64($sp)
 	sw $t4, 48($sp)
 	sw $t6, 56($sp)
-	sw $s1, 68($sp)
-	sw $t2, 40($sp)
-	sw $t7, 60($sp)
-	sw $t5, 52($sp)
-	sw $t3, 44($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl41:
 	li $t0, 1
@@ -537,130 +537,10 @@ _WhileBody0:
 	lw $t1, global_52
 	sub $t2, $t0, $t1
 	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t4, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
 	add $t3, $t2, $t1
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t2, $t0, $t1
-	sub $t2, $t3, $t2
-	add $t3, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t2, $t2, $t4
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t5, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t2, $t2, $t4
-	add $t2, $t5, $t2
-	sub $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t4, $t2, $t4
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t5, $t0, $t1
-	lw $t1, global_53
-	add $t5, $t5, $t1
-	add $t2, $t2, $t5
-	sub $t4, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	sub $t2, $t2, $t5
-	sub $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	sub $t2, $t2, $t5
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t5, $t0, $t1
-	lw $t1, global_53
-	add $t5, $t5, $t1
-	add $t5, $t2, $t5
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t6, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t6, $t6, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t6, $t2
-	sub $t2, $t5, $t2
-	add $t2, $t4, $t2
 	sub $t3, $t3, $t2
 	lw $t0, global_54
 	lw $t1, global_52
@@ -670,132 +550,23 @@ _WhileBody0:
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t2, $t0, $t1
-	sub $t5, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
 	sub $t2, $t4, $t2
-	add $t4, $t5, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t5, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t5, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t5, $t0, $t1
-	lw $t1, global_53
-	add $t5, $t5, $t1
-	add $t2, $t2, $t5
-	add $t6, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t4, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	sub $t5, $t2, $t5
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t5, $t2
-	add $t2, $t4, $t2
-	sub $t7, $t6, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t4, $t2, $t4
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t5, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	add $t4, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t5, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t6, $t5, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	sub $t5, $t2, $t5
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t5, $t2
-	add $t2, $t6, $t2
-	sub $t2, $t4, $t2
-	sub $t2, $t7, $t2
-	add $t7, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
+	add $t2, $t3, $t2
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t3, $t0, $t1
 	lw $t1, global_53
 	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t3, $t3, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t3, $t3, $t4
 	add $t4, $t2, $t3
 	lw $t0, global_52
 	lw $t1, global_53
@@ -806,412 +577,6 @@ _WhileBody0:
 	lw $t1, global_53
 	add $t3, $t3, $t1
 	add $t2, $t2, $t3
-	sub $t3, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t2, $t2, $t4
-	sub $t4, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t5, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t2, $t2, $t3
-	sub $t2, $t5, $t2
-	add $t3, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t2, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t4, $t2, $t4
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t5, $t0, $t1
-	lw $t1, global_53
-	add $t5, $t5, $t1
-	add $t5, $t2, $t5
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t5, $t2
-	sub $t6, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t5, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t2, $t2, $t4
-	sub $t2, $t5, $t2
-	add $t2, $t6, $t2
-	add $s0, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t4, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t3, $t2
-	add $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	add $t5, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t4, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t3, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	add $t2, $t4, $t2
-	sub $t5, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t4, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t3, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	add $t6, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t4, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	add $t2, $t4, $t2
-	sub $t2, $t6, $t2
-	sub $t2, $t5, $t2
-	add $t2, $s0, $t2
-	sub $t2, $t7, $t2
-	sw $t2, global_52
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t2, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t3, $t3, $t4
-	add $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	add $t2, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	add $t3, $t4, $t3
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t5, $t3, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t4, $t3, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	add $t3, $t4, $t3
-	add $t3, $t5, $t3
-	sub $t4, $t2, $t3
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	add $t5, $t2, $t3
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	sub $t2, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	add $t5, $t5, $t3
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t5, $t3
-	sub $t5, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t6, $t0, $t1
-	lw $t1, global_53
-	add $t6, $t6, $t1
-	add $t6, $t3, $t6
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t6, $t3
-	sub $t2, $t2, $t3
-	add $t2, $t5, $t2
-	sub $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	sub $t3, $t3, $t5
-	add $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	sub $t5, $t2, $t5
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t5, $t2
-	add $t6, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t3, $t0, $t1
@@ -1232,6 +597,135 @@ _WhileBody0:
 	add $t3, $t3, $t1
 	add $t3, $t5, $t3
 	add $t2, $t2, $t3
+	sub $t4, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t5, $t3
+	sub $t2, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t5, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t5, $t1
+	add $t3, $t3, $t5
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	sub $t3, $t3, $t5
+	sub $t3, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	sub $t5, $t2, $t5
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t5, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t6, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t6, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t6, $t0, $t1
+	sub $t2, $t2, $t6
+	sub $t2, $t5, $t2
+	add $t2, $t3, $t2
+	sub $t4, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t3, $t5, $t3
+	add $t5, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t2, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t2, $t2, $t3
+	add $t6, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t2, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t2, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t5, $t5, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t5, $t3
+	add $t2, $t2, $t3
 	sub $t7, $t6, $t2
 	lw $t0, global_52
 	lw $t1, global_53
@@ -1250,11 +744,11 @@ _WhileBody0:
 	lw $t1, global_52
 	sub $t2, $t0, $t1
 	lw $t1, global_53
-	add $t5, $t2, $t1
+	add $t2, $t2, $t1
 	lw $t0, global_52
 	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t5, $t5, $t2
+	add $t5, $t0, $t1
+	sub $t5, $t2, $t5
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t2, $t0, $t1
@@ -1264,17 +758,17 @@ _WhileBody0:
 	add $t5, $t3, $t2
 	lw $t0, global_52
 	lw $t1, global_53
-	add $t2, $t0, $t1
+	add $t3, $t0, $t1
 	lw $t0, global_54
 	lw $t1, global_52
-	sub $t3, $t0, $t1
+	sub $t2, $t0, $t1
 	lw $t1, global_53
-	add $t3, $t3, $t1
-	add $t3, $t2, $t3
+	add $t2, $t2, $t1
+	add $t2, $t3, $t2
 	lw $t0, global_52
 	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t3, $t2
+	add $t3, $t0, $t1
+	sub $t2, $t2, $t3
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t3, $t0, $t1
@@ -1293,305 +787,39 @@ _WhileBody0:
 	add $t2, $t2, $t3
 	sub $t2, $t5, $t2
 	sub $t2, $t7, $t2
-	add $t3, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t4, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t5, $t0, $t1
-	lw $t1, global_53
-	add $t5, $t5, $t1
-	add $t2, $t2, $t5
-	sub $t4, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	sub $t2, $t2, $t5
-	sub $t6, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t5, $t2, $t4
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t4, $t2, $t4
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t4, $t2
-	sub $t2, $t5, $t2
-	add $t5, $t6, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t6, $t2, $t4
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t4, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t4, $t2
-	sub $t7, $t6, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t4, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t4, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t6, $t0, $t1
-	lw $t1, global_53
-	add $t6, $t6, $t1
-	add $t2, $t2, $t6
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t6, $t0, $t1
-	sub $t2, $t2, $t6
-	sub $t2, $t4, $t2
-	add $t2, $t7, $t2
-	add $s0, $t5, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t2, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t5, $t0, $t1
-	sub $t4, $t4, $t5
-	add $t5, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t4, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	add $t5, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t2, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t6, $t4, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t6, $t6, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t4, $t6, $t4
-	add $t2, $t2, $t4
-	sub $t6, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t5, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t4, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	add $t7, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t5, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t2, $t2, $t4
-	add $t2, $t5, $t2
-	sub $t2, $t7, $t2
-	sub $t2, $t6, $t2
-	add $t2, $s0, $t2
-	sub $t2, $t3, $t2
-	sw $t2, global_53
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
+	add $s0, $t4, $t2
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t3, $t0, $t1
-	sub $t2, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t3, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t4, $t3
-	add $t3, $t2, $t3
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t2, $t0, $t1
 	lw $t1, global_53
 	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t4, $t2, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
 	add $t4, $t3, $t2
 	lw $t0, global_52
 	lw $t1, global_53
-	add $t2, $t0, $t1
+	add $t3, $t0, $t1
 	lw $t0, global_54
 	lw $t1, global_52
-	sub $t3, $t0, $t1
+	sub $t2, $t0, $t1
 	lw $t1, global_53
-	add $t3, $t3, $t1
-	add $t2, $t2, $t3
+	add $t2, $t2, $t1
+	add $t2, $t3, $t2
+	sub $t2, $t4, $t2
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t3, $t3, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t3, $t3, $t4
 	sub $t5, $t2, $t3
 	lw $t0, global_54
 	lw $t1, global_52
@@ -1607,208 +835,7 @@ _WhileBody0:
 	sub $t3, $t0, $t1
 	lw $t1, global_53
 	add $t3, $t3, $t1
-	add $t2, $t2, $t3
-	add $t2, $t5, $t2
-	sub $t6, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	add $t3, $t4, $t3
-	sub $t4, $t2, $t3
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	add $t2, $t2, $t3
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t2, $t2, $t3
-	sub $t5, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t3, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t4, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t4, $t2
-	sub $t2, $t3, $t2
-	add $t2, $t5, $t2
-	sub $t7, $t6, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t4, $t2
-	add $t4, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	add $t5, $t4, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t4, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t3, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	add $t2, $t4, $t2
-	sub $t5, $t5, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t4, $t2
-	add $t4, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t6, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t3, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t2, $t3, $t2
-	add $t2, $t6, $t2
-	sub $t2, $t4, $t2
-	sub $t2, $t5, $t2
-	add $s0, $t7, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
+	add $t3, $t2, $t3
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t4, $t0, $t1
@@ -1818,130 +845,12 @@ _WhileBody0:
 	lw $t1, global_53
 	add $t2, $t2, $t1
 	add $t2, $t4, $t2
-	sub $t4, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t3, $t2
-	sub $t4, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t3, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t5, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	sub $t2, $t3, $t2
-	sub $t2, $t5, $t2
-	add $t5, $t4, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t2, $t2, $t4
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t4, $t0, $t1
 	sub $t2, $t2, $t4
-	sub $t4, $t3, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	sub $t3, $t2, $t3
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t6, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t2, $t0, $t1
-	lw $t1, global_53
-	add $t2, $t2, $t1
-	add $t3, $t3, $t2
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t2, $t0, $t1
 	sub $t2, $t3, $t2
-	sub $t2, $t6, $t2
-	add $t2, $t4, $t2
 	add $t2, $t5, $t2
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t3, $t0, $t1
-	lw $t1, global_53
-	add $t3, $t3, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t3, $t3, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t5, $t4, $t1
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t4, $t5, $t4
-	add $t5, $t3, $t4
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t3, $t0, $t1
@@ -1956,21 +865,61 @@ _WhileBody0:
 	sub $t3, $t0, $t1
 	lw $t1, global_53
 	add $t3, $t3, $t1
-	add $t3, $t4, $t3
-	add $t5, $t5, $t3
+	add $t5, $t4, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t4, $t4, $t3
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t3, $t0, $t1
+	sub $t3, $t4, $t3
+	sub $t3, $t5, $t3
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t4, $t0, $t1
 	lw $t1, global_53
 	add $t4, $t4, $t1
-	add $t3, $t3, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	sub $t5, $t4, $t5
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t6, $t5, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t5, $t5, $t4
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t4, $t0, $t1
-	sub $t6, $t3, $t4
+	sub $t4, $t5, $t4
+	sub $t4, $t6, $t4
+	add $t3, $t3, $t4
+	add $t2, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t5, $t3, $t4
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t3, $t0, $t1
@@ -1980,27 +929,7 @@ _WhileBody0:
 	lw $t1, global_53
 	add $t4, $t0, $t1
 	sub $t3, $t3, $t4
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t3, $t3, $t4
-	add $t3, $t6, $t3
-	sub $t7, $t5, $t3
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t3, $t0, $t1
-	lw $t0, global_54
-	lw $t1, global_52
-	sub $t4, $t0, $t1
-	lw $t1, global_53
-	add $t4, $t4, $t1
-	add $t3, $t3, $t4
-	lw $t0, global_52
-	lw $t1, global_53
-	add $t4, $t0, $t1
-	sub $t5, $t3, $t4
+	add $t5, $t5, $t3
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t3, $t0, $t1
@@ -2025,11 +954,70 @@ _WhileBody0:
 	sub $t3, $t0, $t1
 	lw $t1, global_53
 	add $t3, $t3, $t1
-	add $t3, $t4, $t3
+	add $t4, $t4, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t3, $t4, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	sub $t5, $t4, $t5
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t4, $t5, $t4
+	add $t3, $t3, $t4
+	sub $t7, $t6, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t3, $t3, $t4
 	lw $t0, global_52
 	lw $t1, global_53
 	add $t4, $t0, $t1
-	sub $t5, $t3, $t4
+	sub $t3, $t3, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t4, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t5, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t5, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t5, $t1
+	add $t4, $t4, $t5
+	add $t6, $t3, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t4, $t4, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t5, $t4, $t3
 	lw $t0, global_54
 	lw $t1, global_52
 	sub $t3, $t0, $t1
@@ -2050,6 +1038,1018 @@ _WhileBody0:
 	sub $t3, $t7, $t3
 	add $t2, $t2, $t3
 	sub $t2, $s0, $t2
+	sw $t2, global_52
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t3, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t2, $t2, $t4
+	add $t3, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t4, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t4, $t2
+	add $t5, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t3, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t4, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t4, $t2
+	add $t2, $t3, $t2
+	sub $t4, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t3, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t5, $t2
+	sub $t3, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t5, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t5, $t1
+	add $t5, $t2, $t5
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t5, $t2
+	sub $t6, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t3, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t5, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t2, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t2, $t2, $t3
+	sub $t2, $t5, $t2
+	add $t2, $t6, $t2
+	sub $t7, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t2, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t3, $t4, $t3
+	add $t4, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t3, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t3, $t2
+	add $t5, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t3, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t4, $t2
+	add $t2, $t3, $t2
+	sub $t5, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t3, $t3, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t3, $t3, $t4
+	add $t3, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t2, $t2, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t6, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t4, $t2
+	add $t2, $t6, $t2
+	sub $t2, $t3, $t2
+	sub $t2, $t5, $t2
+	add $t3, $t7, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t5, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t2, $t2, $t4
+	sub $t4, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t5, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t5, $t2
+	sub $t6, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t4, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t5, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t5, $t2
+	sub $t2, $t4, $t2
+	add $t2, $t6, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	sub $t4, $t4, $t5
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t5, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t5, $t1
+	add $t6, $t4, $t5
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t5, $t5, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t5, $t4
+	sub $t5, $t6, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t6, $t0, $t1
+	sub $t4, $t4, $t6
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t6, $t0, $t1
+	lw $t1, global_53
+	add $t6, $t6, $t1
+	add $t7, $t4, $t6
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t6, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t4, $t6, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t6, $t0, $t1
+	sub $t4, $t4, $t6
+	sub $t4, $t7, $t4
+	add $t4, $t5, $t4
+	add $s0, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t5, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t2, $t2, $t4
+	add $t5, $t5, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t4, $t2
+	add $t5, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t4, $t2, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t6, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t2, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t2, $t2, $t4
+	add $t2, $t6, $t2
+	sub $t7, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t4, $t2, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t5, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t4, $t2
+	add $t5, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t6, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t2, $t2, $t4
+	add $t2, $t6, $t2
+	sub $t2, $t5, $t2
+	sub $t2, $t7, $t2
+	add $t2, $s0, $t2
+	sub $t2, $t3, $t2
+	sw $t2, global_53
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t3, $t3, $t4
+	add $t3, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t2, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t2, $t2, $t4
+	add $t3, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t4, $t2, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t4, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t5, $t5, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t5, $t2
+	add $t2, $t4, $t2
+	sub $t3, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t4, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t5, $t2
+	sub $t2, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t5, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t5, $t1
+	add $t5, $t4, $t5
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t5, $t4
+	sub $t6, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t4, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t5, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t2, $t2, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t2, $t2, $t4
+	sub $t2, $t5, $t2
+	add $t2, $t6, $t2
+	sub $t2, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t5, $t3, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t3, $t3, $t4
+	add $t5, $t5, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t3, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t4, $t3
+	add $t4, $t5, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t5, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t5, $t1
+	add $t5, $t3, $t5
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t5, $t5, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t6, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t3, $t6, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t6, $t0, $t1
+	lw $t1, global_53
+	add $t6, $t6, $t1
+	add $t3, $t3, $t6
+	add $t3, $t5, $t3
+	sub $t4, $t4, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t5, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t5, $t1
+	add $t5, $t3, $t5
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t6, $t5, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	sub $t3, $t3, $t5
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t5, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t5, $t1
+	add $t3, $t3, $t5
+	add $t7, $t6, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t5, $t5, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t6, $t5, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t5, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t5, $t5, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t5, $t3
+	add $t3, $t6, $t3
+	sub $t3, $t7, $t3
+	sub $t3, $t4, $t3
+	add $s0, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t4, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t2, $t2, $t3
+	sub $t4, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t3, $t2
+	sub $t5, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t3, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t3, $t3, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t4, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t4, $t2
+	sub $t2, $t3, $t2
+	add $t3, $t5, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t4, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t4, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t5, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t2, $t5, $t2
+	sub $t5, $t4, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t2, $t2, $t4
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t4, $t0, $t1
+	lw $t1, global_53
+	add $t4, $t4, $t1
+	add $t6, $t2, $t4
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t4, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t4, $t0, $t1
+	sub $t2, $t2, $t4
+	sub $t2, $t6, $t2
+	add $t2, $t5, $t2
+	add $t4, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t5, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t2, $t2, $t3
+	add $t5, $t5, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t3, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	add $t2, $t3, $t2
+	add $t5, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t3, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t6, $t0, $t1
+	sub $t2, $t2, $t6
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t6, $t0, $t1
+	lw $t1, global_53
+	add $t6, $t6, $t1
+	add $t2, $t2, $t6
+	add $t2, $t3, $t2
+	sub $t6, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t2, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t2, $t0, $t1
+	sub $t5, $t3, $t2
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t2, $t0, $t1
+	lw $t1, global_53
+	add $t2, $t2, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t2, $t2, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t2, $t2, $t3
+	add $t2, $t5, $t2
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t5, $t0, $t1
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t5, $t5, $t3
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t3, $t0, $t1
+	sub $t5, $t5, $t3
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	lw $t0, global_52
+	lw $t1, global_53
+	add $t7, $t0, $t1
+	sub $t7, $t3, $t7
+	lw $t0, global_54
+	lw $t1, global_52
+	sub $t3, $t0, $t1
+	lw $t1, global_53
+	add $t3, $t3, $t1
+	add $t3, $t7, $t3
+	add $t3, $t5, $t3
+	sub $t2, $t2, $t3
+	sub $t2, $t6, $t2
+	add $t2, $t4, $t2
+	sub $t2, $s0, $t2
 	sw $t2, global_54
 	b _WhileLoop43
 _OutOfWhile1:
@@ -2059,23 +2059,23 @@ _OutOfWhile1:
 	move $a0, $t2
 	la $a1, string_766
 	jal func__stringConcatenate
-	move $t2, $v0
+	move $t3, $v0
 	lw $a0, global_53
 	jal func__toString
-	move $t3, $v0
-	move $a0, $t2
-	move $a1, $t3
+	move $t2, $v0
+	move $a0, $t3
+	move $a1, $t2
 	jal func__stringConcatenate
 	move $t2, $v0
 	move $a0, $t2
 	la $a1, string_770
 	jal func__stringConcatenate
-	move $t2, $v0
+	move $t3, $v0
 	lw $a0, global_54
 	jal func__toString
-	move $t3, $v0
-	move $a0, $t2
-	move $a1, $t3
+	move $t2, $v0
+	move $a0, $t3
+	move $a1, $t2
 	jal func__stringConcatenate
 	move $t2, $v0
 	move $a0, $t2
@@ -2085,14 +2085,14 @@ _OutOfWhile1:
 	b _EndOfFunctionDecl42
 _EndOfFunctionDecl42:
 	lw $ra, 120($sp)
+	lw $t3, 44($sp)
+	lw $t2, 40($sp)
+	lw $t7, 60($sp)
+	lw $s1, 68($sp)
+	lw $t5, 52($sp)
 	lw $s0, 64($sp)
 	lw $t4, 48($sp)
 	lw $t6, 56($sp)
-	lw $s1, 68($sp)
-	lw $t2, 40($sp)
-	lw $t7, 60($sp)
-	lw $t5, 52($sp)
-	lw $t3, 44($sp)
 	add $sp, $sp, 3208
 	jr $ra
 .data

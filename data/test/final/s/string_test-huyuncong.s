@@ -498,14 +498,14 @@ _calc:
 _BeginOfFunctionDecl59:
 	lw $a0, 232($sp)
 	jal func__length
-	sw $v0, 208($sp)
-	lw $t0, 208($sp)
-	sw $t0, 220($sp)
+	sw $v0, 140($sp)
+	lw $t0, 140($sp)
+	sw $t0, 200($sp)
 	li $t0, 1
-	lw $t1, 220($sp)
+	lw $t1, 200($sp)
 	seq $t1, $t0, $t1
-	sw $t1, 168($sp)
-	lw $t0, 168($sp)
+	sw $t1, 144($sp)
+	lw $t0, 144($sp)
 	beqz $t0, _alternative1
 _consequence0:
 	lw $v0, 232($sp)
@@ -514,113 +514,113 @@ _consequence0:
 _alternative1:
 	b _OutOfIf2
 _OutOfIf2:
-	lw $t0, 220($sp)
+	lw $t0, 200($sp)
 	li $t1, 2
 	div $t1, $t0, $t1
-	sw $t1, 204($sp)
-	lw $t0, 204($sp)
-	sw $t0, 160($sp)
-	lw $t0, 160($sp)
+	sw $t1, 188($sp)
+	lw $t0, 188($sp)
+	sw $t0, 224($sp)
+	lw $t0, 224($sp)
 	li $t1, 1
 	sub $t1, $t0, $t1
-	sw $t1, 172($sp)
+	sw $t1, 164($sp)
 	lw $a0, 232($sp)
 	li $a1, 0
-	lw $a2, 172($sp)
+	lw $a2, 164($sp)
 	jal func__substring
+	sw $v0, 228($sp)
+	lw $t0, 228($sp)
+	sw $t0, -4($sp)
+	jal _calc
 	sw $v0, 152($sp)
 	lw $t0, 152($sp)
-	sw $t0, -4($sp)
-	jal _calc
-	sw $v0, 156($sp)
-	lw $t0, 156($sp)
-	sw $t0, 128($sp)
-	lw $t0, 220($sp)
+	sw $t0, 176($sp)
+	lw $t0, 200($sp)
 	li $t1, 1
 	sub $t1, $t0, $t1
-	sw $t1, 144($sp)
+	sw $t1, 128($sp)
 	lw $a0, 232($sp)
-	lw $a1, 160($sp)
-	lw $a2, 144($sp)
+	lw $a1, 224($sp)
+	lw $a2, 128($sp)
 	jal func__substring
-	sw $v0, 200($sp)
-	lw $t0, 200($sp)
+	sw $v0, 204($sp)
+	lw $t0, 204($sp)
 	sw $t0, -4($sp)
 	jal _calc
-	sw $v0, 192($sp)
-	lw $t0, 192($sp)
-	sw $t0, 148($sp)
-	lw $a0, 128($sp)
-	lw $a1, 148($sp)
+	sw $v0, 208($sp)
+	lw $t0, 208($sp)
+	sw $t0, 192($sp)
+	lw $a0, 176($sp)
+	lw $a1, 192($sp)
 	jal func__stringLess
-	sw $v0, 212($sp)
-	lw $t0, 212($sp)
+	sw $v0, 136($sp)
+	lw $t0, 136($sp)
 	beqz $t0, _alternative4
 _consequence3:
-	lw $a0, 128($sp)
-	lw $a1, 148($sp)
+	lw $a0, 176($sp)
+	lw $a1, 192($sp)
 	jal func__stringConcatenate
-	sw $v0, 176($sp)
-	lw $v0, 176($sp)
+	sw $v0, 196($sp)
+	lw $v0, 196($sp)
 	b _EndOfFunctionDecl60
 	b _OutOfIf5
 _alternative4:
-	lw $a0, 128($sp)
-	lw $a1, 148($sp)
+	lw $a0, 176($sp)
+	lw $a1, 192($sp)
 	jal func__stringIsEqual
-	sw $v0, 184($sp)
-	lw $t0, 184($sp)
+	sw $v0, 172($sp)
+	lw $t0, 172($sp)
 	beqz $t0, _alternative7
 _consequence6:
-	lw $a0, 128($sp)
+	lw $a0, 176($sp)
 	li $a1, 0
 	jal func__ord
-	sw $v0, 196($sp)
-	lw $t0, 196($sp)
-	sw $t0, 136($sp)
-	lw $a0, 148($sp)
-	li $a1, 0
-	jal func__ord
-	sw $v0, 228($sp)
-	lw $t0, 228($sp)
-	sw $t0, 140($sp)
-	lw $t0, 136($sp)
-	lw $t1, 140($sp)
-	slt $t1, $t0, $t1
-	sw $t1, 132($sp)
+	sw $v0, 132($sp)
 	lw $t0, 132($sp)
+	sw $t0, 180($sp)
+	lw $a0, 192($sp)
+	li $a1, 0
+	jal func__ord
+	sw $v0, 148($sp)
+	lw $t0, 148($sp)
+	sw $t0, 168($sp)
+	lw $t0, 180($sp)
+	lw $t1, 168($sp)
+	slt $t1, $t0, $t1
+	sw $t1, 156($sp)
+	lw $t0, 156($sp)
 	beqz $t0, _alternative10
 _consequence9:
-	lw $a0, 128($sp)
-	lw $a1, 148($sp)
+	lw $a0, 176($sp)
+	lw $a1, 192($sp)
 	jal func__stringConcatenate
-	sw $v0, 216($sp)
-	lw $v0, 216($sp)
+	sw $v0, 160($sp)
+	lw $v0, 160($sp)
 	b _EndOfFunctionDecl60
 	b _OutOfIf11
 _alternative10:
 	b _OutOfIf11
 _OutOfIf11:
-	lw $a0, 148($sp)
-	lw $a1, 128($sp)
+	lw $a0, 192($sp)
+	lw $a1, 176($sp)
 	jal func__stringConcatenate
-	sw $v0, 164($sp)
-	lw $v0, 164($sp)
+	sw $v0, 216($sp)
+	lw $v0, 216($sp)
 	b _EndOfFunctionDecl60
 	b _OutOfIf8
 _alternative7:
-	lw $a0, 128($sp)
-	lw $a1, 148($sp)
+	lw $a0, 176($sp)
+	lw $a1, 192($sp)
 	jal func__stringLarge
-	sw $v0, 224($sp)
-	lw $t0, 224($sp)
+	sw $v0, 212($sp)
+	lw $t0, 212($sp)
 	beqz $t0, _alternative13
 _consequence12:
-	lw $a0, 148($sp)
-	lw $a1, 128($sp)
+	lw $a0, 192($sp)
+	lw $a1, 176($sp)
 	jal func__stringConcatenate
-	sw $v0, 180($sp)
-	lw $v0, 180($sp)
+	sw $v0, 220($sp)
+	lw $v0, 220($sp)
 	b _EndOfFunctionDecl60
 	b _OutOfIf14
 _alternative13:
@@ -632,7 +632,7 @@ _OutOfIf8:
 _OutOfIf5:
 	la $a0, string_19
 	jal func__println
-	sw $v0, 188($sp)
+	sw $v0, 184($sp)
 _EndOfFunctionDecl60:
 	lw $ra, 120($sp)
 	add $sp, $sp, 236
@@ -642,22 +642,22 @@ main:
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl61:
 	jal func__getString
-	sw $v0, 160($sp)
-	lw $t0, 160($sp)
+	sw $v0, 128($sp)
+	lw $t0, 128($sp)
 	sw $t0, global_101
 	jal func__getString
-	sw $v0, 144($sp)
-	lw $t0, 144($sp)
+	sw $v0, 140($sp)
+	lw $t0, 140($sp)
 	sw $t0, global_102
 	lw $a0, global_102
 	jal func__parseInt
-	sw $v0, 148($sp)
-	lw $t0, 148($sp)
+	sw $v0, 132($sp)
+	lw $t0, 132($sp)
 	sw $t0, global_104
 	lw $a0, global_101
 	jal func__length
-	sw $v0, 132($sp)
-	lw $t0, 132($sp)
+	sw $v0, 148($sp)
+	lw $t0, 148($sp)
 	lw $t1, global_104
 	slt $t1, $t0, $t1
 	sw $t1, 136($sp)
@@ -666,7 +666,7 @@ _BeginOfFunctionDecl61:
 _consequence15:
 	la $a0, string_29
 	jal func__println
-	sw $v0, 152($sp)
+	sw $v0, 160($sp)
 	li $v0, 0
 	b _EndOfFunctionDecl62
 	b _OutOfIf17
@@ -676,17 +676,17 @@ _OutOfIf17:
 	lw $t0, global_104
 	li $t1, 1
 	sub $t1, $t0, $t1
-	sw $t1, 128($sp)
+	sw $t1, 144($sp)
 	lw $a0, global_101
 	li $a1, 0
-	lw $a2, 128($sp)
+	lw $a2, 144($sp)
 	jal func__substring
-	sw $v0, 156($sp)
-	lw $t0, 156($sp)
+	sw $v0, 152($sp)
+	lw $t0, 152($sp)
 	sw $t0, -4($sp)
 	jal _calc
-	sw $v0, 140($sp)
-	lw $t0, 140($sp)
+	sw $v0, 156($sp)
+	lw $t0, 156($sp)
 	sw $t0, global_103
 	lw $a0, global_103
 	jal func__println

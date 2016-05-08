@@ -495,7 +495,6 @@ func__stringNeq:
 main:
 	sub $sp, $sp, 184
 	sw $t2, 40($sp)
-	sw $t3, 44($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl74:
 	li $t0, 4
@@ -530,9 +529,11 @@ _BeginOfFunctionDecl74:
 	mul $t1, $t0, $t1
 	sw $t1, 180($sp)
 	lw $t1, 180($sp)
-	add $t3, $t2, $t1
+	add $t1, $t2, $t1
+	sw $t1, 164($sp)
 	li $t0, 2
-	sw $t0, 0($t3)
+	lw $t1, 164($sp)
+	sw $t0, 0($t1)
 	sw $t2, global_198
 	li $t0, 2
 	li $t1, 4
@@ -549,7 +550,6 @@ _BeginOfFunctionDecl74:
 _EndOfFunctionDecl75:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
-	lw $t3, 44($sp)
 	add $sp, $sp, 184
 	jr $ra
 .data

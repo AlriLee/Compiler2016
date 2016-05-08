@@ -494,8 +494,9 @@ func__stringNeq:
 	jr $ra
 _tak:
 	sub $sp, $sp, 176
-	sw $t2, 40($sp)
 	sw $t3, 44($sp)
+	sw $t2, 40($sp)
+	sw $t4, 48($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl173:
 	lw $t0, 168($sp)
@@ -516,29 +517,29 @@ _consequence0:
 	lw $t0, 168($sp)
 	li $t1, 1
 	sub $t1, $t0, $t1
-	sw $t1, 144($sp)
-	lw $t0, 144($sp)
+	sw $t1, 156($sp)
+	lw $t0, 156($sp)
 	sw $t0, -12($sp)
 	lw $t0, 172($sp)
 	sw $t0, -8($sp)
 	lw $t0, 164($sp)
 	sw $t0, -4($sp)
 	jal _tak
-	sw $v0, 152($sp)
+	move $t2, $v0
 	lw $t0, 172($sp)
 	li $t1, 1
-	sub $t2, $t0, $t1
-	sw $t2, -12($sp)
+	sub $t4, $t0, $t1
+	sw $t4, -12($sp)
 	lw $t0, 164($sp)
 	sw $t0, -8($sp)
 	lw $t0, 168($sp)
 	sw $t0, -4($sp)
 	jal _tak
-	move $t2, $v0
+	sw $v0, 160($sp)
 	sw $t3, -12($sp)
-	lw $t0, 152($sp)
-	sw $t0, -8($sp)
-	sw $t2, -4($sp)
+	sw $t2, -8($sp)
+	lw $t0, 160($sp)
+	sw $t0, -4($sp)
 	jal _tak
 	move $t2, $v0
 	li $t0, 1
@@ -554,31 +555,31 @@ _OutOfIf2:
 	b _EndOfFunctionDecl174
 _EndOfFunctionDecl174:
 	lw $ra, 120($sp)
-	lw $t2, 40($sp)
 	lw $t3, 44($sp)
+	lw $t2, 40($sp)
+	lw $t4, 48($sp)
 	add $sp, $sp, 176
 	jr $ra
 main:
 	sub $sp, $sp, 164
-	sw $t2, 40($sp)
 	sw $t3, 44($sp)
+	sw $t2, 40($sp)
+	sw $t4, 48($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl175:
 	jal func__getInt
 	move $t2, $v0
-	move $t3, $t2
 	jal func__getInt
-	sw $v0, 152($sp)
-	lw $t0, 152($sp)
-	move $t2, $t0
+	sw $v0, 156($sp)
+	lw $t0, 156($sp)
+	move $t4, $t0
 	jal func__getInt
 	sw $v0, 160($sp)
 	lw $t0, 160($sp)
-	sw $t0, 156($sp)
-	sw $t3, -12($sp)
-	sw $t2, -8($sp)
-	lw $t0, 156($sp)
-	sw $t0, -4($sp)
+	move $t3, $t0
+	sw $t2, -12($sp)
+	sw $t4, -8($sp)
+	sw $t3, -4($sp)
 	jal _tak
 	move $t2, $v0
 	move $a0, $t2
@@ -591,8 +592,9 @@ _BeginOfFunctionDecl175:
 	b _EndOfFunctionDecl176
 _EndOfFunctionDecl176:
 	lw $ra, 120($sp)
-	lw $t2, 40($sp)
 	lw $t3, 44($sp)
+	lw $t2, 40($sp)
+	lw $t4, 48($sp)
 	add $sp, $sp, 164
 	jr $ra
 .data
