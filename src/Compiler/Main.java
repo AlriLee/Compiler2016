@@ -1,13 +1,10 @@
 package Compiler;
 
-import Compiler.AST.Decl.Declaration;
-import Compiler.AST.Decl.FunctionDecl;
 import Compiler.AST.Parser.MagLexer;
 import Compiler.AST.Parser.MagParser;
 import Compiler.AST.Prog;
 import Compiler.Environment.SymbolTable;
 import Compiler.Error.CompileError;
-import Compiler.GlobalRegisterAllocator.GlobalRegisterAllocator;
 import Compiler.Listener.ClassDeclListener;
 import Compiler.Listener.ErrorListener;
 import Compiler.Listener.FunctionDeclListener;

@@ -519,12 +519,12 @@ _BeginOfFunctionDecl557:
 	lw $t0, 144($sp)
 	lw $t1, 148($sp)
 	rem $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
-	li $t1, 0
-	seq $t1, $t0, $t1
 	sw $t1, 132($sp)
 	lw $t0, 132($sp)
+	li $t1, 0
+	seq $t1, $t0, $t1
+	sw $t1, 128($sp)
+	lw $t0, 128($sp)
 	beqz $t0, _alternative562
 _consequence561:
 	lw $v0, 148($sp)
@@ -534,10 +534,10 @@ _alternative562:
 	lw $t0, 144($sp)
 	lw $t1, 148($sp)
 	rem $t1, $t0, $t1
-	sw $t1, 128($sp)
+	sw $t1, 136($sp)
 	lw $t0, 148($sp)
 	sw $t0, -8($sp)
-	lw $t0, 128($sp)
+	lw $t0, 136($sp)
 	sw $t0, -4($sp)
 	jal _gcd
 	sw $v0, 140($sp)
@@ -599,13 +599,13 @@ _BeginOfFunctionDecl559:
 	li $t0, 1
 	sw $t0, -4($sp)
 	jal _gcd
+	sw $v0, 152($sp)
+	lw $a0, 152($sp)
+	jal func__toString
 	sw $v0, 128($sp)
 	lw $a0, 128($sp)
-	jal func__toString
-	sw $v0, 156($sp)
-	lw $a0, 156($sp)
 	jal func__println
-	sw $v0, 132($sp)
+	sw $v0, 160($sp)
 	li $t0, 34986
 	sw $t0, -8($sp)
 	li $t0, 3087
@@ -614,22 +614,22 @@ _BeginOfFunctionDecl559:
 	sw $v0, 140($sp)
 	lw $a0, 140($sp)
 	jal func__toString
-	sw $v0, 136($sp)
-	lw $a0, 136($sp)
+	sw $v0, 132($sp)
+	lw $a0, 132($sp)
 	jal func__println
-	sw $v0, 148($sp)
+	sw $v0, 156($sp)
 	li $t0, 2907
 	sw $t0, -8($sp)
 	li $t0, 1539
 	sw $t0, -4($sp)
 	jal _gcd
-	sw $v0, 152($sp)
-	lw $a0, 152($sp)
+	sw $v0, 136($sp)
+	lw $a0, 136($sp)
 	jal func__toString
-	sw $v0, 144($sp)
-	lw $a0, 144($sp)
+	sw $v0, 148($sp)
+	lw $a0, 148($sp)
 	jal func__println
-	sw $v0, 160($sp)
+	sw $v0, 144($sp)
 	li $v0, 0
 	b _EndOfFunctionDecl560
 _EndOfFunctionDecl560:

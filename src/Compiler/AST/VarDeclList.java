@@ -4,7 +4,7 @@ import Compiler.AST.Decl.VarDecl;
 import Compiler.AST.Type.NullType;
 import Compiler.AST.Type.Type;
 import Compiler.Error.CompileError;
-import javafx.util.Pair;
+import org.antlr.v4.runtime.misc.Pair;
 
 import java.util.List;
 
@@ -37,8 +37,8 @@ public class VarDeclList implements ASTNode {
         VarDeclList varDeclList = null;
         for (int i = parameters.size() - 1; i >= 0; --i) {
             Pair<String, Type> parameter = parameters.get(i);
-            Symbol symbol = Symbol.getSymbol(parameter.getKey());
-            varDeclList = new VarDeclList(new VarDecl(parameter.getValue(), symbol), varDeclList);
+            Symbol symbol = Symbol.getSymbol(parameter.a);
+            varDeclList = new VarDeclList(new VarDecl(parameter.b, symbol), varDeclList);
         }
         return varDeclList;
     }

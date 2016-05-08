@@ -518,60 +518,62 @@ _work:
 _BeginOfFunctionDecl399:
 	lw $t1, 188($sp)
 	lw $t0, 4($t1)
-	sw $t0, 128($sp)
-	lw $t0, 128($sp)
+	sw $t0, 148($sp)
+	lw $t0, 148($sp)
 	li $t1, 100
 	sle $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $t0, 156($sp)
+	sw $t1, 144($sp)
+	lw $t0, 144($sp)
 	beqz $t0, _alternative404
 _consequence403:
 	lw $a0, 184($sp)
 	la $a1, string_2
 	jal func__stringConcatenate
-	sw $v0, 160($sp)
+	move $t2, $v0
 	lw $t1, 188($sp)
-	lw $t2, 0($t1)
-	lw $a0, 160($sp)
-	move $a1, $t2
+	lw $t0, 0($t1)
+	sw $t0, 156($sp)
+	move $a0, $t2
+	lw $a1, 156($sp)
 	jal func__stringConcatenate
-	sw $v0, 136($sp)
-	lw $a0, 136($sp)
+	sw $v0, 160($sp)
+	lw $a0, 160($sp)
 	la $a1, string_6
 	jal func__stringConcatenate
-	sw $v0, 144($sp)
-	lw $a0, 144($sp)
-	jal func__println
 	sw $v0, 164($sp)
+	lw $a0, 164($sp)
+	jal func__println
+	sw $v0, 132($sp)
 	b _OutOfIf405
 _alternative404:
 	lw $a0, 184($sp)
 	la $a1, string_9
 	jal func__stringConcatenate
-	sw $v0, 180($sp)
+	move $t2, $v0
 	lw $t1, 188($sp)
-	lw $t2, 0($t1)
-	lw $a0, 180($sp)
-	move $a1, $t2
+	lw $t0, 0($t1)
+	sw $t0, 152($sp)
+	move $a0, $t2
+	lw $a1, 152($sp)
 	jal func__stringConcatenate
 	sw $v0, 168($sp)
 	lw $a0, 168($sp)
 	la $a1, string_13
 	jal func__stringConcatenate
-	sw $v0, 140($sp)
-	lw $a0, 140($sp)
+	sw $v0, 180($sp)
+	lw $a0, 180($sp)
 	jal func__println
-	sw $v0, 152($sp)
+	sw $v0, 176($sp)
 	b _OutOfIf405
 _OutOfIf405:
 	lw $t1, 188($sp)
 	lw $t0, 4($t1)
-	sw $t0, 176($sp)
-	lw $t0, 176($sp)
+	sw $t0, 172($sp)
+	lw $t0, 172($sp)
 	lw $t1, global_203
 	add $t1, $t0, $t1
-	sw $t1, 148($sp)
-	lw $t0, 148($sp)
+	sw $t1, 140($sp)
+	lw $t0, 140($sp)
 	lw $t1, 188($sp)
 	sw $t0, 4($t1)
 _EndOfFunctionDecl400:
@@ -629,40 +631,40 @@ _BeginOfFunctionDecl401:
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 156($sp)
-	lw $a0, 156($sp)
+	sw $t1, 132($sp)
+	lw $a0, 132($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 140($sp)
+	sw $v0, 136($sp)
+	lw $t0, 136($sp)
+	sw $t0, 140($sp)
 	lw $t0, 140($sp)
-	sw $t0, 144($sp)
-	lw $t0, 144($sp)
-	move $t3, $t0
+	sw $t0, 160($sp)
 	la $t0, string_24
-	sw $t0, 0($t3)
+	lw $t1, 160($sp)
+	sw $t0, 0($t1)
 	li $t0, 0
-	sw $t0, 4($t3)
+	lw $t1, 160($sp)
+	sw $t0, 4($t1)
 	li $t0, 2
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $a0, 136($sp)
+	mul $t2, $t0, $t1
+	move $a0, $t2
 	li $v0, 9
 	syscall
-	sw $v0, 152($sp)
-	lw $t0, 152($sp)
-	sw $t0, 160($sp)
-	lw $t0, 160($sp)
-	move $t2, $t0
+	move $t2, $v0
+	move $t2, $t2
+	move $t2, $t2
 	la $t0, string_31
 	sw $t0, 0($t2)
 	lw $t0, global_202
 	sw $t0, 4($t2)
 	la $t0, string_33
 	sw $t0, -8($sp)
-	sw $t3, -4($sp)
+	lw $t0, 160($sp)
+	sw $t0, -4($sp)
 	jal _work
-	sw $v0, 168($sp)
+	sw $v0, 164($sp)
 	la $t0, string_35
 	sw $t0, -8($sp)
 	sw $t2, -4($sp)
@@ -672,7 +674,7 @@ _BeginOfFunctionDecl401:
 	sw $t0, -8($sp)
 	sw $t2, -4($sp)
 	jal _work
-	sw $v0, 132($sp)
+	sw $v0, 168($sp)
 _EndOfFunctionDecl402:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)

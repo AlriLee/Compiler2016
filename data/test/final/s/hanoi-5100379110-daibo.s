@@ -519,27 +519,27 @@ _BeginOfFunctionDecl602:
 	lw $t0, 188($sp)
 	li $t1, 1
 	seq $t1, $t0, $t1
-	sw $t1, 172($sp)
-	lw $t0, 172($sp)
+	sw $t1, 180($sp)
+	lw $t0, 180($sp)
 	beqz $t0, _alternative607
 _consequence606:
 	la $a0, string_1
 	lw $a1, 192($sp)
 	jal func__stringConcatenate
-	sw $v0, 152($sp)
-	lw $a0, 152($sp)
+	sw $v0, 184($sp)
+	lw $a0, 184($sp)
 	la $a1, string_3
 	jal func__stringConcatenate
-	sw $v0, 180($sp)
-	lw $a0, 180($sp)
+	sw $v0, 148($sp)
+	lw $a0, 148($sp)
 	lw $a1, 200($sp)
 	jal func__stringConcatenate
 	sw $v0, 156($sp)
 	lw $a0, 156($sp)
 	jal func__println
-	sw $v0, 168($sp)
+	sw $v0, 172($sp)
 	lw $t0, 204($sp)
-	sw $t0, 148($sp)
+	sw $t0, 128($sp)
 	lw $t0, 204($sp)
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -549,14 +549,47 @@ _alternative607:
 	lw $t0, 188($sp)
 	li $t1, 1
 	sub $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
+	sw $t1, 160($sp)
+	lw $t0, 160($sp)
 	sw $t0, -20($sp)
 	lw $t0, 192($sp)
 	sw $t0, -16($sp)
 	lw $t0, 200($sp)
 	sw $t0, -12($sp)
 	lw $t0, 196($sp)
+	sw $t0, -8($sp)
+	lw $t0, 204($sp)
+	sw $t0, -4($sp)
+	jal _cd
+	sw $v0, 132($sp)
+	lw $t0, 132($sp)
+	sw $t0, 204($sp)
+	la $a0, string_11
+	lw $a1, 192($sp)
+	jal func__stringConcatenate
+	sw $v0, 136($sp)
+	lw $a0, 136($sp)
+	la $a1, string_13
+	jal func__stringConcatenate
+	sw $v0, 168($sp)
+	lw $a0, 168($sp)
+	lw $a1, 200($sp)
+	jal func__stringConcatenate
+	sw $v0, 152($sp)
+	lw $a0, 152($sp)
+	jal func__println
+	sw $v0, 144($sp)
+	lw $t0, 188($sp)
+	li $t1, 1
+	sub $t1, $t0, $t1
+	sw $t1, 140($sp)
+	lw $t0, 140($sp)
+	sw $t0, -20($sp)
+	lw $t0, 196($sp)
+	sw $t0, -16($sp)
+	lw $t0, 192($sp)
+	sw $t0, -12($sp)
+	lw $t0, 200($sp)
 	sw $t0, -8($sp)
 	lw $t0, 204($sp)
 	sw $t0, -4($sp)
@@ -564,41 +597,8 @@ _alternative607:
 	sw $v0, 164($sp)
 	lw $t0, 164($sp)
 	sw $t0, 204($sp)
-	la $a0, string_11
-	lw $a1, 192($sp)
-	jal func__stringConcatenate
-	sw $v0, 140($sp)
-	lw $a0, 140($sp)
-	la $a1, string_13
-	jal func__stringConcatenate
-	sw $v0, 160($sp)
-	lw $a0, 160($sp)
-	lw $a1, 200($sp)
-	jal func__stringConcatenate
-	sw $v0, 176($sp)
-	lw $a0, 176($sp)
-	jal func__println
-	sw $v0, 184($sp)
-	lw $t0, 188($sp)
-	li $t1, 1
-	sub $t1, $t0, $t1
-	sw $t1, 128($sp)
-	lw $t0, 128($sp)
-	sw $t0, -20($sp)
-	lw $t0, 196($sp)
-	sw $t0, -16($sp)
-	lw $t0, 192($sp)
-	sw $t0, -12($sp)
-	lw $t0, 200($sp)
-	sw $t0, -8($sp)
 	lw $t0, 204($sp)
-	sw $t0, -4($sp)
-	jal _cd
-	sw $v0, 144($sp)
-	lw $t0, 144($sp)
-	sw $t0, 204($sp)
-	lw $t0, 204($sp)
-	sw $t0, 132($sp)
+	sw $t0, 176($sp)
 	lw $t0, 204($sp)
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -656,32 +656,31 @@ main:
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl604:
 	la $t0, string_21
-	move $t2, $t0
+	move $t5, $t0
 	la $t0, string_22
-	move $t4, $t0
-	la $t0, string_23
 	move $t3, $t0
+	la $t0, string_23
+	move $t2, $t0
 	jal func__getInt
 	sw $v0, 152($sp)
 	lw $t0, 152($sp)
-	sw $t0, 156($sp)
-	lw $t0, 156($sp)
-	sw $t0, -20($sp)
-	sw $t2, -16($sp)
-	sw $t4, -12($sp)
-	sw $t3, -8($sp)
+	move $t4, $t0
+	sw $t4, -20($sp)
+	sw $t5, -16($sp)
+	sw $t3, -12($sp)
+	sw $t2, -8($sp)
 	li $t0, 0
 	sw $t0, -4($sp)
 	jal _cd
-	sw $v0, 160($sp)
-	lw $t0, 160($sp)
-	sw $t0, 132($sp)
-	lw $a0, 132($sp)
-	jal func__toString
-	sw $v0, 144($sp)
-	lw $a0, 144($sp)
-	jal func__println
 	sw $v0, 148($sp)
+	lw $t0, 148($sp)
+	sw $t0, 140($sp)
+	lw $a0, 140($sp)
+	jal func__toString
+	sw $v0, 156($sp)
+	lw $a0, 156($sp)
+	jal func__println
+	sw $v0, 160($sp)
 	li $v0, 0
 	b _EndOfFunctionDecl605
 _EndOfFunctionDecl605:

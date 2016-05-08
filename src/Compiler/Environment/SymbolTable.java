@@ -10,7 +10,7 @@ import Compiler.Error.CompileError;
 import Compiler.Listener.FunctionDeclListener;
 import Compiler.Listener.MagASTBuilder;
 import Compiler.Operand.StringImmediate;
-import javafx.util.Pair;
+import org.antlr.v4.runtime.misc.Pair;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
 import java.util.ArrayList;
