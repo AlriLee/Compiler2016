@@ -34,16 +34,16 @@ public class MagASTBuilder extends BaseListener {
 
     @Override
     public void enterStatement(MagParser.StatementContext ctx) {
-        if (ctx.parent instanceof MagParser.Selection_ifContext || ctx.parent instanceof MagParser.Selection_ifElseContext) {
-            SymbolTable.beginScope();
-        }
+//        if (ctx.parent instanceof MagParser.Selection_ifContext || ctx.parent instanceof MagParser.Selection_ifElseContext) {
+//            SymbolTable.beginScope();
+//        }
     }
 
     @Override
     public void exitStatement(MagParser.StatementContext ctx) {
-        if (ctx.parent instanceof MagParser.Selection_ifContext || ctx.parent instanceof MagParser.Selection_ifElseContext) {
-            SymbolTable.endScope();
-        }
+//        if (ctx.parent instanceof MagParser.Selection_ifContext || ctx.parent instanceof MagParser.Selection_ifElseContext) {
+//            SymbolTable.endScope();
+//        }
     }
 
     @Override

@@ -558,26 +558,20 @@ _ForBody0:
 	li $t0, 11
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 420($sp)
-	lw $t0, 420($sp)
+	sw $t1, 448($sp)
+	lw $t0, 448($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 420($sp)
-	lw $a0, 420($sp)
+	sw $t1, 448($sp)
+	lw $a0, 448($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 444($sp)
+	move $t3, $v0
 	li $t0, 11
-	lw $t1, 444($sp)
-	sw $t0, 0($t1)
-	lw $t0, 444($sp)
+	sw $t0, 0($t3)
 	li $t1, 4
-	add $t1, $t0, $t1
-	sw $t1, 444($sp)
-	lw $t0, 444($sp)
-	sw $t0, 336($sp)
-	lw $t0, 336($sp)
-	sw $t0, 0($t2)
+	add $t3, $t3, $t1
+	sw $t3, 0($t2)
 _continueFor77:
 	lw $t0, global_170
 	move $t2, $t0
@@ -608,13 +602,13 @@ _ForBody4:
 	mul $t2, $t0, $t1
 	lw $t0, global_169
 	add $t2, $t0, $t2
-	lw $t0, 0($t2)
-	sw $t0, 516($sp)
+	lw $t2, 0($t2)
 	lw $t0, global_171
 	li $t1, 4
-	mul $t2, $t0, $t1
-	lw $t0, 516($sp)
-	add $t2, $t0, $t2
+	mul $t1, $t0, $t1
+	sw $t1, 308($sp)
+	lw $t1, 308($sp)
+	add $t2, $t2, $t1
 	li $t0, 888
 	sw $t0, 0($t2)
 _continueFor81:
@@ -651,14 +645,15 @@ _ForBody6:
 	add $t2, $t0, $t2
 	li $t0, 2
 	li $t1, 4
-	mul $t3, $t0, $t1
-	move $a0, $t3
+	mul $t1, $t0, $t1
+	sw $t1, 324($sp)
+	lw $a0, 324($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 316($sp)
-	lw $t0, 316($sp)
-	sw $t0, 264($sp)
-	lw $t0, 264($sp)
+	sw $v0, 272($sp)
+	lw $t0, 272($sp)
+	sw $t0, 440($sp)
+	lw $t0, 440($sp)
 	sw $t0, 0($t2)
 	lw $t0, global_170
 	li $t1, 4
@@ -668,8 +663,8 @@ _ForBody6:
 	lw $t2, 0($t2)
 	li $t0, 1
 	neg $t1, $t0
-	sw $t1, 280($sp)
-	lw $t0, 280($sp)
+	sw $t1, 420($sp)
+	lw $t0, 420($sp)
 	sw $t0, 0($t2)
 _continueFor83:
 	lw $t0, global_170
@@ -685,13 +680,13 @@ _OutOfFor7:
 	mul $t2, $t0, $t1
 	lw $t0, global_169
 	add $t2, $t0, $t2
-	lw $t2, 0($t2)
+	lw $t0, 0($t2)
+	sw $t0, 400($sp)
 	li $t0, 9
 	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 392($sp)
-	lw $t1, 392($sp)
-	add $t2, $t2, $t1
+	mul $t2, $t0, $t1
+	lw $t0, 400($sp)
+	add $t2, $t0, $t2
 	lw $t2, 0($t2)
 	sw $t2, -4($sp)
 	jal _printNum
@@ -717,21 +712,23 @@ _ForBody10:
 	mul $t2, $t0, $t1
 	lw $t0, global_169
 	add $t2, $t0, $t2
-	lw $t0, 0($t2)
-	sw $t0, 452($sp)
+	lw $t2, 0($t2)
 	lw $t0, global_171
 	li $t1, 4
-	mul $t2, $t0, $t1
-	lw $t0, 452($sp)
-	add $t1, $t0, $t2
-	sw $t1, 352($sp)
+	mul $t1, $t0, $t1
+	sw $t1, 356($sp)
+	lw $t1, 356($sp)
+	add $t2, $t2, $t1
 	lw $t0, global_170
 	li $t1, 10
-	mul $t2, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 280($sp)
+	lw $t0, 280($sp)
 	lw $t1, global_171
-	add $t2, $t2, $t1
-	lw $t1, 352($sp)
-	sw $t2, 0($t1)
+	add $t1, $t0, $t1
+	sw $t1, 436($sp)
+	lw $t0, 436($sp)
+	sw $t0, 0($t2)
 _continueFor87:
 	lw $t0, global_171
 	move $t2, $t0
@@ -773,11 +770,11 @@ _ForBody14:
 	lw $t0, global_169
 	add $t2, $t0, $t2
 	lw $t0, 0($t2)
-	sw $t0, 500($sp)
+	sw $t0, 428($sp)
 	lw $t0, global_171
 	li $t1, 4
 	mul $t2, $t0, $t1
-	lw $t0, 500($sp)
+	lw $t0, 428($sp)
 	add $t2, $t0, $t2
 	lw $t2, 0($t2)
 	sw $t2, -4($sp)
@@ -808,11 +805,11 @@ _OutOfFor13:
 	lw $t0, global_169
 	add $t2, $t0, $t2
 	lw $t0, 0($t2)
-	sw $t0, 476($sp)
+	sw $t0, 300($sp)
 	li $t0, 10
 	li $t1, 4
 	mul $t2, $t0, $t1
-	lw $t0, 476($sp)
+	lw $t0, 300($sp)
 	add $t2, $t0, $t2
 	li $t0, 0
 	sw $t0, 0($t2)
@@ -825,8 +822,8 @@ _OutOfFor13:
 	li $t0, 10
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 464($sp)
-	lw $t1, 464($sp)
+	sw $t1, 508($sp)
+	lw $t1, 508($sp)
 	add $t2, $t2, $t1
 	lw $t2, 0($t2)
 	sw $t2, -4($sp)
@@ -837,35 +834,35 @@ _OutOfFor13:
 	mul $t2, $t0, $t1
 	lw $t0, global_172
 	add $t2, $t0, $t2
-	lw $t0, 0($t2)
-	sw $t0, 400($sp)
+	lw $t2, 0($t2)
 	li $t0, 2
-	neg $t2, $t0
-	lw $t1, 400($sp)
-	sw $t2, 0($t1)
+	neg $t1, $t0
+	sw $t1, 512($sp)
+	lw $t0, 512($sp)
+	sw $t0, 0($t2)
 	li $t0, 2
 	li $t1, 4
 	mul $t2, $t0, $t1
 	lw $t0, global_169
 	add $t2, $t0, $t2
-	lw $t0, 0($t2)
-	sw $t0, 304($sp)
+	lw $t2, 0($t2)
 	li $t0, 10
 	li $t1, 4
-	mul $t2, $t0, $t1
-	lw $t0, 304($sp)
-	add $t2, $t0, $t2
+	mul $t1, $t0, $t1
+	sw $t1, 192($sp)
+	lw $t1, 192($sp)
+	add $t2, $t2, $t1
 	lw $t2, 0($t2)
 	li $t1, 4
 	mul $t2, $t2, $t1
 	lw $t0, global_172
 	add $t2, $t0, $t2
-	lw $t2, 0($t2)
+	lw $t0, 0($t2)
+	sw $t0, 352($sp)
 	li $t0, 10
-	neg $t1, $t0
-	sw $t1, 348($sp)
-	lw $t0, 348($sp)
-	sw $t0, 0($t2)
+	neg $t2, $t0
+	lw $t1, 352($sp)
+	sw $t2, 0($t1)
 	li $t0, 0
 	li $t1, 4
 	mul $t2, $t0, $t1

@@ -520,109 +520,118 @@ _BeginOfFunctionDecl41:
 	li $t0, 0
 	sw $t0, global_33
 	li $t0, 1
-	move $t2, $t0
+	sw $t0, 172($sp)
 _ForLoop43:
+	lw $t0, 172($sp)
 	lw $t1, global_31
-	sle $t3, $t2, $t1
-	beqz $t3, _OutOfFor1
+	sle $t2, $t0, $t1
+	beqz $t2, _OutOfFor1
 _ForBody0:
+	lw $t0, 172($sp)
 	li $t1, 4
-	mul $t3, $t2, $t1
+	mul $t2, $t0, $t1
 	lw $t0, global_32
-	add $t3, $t0, $t3
+	add $t2, $t0, $t2
 	li $t0, 1
-	sw $t0, 0($t3)
+	sw $t0, 0($t2)
 _continueFor44:
-	move $t3, $t2
+	lw $t0, 172($sp)
+	move $t2, $t0
+	lw $t0, 172($sp)
 	li $t1, 1
-	add $t2, $t2, $t1
+	add $t1, $t0, $t1
+	sw $t1, 172($sp)
 	b _ForLoop43
 _OutOfFor1:
 	li $t0, 2
-	move $t2, $t0
+	sw $t0, 172($sp)
 _ForLoop45:
+	lw $t0, 172($sp)
 	lw $t1, global_31
-	sle $t1, $t2, $t1
-	sw $t1, 248($sp)
-	lw $t0, 248($sp)
-	beqz $t0, _OutOfFor3
+	sle $t2, $t0, $t1
+	beqz $t2, _OutOfFor3
 _ForBody2:
+	lw $t0, 172($sp)
 	li $t1, 4
-	mul $t3, $t2, $t1
+	mul $t2, $t0, $t1
 	lw $t0, global_32
-	add $t3, $t0, $t3
-	lw $t0, 0($t3)
-	sw $t0, 252($sp)
-	lw $t0, 252($sp)
-	beqz $t0, _alternative5
+	add $t2, $t0, $t2
+	lw $t2, 0($t2)
+	beqz $t2, _alternative5
 _consequence4:
 	li $t0, 2
-	move $t4, $t0
+	move $t3, $t0
+	lw $t0, 172($sp)
 	li $t1, 3
-	sgt $t3, $t2, $t1
-	beqz $t3, _logicalFalse11
+	sgt $t2, $t0, $t1
+	beqz $t2, _logicalFalse11
 _logicalTrue10:
+	lw $t0, 172($sp)
 	li $t1, 2
-	sub $t3, $t2, $t1
+	sub $t2, $t0, $t1
 	li $t1, 4
-	mul $t3, $t3, $t1
+	mul $t2, $t2, $t1
 	lw $t0, global_32
-	add $t3, $t0, $t3
-	lw $t3, 0($t3)
+	add $t2, $t0, $t2
+	lw $t2, 0($t2)
+	move $t5, $t2
 	b _logicalMerge12
 _logicalFalse11:
 	li $t0, 0
-	move $t3, $t0
+	move $t5, $t0
 	b _logicalMerge12
 _logicalMerge12:
-	beqz $t3, _alternative8
+	beqz $t5, _alternative8
 _consequence7:
 	lw $t0, global_33
-	move $t5, $t0
+	move $t2, $t0
 	lw $t0, global_33
 	li $t1, 1
 	add $t1, $t0, $t1
 	sw $t1, global_33
+	lw $t0, 172($sp)
 	li $t1, 2
-	sub $t5, $t2, $t1
-	move $a0, $t5
-	jal func__toString
-	move $t5, $v0
-	move $a0, $t5
-	la $a1, string_23
-	jal func__stringConcatenate
-	move $t5, $v0
+	sub $t2, $t0, $t1
 	move $a0, $t2
 	jal func__toString
-	move $t6, $v0
-	move $a0, $t5
-	move $a1, $t6
+	move $t2, $v0
+	move $a0, $t2
+	la $a1, string_23
 	jal func__stringConcatenate
-	move $t5, $v0
-	move $a0, $t5
+	move $t2, $v0
+	lw $a0, 172($sp)
+	jal func__toString
+	move $t4, $v0
+	move $a0, $t2
+	move $a1, $t4
+	jal func__stringConcatenate
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	move $t5, $v0
+	move $t2, $v0
 	b _OutOfIf9
 _alternative8:
 	b _OutOfIf9
 _OutOfIf9:
 	b _WhileLoop47
 _WhileLoop47:
-	mul $t5, $t2, $t4
+	lw $t0, 172($sp)
+	mul $t2, $t0, $t3
 	lw $t1, global_31
-	sle $t5, $t5, $t1
-	beqz $t5, _OutOfWhile14
+	sle $t2, $t2, $t1
+	beqz $t2, _OutOfWhile14
 _WhileBody13:
-	mul $t5, $t2, $t4
+	lw $t0, 172($sp)
+	mul $t2, $t0, $t3
 	li $t1, 4
-	mul $t5, $t5, $t1
+	mul $t2, $t2, $t1
 	lw $t0, global_32
-	add $t5, $t0, $t5
+	add $t2, $t0, $t2
 	li $t0, 0
-	sw $t0, 0($t5)
-	move $t5, $t4
+	sw $t0, 0($t2)
+	move $t2, $t3
 	li $t1, 1
-	add $t4, $t4, $t1
+	add $t3, $t3, $t1
 	b _WhileLoop47
 _OutOfWhile14:
 	b _OutOfIf6
@@ -631,21 +640,24 @@ _alternative5:
 _OutOfIf6:
 	b _continueFor46
 _continueFor46:
-	move $t5, $t2
+	lw $t0, 172($sp)
+	move $t2, $t0
+	lw $t0, 172($sp)
 	li $t1, 1
-	add $t2, $t2, $t1
+	add $t1, $t0, $t1
+	sw $t1, 172($sp)
 	b _ForLoop45
 _OutOfFor3:
 	lw $a0, global_33
 	jal func__toString
-	move $t5, $v0
+	move $t2, $v0
 	la $a0, string_36
-	move $a1, $t5
+	move $a1, $t2
 	jal func__stringConcatenate
-	move $t5, $v0
-	move $a0, $t5
+	move $t2, $v0
+	move $a0, $t2
 	jal func__println
-	move $t5, $v0
+	move $t2, $v0
 	li $v0, 0
 	b _EndOfFunctionDecl42
 _EndOfFunctionDecl42:

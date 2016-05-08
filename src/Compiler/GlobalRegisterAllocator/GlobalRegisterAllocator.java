@@ -83,6 +83,10 @@ public class GlobalRegisterAllocator {
                         for (Register liveNowReg : liveNow) {
                             addEdge(liveNowReg, defined);
                         }
+                    }
+                }
+                if (definedReg != null) {
+                    for (Register defined : definedReg) {
                         liveNow.remove(defined);
                     }
                 }

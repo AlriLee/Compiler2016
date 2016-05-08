@@ -123,6 +123,7 @@ public class MIPSTranslator {
             output.printf("\tsw %s, %d(%s)\n", MIPSRegister.ra.registerName, graph.frame.getOffset(MIPSRegister.ra), MIPSRegister.sp.registerName);
         for (int l = 0; l < graph.instruction.size(); ++l) {
             Instruction instruction = graph.instruction.get(l);
+            output.println("#\t" + instruction);
             if (instruction instanceof LabelInstruction) {
                 output.printf("_%s%d:\n", ((LabelInstruction) instruction).label, ((LabelInstruction) instruction).labelIndex);
             }
@@ -788,12 +789,12 @@ public class MIPSTranslator {
                 "\tlw $ra, 0($sp)\n" +
                 "\taddu $sp, $sp, 4\n" +
                 "\tjr $ra\n");
-        boolean isMaxFlow = false;
+        boolean banned = false;
         for (Declaration declaration : SymbolTable.program.declarations) {
             if (declaration instanceof FunctionDecl) {
                 FunctionDecl function = (FunctionDecl) declaration;
-                if (function.functionName.name.equals("improve")) {
-                    isMaxFlow = true;
+                if (function.functionName.name.equals("improve") || function.functionName.name.equals("calc")) {
+                    banned = true;
                 }
             }
         }
@@ -802,11 +803,11 @@ public class MIPSTranslator {
                 FunctionDecl function = (FunctionDecl) declaration;
                 function.cfg.buildBasicBlock();
                 function.cfg.analyseFrame();
-                if (!isMaxFlow) {
+                if (!banned) {
                     function.cfg.allocator = new GlobalRegisterAllocator(function.cfg);
                 }
-//                System.out.println(function.cfg.allocator.interferenceGraphToString());
-//                System.out.println(function.cfg.basicBlockToString());
+                System.out.println(function.cfg.allocator.interferenceGraphToString());
+                System.out.println(function.cfg.basicBlockToString());
                 translate(function.cfg);
             }
         }

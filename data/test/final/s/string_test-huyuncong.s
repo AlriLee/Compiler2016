@@ -494,186 +494,301 @@ func__stringNeq:
 	jr $ra
 _calc:
 	sub $sp, $sp, 236
-	sw $t4, 48($sp)
-	sw $t6, 56($sp)
-	sw $t2, 40($sp)
-	sw $t5, 52($sp)
-	sw $t3, 44($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl59:
+#	%BeginOfFunctionDecl38
+_BeginOfFunctionDecl38:
+#	$0 = call length $18
 	lw $a0, 232($sp)
 	jal func__length
-	move $t2, $v0
+	sw $v0, 188($sp)
+#	$19 = move $0
+	lw $t0, 188($sp)
+	sw $t0, 184($sp)
+#	$1 = seq 1 $19
 	li $t0, 1
-	seq $t1, $t0, $t2
-	sw $t1, 220($sp)
-	lw $t0, 220($sp)
+	lw $t1, 184($sp)
+	seq $t1, $t0, $t1
+	sw $t1, 208($sp)
+#	br $1 %consequence0 %alternative1
+	lw $t0, 208($sp)
 	beqz $t0, _alternative1
+#	%consequence0
 _consequence0:
+#	ret $18
 	lw $v0, 232($sp)
-	b _EndOfFunctionDecl60
+#	jump %EndOfFunctionDecl39
+	b _EndOfFunctionDecl39
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%alternative1
 _alternative1:
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%OutOfIf2
 _OutOfIf2:
+#	$2 = div $19 2
+	lw $t0, 184($sp)
 	li $t1, 2
-	div $t3, $t2, $t1
+	div $t1, $t0, $t1
+	sw $t1, 156($sp)
+#	$20 = move $2
+	lw $t0, 156($sp)
+	sw $t0, 148($sp)
+#	$3 = sub $20 1
+	lw $t0, 148($sp)
 	li $t1, 1
-	sub $t4, $t3, $t1
+	sub $t1, $t0, $t1
+	sw $t1, 212($sp)
+#	$4 = call substring $18 0 $3
 	lw $a0, 232($sp)
 	li $a1, 0
-	move $a2, $t4
+	lw $a2, 212($sp)
 	jal func__substring
-	move $t4, $v0
-	sw $t4, -4($sp)
-	jal _calc
-	move $t4, $v0
-	move $t5, $t4
-	li $t1, 1
-	sub $t4, $t2, $t1
-	lw $a0, 232($sp)
-	move $a1, $t3
-	move $a2, $t4
-	jal func__substring
-	move $t3, $v0
-	sw $t3, -4($sp)
-	jal _calc
-	move $t3, $v0
-	move $t4, $t3
-	move $a0, $t5
-	move $a1, $t4
-	jal func__stringLess
-	move $t3, $v0
-	beqz $t3, _alternative4
-_consequence3:
-	move $a0, $t5
-	move $a1, $t4
-	jal func__stringConcatenate
-	sw $v0, 212($sp)
-	lw $v0, 212($sp)
-	b _EndOfFunctionDecl60
-	b _OutOfIf5
-_alternative4:
-	move $a0, $t5
-	move $a1, $t4
-	jal func__stringIsEqual
-	move $t3, $v0
-	beqz $t3, _alternative7
-_consequence6:
-	move $a0, $t5
-	li $a1, 0
-	jal func__ord
-	move $t3, $v0
-	move $a0, $t4
-	li $a1, 0
-	jal func__ord
-	move $t6, $v0
-	sw $t6, 228($sp)
-	lw $t1, 228($sp)
-	slt $t3, $t3, $t1
-	beqz $t3, _alternative10
-_consequence9:
-	move $a0, $t5
-	move $a1, $t4
-	jal func__stringConcatenate
-	move $t3, $v0
-	move $v0, $t3
-	b _EndOfFunctionDecl60
-	b _OutOfIf11
-_alternative10:
-	b _OutOfIf11
-_OutOfIf11:
-	move $a0, $t4
-	move $a1, $t5
-	jal func__stringConcatenate
 	sw $v0, 216($sp)
-	lw $v0, 216($sp)
-	b _EndOfFunctionDecl60
-	b _OutOfIf8
-_alternative7:
-	move $a0, $t5
-	move $a1, $t4
-	jal func__stringLarge
-	move $t3, $v0
-	beqz $t3, _alternative13
-_consequence12:
-	move $a0, $t4
-	move $a1, $t5
-	jal func__stringConcatenate
+#	$5 = call calc $4
+	lw $t0, 216($sp)
+	sw $t0, -4($sp)
+	jal _calc
+	sw $v0, 144($sp)
+#	$21 = move $5
+	lw $t0, 144($sp)
+	sw $t0, 160($sp)
+#	$6 = sub $19 1
+	lw $t0, 184($sp)
+	li $t1, 1
+	sub $t1, $t0, $t1
+	sw $t1, 132($sp)
+#	$7 = call substring $18 $20 $6
+	lw $a0, 232($sp)
+	lw $a1, 148($sp)
+	lw $a2, 132($sp)
+	jal func__substring
 	sw $v0, 224($sp)
-	lw $v0, 224($sp)
-	b _EndOfFunctionDecl60
-	b _OutOfIf14
-_alternative13:
-	b _OutOfIf14
-_OutOfIf14:
-	b _OutOfIf8
-_OutOfIf8:
+#	$8 = call calc $7
+	lw $t0, 224($sp)
+	sw $t0, -4($sp)
+	jal _calc
+	sw $v0, 192($sp)
+#	$22 = move $8
+	lw $t0, 192($sp)
+	sw $t0, 228($sp)
+#	$9 = call stringLess $21 $22
+	lw $a0, 160($sp)
+	lw $a1, 228($sp)
+	jal func__stringLess
+	sw $v0, 172($sp)
+#	br $9 %consequence3 %alternative4
+	lw $t0, 172($sp)
+	beqz $t0, _alternative4
+#	%consequence3
+_consequence3:
+#	$10 = call stringConcatenate $21 $22
+	lw $a0, 160($sp)
+	lw $a1, 228($sp)
+	jal func__stringConcatenate
+	sw $v0, 140($sp)
+#	ret $10
+	lw $v0, 140($sp)
+#	jump %EndOfFunctionDecl39
+	b _EndOfFunctionDecl39
+#	jump %OutOfIf5
 	b _OutOfIf5
+#	%alternative4
+_alternative4:
+#	$11 = call stringIsEqual $21 $22
+	lw $a0, 160($sp)
+	lw $a1, 228($sp)
+	jal func__stringIsEqual
+	sw $v0, 204($sp)
+#	br $11 %consequence6 %alternative7
+	lw $t0, 204($sp)
+	beqz $t0, _alternative7
+#	%consequence6
+_consequence6:
+#	$12 = call ord $21 0
+	lw $a0, 160($sp)
+	li $a1, 0
+	jal func__ord
+	sw $v0, 136($sp)
+#	$23 = move $12
+	lw $t0, 136($sp)
+	sw $t0, 164($sp)
+#	$13 = call ord $22 0
+	lw $a0, 228($sp)
+	li $a1, 0
+	jal func__ord
+	sw $v0, 128($sp)
+#	$24 = move $13
+	lw $t0, 128($sp)
+	sw $t0, 168($sp)
+#	$14 = slt $23 $24
+	lw $t0, 164($sp)
+	lw $t1, 168($sp)
+	slt $t1, $t0, $t1
+	sw $t1, 196($sp)
+#	br $14 %consequence9 %alternative10
+	lw $t0, 196($sp)
+	beqz $t0, _alternative10
+#	%consequence9
+_consequence9:
+#	$15 = call stringConcatenate $21 $22
+	lw $a0, 160($sp)
+	lw $a1, 228($sp)
+	jal func__stringConcatenate
+	sw $v0, 176($sp)
+#	ret $15
+	lw $v0, 176($sp)
+#	jump %EndOfFunctionDecl39
+	b _EndOfFunctionDecl39
+#	jump %OutOfIf11
+	b _OutOfIf11
+#	%alternative10
+_alternative10:
+#	jump %OutOfIf11
+	b _OutOfIf11
+#	%OutOfIf11
+_OutOfIf11:
+#	$16 = call stringConcatenate $22 $21
+	lw $a0, 228($sp)
+	lw $a1, 160($sp)
+	jal func__stringConcatenate
+	sw $v0, 200($sp)
+#	ret $16
+	lw $v0, 200($sp)
+#	jump %EndOfFunctionDecl39
+	b _EndOfFunctionDecl39
+#	jump %OutOfIf8
+	b _OutOfIf8
+#	%alternative7
+_alternative7:
+#	$17 = call stringLarge $21 $22
+	lw $a0, 160($sp)
+	lw $a1, 228($sp)
+	jal func__stringLarge
+	sw $v0, 152($sp)
+#	br $17 %consequence12 %alternative13
+	lw $t0, 152($sp)
+	beqz $t0, _alternative13
+#	%consequence12
+_consequence12:
+#	$18 = call stringConcatenate $22 $21
+	lw $a0, 228($sp)
+	lw $a1, 160($sp)
+	jal func__stringConcatenate
+	sw $v0, 220($sp)
+#	ret $18
+	lw $v0, 220($sp)
+#	jump %EndOfFunctionDecl39
+	b _EndOfFunctionDecl39
+#	jump %OutOfIf14
+	b _OutOfIf14
+#	%alternative13
+_alternative13:
+#	jump %OutOfIf14
+	b _OutOfIf14
+#	%OutOfIf14
+_OutOfIf14:
+#	jump %OutOfIf8
+	b _OutOfIf8
+#	%OutOfIf8
+_OutOfIf8:
+#	jump %OutOfIf5
+	b _OutOfIf5
+#	%OutOfIf5
 _OutOfIf5:
+#	nullcall println "Never Ever!"
 	la $a0, string_19
 	jal func__println
-	move $t3, $v0
-_EndOfFunctionDecl60:
+	sw $v0, 180($sp)
+#	%EndOfFunctionDecl39
+_EndOfFunctionDecl39:
 	lw $ra, 120($sp)
-	lw $t4, 48($sp)
-	lw $t6, 56($sp)
-	lw $t2, 40($sp)
-	lw $t5, 52($sp)
-	lw $t3, 44($sp)
 	add $sp, $sp, 236
 	jr $ra
 main:
 	sub $sp, $sp, 168
-	sw $t2, 40($sp)
 	sw $ra, 120($sp)
-_BeginOfFunctionDecl61:
+#	%BeginOfFunctionDecl40
+_BeginOfFunctionDecl40:
+#	$22 = call getString
 	jal func__getString
-	move $t2, $v0
-	sw $t2, global_101
+	sw $v0, 148($sp)
+#	$14 = move $22
+	lw $t0, 148($sp)
+	sw $t0, global_14
+#	$24 = call getString
 	jal func__getString
-	move $t2, $v0
-	sw $t2, global_102
-	lw $a0, global_102
+	sw $v0, 144($sp)
+#	$15 = move $24
+	lw $t0, 144($sp)
+	sw $t0, global_15
+#	$26 = call parseInt $15
+	lw $a0, global_15
 	jal func__parseInt
-	move $t2, $v0
-	sw $t2, global_104
-	lw $a0, global_101
+	sw $v0, 136($sp)
+#	$17 = move $26
+	lw $t0, 136($sp)
+	sw $t0, global_17
+#	$28 = call length $14
+	lw $a0, global_14
 	jal func__length
-	move $t2, $v0
-	lw $t1, global_104
-	slt $t2, $t2, $t1
-	beqz $t2, _alternative16
+	sw $v0, 160($sp)
+#	$27 = slt $28 $17
+	lw $t0, 160($sp)
+	lw $t1, global_17
+	slt $t1, $t0, $t1
+	sw $t1, 164($sp)
+#	br $27 %consequence15 %alternative16
+	lw $t0, 164($sp)
+	beqz $t0, _alternative16
+#	%consequence15
 _consequence15:
+#	nullcall println "length error!"
 	la $a0, string_29
 	jal func__println
-	move $t2, $v0
+	sw $v0, 132($sp)
+#	ret 0
 	li $v0, 0
-	b _EndOfFunctionDecl62
+#	jump %EndOfFunctionDecl41
+	b _EndOfFunctionDecl41
+#	jump %OutOfIf17
 	b _OutOfIf17
+#	%alternative16
 _alternative16:
+#	jump %OutOfIf17
 	b _OutOfIf17
+#	%OutOfIf17
 _OutOfIf17:
-	lw $t0, global_104
+#	$32 = sub $17 1
+	lw $t0, global_17
 	li $t1, 1
-	sub $t2, $t0, $t1
-	lw $a0, global_101
+	sub $t1, $t0, $t1
+	sw $t1, 128($sp)
+#	$33 = call substring $14 0 $32
+	lw $a0, global_14
 	li $a1, 0
-	move $a2, $t2
+	lw $a2, 128($sp)
 	jal func__substring
-	move $t2, $v0
-	sw $t2, -4($sp)
+	sw $v0, 140($sp)
+#	$34 = call calc $33
+	lw $t0, 140($sp)
+	sw $t0, -4($sp)
 	jal _calc
-	move $t2, $v0
-	sw $t2, global_103
-	lw $a0, global_103
+	sw $v0, 156($sp)
+#	$16 = move $34
+	lw $t0, 156($sp)
+	sw $t0, global_16
+#	nullcall println $16
+	lw $a0, global_16
 	jal func__println
-	move $t2, $v0
+	sw $v0, 152($sp)
+#	ret 0
 	li $v0, 0
-	b _EndOfFunctionDecl62
-_EndOfFunctionDecl62:
+#	jump %EndOfFunctionDecl41
+	b _EndOfFunctionDecl41
+#	%EndOfFunctionDecl41
+_EndOfFunctionDecl41:
 	lw $ra, 120($sp)
-	lw $t2, 40($sp)
 	add $sp, $sp, 168
 	jr $ra
 .data
@@ -681,16 +796,16 @@ _end: .asciiz "\n"
 	.align 2
 _buffer: .space 256
 	.align 2
-global_101:
+global_14:
 .space 4
 .align 2
-global_102:
+global_15:
 .space 4
 .align 2
-global_103:
+global_16:
 .space 4
 .align 2
-global_104:
+global_17:
 .space 4
 .align 2
 .word 11
