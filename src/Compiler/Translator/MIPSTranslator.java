@@ -792,7 +792,7 @@ public class MIPSTranslator {
         for (Declaration declaration : SymbolTable.program.declarations) {
             if (declaration instanceof FunctionDecl) {
                 FunctionDecl function = (FunctionDecl) declaration;
-                if (function.functionName.name.equals("origin")) {
+                if (function.functionName.name.equals("improve")) {
                     isMaxFlow = true;
                 }
             }

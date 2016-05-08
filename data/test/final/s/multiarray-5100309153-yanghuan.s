@@ -494,26 +494,6 @@ func__stringNeq:
 	jr $ra
 _printNum:
 	sub $sp, $sp, 140
-	sw $t2, 40($sp)
-	sw $t3, 44($sp)
-	sw $t4, 48($sp)
-	sw $t5, 52($sp)
-	sw $t6, 56($sp)
-	sw $t7, 60($sp)
-	sw $s0, 64($sp)
-	sw $s1, 68($sp)
-	sw $s2, 72($sp)
-	sw $s3, 76($sp)
-	sw $s4, 80($sp)
-	sw $s5, 84($sp)
-	sw $s6, 88($sp)
-	sw $s7, 92($sp)
-	sw $t8, 96($sp)
-	sw $t9, 100($sp)
-	sw $k0, 104($sp)
-	sw $k1, 108($sp)
-	sw $gp, 112($sp)
-	sw $fp, 124($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl72:
 	lw $a0, 136($sp)
@@ -524,97 +504,59 @@ _BeginOfFunctionDecl72:
 	sw $v0, 128($sp)
 _EndOfFunctionDecl73:
 	lw $ra, 120($sp)
-	lw $t2, 40($sp)
-	lw $t3, 44($sp)
-	lw $t4, 48($sp)
-	lw $t5, 52($sp)
-	lw $t6, 56($sp)
-	lw $t7, 60($sp)
-	lw $s0, 64($sp)
-	lw $s1, 68($sp)
-	lw $s2, 72($sp)
-	lw $s3, 76($sp)
-	lw $s4, 80($sp)
-	lw $s5, 84($sp)
-	lw $s6, 88($sp)
-	lw $s7, 92($sp)
-	lw $t8, 96($sp)
-	lw $t9, 100($sp)
-	lw $k0, 104($sp)
-	lw $k1, 108($sp)
-	lw $gp, 112($sp)
-	lw $fp, 124($sp)
 	add $sp, $sp, 140
 	jr $ra
 main:
 	sub $sp, $sp, 520
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
-	sw $t4, 48($sp)
-	sw $t5, 52($sp)
-	sw $t6, 56($sp)
-	sw $t7, 60($sp)
-	sw $s0, 64($sp)
-	sw $s1, 68($sp)
-	sw $s2, 72($sp)
-	sw $s3, 76($sp)
-	sw $s4, 80($sp)
-	sw $s5, 84($sp)
-	sw $s6, 88($sp)
-	sw $s7, 92($sp)
-	sw $t8, 96($sp)
-	sw $t9, 100($sp)
-	sw $k0, 104($sp)
-	sw $k1, 108($sp)
-	sw $gp, 112($sp)
-	sw $fp, 124($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl74:
 	li $t0, 4
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 428($sp)
-	lw $t0, 428($sp)
+	sw $t1, 188($sp)
+	lw $t0, 188($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 428($sp)
-	lw $a0, 428($sp)
+	sw $t1, 188($sp)
+	lw $a0, 188($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 292($sp)
+	sw $v0, 476($sp)
 	li $t0, 4
-	lw $t1, 292($sp)
+	lw $t1, 476($sp)
 	sw $t0, 0($t1)
-	lw $t0, 292($sp)
+	lw $t0, 476($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 292($sp)
-	lw $t0, 292($sp)
-	sw $t0, 252($sp)
-	lw $t0, 252($sp)
+	sw $t1, 476($sp)
+	lw $t0, 476($sp)
+	sw $t0, 240($sp)
+	lw $t0, 240($sp)
 	sw $t0, global_169
 	li $t0, 5
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 280($sp)
-	lw $t0, 280($sp)
+	sw $t1, 384($sp)
+	lw $t0, 384($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 280($sp)
-	lw $a0, 280($sp)
+	sw $t1, 384($sp)
+	lw $a0, 384($sp)
 	li $v0, 9
 	syscall
-	sw $v0, 472($sp)
+	sw $v0, 332($sp)
 	li $t0, 5
-	lw $t1, 472($sp)
+	lw $t1, 332($sp)
 	sw $t0, 0($t1)
-	lw $t0, 472($sp)
+	lw $t0, 332($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
-	sw $t1, 472($sp)
-	lw $t0, 472($sp)
-	sw $t0, 240($sp)
-	lw $t0, 240($sp)
+	sw $t1, 332($sp)
+	lw $t0, 332($sp)
+	sw $t0, 364($sp)
+	lw $t0, 364($sp)
 	sw $t0, global_172
 	li $t0, 0
 	sw $t0, global_170
@@ -622,37 +564,43 @@ _ForLoop76:
 	lw $t0, global_170
 	li $t1, 4
 	slt $t1, $t0, $t1
-	sw $t1, 408($sp)
-	lw $t0, 408($sp)
+	sw $t1, 504($sp)
+	lw $t0, 504($sp)
 	beqz $t0, _OutOfFor1
 _ForBody0:
 	lw $t0, global_170
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 284($sp)
+	sw $t1, 252($sp)
 	lw $t0, global_169
-	lw $t1, 284($sp)
-	add $t1, $t0, $t1
-	sw $t1, 488($sp)
+	lw $t1, 252($sp)
+	add $t2, $t0, $t1
 	li $t0, 11
 	li $t1, 4
-	mul $t2, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 448($sp)
+	lw $t0, 448($sp)
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $a0, $t2
+	add $t1, $t0, $t1
+	sw $t1, 448($sp)
+	lw $a0, 448($sp)
 	li $v0, 9
 	syscall
-	move $t2, $v0
+	sw $v0, 340($sp)
 	li $t0, 11
-	sw $t0, 0($t2)
+	lw $t1, 340($sp)
+	sw $t0, 0($t1)
+	lw $t0, 340($sp)
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $t2, $t2
-	lw $t1, 488($sp)
-	sw $t2, 0($t1)
+	add $t1, $t0, $t1
+	sw $t1, 340($sp)
+	lw $t0, 340($sp)
+	sw $t0, 376($sp)
+	lw $t0, 376($sp)
+	sw $t0, 0($t2)
 _continueFor77:
 	lw $t0, global_170
-	sw $t0, 176($sp)
+	sw $t0, 216($sp)
 	lw $t0, global_170
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -665,8 +613,8 @@ _ForLoop78:
 	lw $t0, global_170
 	li $t1, 4
 	slt $t1, $t0, $t1
-	sw $t1, 224($sp)
-	lw $t0, 224($sp)
+	sw $t1, 164($sp)
+	lw $t0, 164($sp)
 	beqz $t0, _OutOfFor3
 _ForBody2:
 	li $t0, 0
@@ -675,33 +623,33 @@ _ForLoop80:
 	lw $t0, global_171
 	li $t1, 10
 	slt $t1, $t0, $t1
-	sw $t1, 196($sp)
-	lw $t0, 196($sp)
+	sw $t1, 472($sp)
+	lw $t0, 472($sp)
 	beqz $t0, _OutOfFor5
 _ForBody4:
 	lw $t0, global_170
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 400($sp)
+	sw $t1, 368($sp)
 	lw $t0, global_169
-	lw $t1, 400($sp)
+	lw $t1, 368($sp)
 	add $t1, $t0, $t1
-	sw $t1, 140($sp)
-	lw $t1, 140($sp)
+	sw $t1, 516($sp)
+	lw $t1, 516($sp)
 	lw $t0, 0($t1)
-	sw $t0, 180($sp)
+	sw $t0, 196($sp)
 	lw $t0, global_171
 	li $t1, 4
 	mul $t2, $t0, $t1
-	lw $t0, 180($sp)
+	lw $t0, 196($sp)
 	add $t1, $t0, $t2
-	sw $t1, 476($sp)
+	sw $t1, 344($sp)
 	li $t0, 888
-	lw $t1, 476($sp)
+	lw $t1, 344($sp)
 	sw $t0, 0($t1)
 _continueFor81:
 	lw $t0, global_171
-	sw $t0, 228($sp)
+	sw $t0, 336($sp)
 	lw $t0, global_171
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -711,7 +659,7 @@ _OutOfFor5:
 	b _continueFor79
 _continueFor79:
 	lw $t0, global_170
-	sw $t0, 492($sp)
+	sw $t0, 212($sp)
 	lw $t0, global_170
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -724,16 +672,16 @@ _ForLoop82:
 	lw $t0, global_170
 	li $t1, 5
 	slt $t1, $t0, $t1
-	sw $t1, 372($sp)
-	lw $t0, 372($sp)
+	sw $t1, 184($sp)
+	lw $t0, 184($sp)
 	beqz $t0, _OutOfFor7
 _ForBody6:
 	lw $t0, global_170
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 320($sp)
+	sw $t1, 208($sp)
 	lw $t0, global_172
-	lw $t1, 320($sp)
+	lw $t1, 208($sp)
 	add $t2, $t0, $t1
 	li $t0, 2
 	li $t1, 4
@@ -741,28 +689,29 @@ _ForBody6:
 	move $a0, $t3
 	li $v0, 9
 	syscall
-	move $t3, $v0
-	sw $t3, 508($sp)
-	lw $t0, 508($sp)
+	sw $v0, 272($sp)
+	lw $t0, 272($sp)
+	sw $t0, 440($sp)
+	lw $t0, 440($sp)
 	sw $t0, 0($t2)
 	lw $t0, global_170
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 236($sp)
+	sw $t1, 360($sp)
 	lw $t0, global_172
-	lw $t1, 236($sp)
+	lw $t1, 360($sp)
 	add $t1, $t0, $t1
-	sw $t1, 424($sp)
-	lw $t1, 424($sp)
-	lw $t2, 0($t1)
+	sw $t1, 264($sp)
+	lw $t1, 264($sp)
+	lw $t0, 0($t1)
+	sw $t0, 288($sp)
 	li $t0, 1
-	neg $t1, $t0
-	sw $t1, 332($sp)
-	lw $t0, 332($sp)
-	sw $t0, 0($t2)
+	neg $t2, $t0
+	lw $t1, 288($sp)
+	sw $t2, 0($t1)
 _continueFor83:
 	lw $t0, global_170
-	sw $t0, 364($sp)
+	sw $t0, 200($sp)
 	lw $t0, global_170
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -772,35 +721,35 @@ _OutOfFor7:
 	li $t0, 3
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 208($sp)
+	sw $t1, 372($sp)
 	lw $t0, global_169
-	lw $t1, 208($sp)
+	lw $t1, 372($sp)
 	add $t1, $t0, $t1
-	sw $t1, 160($sp)
-	lw $t1, 160($sp)
+	sw $t1, 304($sp)
+	lw $t1, 304($sp)
 	lw $t2, 0($t1)
 	li $t0, 9
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 468($sp)
-	lw $t1, 468($sp)
+	sw $t1, 132($sp)
+	lw $t1, 132($sp)
 	add $t1, $t2, $t1
-	sw $t1, 356($sp)
-	lw $t1, 356($sp)
+	sw $t1, 380($sp)
+	lw $t1, 380($sp)
 	lw $t0, 0($t1)
-	sw $t0, 516($sp)
-	lw $t0, 516($sp)
+	sw $t0, 140($sp)
+	lw $t0, 140($sp)
 	sw $t0, -4($sp)
 	jal _printNum
-	sw $v0, 184($sp)
+	sw $v0, 444($sp)
 	li $t0, 0
 	sw $t0, global_170
 _ForLoop84:
 	lw $t0, global_170
 	li $t1, 3
 	sle $t1, $t0, $t1
-	sw $t1, 308($sp)
-	lw $t0, 308($sp)
+	sw $t1, 256($sp)
+	lw $t0, 256($sp)
 	beqz $t0, _OutOfFor9
 _ForBody8:
 	li $t0, 0
@@ -809,37 +758,37 @@ _ForLoop86:
 	lw $t0, global_171
 	li $t1, 9
 	sle $t1, $t0, $t1
-	sw $t1, 336($sp)
-	lw $t0, 336($sp)
+	sw $t1, 464($sp)
+	lw $t0, 464($sp)
 	beqz $t0, _OutOfFor11
 _ForBody10:
 	lw $t0, global_170
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 328($sp)
+	sw $t1, 484($sp)
 	lw $t0, global_169
-	lw $t1, 328($sp)
+	lw $t1, 484($sp)
 	add $t1, $t0, $t1
-	sw $t1, 204($sp)
-	lw $t1, 204($sp)
+	sw $t1, 456($sp)
+	lw $t1, 456($sp)
 	lw $t2, 0($t1)
 	lw $t0, global_171
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 200($sp)
-	lw $t1, 200($sp)
+	sw $t1, 356($sp)
+	lw $t1, 356($sp)
 	add $t2, $t2, $t1
 	lw $t0, global_170
 	li $t1, 10
-	mul $t3, $t0, $t1
+	mul $t1, $t0, $t1
+	sw $t1, 280($sp)
+	lw $t0, 280($sp)
 	lw $t1, global_171
-	add $t1, $t3, $t1
-	sw $t1, 264($sp)
-	lw $t0, 264($sp)
-	sw $t0, 0($t2)
+	add $t3, $t0, $t1
+	sw $t3, 0($t2)
 _continueFor87:
 	lw $t0, global_171
-	sw $t0, 444($sp)
+	sw $t0, 404($sp)
 	lw $t0, global_171
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -849,7 +798,7 @@ _OutOfFor11:
 	b _continueFor85
 _continueFor85:
 	lw $t0, global_170
-	sw $t0, 348($sp)
+	sw $t0, 148($sp)
 	lw $t0, global_170
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -862,8 +811,8 @@ _ForLoop88:
 	lw $t0, global_170
 	li $t1, 3
 	sle $t1, $t0, $t1
-	sw $t1, 256($sp)
-	lw $t0, 256($sp)
+	sw $t1, 348($sp)
+	lw $t0, 348($sp)
 	beqz $t0, _OutOfFor13
 _ForBody12:
 	li $t0, 0
@@ -872,37 +821,37 @@ _ForLoop90:
 	lw $t0, global_171
 	li $t1, 9
 	sle $t1, $t0, $t1
-	sw $t1, 276($sp)
-	lw $t0, 276($sp)
+	sw $t1, 388($sp)
+	lw $t0, 388($sp)
 	beqz $t0, _OutOfFor15
 _ForBody14:
 	lw $t0, global_170
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 420($sp)
+	sw $t1, 492($sp)
 	lw $t0, global_169
-	lw $t1, 420($sp)
+	lw $t1, 492($sp)
 	add $t1, $t0, $t1
-	sw $t1, 188($sp)
-	lw $t1, 188($sp)
+	sw $t1, 500($sp)
+	lw $t1, 500($sp)
 	lw $t2, 0($t1)
 	lw $t0, global_171
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 296($sp)
-	lw $t1, 296($sp)
+	sw $t1, 168($sp)
+	lw $t1, 168($sp)
 	add $t1, $t2, $t1
-	sw $t1, 384($sp)
-	lw $t1, 384($sp)
+	sw $t1, 284($sp)
+	lw $t1, 284($sp)
 	lw $t0, 0($t1)
-	sw $t0, 128($sp)
-	lw $t0, 128($sp)
+	sw $t0, 228($sp)
+	lw $t0, 228($sp)
 	sw $t0, -4($sp)
 	jal _printNum
-	sw $v0, 368($sp)
+	sw $v0, 244($sp)
 _continueFor91:
 	lw $t0, global_171
-	sw $t0, 136($sp)
+	sw $t0, 416($sp)
 	lw $t0, global_171
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -912,7 +861,7 @@ _OutOfFor15:
 	b _continueFor89
 _continueFor89:
 	lw $t0, global_170
-	sw $t0, 448($sp)
+	sw $t0, 156($sp)
 	lw $t0, global_170
 	li $t1, 1
 	add $t1, $t0, $t1
@@ -922,157 +871,139 @@ _OutOfFor13:
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 244($sp)
+	sw $t1, 220($sp)
 	lw $t0, global_169
-	lw $t1, 244($sp)
-	add $t1, $t0, $t1
-	sw $t1, 460($sp)
-	lw $t1, 460($sp)
-	lw $t0, 0($t1)
-	sw $t0, 484($sp)
-	li $t0, 10
-	li $t1, 4
-	mul $t2, $t0, $t1
-	lw $t0, 484($sp)
-	add $t1, $t0, $t2
-	sw $t1, 132($sp)
-	li $t0, 0
-	lw $t1, 132($sp)
-	sw $t0, 0($t1)
-	li $t0, 2
-	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 344($sp)
-	lw $t0, global_169
-	lw $t1, 344($sp)
-	add $t1, $t0, $t1
-	sw $t1, 248($sp)
-	lw $t1, 248($sp)
-	lw $t0, 0($t1)
-	sw $t0, 268($sp)
-	li $t0, 10
-	li $t1, 4
-	mul $t2, $t0, $t1
-	lw $t0, 268($sp)
-	add $t1, $t0, $t2
-	sw $t1, 388($sp)
-	lw $t1, 388($sp)
-	lw $t0, 0($t1)
-	sw $t0, 148($sp)
-	lw $t0, 148($sp)
-	sw $t0, -4($sp)
-	jal _printNum
-	sw $v0, 340($sp)
-	li $t0, 0
-	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 376($sp)
-	lw $t0, global_172
-	lw $t1, 376($sp)
-	add $t1, $t0, $t1
-	sw $t1, 496($sp)
-	lw $t1, 496($sp)
-	lw $t0, 0($t1)
-	sw $t0, 504($sp)
-	li $t0, 2
-	neg $t2, $t0
-	lw $t1, 504($sp)
-	sw $t2, 0($t1)
-	li $t0, 2
-	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 164($sp)
-	lw $t0, global_169
-	lw $t1, 164($sp)
-	add $t1, $t0, $t1
-	sw $t1, 272($sp)
-	lw $t1, 272($sp)
-	lw $t2, 0($t1)
-	li $t0, 10
-	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 232($sp)
-	lw $t1, 232($sp)
-	add $t1, $t2, $t1
-	sw $t1, 412($sp)
-	lw $t1, 412($sp)
-	lw $t0, 0($t1)
-	sw $t0, 152($sp)
-	lw $t0, 152($sp)
-	li $t1, 4
-	mul $t1, $t0, $t1
-	sw $t1, 212($sp)
-	lw $t0, global_172
-	lw $t1, 212($sp)
+	lw $t1, 220($sp)
 	add $t1, $t0, $t1
 	sw $t1, 480($sp)
 	lw $t1, 480($sp)
 	lw $t0, 0($t1)
-	sw $t0, 288($sp)
+	sw $t0, 300($sp)
+	li $t0, 10
+	li $t1, 4
+	mul $t2, $t0, $t1
+	lw $t0, 300($sp)
+	add $t1, $t0, $t2
+	sw $t1, 204($sp)
+	li $t0, 0
+	lw $t1, 204($sp)
+	sw $t0, 0($t1)
+	li $t0, 2
+	li $t1, 4
+	mul $t1, $t0, $t1
+	sw $t1, 496($sp)
+	lw $t0, global_169
+	lw $t1, 496($sp)
+	add $t1, $t0, $t1
+	sw $t1, 392($sp)
+	lw $t1, 392($sp)
+	lw $t2, 0($t1)
+	li $t0, 10
+	li $t1, 4
+	mul $t1, $t0, $t1
+	sw $t1, 508($sp)
+	lw $t1, 508($sp)
+	add $t1, $t2, $t1
+	sw $t1, 432($sp)
+	lw $t1, 432($sp)
+	lw $t0, 0($t1)
+	sw $t0, 316($sp)
+	lw $t0, 316($sp)
+	sw $t0, -4($sp)
+	jal _printNum
+	sw $v0, 232($sp)
+	li $t0, 0
+	li $t1, 4
+	mul $t1, $t0, $t1
+	sw $t1, 268($sp)
+	lw $t0, global_172
+	lw $t1, 268($sp)
+	add $t1, $t0, $t1
+	sw $t1, 408($sp)
+	lw $t1, 408($sp)
+	lw $t2, 0($t1)
+	li $t0, 2
+	neg $t1, $t0
+	sw $t1, 512($sp)
+	lw $t0, 512($sp)
+	sw $t0, 0($t2)
+	li $t0, 2
+	li $t1, 4
+	mul $t1, $t0, $t1
+	sw $t1, 412($sp)
+	lw $t0, global_169
+	lw $t1, 412($sp)
+	add $t1, $t0, $t1
+	sw $t1, 312($sp)
+	lw $t1, 312($sp)
+	lw $t2, 0($t1)
+	li $t0, 10
+	li $t1, 4
+	mul $t1, $t0, $t1
+	sw $t1, 192($sp)
+	lw $t1, 192($sp)
+	add $t1, $t2, $t1
+	sw $t1, 292($sp)
+	lw $t1, 292($sp)
+	lw $t0, 0($t1)
+	sw $t0, 172($sp)
+	lw $t0, 172($sp)
+	li $t1, 4
+	mul $t1, $t0, $t1
+	sw $t1, 276($sp)
+	lw $t0, global_172
+	lw $t1, 276($sp)
+	add $t1, $t0, $t1
+	sw $t1, 296($sp)
+	lw $t1, 296($sp)
+	lw $t0, 0($t1)
+	sw $t0, 352($sp)
 	li $t0, 10
 	neg $t2, $t0
-	lw $t1, 288($sp)
+	lw $t1, 352($sp)
 	sw $t2, 0($t1)
 	li $t0, 0
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 192($sp)
+	sw $t1, 152($sp)
 	lw $t0, global_172
-	lw $t1, 192($sp)
+	lw $t1, 152($sp)
 	add $t1, $t0, $t1
-	sw $t1, 500($sp)
-	lw $t1, 500($sp)
+	sw $t1, 180($sp)
+	lw $t1, 180($sp)
 	lw $t0, 0($t1)
-	sw $t0, 380($sp)
-	lw $t1, 380($sp)
+	sw $t0, 320($sp)
+	lw $t1, 320($sp)
 	lw $t0, 0($t1)
-	sw $t0, 464($sp)
-	lw $t0, 464($sp)
+	sw $t0, 488($sp)
+	lw $t0, 488($sp)
 	sw $t0, -4($sp)
 	jal _printNum
-	sw $v0, 512($sp)
+	sw $v0, 224($sp)
 	li $t0, 1
 	li $t1, 4
 	mul $t1, $t0, $t1
-	sw $t1, 436($sp)
+	sw $t1, 328($sp)
 	lw $t0, global_172
-	lw $t1, 436($sp)
+	lw $t1, 328($sp)
 	add $t1, $t0, $t1
-	sw $t1, 312($sp)
-	lw $t1, 312($sp)
+	sw $t1, 452($sp)
+	lw $t1, 452($sp)
 	lw $t0, 0($t1)
-	sw $t0, 220($sp)
-	lw $t1, 220($sp)
+	sw $t0, 460($sp)
+	lw $t1, 460($sp)
 	lw $t0, 0($t1)
-	sw $t0, 260($sp)
-	lw $t0, 260($sp)
+	sw $t0, 396($sp)
+	lw $t0, 396($sp)
 	sw $t0, -4($sp)
 	jal _printNum
-	sw $v0, 392($sp)
+	sw $v0, 248($sp)
 	li $v0, 0
 	b _EndOfFunctionDecl75
 _EndOfFunctionDecl75:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
 	lw $t3, 44($sp)
-	lw $t4, 48($sp)
-	lw $t5, 52($sp)
-	lw $t6, 56($sp)
-	lw $t7, 60($sp)
-	lw $s0, 64($sp)
-	lw $s1, 68($sp)
-	lw $s2, 72($sp)
-	lw $s3, 76($sp)
-	lw $s4, 80($sp)
-	lw $s5, 84($sp)
-	lw $s6, 88($sp)
-	lw $s7, 92($sp)
-	lw $t8, 96($sp)
-	lw $t9, 100($sp)
-	lw $k0, 104($sp)
-	lw $k1, 108($sp)
-	lw $gp, 112($sp)
-	lw $fp, 124($sp)
 	add $sp, $sp, 520
 	jr $ra
 .data

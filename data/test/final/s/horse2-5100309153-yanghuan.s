@@ -494,27 +494,6 @@ func__stringNeq:
 	jr $ra
 _check:
 	sub $sp, $sp, 148
-	sw $t2, 40($sp)
-	sw $t3, 44($sp)
-	sw $t4, 48($sp)
-	sw $t5, 52($sp)
-	sw $t6, 56($sp)
-	sw $t7, 60($sp)
-	sw $s0, 64($sp)
-	sw $s1, 68($sp)
-	sw $s2, 72($sp)
-	sw $s3, 76($sp)
-	sw $s4, 80($sp)
-	sw $s5, 84($sp)
-	sw $s6, 88($sp)
-	sw $s7, 92($sp)
-	sw $t8, 96($sp)
-	sw $t9, 100($sp)
-	sw $k0, 104($sp)
-	sw $k1, 108($sp)
-	sw $gp, 112($sp)
-	sw $fp, 124($sp)
-	sw $ra, 120($sp)
 _BeginOfFunctionDecl72:
 	lw $t0, 140($sp)
 	lw $t1, 144($sp)
@@ -526,283 +505,257 @@ _logicalTrue0:
 	lw $t0, 140($sp)
 	li $t1, 0
 	sge $t1, $t0, $t1
-	sw $t1, 136($sp)
-	lw $t0, 136($sp)
-	sw $t0, 128($sp)
+	sw $t1, 128($sp)
+	lw $t0, 128($sp)
+	sw $t0, 136($sp)
 	b _logicalMerge2
 _logicalFalse1:
 	li $t0, 0
-	sw $t0, 128($sp)
+	sw $t0, 136($sp)
 	b _logicalMerge2
 _logicalMerge2:
-	lw $v0, 128($sp)
+	lw $v0, 136($sp)
 	b _EndOfFunctionDecl73
 _EndOfFunctionDecl73:
-	lw $ra, 120($sp)
-	lw $t2, 40($sp)
-	lw $t3, 44($sp)
-	lw $t4, 48($sp)
-	lw $t5, 52($sp)
-	lw $t6, 56($sp)
-	lw $t7, 60($sp)
-	lw $s0, 64($sp)
-	lw $s1, 68($sp)
-	lw $s2, 72($sp)
-	lw $s3, 76($sp)
-	lw $s4, 80($sp)
-	lw $s5, 84($sp)
-	lw $s6, 88($sp)
-	lw $s7, 92($sp)
-	lw $t8, 96($sp)
-	lw $t9, 100($sp)
-	lw $k0, 104($sp)
-	lw $k1, 108($sp)
-	lw $gp, 112($sp)
-	lw $fp, 124($sp)
 	add $sp, $sp, 148
 	jr $ra
 main:
 	sub $sp, $sp, 1576
-	sw $t2, 40($sp)
-	sw $t3, 44($sp)
-	sw $t4, 48($sp)
-	sw $t5, 52($sp)
-	sw $t6, 56($sp)
-	sw $t7, 60($sp)
 	sw $s0, 64($sp)
+	sw $t8, 96($sp)
+	sw $fp, 124($sp)
+	sw $t6, 56($sp)
+	sw $s7, 92($sp)
+	sw $t2, 40($sp)
+	sw $t7, 60($sp)
+	sw $t9, 100($sp)
+	sw $s5, 84($sp)
+	sw $s6, 88($sp)
+	sw $t4, 48($sp)
+	sw $gp, 112($sp)
+	sw $k1, 108($sp)
 	sw $s1, 68($sp)
 	sw $s2, 72($sp)
 	sw $s3, 76($sp)
-	sw $s4, 80($sp)
-	sw $s5, 84($sp)
-	sw $s6, 88($sp)
-	sw $s7, 92($sp)
-	sw $t8, 96($sp)
-	sw $t9, 100($sp)
 	sw $k0, 104($sp)
-	sw $k1, 108($sp)
-	sw $gp, 112($sp)
-	sw $fp, 124($sp)
+	sw $t5, 52($sp)
+	sw $s4, 80($sp)
+	sw $t3, 44($sp)
 	sw $ra, 120($sp)
 _BeginOfFunctionDecl74:
 	jal func__getInt
-	sw $v0, 1236($sp)
-	lw $t0, 1236($sp)
-	move $s2, $t0
-	li $t0, 0
-	move $t5, $t0
-	move $t4, $t5
-	move $s4, $t4
-	sw $s4, 360($sp)
-	li $t1, 1
-	sub $t2, $s2, $t1
-	move $t6, $t2
-	move $s3, $t6
-	li $t0, 0
-	move $s6, $t0
-	move $k0, $s6
-	li $t0, 0
+	sw $v0, 1420($sp)
+	lw $t0, 1420($sp)
 	move $t2, $t0
-	move $s0, $t2
-	mul $t3, $s2, $s2
+	li $t0, 0
+	move $s0, $t0
+	move $s2, $s0
+	sw $s2, 1460($sp)
+	lw $t0, 1460($sp)
+	move $s4, $t0
+	li $t1, 1
+	sub $t3, $t2, $t1
+	move $t5, $t3
+	move $t6, $t5
+	li $t0, 0
+	move $k0, $t0
+	move $s7, $k0
+	li $t0, 0
+	move $s3, $t0
+	move $s5, $s3
+	mul $t3, $t2, $t2
 	li $t1, 4
-	mul $t2, $t3, $t1
+	mul $t4, $t3, $t1
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $a0, $t2
+	add $t4, $t4, $t1
+	move $a0, $t4
 	li $v0, 9
 	syscall
-	move $t2, $v0
-	sw $t3, 0($t2)
+	move $t4, $v0
+	sw $t3, 0($t4)
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $t2, $t2
-	move $s1, $t2
+	add $t4, $t4, $t1
+	move $t3, $t4
+	move $t4, $t3
 	li $t0, 0
-	move $s5, $t0
+	move $t7, $t0
 _ForLoop76:
-	mul $t2, $s2, $s2
-	slt $t2, $s5, $t2
-	beqz $t2, _OutOfFor4
+	mul $t3, $t2, $t2
+	slt $t3, $t7, $t3
+	beqz $t3, _OutOfFor4
 _ForBody3:
 	li $t1, 4
-	mul $t2, $s5, $t1
-	add $t2, $s1, $t2
+	mul $t3, $t7, $t1
+	add $t3, $t4, $t3
 	li $t0, 0
-	sw $t0, 0($t2)
+	sw $t0, 0($t3)
 _continueFor77:
-	move $t2, $s5
+	move $t3, $t7
 	li $t1, 1
-	add $s5, $s5, $t1
+	add $t7, $t7, $t1
 	b _ForLoop76
 _OutOfFor4:
-	mul $t3, $s2, $s2
+	mul $t3, $t2, $t2
 	li $t1, 4
-	mul $t2, $t3, $t1
+	mul $t7, $t3, $t1
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $a0, $t2
+	add $t7, $t7, $t1
+	move $a0, $t7
 	li $v0, 9
 	syscall
-	move $t2, $v0
-	sw $t3, 0($t2)
+	move $t7, $v0
+	sw $t3, 0($t7)
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $t2, $t2
-	move $t8, $t2
+	add $t7, $t7, $t1
+	move $t3, $t7
+	move $t8, $t3
 	li $t0, 0
-	move $s5, $t0
+	move $t7, $t0
 _ForLoop78:
-	mul $t2, $s2, $s2
-	slt $t2, $s5, $t2
-	beqz $t2, _OutOfFor6
+	mul $t3, $t2, $t2
+	slt $t3, $t7, $t3
+	beqz $t3, _OutOfFor6
 _ForBody5:
 	li $t1, 4
-	mul $t2, $s5, $t1
-	add $t2, $t8, $t2
+	mul $t3, $t7, $t1
+	add $t3, $t8, $t3
 	li $t0, 0
-	sw $t0, 0($t2)
+	sw $t0, 0($t3)
 _continueFor79:
-	move $t2, $s5
+	move $t3, $t7
 	li $t1, 1
-	add $s5, $s5, $t1
+	add $t7, $t7, $t1
 	b _ForLoop78
 _OutOfFor6:
 	li $t1, 4
-	mul $t2, $s2, $t1
+	mul $t3, $t2, $t1
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $a0, $t2
+	add $t3, $t3, $t1
+	move $a0, $t3
 	li $v0, 9
 	syscall
-	move $t2, $v0
-	sw $s2, 0($t2)
+	move $t3, $v0
+	sw $t2, 0($t3)
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $t2, $t2
-	move $s7, $t2
+	add $t3, $t3, $t1
+	move $s6, $t3
 	li $t0, 0
-	move $s5, $t0
+	move $t7, $t0
 _ForLoop80:
-	slt $t2, $s5, $s2
-	beqz $t2, _OutOfFor8
+	slt $t3, $t7, $t2
+	beqz $t3, _OutOfFor8
 _ForBody7:
 	li $t1, 4
-	mul $t2, $s5, $t1
-	add $t3, $s7, $t2
+	mul $t3, $t7, $t1
+	add $t3, $s6, $t3
 	li $t1, 4
-	mul $t2, $s2, $t1
+	mul $s1, $t2, $t1
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $a0, $t2
+	add $s1, $s1, $t1
+	move $a0, $s1
 	li $v0, 9
 	syscall
-	move $t2, $v0
-	sw $s2, 0($t2)
+	move $s1, $v0
+	sw $t2, 0($s1)
 	li $t1, 4
-	add $t2, $t2, $t1
-	move $t2, $t2
-	sw $t2, 0($t3)
+	add $s1, $s1, $t1
+	sw $s1, 0($t3)
 	li $t0, 0
 	move $t9, $t0
 _ForLoop82:
-	slt $t2, $t9, $s2
-	beqz $t2, _OutOfFor10
+	slt $t3, $t9, $t2
+	beqz $t3, _OutOfFor10
 _ForBody9:
 	li $t1, 4
-	mul $t2, $s5, $t1
-	add $t2, $s7, $t2
-	lw $t3, 0($t2)
+	mul $t3, $t7, $t1
+	add $t3, $s6, $t3
+	lw $s1, 0($t3)
 	li $t1, 4
-	mul $t2, $t9, $t1
-	add $t2, $t3, $t2
+	mul $t3, $t9, $t1
+	add $s1, $s1, $t3
 	li $t0, 1
 	neg $t3, $t0
-	sw $t3, 0($t2)
+	sw $t3, 0($s1)
 _continueFor83:
-	move $t2, $t9
+	move $t3, $t9
 	li $t1, 1
 	add $t9, $t9, $t1
 	b _ForLoop82
 _OutOfFor10:
 	b _continueFor81
 _continueFor81:
-	move $t2, $s5
+	move $t3, $t7
 	li $t1, 1
-	add $s5, $s5, $t1
+	add $t7, $t7, $t1
 	b _ForLoop80
 _OutOfFor8:
 	li $t0, 0
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $s1, $t2
-	sw $t4, 0($t2)
+	mul $t3, $t0, $t1
+	add $t3, $t4, $t3
+	sw $s2, 0($t3)
 	li $t0, 0
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $t8, $t2
-	sw $t5, 0($t2)
+	mul $t3, $t0, $t1
+	add $t3, $t8, $t3
+	sw $s0, 0($t3)
 	li $t1, 4
-	mul $t2, $t4, $t1
-	add $t2, $s7, $t2
-	lw $t3, 0($t2)
+	mul $t3, $s2, $t1
+	add $t3, $s6, $t3
+	lw $s1, 0($t3)
 	li $t1, 4
-	mul $t2, $t5, $t1
-	add $t2, $t3, $t2
-	lw $t2, 0($t2)
+	mul $t3, $s0, $t1
+	add $t3, $s1, $t3
+	lw $t3, 0($t3)
 	li $t1, 0
-	seq $t2, $t2, $t1
+	seq $t3, $t3, $t1
 _WhileLoop84:
-	lw $t0, 360($sp)
-	sle $t2, $t0, $s4
-	beqz $t2, _OutOfWhile12
+	lw $t1, 1460($sp)
+	sle $t3, $s4, $t1
+	beqz $t3, _OutOfWhile12
 _WhileBody11:
-	lw $t0, 360($sp)
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $s1, $t2
-	lw $t2, 0($t2)
+	mul $t3, $s4, $t1
+	add $t3, $t4, $t3
+	lw $t3, 0($t3)
 	li $t1, 4
-	mul $t2, $t2, $t1
-	add $t2, $s7, $t2
-	lw $t3, 0($t2)
-	lw $t0, 360($sp)
+	mul $t3, $t3, $t1
+	add $t3, $s6, $t3
+	lw $s1, 0($t3)
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $t8, $t2
-	lw $t2, 0($t2)
+	mul $t3, $s4, $t1
+	add $t3, $t8, $t3
+	lw $t3, 0($t3)
 	li $t1, 4
-	mul $t2, $t2, $t1
-	add $t2, $t3, $t2
-	lw $t2, 0($t2)
-	move $s0, $t2
-	lw $t0, 360($sp)
+	mul $t3, $t3, $t1
+	add $t3, $s1, $t3
+	lw $t3, 0($t3)
+	move $s5, $t3
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $s1, $t2
-	lw $t2, 0($t2)
+	mul $t3, $s4, $t1
+	add $t3, $t4, $t3
+	lw $t3, 0($t3)
 	li $t1, 1
-	sub $t2, $t2, $t1
-	move $k0, $t2
-	lw $t0, 360($sp)
+	sub $t3, $t3, $t1
+	move $s7, $t3
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $t8, $t2
-	lw $t2, 0($t2)
+	mul $t3, $s4, $t1
+	add $t3, $t8, $t3
+	lw $t3, 0($t3)
 	li $t1, 2
-	sub $t2, $t2, $t1
-	move $s6, $t2
-	sw $k0, -8($sp)
-	sw $s2, -4($sp)
+	sub $t3, $t3, $t1
+	move $k0, $t3
+	sw $s7, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t2, $v0
-	beqz $t2, _logicalFalse17
+	move $t3, $v0
+	beqz $t3, _logicalFalse17
 _logicalTrue16:
-	sw $s6, -8($sp)
-	sw $s2, -4($sp)
+	sw $k0, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t2, $v0
-	move $k1, $t2
+	move $t3, $v0
+	move $k1, $t3
 	b _logicalMerge18
 _logicalFalse17:
 	li $t0, 0
@@ -812,17 +765,17 @@ _logicalMerge18:
 	beqz $k1, _logicalFalse20
 _logicalTrue19:
 	li $t1, 4
-	mul $t2, $k0, $t1
-	add $t2, $s7, $t2
-	lw $t3, 0($t2)
+	mul $t3, $s7, $t1
+	add $t3, $s6, $t3
+	lw $s1, 0($t3)
 	li $t1, 4
-	mul $t2, $s6, $t1
-	add $t3, $t3, $t2
+	mul $t3, $k0, $t1
+	add $t3, $s1, $t3
 	li $t0, 1
-	neg $t2, $t0
+	neg $s1, $t0
 	lw $t3, 0($t3)
-	seq $t2, $t3, $t2
-	move $gp, $t2
+	seq $t3, $t3, $s1
+	move $gp, $t3
 	b _logicalMerge21
 _logicalFalse20:
 	li $t0, 0
@@ -831,32 +784,35 @@ _logicalFalse20:
 _logicalMerge21:
 	beqz $gp, _alternative14
 _consequence13:
+	lw $t0, 1460($sp)
 	li $t1, 1
-	add $t2, $s4, $t1
-	move $s4, $t2
+	add $t3, $t0, $t1
+	sw $t3, 1460($sp)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t2, $s4, $t1
-	add $t2, $s1, $t2
-	sw $k0, 0($t2)
+	mul $t3, $t0, $t1
+	add $t3, $t4, $t3
+	sw $s7, 0($t3)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t2, $s4, $t1
-	add $t2, $t8, $t2
-	sw $s6, 0($t2)
+	mul $t3, $t0, $t1
+	add $t3, $t8, $t3
+	sw $k0, 0($t3)
 	li $t1, 4
-	mul $t2, $k0, $t1
-	add $t2, $s7, $t2
-	lw $t2, 0($t2)
+	mul $t3, $s7, $t1
+	add $t3, $s6, $t3
+	lw $t3, 0($t3)
 	li $t1, 4
-	mul $t3, $s6, $t1
-	add $t3, $t2, $t3
+	mul $s1, $k0, $t1
+	add $s1, $t3, $s1
 	li $t1, 1
-	add $t2, $s0, $t1
-	sw $t2, 0($t3)
-	seq $t2, $k0, $s3
-	beqz $t2, _logicalFalse26
+	add $t3, $s5, $t1
+	sw $t3, 0($s1)
+	seq $t3, $s7, $t6
+	beqz $t3, _logicalFalse26
 _logicalTrue25:
-	seq $t2, $s6, $t6
-	move $fp, $t2
+	seq $t3, $k0, $t5
+	move $fp, $t3
 	b _logicalMerge27
 _logicalFalse26:
 	li $t0, 0
@@ -866,7 +822,7 @@ _logicalMerge27:
 	beqz $fp, _alternative23
 _consequence22:
 	li $t0, 1
-	move $t2, $t0
+	move $s3, $t0
 	b _OutOfIf24
 _alternative23:
 	b _OutOfIf24
@@ -875,97 +831,95 @@ _OutOfIf24:
 _alternative14:
 	b _OutOfIf15
 _OutOfIf15:
-	lw $t0, 360($sp)
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $s1, $t2
-	lw $t2, 0($t2)
+	mul $t3, $s4, $t1
+	add $t3, $t4, $t3
+	lw $t3, 0($t3)
 	li $t1, 1
-	sub $t2, $t2, $t1
-	move $k0, $t2
-	lw $t0, 360($sp)
+	sub $t3, $t3, $t1
+	move $s7, $t3
 	li $t1, 4
-	mul $t2, $t0, $t1
-	add $t2, $t8, $t2
-	lw $t2, 0($t2)
+	mul $t3, $s4, $t1
+	add $t3, $t8, $t3
+	lw $t3, 0($t3)
 	li $t1, 2
-	add $t2, $t2, $t1
-	move $s6, $t2
-	sw $k0, -8($sp)
-	sw $s2, -4($sp)
+	add $t3, $t3, $t1
+	move $k0, $t3
+	sw $s7, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t2, $v0
-	beqz $t2, _logicalFalse32
+	move $t3, $v0
+	beqz $t3, _logicalFalse32
 _logicalTrue31:
-	sw $s6, -8($sp)
-	sw $s2, -4($sp)
+	sw $k0, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t2, $v0
-	move $t2, $t2
+	move $t3, $v0
 	b _logicalMerge33
 _logicalFalse32:
 	li $t0, 0
-	move $t2, $t0
+	move $t3, $t0
 	b _logicalMerge33
 _logicalMerge33:
-	beqz $t2, _logicalFalse35
+	beqz $t3, _logicalFalse35
 _logicalTrue34:
 	li $t1, 4
-	mul $t3, $k0, $t1
-	add $t3, $s7, $t3
-	lw $t3, 0($t3)
+	mul $s1, $s7, $t1
+	add $s1, $s6, $s1
+	lw $s1, 0($s1)
 	li $t1, 4
-	mul $t7, $s6, $t1
-	add $t7, $t3, $t7
+	mul $s3, $k0, $t1
+	add $s3, $s1, $s3
 	li $t0, 1
-	neg $t3, $t0
-	lw $t7, 0($t7)
-	seq $t3, $t7, $t3
-	move $t3, $t3
+	neg $s1, $t0
+	lw $s3, 0($s3)
+	seq $s1, $s3, $s1
 	b _logicalMerge36
 _logicalFalse35:
 	li $t0, 0
-	move $t3, $t0
+	move $s1, $t0
 	b _logicalMerge36
 _logicalMerge36:
-	beqz $t3, _alternative29
+	beqz $s1, _alternative29
 _consequence28:
+	lw $t0, 1460($sp)
 	li $t1, 1
-	add $t7, $s4, $t1
-	move $s4, $t7
+	add $s3, $t0, $t1
+	sw $s3, 1460($sp)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $s1, $t7
-	sw $k0, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t4, $s3
+	sw $s7, 0($s3)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $t8, $t7
-	sw $s6, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t8, $s3
+	sw $k0, 0($s3)
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t7, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s3, 0($s3)
 	li $t1, 4
-	mul $t3, $s6, $t1
-	add $t7, $t7, $t3
+	mul $s1, $k0, $t1
+	add $s3, $s3, $s1
 	li $t1, 1
-	add $t3, $s0, $t1
-	sw $t3, 0($t7)
-	seq $t7, $k0, $s3
-	beqz $t7, _logicalFalse41
+	add $s1, $s5, $t1
+	sw $s1, 0($s3)
+	seq $s3, $s7, $t6
+	beqz $s3, _logicalFalse41
 _logicalTrue40:
-	seq $t7, $s6, $t6
-	move $t7, $t7
+	seq $s3, $k0, $t5
 	b _logicalMerge42
 _logicalFalse41:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge42
 _logicalMerge42:
-	beqz $t7, _alternative38
+	beqz $s3, _alternative38
 _consequence37:
 	li $t0, 1
-	move $t2, $t0
+	move $s3, $t0
 	b _OutOfIf39
 _alternative38:
 	b _OutOfIf39
@@ -974,97 +928,93 @@ _OutOfIf39:
 _alternative29:
 	b _OutOfIf30
 _OutOfIf30:
-	lw $t0, 360($sp)
 	li $t1, 4
-	mul $s6, $t0, $t1
-	add $s6, $s1, $s6
-	lw $s6, 0($s6)
+	mul $s7, $s4, $t1
+	add $s7, $t4, $s7
+	lw $s7, 0($s7)
 	li $t1, 1
-	add $s6, $s6, $t1
-	move $k0, $s6
-	lw $t0, 360($sp)
+	add $s7, $s7, $t1
 	li $t1, 4
-	mul $s6, $t0, $t1
-	add $s6, $t8, $s6
-	lw $s6, 0($s6)
+	mul $k0, $s4, $t1
+	add $k0, $t8, $k0
+	lw $k0, 0($k0)
 	li $t1, 2
-	sub $s6, $s6, $t1
-	move $s6, $s6
-	sw $k0, -8($sp)
-	sw $s2, -4($sp)
+	sub $k0, $k0, $t1
+	sw $s7, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	beqz $t7, _logicalFalse47
+	move $s3, $v0
+	beqz $s3, _logicalFalse47
 _logicalTrue46:
-	sw $s6, -8($sp)
-	sw $s2, -4($sp)
+	sw $k0, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	move $t7, $t7
+	move $s3, $v0
 	b _logicalMerge48
 _logicalFalse47:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge48
 _logicalMerge48:
-	beqz $t7, _logicalFalse50
+	beqz $s3, _logicalFalse50
 _logicalTrue49:
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t7, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s1, 0($s3)
 	li $t1, 4
-	mul $t3, $s6, $t1
-	add $t3, $t7, $t3
+	mul $s3, $k0, $t1
+	add $s3, $s1, $s3
 	li $t0, 1
-	neg $t7, $t0
-	lw $t3, 0($t3)
-	seq $t7, $t3, $t7
-	move $t7, $t7
+	neg $s1, $t0
+	lw $s3, 0($s3)
+	seq $s3, $s3, $s1
 	b _logicalMerge51
 _logicalFalse50:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge51
 _logicalMerge51:
-	beqz $t7, _alternative44
+	beqz $s3, _alternative44
 _consequence43:
+	lw $t0, 1460($sp)
 	li $t1, 1
-	add $s4, $s4, $t1
-	move $s4, $s4
+	add $s3, $t0, $t1
+	sw $s3, 1460($sp)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $s1, $t7
-	sw $k0, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t4, $s3
+	sw $s7, 0($s3)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $t8, $t7
-	sw $s6, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t8, $s3
+	sw $k0, 0($s3)
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t3, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s3, 0($s3)
 	li $t1, 4
-	mul $t7, $s6, $t1
-	add $t7, $t3, $t7
+	mul $s1, $k0, $t1
+	add $s3, $s3, $s1
 	li $t1, 1
-	add $t3, $s0, $t1
-	sw $t3, 0($t7)
-	seq $k0, $k0, $s3
-	beqz $k0, _logicalFalse56
+	add $s1, $s5, $t1
+	sw $s1, 0($s3)
+	seq $s7, $s7, $t6
+	beqz $s7, _logicalFalse56
 _logicalTrue55:
-	seq $s6, $s6, $t6
-	move $s6, $s6
+	seq $s7, $k0, $t5
 	b _logicalMerge57
 _logicalFalse56:
 	li $t0, 0
-	move $s6, $t0
+	move $s7, $t0
 	b _logicalMerge57
 _logicalMerge57:
-	beqz $s6, _alternative53
+	beqz $s7, _alternative53
 _consequence52:
 	li $t0, 1
-	move $t2, $t0
+	move $s3, $t0
 	b _OutOfIf54
 _alternative53:
 	b _OutOfIf54
@@ -1073,87 +1023,84 @@ _OutOfIf54:
 _alternative44:
 	b _OutOfIf45
 _OutOfIf45:
-	lw $t0, 360($sp)
 	li $t1, 4
-	mul $k0, $t0, $t1
-	add $k0, $s1, $k0
+	mul $k0, $s4, $t1
+	add $k0, $t4, $k0
 	lw $k0, 0($k0)
 	li $t1, 1
 	add $k0, $k0, $t1
-	move $k0, $k0
-	lw $t0, 360($sp)
+	move $s7, $k0
 	li $t1, 4
-	mul $s6, $t0, $t1
-	add $s6, $t8, $s6
-	lw $s6, 0($s6)
+	mul $k0, $s4, $t1
+	add $k0, $t8, $k0
+	lw $k0, 0($k0)
 	li $t1, 2
-	add $s6, $s6, $t1
-	move $s6, $s6
-	sw $k0, -8($sp)
-	sw $s2, -4($sp)
+	add $k0, $k0, $t1
+	sw $s7, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	beqz $t7, _logicalFalse62
+	move $s3, $v0
+	beqz $s3, _logicalFalse62
 _logicalTrue61:
-	sw $s6, -8($sp)
-	sw $s2, -4($sp)
+	sw $k0, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	move $t7, $t7
+	move $s3, $v0
 	b _logicalMerge63
 _logicalFalse62:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge63
 _logicalMerge63:
-	beqz $t7, _logicalFalse65
+	beqz $s3, _logicalFalse65
 _logicalTrue64:
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t3, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s1, 0($s3)
 	li $t1, 4
-	mul $t7, $s6, $t1
-	add $t3, $t3, $t7
+	mul $s3, $k0, $t1
+	add $s3, $s1, $s3
 	li $t0, 1
-	neg $t7, $t0
-	lw $t3, 0($t3)
-	seq $t7, $t3, $t7
-	move $t7, $t7
+	neg $s1, $t0
+	lw $s3, 0($s3)
+	seq $s3, $s3, $s1
 	b _logicalMerge66
 _logicalFalse65:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge66
 _logicalMerge66:
-	beqz $t7, _alternative59
+	beqz $s3, _alternative59
 _consequence58:
+	lw $t0, 1460($sp)
 	li $t1, 1
-	add $s4, $s4, $t1
-	move $s4, $s4
+	add $s3, $t0, $t1
+	sw $s3, 1460($sp)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $s1, $t7
-	sw $k0, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t4, $s3
+	sw $s7, 0($s3)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $t8, $t7
-	sw $s6, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t8, $s3
+	sw $k0, 0($s3)
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t7, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s1, 0($s3)
 	li $t1, 4
-	mul $t3, $s6, $t1
-	add $t3, $t7, $t3
+	mul $s3, $k0, $t1
+	add $s1, $s1, $s3
 	li $t1, 1
-	add $t7, $s0, $t1
-	sw $t7, 0($t3)
-	seq $k0, $k0, $s3
-	beqz $k0, _logicalFalse71
+	add $s3, $s5, $t1
+	sw $s3, 0($s1)
+	seq $s7, $s7, $t6
+	beqz $s7, _logicalFalse71
 _logicalTrue70:
-	seq $s6, $s6, $t6
-	move $k0, $s6
+	seq $k0, $k0, $t5
 	b _logicalMerge72
 _logicalFalse71:
 	li $t0, 0
@@ -1163,7 +1110,7 @@ _logicalMerge72:
 	beqz $k0, _alternative68
 _consequence67:
 	li $t0, 1
-	move $t2, $t0
+	move $s3, $t0
 	b _OutOfIf69
 _alternative68:
 	b _OutOfIf69
@@ -1172,87 +1119,84 @@ _OutOfIf69:
 _alternative59:
 	b _OutOfIf60
 _OutOfIf60:
-	lw $t0, 360($sp)
 	li $t1, 4
-	mul $k0, $t0, $t1
-	add $k0, $s1, $k0
+	mul $k0, $s4, $t1
+	add $k0, $t4, $k0
 	lw $k0, 0($k0)
 	li $t1, 2
 	sub $k0, $k0, $t1
-	move $k0, $k0
-	lw $t0, 360($sp)
+	move $s7, $k0
 	li $t1, 4
-	mul $s6, $t0, $t1
-	add $s6, $t8, $s6
-	lw $s6, 0($s6)
+	mul $k0, $s4, $t1
+	add $k0, $t8, $k0
+	lw $k0, 0($k0)
 	li $t1, 1
-	sub $s6, $s6, $t1
-	move $s6, $s6
-	sw $k0, -8($sp)
-	sw $s2, -4($sp)
+	sub $k0, $k0, $t1
+	sw $s7, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	beqz $t7, _logicalFalse77
+	move $s3, $v0
+	beqz $s3, _logicalFalse77
 _logicalTrue76:
-	sw $s6, -8($sp)
-	sw $s2, -4($sp)
+	sw $k0, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	move $t7, $t7
+	move $s3, $v0
 	b _logicalMerge78
 _logicalFalse77:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge78
 _logicalMerge78:
-	beqz $t7, _logicalFalse80
+	beqz $s3, _logicalFalse80
 _logicalTrue79:
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t7, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s3, 0($s3)
 	li $t1, 4
-	mul $t3, $s6, $t1
-	add $t7, $t7, $t3
+	mul $s1, $k0, $t1
+	add $s3, $s3, $s1
 	li $t0, 1
-	neg $t3, $t0
-	lw $t7, 0($t7)
-	seq $t7, $t7, $t3
-	move $t7, $t7
+	neg $s1, $t0
+	lw $s3, 0($s3)
+	seq $s3, $s3, $s1
 	b _logicalMerge81
 _logicalFalse80:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge81
 _logicalMerge81:
-	beqz $t7, _alternative74
+	beqz $s3, _alternative74
 _consequence73:
+	lw $t0, 1460($sp)
 	li $t1, 1
-	add $s4, $s4, $t1
-	move $s4, $s4
+	add $s3, $t0, $t1
+	sw $s3, 1460($sp)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $s1, $t7
-	sw $k0, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t4, $s3
+	sw $s7, 0($s3)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $t8, $t7
-	sw $s6, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t8, $s3
+	sw $k0, 0($s3)
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t3, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s3, 0($s3)
 	li $t1, 4
-	mul $t7, $s6, $t1
-	add $t7, $t3, $t7
+	mul $s1, $k0, $t1
+	add $s3, $s3, $s1
 	li $t1, 1
-	add $t3, $s0, $t1
-	sw $t3, 0($t7)
-	seq $k0, $k0, $s3
-	beqz $k0, _logicalFalse86
+	add $s1, $s5, $t1
+	sw $s1, 0($s3)
+	seq $s7, $s7, $t6
+	beqz $s7, _logicalFalse86
 _logicalTrue85:
-	seq $k0, $s6, $t6
-	move $k0, $k0
+	seq $k0, $k0, $t5
 	b _logicalMerge87
 _logicalFalse86:
 	li $t0, 0
@@ -1262,7 +1206,7 @@ _logicalMerge87:
 	beqz $k0, _alternative83
 _consequence82:
 	li $t0, 1
-	move $t2, $t0
+	move $s3, $t0
 	b _OutOfIf84
 _alternative83:
 	b _OutOfIf84
@@ -1271,87 +1215,84 @@ _OutOfIf84:
 _alternative74:
 	b _OutOfIf75
 _OutOfIf75:
-	lw $t0, 360($sp)
 	li $t1, 4
-	mul $k0, $t0, $t1
-	add $k0, $s1, $k0
-	lw $k0, 0($k0)
+	mul $k0, $s4, $t1
+	add $k0, $t4, $k0
+	lw $s7, 0($k0)
 	li $t1, 2
-	sub $k0, $k0, $t1
-	move $k0, $k0
-	lw $t0, 360($sp)
+	sub $k0, $s7, $t1
+	move $s7, $k0
 	li $t1, 4
-	mul $s6, $t0, $t1
-	add $s6, $t8, $s6
-	lw $s6, 0($s6)
+	mul $k0, $s4, $t1
+	add $k0, $t8, $k0
+	lw $k0, 0($k0)
 	li $t1, 1
-	add $s6, $s6, $t1
-	move $s6, $s6
-	sw $k0, -8($sp)
-	sw $s2, -4($sp)
+	add $k0, $k0, $t1
+	sw $s7, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	beqz $t7, _logicalFalse92
+	move $s3, $v0
+	beqz $s3, _logicalFalse92
 _logicalTrue91:
-	sw $s6, -8($sp)
-	sw $s2, -4($sp)
+	sw $k0, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	move $t7, $t7
+	move $s3, $v0
 	b _logicalMerge93
 _logicalFalse92:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge93
 _logicalMerge93:
-	beqz $t7, _logicalFalse95
+	beqz $s3, _logicalFalse95
 _logicalTrue94:
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t3, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s1, 0($s3)
 	li $t1, 4
-	mul $t7, $s6, $t1
-	add $t7, $t3, $t7
+	mul $s3, $k0, $t1
+	add $s3, $s1, $s3
 	li $t0, 1
-	neg $t3, $t0
-	lw $t7, 0($t7)
-	seq $t7, $t7, $t3
-	move $t7, $t7
+	neg $s1, $t0
+	lw $s3, 0($s3)
+	seq $s3, $s3, $s1
 	b _logicalMerge96
 _logicalFalse95:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge96
 _logicalMerge96:
-	beqz $t7, _alternative89
+	beqz $s3, _alternative89
 _consequence88:
+	lw $t0, 1460($sp)
 	li $t1, 1
-	add $s4, $s4, $t1
-	move $s4, $s4
+	add $s3, $t0, $t1
+	sw $s3, 1460($sp)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $s1, $t7
-	sw $k0, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t4, $s3
+	sw $s7, 0($s3)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $t8, $t7
-	sw $s6, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t8, $s3
+	sw $k0, 0($s3)
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t7, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s3, 0($s3)
 	li $t1, 4
-	mul $t3, $s6, $t1
-	add $t7, $t7, $t3
+	mul $s1, $k0, $t1
+	add $s1, $s3, $s1
 	li $t1, 1
-	add $t3, $s0, $t1
-	sw $t3, 0($t7)
-	seq $k0, $k0, $s3
-	beqz $k0, _logicalFalse101
+	add $s3, $s5, $t1
+	sw $s3, 0($s1)
+	seq $s7, $s7, $t6
+	beqz $s7, _logicalFalse101
 _logicalTrue100:
-	seq $k0, $s6, $t6
-	move $k0, $k0
+	seq $k0, $k0, $t5
 	b _logicalMerge102
 _logicalFalse101:
 	li $t0, 0
@@ -1361,7 +1302,7 @@ _logicalMerge102:
 	beqz $k0, _alternative98
 _consequence97:
 	li $t0, 1
-	move $t2, $t0
+	move $s3, $t0
 	b _OutOfIf99
 _alternative98:
 	b _OutOfIf99
@@ -1370,87 +1311,84 @@ _OutOfIf99:
 _alternative89:
 	b _OutOfIf90
 _OutOfIf90:
-	lw $t0, 360($sp)
 	li $t1, 4
-	mul $k0, $t0, $t1
-	add $k0, $s1, $k0
+	mul $k0, $s4, $t1
+	add $k0, $t4, $k0
 	lw $k0, 0($k0)
 	li $t1, 2
 	add $k0, $k0, $t1
-	move $k0, $k0
-	lw $t0, 360($sp)
+	move $s7, $k0
 	li $t1, 4
-	mul $s6, $t0, $t1
-	add $s6, $t8, $s6
-	lw $s6, 0($s6)
+	mul $k0, $s4, $t1
+	add $k0, $t8, $k0
+	lw $k0, 0($k0)
 	li $t1, 1
-	sub $s6, $s6, $t1
-	move $s6, $s6
-	sw $k0, -8($sp)
-	sw $s2, -4($sp)
+	sub $k0, $k0, $t1
+	sw $s7, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	beqz $t7, _logicalFalse107
+	move $s3, $v0
+	beqz $s3, _logicalFalse107
 _logicalTrue106:
-	sw $s6, -8($sp)
-	sw $s2, -4($sp)
+	sw $k0, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	move $t7, $t7
+	move $s3, $v0
 	b _logicalMerge108
 _logicalFalse107:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge108
 _logicalMerge108:
-	beqz $t7, _logicalFalse110
+	beqz $s3, _logicalFalse110
 _logicalTrue109:
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t3, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s1, 0($s3)
 	li $t1, 4
-	mul $t7, $s6, $t1
-	add $t7, $t3, $t7
+	mul $s3, $k0, $t1
+	add $s3, $s1, $s3
 	li $t0, 1
-	neg $t3, $t0
-	lw $t7, 0($t7)
-	seq $t7, $t7, $t3
-	move $t7, $t7
+	neg $s1, $t0
+	lw $s3, 0($s3)
+	seq $s3, $s3, $s1
 	b _logicalMerge111
 _logicalFalse110:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge111
 _logicalMerge111:
-	beqz $t7, _alternative104
+	beqz $s3, _alternative104
 _consequence103:
+	lw $t0, 1460($sp)
 	li $t1, 1
-	add $s4, $s4, $t1
-	move $s4, $s4
+	add $s3, $t0, $t1
+	sw $s3, 1460($sp)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $s1, $t7
-	sw $k0, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t4, $s3
+	sw $s7, 0($s3)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $t8, $t7
-	sw $s6, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t8, $s3
+	sw $k0, 0($s3)
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t7, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s1, 0($s3)
 	li $t1, 4
-	mul $t3, $s6, $t1
-	add $t3, $t7, $t3
+	mul $s3, $k0, $t1
+	add $s3, $s1, $s3
 	li $t1, 1
-	add $t7, $s0, $t1
-	sw $t7, 0($t3)
-	seq $k0, $k0, $s3
-	beqz $k0, _logicalFalse116
+	add $s1, $s5, $t1
+	sw $s1, 0($s3)
+	seq $s7, $s7, $t6
+	beqz $s7, _logicalFalse116
 _logicalTrue115:
-	seq $k0, $s6, $t6
-	move $k0, $k0
+	seq $k0, $k0, $t5
 	b _logicalMerge117
 _logicalFalse116:
 	li $t0, 0
@@ -1460,7 +1398,7 @@ _logicalMerge117:
 	beqz $k0, _alternative113
 _consequence112:
 	li $t0, 1
-	move $t2, $t0
+	move $s3, $t0
 	b _OutOfIf114
 _alternative113:
 	b _OutOfIf114
@@ -1469,97 +1407,94 @@ _OutOfIf114:
 _alternative104:
 	b _OutOfIf105
 _OutOfIf105:
-	lw $t0, 360($sp)
 	li $t1, 4
-	mul $k0, $t0, $t1
-	add $k0, $s1, $k0
+	mul $k0, $s4, $t1
+	add $k0, $t4, $k0
 	lw $k0, 0($k0)
 	li $t1, 2
 	add $k0, $k0, $t1
-	move $k0, $k0
-	lw $t0, 360($sp)
+	move $s7, $k0
 	li $t1, 4
-	mul $s6, $t0, $t1
-	add $s6, $t8, $s6
-	lw $s6, 0($s6)
+	mul $k0, $s4, $t1
+	add $k0, $t8, $k0
+	lw $k0, 0($k0)
 	li $t1, 1
-	add $s6, $s6, $t1
-	move $s6, $s6
-	sw $k0, -8($sp)
-	sw $s2, -4($sp)
+	add $k0, $k0, $t1
+	sw $s7, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	beqz $t7, _logicalFalse122
+	move $s3, $v0
+	beqz $s3, _logicalFalse122
 _logicalTrue121:
-	sw $s6, -8($sp)
-	sw $s2, -4($sp)
+	sw $k0, -8($sp)
+	sw $t2, -4($sp)
 	jal _check
-	move $t7, $v0
-	move $t7, $t7
+	move $s3, $v0
 	b _logicalMerge123
 _logicalFalse122:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge123
 _logicalMerge123:
-	beqz $t7, _logicalFalse125
+	beqz $s3, _logicalFalse125
 _logicalTrue124:
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t3, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s1, 0($s3)
 	li $t1, 4
-	mul $t7, $s6, $t1
-	add $t3, $t3, $t7
+	mul $s3, $k0, $t1
+	add $s3, $s1, $s3
 	li $t0, 1
-	neg $t7, $t0
-	lw $t3, 0($t3)
-	seq $t7, $t3, $t7
-	move $t7, $t7
+	neg $s1, $t0
+	lw $s3, 0($s3)
+	seq $s3, $s3, $s1
 	b _logicalMerge126
 _logicalFalse125:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge126
 _logicalMerge126:
-	beqz $t7, _alternative119
+	beqz $s3, _alternative119
 _consequence118:
+	lw $t0, 1460($sp)
 	li $t1, 1
-	add $s4, $s4, $t1
-	move $s4, $s4
+	add $s3, $t0, $t1
+	sw $s3, 1460($sp)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $s1, $t7
-	sw $k0, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t4, $s3
+	sw $s7, 0($s3)
+	lw $t0, 1460($sp)
 	li $t1, 4
-	mul $t7, $s4, $t1
-	add $t7, $t8, $t7
-	sw $s6, 0($t7)
+	mul $s3, $t0, $t1
+	add $s3, $t8, $s3
+	sw $k0, 0($s3)
 	li $t1, 4
-	mul $t7, $k0, $t1
-	add $t7, $s7, $t7
-	lw $t3, 0($t7)
+	mul $s3, $s7, $t1
+	add $s3, $s6, $s3
+	lw $s3, 0($s3)
 	li $t1, 4
-	mul $t7, $s6, $t1
-	add $t3, $t3, $t7
+	mul $s1, $k0, $t1
+	add $s3, $s3, $s1
 	li $t1, 1
-	add $t7, $s0, $t1
-	sw $t7, 0($t3)
-	seq $t7, $k0, $s3
-	beqz $t7, _logicalFalse131
+	add $s1, $s5, $t1
+	sw $s1, 0($s3)
+	seq $s3, $s7, $t6
+	beqz $s3, _logicalFalse131
 _logicalTrue130:
-	seq $t7, $s6, $t6
-	move $t7, $t7
+	seq $s3, $k0, $t5
 	b _logicalMerge132
 _logicalFalse131:
 	li $t0, 0
-	move $t7, $t0
+	move $s3, $t0
 	b _logicalMerge132
 _logicalMerge132:
-	beqz $t7, _alternative128
+	beqz $s3, _alternative128
 _consequence127:
 	li $t0, 1
-	move $t2, $t0
+	move $s3, $t0
 	b _OutOfIf129
 _alternative128:
 	b _OutOfIf129
@@ -1569,69 +1504,67 @@ _alternative119:
 	b _OutOfIf120
 _OutOfIf120:
 	li $t1, 1
-	seq $t7, $t2, $t1
-	beqz $t7, _alternative134
+	seq $s1, $s3, $t1
+	beqz $s1, _alternative134
 _consequence133:
 	b _OutOfWhile12
 	b _OutOfIf135
 _alternative134:
 	b _OutOfIf135
 _OutOfIf135:
-	lw $t0, 360($sp)
 	li $t1, 1
-	add $t7, $t0, $t1
-	sw $t7, 360($sp)
+	add $s4, $s4, $t1
 	b _WhileLoop84
 _OutOfWhile12:
 	li $t1, 1
-	seq $t7, $t2, $t1
-	beqz $t7, _alternative137
+	seq $s1, $s3, $t1
+	beqz $s1, _alternative137
 _consequence136:
 	li $t1, 4
-	mul $t7, $s3, $t1
-	add $t7, $s7, $t7
-	lw $t3, 0($t7)
+	mul $s1, $t6, $t1
+	add $s1, $s6, $s1
+	lw $t3, 0($s1)
 	li $t1, 4
-	mul $t7, $t6, $t1
-	add $t7, $t3, $t7
-	lw $t7, 0($t7)
-	move $a0, $t7
+	mul $s1, $t5, $t1
+	add $s1, $t3, $s1
+	lw $s1, 0($s1)
+	move $a0, $s1
 	jal func__toString
-	move $t7, $v0
-	move $a0, $t7
+	move $s1, $v0
+	move $a0, $s1
 	jal func__println
-	move $t7, $v0
+	move $s1, $v0
 	b _OutOfIf138
 _alternative137:
 	la $a0, string_430
 	jal func__print
-	move $t7, $v0
+	move $s1, $v0
 	b _OutOfIf138
 _OutOfIf138:
 	li $v0, 0
 	b _EndOfFunctionDecl75
 _EndOfFunctionDecl75:
 	lw $ra, 120($sp)
-	lw $t2, 40($sp)
-	lw $t3, 44($sp)
-	lw $t4, 48($sp)
-	lw $t5, 52($sp)
-	lw $t6, 56($sp)
-	lw $t7, 60($sp)
 	lw $s0, 64($sp)
+	lw $t8, 96($sp)
+	lw $fp, 124($sp)
+	lw $t6, 56($sp)
+	lw $s7, 92($sp)
+	lw $t2, 40($sp)
+	lw $t7, 60($sp)
+	lw $t9, 100($sp)
+	lw $s5, 84($sp)
+	lw $s6, 88($sp)
+	lw $t4, 48($sp)
+	lw $gp, 112($sp)
+	lw $k1, 108($sp)
 	lw $s1, 68($sp)
 	lw $s2, 72($sp)
 	lw $s3, 76($sp)
-	lw $s4, 80($sp)
-	lw $s5, 84($sp)
-	lw $s6, 88($sp)
-	lw $s7, 92($sp)
-	lw $t8, 96($sp)
-	lw $t9, 100($sp)
 	lw $k0, 104($sp)
-	lw $k1, 108($sp)
-	lw $gp, 112($sp)
-	lw $fp, 124($sp)
+	lw $t5, 52($sp)
+	lw $s4, 80($sp)
+	lw $t3, 44($sp)
 	add $sp, $sp, 1576
 	jr $ra
 .data
