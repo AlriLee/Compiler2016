@@ -498,130 +498,200 @@ main:
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl38
 _BeginOfFunctionDecl38:
+#	$2 = mul 4 4
 	li $t0, 4
 	li $t1, 4
 	mul $t2, $t0, $t1
+#	$2 = add $2 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$1 = alloc $2
 	move $a0, $t2
 	li $v0, 9
 	syscall
 	move $t2, $v0
+#	store 4 $1 4 0
 	li $t0, 4
 	sw $t0, 0($t2)
+#	$1 = add $1 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$0 = move $1
+#	$13 = move $0
 	sw $t2, global_13
+#	$5 = call size $13
 	lw $a0, global_13
 	jal func__size
 	move $t2, $v0
+#	$6 = mul $5 4
 	li $t1, 4
 	mul $t1, $t2, $t1
 	sw $t1, 212($sp)
+#	$6 = add $6 4
 	lw $t0, 212($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
 	sw $t1, 212($sp)
+#	$4 = alloc $6
 	lw $a0, 212($sp)
 	li $v0, 9
 	syscall
 	sw $v0, 252($sp)
+#	store 4 $4 $5 0
 	lw $t1, 252($sp)
 	sw $t2, 0($t1)
+#	$4 = add $4 4
 	lw $t0, 252($sp)
 	li $t1, 4
 	add $t1, $t0, $t1
 	sw $t1, 252($sp)
+#	$3 = move $4
 	lw $t0, 252($sp)
 	move $t2, $t0
+#	$14 = move $3
 	sw $t2, 132($sp)
+#	$15 = move 0
 	li $t0, 0
 	move $t2, $t0
+#	%ForLoop40
 _ForLoop40:
+#	$9 = call size $13
 	lw $a0, global_13
 	jal func__size
 	move $t3, $v0
+#	$8 = slt $15 $9
 	slt $t3, $t2, $t3
+#	br $8 %ForBody0 %OutOfFor1
 	beqz $t3, _OutOfFor1
+#	%ForBody0
 _ForBody0:
+#	$11 = mul $15 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$12 = add $13 $11
 	lw $t0, global_13
 	add $t3, $t0, $t3
+#	store 4 $12 0 0
 	li $t0, 0
 	sw $t0, 0($t3)
+#	$14 = mul $15 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$15 = add $14 $14
 	lw $t0, 132($sp)
 	add $t3, $t0, $t3
+#	$16 = call getInt
 	jal func__getInt
 	move $t4, $v0
+#	store 4 $15 $16 0
 	sw $t4, 0($t3)
+#	%continueFor41
 _continueFor41:
+#	$17 = move $15
 	move $t3, $t2
+#	$15 = add $15 1
 	li $t1, 1
 	add $t2, $t2, $t1
+#	jump %ForLoop40
 	b _ForLoop40
+#	%OutOfFor1
 _OutOfFor1:
+#	$15 = move 0
 	li $t0, 0
 	move $t2, $t0
+#	%ForLoop42
 _ForLoop42:
+#	$20 = call size $13
 	lw $a0, global_13
 	jal func__size
 	move $t3, $v0
+#	$19 = slt $15 $20
 	slt $t3, $t2, $t3
+#	br $19 %ForBody2 %OutOfFor3
 	beqz $t3, _OutOfFor3
+#	%ForBody2
 _ForBody2:
+#	$21 = mul $15 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$22 = add $13 $21
 	lw $t0, global_13
 	add $t3, $t0, $t3
+#	$23 = load 4 $22 0
 	lw $t3, 0($t3)
+#	$24 = call toString $23
 	move $a0, $t3
 	jal func__toString
 	move $t3, $v0
+#	nullcall print $24
 	move $a0, $t3
 	jal func__print
 	move $t3, $v0
+#	%continueFor43
 _continueFor43:
+#	$26 = move $15
 	move $t3, $t2
+#	$15 = add $15 1
 	li $t1, 1
 	add $t2, $t2, $t1
+#	jump %ForLoop42
 	b _ForLoop42
+#	%OutOfFor3
 _OutOfFor3:
+#	nullcall println ""
 	la $a0, string_27
 	jal func__println
 	move $t2, $v0
+#	$13 = move $14
 	lw $t0, 132($sp)
 	sw $t0, global_13
+#	$15 = move 0
 	li $t0, 0
 	move $t2, $t0
+#	%ForLoop44
 _ForLoop44:
+#	$32 = call size $13
 	lw $a0, global_13
 	jal func__size
 	move $t3, $v0
+#	$31 = slt $15 $32
 	slt $t3, $t2, $t3
+#	br $31 %ForBody4 %OutOfFor5
 	beqz $t3, _OutOfFor5
+#	%ForBody4
 _ForBody4:
+#	$33 = mul $15 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$34 = add $13 $33
 	lw $t0, global_13
 	add $t3, $t0, $t3
+#	$35 = load 4 $34 0
 	lw $t3, 0($t3)
+#	$36 = call toString $35
 	move $a0, $t3
 	jal func__toString
 	move $t3, $v0
+#	nullcall print $36
 	move $a0, $t3
 	jal func__print
 	move $t3, $v0
+#	%continueFor45
 _continueFor45:
+#	$38 = move $15
 	move $t3, $t2
+#	$15 = add $15 1
 	li $t1, 1
 	add $t2, $t2, $t1
+#	jump %ForLoop44
 	b _ForLoop44
+#	%OutOfFor5
 _OutOfFor5:
+#	jump %EndOfFunctionDecl39
 	b _EndOfFunctionDecl39
+#	%EndOfFunctionDecl39
 _EndOfFunctionDecl39:
 	lw $ra, 120($sp)
 	lw $t4, 48($sp)

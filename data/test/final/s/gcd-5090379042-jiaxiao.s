@@ -496,31 +496,48 @@ _gcd:
 	sub $sp, $sp, 152
 	sw $t2, 40($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl55
 _BeginOfFunctionDecl55:
+#	$1 = rem $129 $130
 	lw $t0, 144($sp)
 	lw $t1, 148($sp)
 	rem $t2, $t0, $t1
+#	$0 = seq $1 0
 	li $t1, 0
 	seq $t2, $t2, $t1
+#	br $0 %consequence0 %alternative1
 	beqz $t2, _alternative1
+#	%consequence0
 _consequence0:
+#	ret $130
 	lw $v0, 148($sp)
+#	jump %EndOfFunctionDecl56
 	b _EndOfFunctionDecl56
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%alternative1
 _alternative1:
+#	$2 = rem $129 $130
 	lw $t0, 144($sp)
 	lw $t1, 148($sp)
 	rem $t2, $t0, $t1
+#	$3 = call gcd $130 $2
 	lw $t0, 148($sp)
 	sw $t0, -8($sp)
 	sw $t2, -4($sp)
 	jal _gcd
 	move $t2, $v0
+#	ret $3
 	move $v0, $t2
+#	jump %EndOfFunctionDecl56
 	b _EndOfFunctionDecl56
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%OutOfIf2
 _OutOfIf2:
+#	jump %EndOfFunctionDecl56
 	b _EndOfFunctionDecl56
+#	%EndOfFunctionDecl56
 _EndOfFunctionDecl56:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
@@ -530,45 +547,58 @@ main:
 	sub $sp, $sp, 164
 	sw $t2, 40($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl57
 _BeginOfFunctionDecl57:
+#	$4 = call gcd 10 1
 	li $t0, 10
 	sw $t0, -8($sp)
 	li $t0, 1
 	sw $t0, -4($sp)
 	jal _gcd
 	move $t2, $v0
+#	$5 = call toString $4
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	nullcall println $5
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	$7 = call gcd 34986 3087
 	li $t0, 34986
 	sw $t0, -8($sp)
 	li $t0, 3087
 	sw $t0, -4($sp)
 	jal _gcd
 	move $t2, $v0
+#	$8 = call toString $7
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	nullcall println $8
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	$10 = call gcd 2907 1539
 	li $t0, 2907
 	sw $t0, -8($sp)
 	li $t0, 1539
 	sw $t0, -4($sp)
 	jal _gcd
 	move $t2, $v0
+#	$11 = call toString $10
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	nullcall println $11
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	ret 0
 	li $v0, 0
+#	jump %EndOfFunctionDecl58
 	b _EndOfFunctionDecl58
+#	%EndOfFunctionDecl58
 _EndOfFunctionDecl58:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)

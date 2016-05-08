@@ -806,8 +806,8 @@ public class MIPSTranslator {
                 if (!banned) {
                     function.cfg.allocator = new GlobalRegisterAllocator(function.cfg);
                 }
-                System.out.println(function.cfg.allocator.interferenceGraphToString());
-                System.out.println(function.cfg.basicBlockToString());
+                //System.out.println(function.cfg.allocator.interferenceGraphToString());
+                //System.out.println(function.cfg.basicBlockToString());
                 translate(function.cfg);
             }
         }

@@ -495,38 +495,56 @@ func__stringNeq:
 _a:
 	sub $sp, $sp, 244
 	sw $t2, 40($sp)
+#	%BeginOfFunctionDecl108
 _BeginOfFunctionDecl108:
+#	$13 = add $406 $407
 	lw $t0, 184($sp)
 	lw $t1, 188($sp)
 	add $t2, $t0, $t1
+#	$12 = add $13 $408
 	lw $t1, 192($sp)
 	add $t2, $t2, $t1
+#	$11 = add $12 $409
 	lw $t1, 196($sp)
 	add $t2, $t2, $t1
+#	$10 = add $11 $410
 	lw $t1, 200($sp)
 	add $t2, $t2, $t1
+#	$9 = add $10 $411
 	lw $t1, 204($sp)
 	add $t2, $t2, $t1
+#	$8 = add $9 $412
 	lw $t1, 208($sp)
 	add $t2, $t2, $t1
+#	$7 = add $8 $413
 	lw $t1, 212($sp)
 	add $t2, $t2, $t1
+#	$6 = add $7 $414
 	lw $t1, 216($sp)
 	add $t2, $t2, $t1
+#	$5 = add $6 $415
 	lw $t1, 220($sp)
 	add $t2, $t2, $t1
+#	$4 = add $5 $416
 	lw $t1, 224($sp)
 	add $t2, $t2, $t1
+#	$3 = add $4 $417
 	lw $t1, 228($sp)
 	add $t2, $t2, $t1
+#	$2 = add $3 $418
 	lw $t1, 232($sp)
 	add $t2, $t2, $t1
+#	$1 = add $2 $419
 	lw $t1, 236($sp)
 	add $t2, $t2, $t1
+#	$0 = add $1 $420
 	lw $t1, 240($sp)
 	add $t2, $t2, $t1
+#	ret $0
 	move $v0, $t2
+#	jump %EndOfFunctionDecl109
 	b _EndOfFunctionDecl109
+#	%EndOfFunctionDecl109
 _EndOfFunctionDecl109:
 	lw $t2, 40($sp)
 	add $sp, $sp, 244
@@ -535,7 +553,9 @@ main:
 	sub $sp, $sp, 140
 	sw $t2, 40($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl110
 _BeginOfFunctionDecl110:
+#	$14 = call a 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 	li $t0, 1
 	sw $t0, -60($sp)
 	li $t0, 2
@@ -568,14 +588,19 @@ _BeginOfFunctionDecl110:
 	sw $t0, -4($sp)
 	jal _a
 	move $t2, $v0
+#	$15 = call toString $14
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	nullcall println $15
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	ret 0
 	li $v0, 0
+#	jump %EndOfFunctionDecl111
 	b _EndOfFunctionDecl111
+#	%EndOfFunctionDecl111
 _EndOfFunctionDecl111:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)

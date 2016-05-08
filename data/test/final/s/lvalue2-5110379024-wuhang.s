@@ -497,55 +497,80 @@ main:
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl74
 _BeginOfFunctionDecl74:
+#	$2 = mul 4 4
 	li $t0, 4
 	li $t1, 4
 	mul $t2, $t0, $t1
+#	$2 = add $2 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$1 = alloc $2
 	move $a0, $t2
 	li $v0, 9
 	syscall
 	move $t2, $v0
+#	store 4 $1 4 0
 	li $t0, 4
 	sw $t0, 0($t2)
+#	$1 = add $1 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$0 = move $1
+#	$198 = move $0
 	sw $t2, global_198
+#	$5 = mul 4 4
 	li $t0, 4
 	li $t1, 4
 	mul $t2, $t0, $t1
+#	$5 = add $5 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$4 = alloc $5
 	move $a0, $t2
 	li $v0, 9
 	syscall
 	move $t2, $v0
+#	store 4 $4 4 0
 	li $t0, 4
 	sw $t0, 0($t2)
+#	$4 = add $4 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$3 = move $4
+#	$199 = move $3
+#	$7 = mul 2 4
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
 	sw $t1, 180($sp)
+#	$8 = add $199 $7
 	lw $t1, 180($sp)
 	add $t3, $t2, $t1
+#	store 4 $8 2 0
 	li $t0, 2
 	sw $t0, 0($t3)
+#	$198 = move $199
 	sw $t2, global_198
+#	$10 = mul 2 4
 	li $t0, 2
 	li $t1, 4
 	mul $t2, $t0, $t1
+#	$11 = add $198 $10
 	lw $t0, global_198
 	add $t2, $t0, $t2
+#	$12 = load 4 $11 0
 	lw $t2, 0($t2)
+#	$13 = call toString $12
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	nullcall println $13
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	%EndOfFunctionDecl75
 _EndOfFunctionDecl75:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)

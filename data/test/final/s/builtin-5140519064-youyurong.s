@@ -496,74 +496,101 @@ main:
 	sub $sp, $sp, 208
 	sw $t2, 40($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl64
 _BeginOfFunctionDecl64:
+#	$2 = mul 3 4
 	li $t0, 3
 	li $t1, 4
 	mul $t2, $t0, $t1
+#	$2 = add $2 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$1 = alloc $2
 	move $a0, $t2
 	li $v0, 9
 	syscall
 	move $t2, $v0
+#	store 4 $1 3 0
 	li $t0, 3
 	sw $t0, 0($t2)
+#	$1 = add $1 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$0 = move $1
+#	$84 = move $0
+#	$4 = call size $84
 	move $a0, $t2
 	jal func__size
 	move $t2, $v0
+#	$5 = call toString $4
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	$6 = call stringConcatenate "I have done " $5
 	la $a0, string_3
 	move $a1, $t2
 	jal func__stringConcatenate
 	move $t2, $v0
+#	$8 = call stringConcatenate $6 " little things"
 	move $a0, $t2
 	la $a1, string_7
 	jal func__stringConcatenate
 	move $t2, $v0
+#	nullcall print $8
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
+#	nullcall println "too young!"
 	la $a0, string_10
 	jal func__println
 	move $t2, $v0
+#	$13 = call length "\"hahaha\""
 	la $a0, string_12
 	jal func__length
 	move $t2, $v0
+#	$14 = call toString $13
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	nullcall print $14
 	move $a0, $t2
 	jal func__print
 	move $t2, $v0
+#	$17 = call getInt
 	jal func__getInt
 	move $t2, $v0
+#	$18 = call substring "four scores and seven years" 0 $17
 	la $a0, string_16
 	li $a1, 0
 	move $a2, $t2
 	jal func__substring
 	move $t2, $v0
+#	nullcall println $18
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	$21 = call parseInt "45 best songs in the world"
 	la $a0, string_20
 	jal func__parseInt
 	move $t2, $v0
+#	$22 = call toString $21
 	move $a0, $t2
 	jal func__toString
 	move $t2, $v0
+#	nullcall println $22
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	$25 = call ord "45 best songs" 5
 	la $a0, string_24
 	li $a1, 5
 	jal func__ord
 	move $t2, $v0
+#	ret $25
 	move $v0, $t2
+#	jump %EndOfFunctionDecl65
 	b _EndOfFunctionDecl65
+#	%EndOfFunctionDecl65
 _EndOfFunctionDecl65:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)

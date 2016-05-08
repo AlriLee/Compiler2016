@@ -503,134 +503,226 @@ main:
 	sw $t5, 52($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl54
 _BeginOfFunctionDecl54:
+#	$129 = move 10000
 	li $t0, 10000
 	move $t2, $t0
+#	$130 = move 0
 	li $t0, 0
 	move $t5, $t0
+#	$131 = move 2800
 	li $t0, 2800
 	sw $t0, 184($sp)
+#	$132 = move 0
 	li $t0, 0
 	move $s1, $t0
+#	$133 = move 0
 	li $t0, 0
 	move $t4, $t0
+#	$2 = mul 2801 4
 	li $t0, 2801
 	li $t1, 4
 	mul $t3, $t0, $t1
+#	$2 = add $2 4
 	li $t1, 4
 	add $t3, $t3, $t1
+#	$1 = alloc $2
 	move $a0, $t3
 	li $v0, 9
 	syscall
 	move $t3, $v0
+#	store 4 $1 2801 0
 	li $t0, 2801
 	sw $t0, 0($t3)
+#	$1 = add $1 4
 	li $t1, 4
 	add $t3, $t3, $t1
+#	$0 = move $1
+#	$134 = move $0
 	move $t7, $t3
+#	$135 = move 0
 	li $t0, 0
 	move $t6, $t0
+#	%ForLoop56
 _ForLoop56:
+#	$4 = sub $130 $131
 	lw $t1, 184($sp)
 	sub $t3, $t5, $t1
+#	$3 = sne $4 0
 	li $t1, 0
 	sne $t3, $t3, $t1
+#	br $3 %ForBody0 %OutOfFor1
 	beqz $t3, _OutOfFor1
+#	%ForBody0
 _ForBody0:
+#	$6 = move $130
 	move $t3, $t5
+#	$130 = add $130 1
 	li $t1, 1
 	add $t5, $t5, $t1
+#	$7 = mul $6 4
 	li $t1, 4
 	mul $t3, $t3, $t1
+#	$8 = add $134 $7
 	add $t5, $t7, $t3
+#	$9 = div $129 5
 	li $t1, 5
 	div $t3, $t2, $t1
+#	store 4 $8 $9 0
 	sw $t3, 0($t5)
+#	%continueFor57
 _continueFor57:
+#	jump %ForLoop56
 	b _ForLoop56
+#	%OutOfFor1
 _OutOfFor1:
+#	jump %ForLoop58
 	b _ForLoop58
+#	%ForLoop58
 _ForLoop58:
+#	jump %ForBody2
 	b _ForBody2
+#	%ForBody2
 _ForBody2:
+#	$132 = move 0
 	li $t0, 0
 	move $s1, $t0
+#	$12 = mul $131 2
 	lw $t0, 184($sp)
 	li $t1, 2
 	mul $t3, $t0, $t1
+#	$135 = move $12
 	move $t6, $t3
+#	$13 = seq $135 0
 	li $t1, 0
 	seq $t3, $t6, $t1
+#	br $13 %consequence4 %alternative5
 	beqz $t3, _alternative5
+#	%consequence4
 _consequence4:
+#	jump %OutOfFor3
 	b _OutOfFor3
+#	jump %OutOfIf6
 	b _OutOfIf6
+#	%alternative5
 _alternative5:
+#	jump %OutOfIf6
 	b _OutOfIf6
+#	%OutOfIf6
 _OutOfIf6:
+#	$130 = move $131
 	lw $t0, 184($sp)
 	move $t5, $t0
+#	%ForLoop60
 _ForLoop60:
+#	jump %ForBody7
 	b _ForBody7
+#	%ForBody7
 _ForBody7:
+#	$18 = mul $130 4
 	li $t1, 4
 	mul $t3, $t5, $t1
+#	$19 = add $134 $18
 	add $t3, $t7, $t3
+#	$20 = load 4 $19 0
 	lw $t3, 0($t3)
+#	$17 = mul $20 $129
 	mul $t3, $t3, $t2
+#	$16 = add $132 $17
 	add $t3, $s1, $t3
+#	$132 = move $16
 	move $s1, $t3
+#	$22 = mul $130 4
 	li $t1, 4
 	mul $t3, $t5, $t1
+#	$23 = add $134 $22
 	add $s0, $t7, $t3
+#	$135 = sub $135 1
 	li $t1, 1
 	sub $t6, $t6, $t1
+#	$24 = rem $132 $135
 	rem $t3, $s1, $t6
+#	store 4 $23 $24 0
 	sw $t3, 0($s0)
+#	$27 = move $135
 	move $t3, $t6
+#	$135 = sub $135 1
 	li $t1, 1
 	sub $t6, $t6, $t1
+#	$26 = div $132 $27
 	div $t3, $s1, $t3
+#	$132 = move $26
 	move $s1, $t3
+#	$130 = sub $130 1
 	li $t1, 1
 	sub $t5, $t5, $t1
+#	$28 = seq $130 0
 	li $t1, 0
 	seq $t3, $t5, $t1
+#	br $28 %consequence9 %alternative10
 	beqz $t3, _alternative10
+#	%consequence9
 _consequence9:
+#	jump %OutOfFor8
 	b _OutOfFor8
+#	jump %OutOfIf11
 	b _OutOfIf11
+#	%alternative10
 _alternative10:
+#	jump %OutOfIf11
 	b _OutOfIf11
+#	%OutOfIf11
 _OutOfIf11:
+#	jump %continueFor61
 	b _continueFor61
+#	%continueFor61
 _continueFor61:
+#	$30 = mul $132 $130
 	mul $t3, $s1, $t5
+#	$132 = move $30
 	move $s1, $t3
+#	jump %ForLoop60
 	b _ForLoop60
+#	%OutOfFor8
 _OutOfFor8:
+#	$32 = sub $131 14
 	lw $t0, 184($sp)
 	li $t1, 14
 	sub $t3, $t0, $t1
+#	$131 = move $32
 	sw $t3, 184($sp)
+#	$34 = div $132 $129
 	div $t3, $s1, $t2
+#	$33 = add $133 $34
 	add $t3, $t4, $t3
+#	$35 = call toString $33
 	move $a0, $t3
 	jal func__toString
 	move $t3, $v0
+#	nullcall print $35
 	move $a0, $t3
 	jal func__print
 	move $t3, $v0
+#	%continueFor59
 _continueFor59:
+#	$38 = rem $132 $129
 	rem $t3, $s1, $t2
+#	$133 = move $38
 	move $t4, $t3
+#	jump %ForLoop58
 	b _ForLoop58
+#	%OutOfFor3
 _OutOfFor3:
+#	nullcall print "\n"
 	la $a0, string_39
 	jal func__print
 	move $t3, $v0
+#	ret 0
 	li $v0, 0
+#	jump %EndOfFunctionDecl55
 	b _EndOfFunctionDecl55
+#	%EndOfFunctionDecl55
 _EndOfFunctionDecl55:
 	lw $ra, 120($sp)
 	lw $s0, 64($sp)

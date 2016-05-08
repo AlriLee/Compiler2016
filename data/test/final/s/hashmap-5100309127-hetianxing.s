@@ -495,14 +495,20 @@ func__stringNeq:
 _getHash:
 	sub $sp, $sp, 140
 	sw $t2, 40($sp)
+#	%BeginOfFunctionDecl41
 _BeginOfFunctionDecl41:
+#	$1 = mul $47 237
 	lw $t0, 136($sp)
 	li $t1, 237
 	mul $t2, $t0, $t1
+#	$0 = rem $1 $45
 	lw $t1, global_45
 	rem $t2, $t2, $t1
+#	ret $0
 	move $v0, $t2
+#	jump %EndOfFunctionDecl42
 	b _EndOfFunctionDecl42
+#	%EndOfFunctionDecl42
 _EndOfFunctionDecl42:
 	lw $t2, 40($sp)
 	add $sp, $sp, 140
@@ -513,121 +519,185 @@ _put:
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl43
 _BeginOfFunctionDecl43:
+#	$51 = move 0
 	li $t0, 0
 	move $t4, $t0
+#	$3 = call getHash $48
 	lw $t0, 264($sp)
 	sw $t0, -4($sp)
 	jal _getHash
 	move $t2, $v0
+#	$50 = move $3
+#	$5 = mul $50 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$6 = add $46 $5
 	lw $t0, global_46
 	add $t3, $t0, $t3
+#	$7 = load 4 $6 0
 	lw $t0, 0($t3)
 	sw $t0, 240($sp)
+#	$4 = seq $7 0
 	lw $t0, 240($sp)
 	li $t1, 0
 	seq $t3, $t0, $t1
+#	br $4 %consequence0 %alternative1
 	beqz $t3, _alternative1
+#	%consequence0
 _consequence0:
+#	$9 = mul $50 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$10 = add $46 $9
 	lw $t0, global_46
 	add $t3, $t0, $t3
+#	$13 = mul 3 4
 	li $t0, 3
 	li $t1, 4
 	mul $t4, $t0, $t1
+#	$12 = alloc $13
 	move $a0, $t4
 	li $v0, 9
 	syscall
 	move $t4, $v0
+#	$11 = move $12
+#	store 4 $10 $11 0
 	sw $t4, 0($t3)
+#	$15 = mul $50 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$16 = add $46 $15
 	lw $t0, global_46
 	add $t3, $t0, $t3
+#	$17 = load 4 $16 0
 	lw $t0, 0($t3)
 	sw $t0, 256($sp)
+#	store 4 $17 $48 0
 	lw $t0, 264($sp)
 	lw $t1, 256($sp)
 	sw $t0, 0($t1)
+#	$19 = mul $50 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$20 = add $46 $19
 	lw $t0, global_46
 	add $t1, $t0, $t3
 	sw $t1, 228($sp)
+#	$21 = load 4 $20 0
 	lw $t1, 228($sp)
 	lw $t3, 0($t1)
+#	store 4 $21 $49 4
 	lw $t0, 268($sp)
 	sw $t0, 4($t3)
+#	$23 = mul $50 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$24 = add $46 $23
 	lw $t0, global_46
 	add $t1, $t0, $t3
 	sw $t1, 224($sp)
+#	$25 = load 4 $24 0
 	lw $t1, 224($sp)
 	lw $t0, 0($t1)
 	sw $t0, 232($sp)
+#	store 4 $25 0 8
 	li $t0, 0
 	lw $t1, 232($sp)
 	sw $t0, 8($t1)
+#	jump %EndOfFunctionDecl44
 	b _EndOfFunctionDecl44
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%alternative1
 _alternative1:
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%OutOfIf2
 _OutOfIf2:
+#	$27 = mul $50 4
 	li $t1, 4
 	mul $t1, $t2, $t1
 	sw $t1, 244($sp)
+#	$28 = add $46 $27
 	lw $t0, global_46
 	lw $t1, 244($sp)
 	add $t1, $t0, $t1
 	sw $t1, 236($sp)
+#	$29 = load 4 $28 0
 	lw $t1, 236($sp)
 	lw $t3, 0($t1)
+#	$51 = move $29
 	move $t4, $t3
+#	%WhileLoop49
 _WhileLoop49:
+#	$31 = load 4 $51 0
 	lw $t3, 0($t4)
+#	$30 = sne $31 $48
 	lw $t1, 264($sp)
 	sne $t1, $t3, $t1
 	sw $t1, 220($sp)
+#	br $30 %WhileBody3 %OutOfWhile4
 	lw $t0, 220($sp)
 	beqz $t0, _OutOfWhile4
+#	%WhileBody3
 _WhileBody3:
+#	$33 = load 4 $51 8
 	lw $t3, 8($t4)
+#	$32 = seq $33 0
 	li $t1, 0
 	seq $t1, $t3, $t1
 	sw $t1, 260($sp)
+#	br $32 %consequence5 %alternative6
 	lw $t0, 260($sp)
 	beqz $t0, _alternative6
+#	%consequence5
 _consequence5:
+#	$37 = mul 3 4
 	li $t0, 3
 	li $t1, 4
 	mul $t3, $t0, $t1
+#	$36 = alloc $37
 	move $a0, $t3
 	li $v0, 9
 	syscall
 	move $t3, $v0
+#	$35 = move $36
 	sw $t3, 252($sp)
+#	store 4 $51 $35 8
 	lw $t0, 252($sp)
 	sw $t0, 8($t4)
+#	$39 = load 4 $51 8
 	lw $t3, 8($t4)
+#	store 4 $39 $48 0
 	lw $t0, 264($sp)
 	sw $t0, 0($t3)
+#	$41 = load 4 $51 8
 	lw $t3, 8($t4)
+#	store 4 $41 0 8
 	li $t0, 0
 	sw $t0, 8($t3)
+#	jump %OutOfIf7
 	b _OutOfIf7
+#	%alternative6
 _alternative6:
+#	jump %OutOfIf7
 	b _OutOfIf7
+#	%OutOfIf7
 _OutOfIf7:
+#	$43 = load 4 $51 8
 	lw $t3, 8($t4)
+#	$51 = move $43
 	move $t4, $t3
+#	jump %WhileLoop49
 	b _WhileLoop49
+#	%OutOfWhile4
 _OutOfWhile4:
+#	store 4 $51 $49 4
 	lw $t0, 268($sp)
 	sw $t0, 4($t4)
+#	%EndOfFunctionDecl44
 _EndOfFunctionDecl44:
 	lw $ra, 120($sp)
 	lw $t4, 48($sp)
@@ -640,33 +710,53 @@ _get:
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl45
 _BeginOfFunctionDecl45:
+#	$53 = move 0
 	li $t0, 0
 	move $t2, $t0
+#	$46 = call getHash $52
 	lw $t0, 164($sp)
 	sw $t0, -4($sp)
 	jal _getHash
 	move $t2, $v0
+#	$47 = mul $46 4
 	li $t1, 4
 	mul $t2, $t2, $t1
+#	$48 = add $46 $47
 	lw $t0, global_46
 	add $t2, $t0, $t2
+#	$49 = load 4 $48 0
 	lw $t2, 0($t2)
+#	$53 = move $49
+#	%WhileLoop50
 _WhileLoop50:
+#	$51 = load 4 $53 0
 	lw $t3, 0($t2)
+#	$50 = sne $51 $52
 	lw $t1, 164($sp)
 	sne $t1, $t3, $t1
 	sw $t1, 156($sp)
+#	br $50 %WhileBody8 %OutOfWhile9
 	lw $t0, 156($sp)
 	beqz $t0, _OutOfWhile9
+#	%WhileBody8
 _WhileBody8:
+#	$53 = load 4 $53 8
 	lw $t2, 8($t2)
+#	$53 = move $53
+#	jump %WhileLoop50
 	b _WhileLoop50
+#	%OutOfWhile9
 _OutOfWhile9:
+#	$54 = load 4 $53 4
 	lw $t0, 4($t2)
 	sw $t0, 160($sp)
+#	ret $54
 	lw $v0, 160($sp)
+#	jump %EndOfFunctionDecl46
 	b _EndOfFunctionDecl46
+#	%EndOfFunctionDecl46
 _EndOfFunctionDecl46:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
@@ -679,98 +769,150 @@ main:
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl47
 _BeginOfFunctionDecl47:
+#	$45 = move 100
 	li $t0, 100
 	sw $t0, global_45
+#	$58 = mul 100 4
 	li $t0, 100
 	li $t1, 4
 	mul $t2, $t0, $t1
+#	$58 = add $58 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$57 = alloc $58
 	move $a0, $t2
 	li $v0, 9
 	syscall
 	move $t2, $v0
+#	store 4 $57 100 0
 	li $t0, 100
 	sw $t0, 0($t2)
+#	$57 = add $57 4
 	li $t1, 4
 	add $t2, $t2, $t1
+#	$56 = move $57
+#	$46 = move $56
 	sw $t2, global_46
+#	$54 = move 0
 	li $t0, 0
 	move $t2, $t0
+#	%ForLoop51
 _ForLoop51:
+#	$60 = slt $54 $45
 	lw $t1, global_45
 	slt $t3, $t2, $t1
+#	br $60 %ForBody10 %OutOfFor11
 	beqz $t3, _OutOfFor11
+#	%ForBody10
 _ForBody10:
+#	$62 = mul $54 4
 	li $t1, 4
 	mul $t3, $t2, $t1
+#	$63 = add $46 $62
 	lw $t0, global_46
 	add $t1, $t0, $t3
 	sw $t1, 192($sp)
+#	store 4 $63 0 0
 	li $t0, 0
 	lw $t1, 192($sp)
 	sw $t0, 0($t1)
+#	%continueFor52
 _continueFor52:
+#	$64 = move $54
 	sw $t2, 196($sp)
+#	$54 = add $54 1
 	li $t1, 1
 	add $t2, $t2, $t1
+#	jump %ForLoop51
 	b _ForLoop51
+#	%OutOfFor11
 _OutOfFor11:
+#	$54 = move 0
 	li $t0, 0
 	move $t2, $t0
+#	%ForLoop53
 _ForLoop53:
+#	$66 = slt $54 1000
 	li $t1, 1000
 	slt $t1, $t2, $t1
 	sw $t1, 184($sp)
+#	br $66 %ForBody12 %OutOfFor13
 	lw $t0, 184($sp)
 	beqz $t0, _OutOfFor13
+#	%ForBody12
 _ForBody12:
+#	nullcall put $54 $54
 	sw $t2, -8($sp)
 	sw $t2, -4($sp)
 	jal _put
 	move $t3, $v0
+#	%continueFor54
 _continueFor54:
+#	$68 = move $54
 	move $t3, $t2
+#	$54 = add $54 1
 	li $t1, 1
 	add $t2, $t2, $t1
+#	jump %ForLoop53
 	b _ForLoop53
+#	%OutOfFor13
 _OutOfFor13:
+#	$54 = move 0
 	li $t0, 0
 	move $t2, $t0
+#	%ForLoop55
 _ForLoop55:
+#	$70 = slt $54 1000
 	li $t1, 1000
 	slt $t3, $t2, $t1
+#	br $70 %ForBody14 %OutOfFor15
 	beqz $t3, _OutOfFor15
+#	%ForBody14
 _ForBody14:
+#	$71 = call toString $54
 	move $a0, $t2
 	jal func__toString
 	sw $v0, 180($sp)
+#	$73 = call stringConcatenate $71 " "
 	lw $a0, 180($sp)
 	la $a1, string_72
 	jal func__stringConcatenate
 	move $t4, $v0
+#	$74 = call get $54
 	sw $t2, -4($sp)
 	jal _get
 	move $t3, $v0
+#	$75 = call toString $74
 	move $a0, $t3
 	jal func__toString
 	sw $v0, 176($sp)
+#	$76 = call stringConcatenate $73 $75
 	move $a0, $t4
 	lw $a1, 176($sp)
 	jal func__stringConcatenate
 	move $t3, $v0
+#	nullcall println $76
 	move $a0, $t3
 	jal func__println
 	move $t3, $v0
+#	%continueFor56
 _continueFor56:
+#	$78 = move $54
 	sw $t2, 188($sp)
+#	$54 = add $54 1
 	li $t1, 1
 	add $t2, $t2, $t1
+#	jump %ForLoop55
 	b _ForLoop55
+#	%OutOfFor15
 _OutOfFor15:
+#	ret 0
 	li $v0, 0
+#	jump %EndOfFunctionDecl48
 	b _EndOfFunctionDecl48
+#	%EndOfFunctionDecl48
 _EndOfFunctionDecl48:
 	lw $ra, 120($sp)
 	lw $t4, 48($sp)

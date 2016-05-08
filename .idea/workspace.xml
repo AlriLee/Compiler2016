@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba8dac69-be94-4b63-b1be-3e3ea954506e" name="Default" comment="18 cases exceed limit.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Listener/MagASTBuilder.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Listener/MagASTBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Translator/MIPSTranslator.class" afterPath="$PROJECT_DIR$/out/production/Compiler2016/Compiler/Translator/MIPSTranslator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase" afterPath="$PROJECT_DIR$/testcase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/out/string_test-huyuncong.out" afterPath="$PROJECT_DIR$/data/test/final/out/string_test-huyuncong.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/maxflow-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/maxflow-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/multiarray-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/multiarray-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/pi-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/pi-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/data/test/final/s/prime-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/qsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/qsort-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/queens-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/queens-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/spill2-5100379110-daibo.s" afterPath="$PROJECT_DIR$/data/test/final/s/spill2-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/statement_test-huyuncong.s" afterPath="$PROJECT_DIR$/data/test/final/s/statement_test-huyuncong.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/string_test-huyuncong.s" afterPath="$PROJECT_DIR$/data/test/final/s/string_test-huyuncong.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/superloop-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/superloop-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/tak-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/tak-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/final/s/twinprime-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/data/test/final/s/twinprime-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java" afterPath="$PROJECT_DIR$/src/Compiler/GlobalRegisterAllocator/GlobalRegisterAllocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" afterPath="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" afterPath="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" />
     </list>
     <ignored path="Compiler2016.iws" />
@@ -95,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="807" column="0" selection-start-line="807" selection-start-column="0" selection-end-line="807" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="809" column="18" selection-start-line="809" selection-start-column="18" selection-end-line="809" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="string_test-huyuncong.mx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="string_test-huyuncong.mx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/test/final/mx/string_test-huyuncong.mx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -189,8 +170,8 @@
         <option value="$PROJECT_DIR$/data/test/final/out/string_test-huyuncong.out" />
         <option value="$PROJECT_DIR$/data/test/final/s/string_test-huyuncong.s" />
         <option value="$PROJECT_DIR$/src/Compiler/Listener/MagASTBuilder.java" />
-        <option value="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" />
         <option value="$PROJECT_DIR$/data/test/final/mx/string_test-huyuncong.mx" />
+        <option value="$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java" />
       </list>
     </option>
   </component>
@@ -527,7 +508,7 @@
       <recent name="$PROJECT_DIR$/src/Compiler" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Compiler (4)">
+  <component name="RunManager" selected="JUnit.Compiler.testPass">
     <configuration default="false" name="Compiler.testPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -879,8 +860,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Compiler (4)" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Compiler.testPass" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Compiler.testPass" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Compiler (4)" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.Compiler (1)" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.Compiler (3)" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.Compiler (2)" />
@@ -1785,21 +1766,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="807" column="0" selection-start-line="807" selection-start-column="0" selection-end-line="807" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/test/final/mx/string_test-huyuncong.mx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler/Translator/MIPSTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="809" column="18" selection-start-line="809" selection-start-column="18" selection-end-line="809" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

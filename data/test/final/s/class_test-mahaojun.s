@@ -496,58 +496,81 @@ _work:
 	sub $sp, $sp, 192
 	sw $t2, 40($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl91
 _BeginOfFunctionDecl91:
+#	$1 = load 4 $205 4
 	lw $t1, 188($sp)
 	lw $t2, 4($t1)
+#	$0 = sle $1 100
 	li $t1, 100
 	sle $t2, $t2, $t1
+#	br $0 %consequence0 %alternative1
 	beqz $t2, _alternative1
+#	%consequence0
 _consequence0:
+#	$3 = call stringConcatenate $204 ", "
 	lw $a0, 184($sp)
 	la $a1, string_2
 	jal func__stringConcatenate
 	move $t2, $v0
+#	$4 = load 4 $205 0
 	lw $t1, 188($sp)
 	lw $t0, 0($t1)
 	sw $t0, 152($sp)
+#	$5 = call stringConcatenate $3 $4
 	move $a0, $t2
 	lw $a1, 152($sp)
 	jal func__stringConcatenate
 	move $t2, $v0
+#	$7 = call stringConcatenate $5 " enjoys this work. XD"
 	move $a0, $t2
 	la $a1, string_6
 	jal func__stringConcatenate
 	move $t2, $v0
+#	nullcall println $7
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%alternative1
 _alternative1:
+#	$10 = call stringConcatenate $204 ", "
 	lw $a0, 184($sp)
 	la $a1, string_9
 	jal func__stringConcatenate
 	sw $v0, 160($sp)
+#	$11 = load 4 $205 0
 	lw $t1, 188($sp)
 	lw $t2, 0($t1)
+#	$12 = call stringConcatenate $10 $11
 	lw $a0, 160($sp)
 	move $a1, $t2
 	jal func__stringConcatenate
 	move $t2, $v0
+#	$14 = call stringConcatenate $12 " wants to give up!!!!!"
 	move $a0, $t2
 	la $a1, string_13
 	jal func__stringConcatenate
 	move $t2, $v0
+#	nullcall println $14
 	move $a0, $t2
 	jal func__println
 	move $t2, $v0
+#	jump %OutOfIf2
 	b _OutOfIf2
+#	%OutOfIf2
 _OutOfIf2:
+#	$18 = load 4 $205 4
 	lw $t1, 188($sp)
 	lw $t2, 4($t1)
+#	$17 = add $18 $203
 	lw $t1, global_203
 	add $t2, $t2, $t1
+#	store 4 $205 $17 4
 	lw $t1, 188($sp)
 	sw $t2, 4($t1)
+#	%EndOfFunctionDecl92
 _EndOfFunctionDecl92:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
@@ -558,54 +581,73 @@ main:
 	sw $t2, 40($sp)
 	sw $t3, 44($sp)
 	sw $ra, 120($sp)
+#	%BeginOfFunctionDecl93
 _BeginOfFunctionDecl93:
+#	$202 = move 100
 	li $t0, 100
 	sw $t0, global_202
+#	$203 = move 10
 	li $t0, 10
 	sw $t0, global_203
+#	$22 = mul 2 4
 	li $t0, 2
 	li $t1, 4
 	mul $t2, $t0, $t1
+#	$21 = alloc $22
 	move $a0, $t2
 	li $v0, 9
 	syscall
 	move $t2, $v0
+#	$20 = move $21
+#	$206 = move $20
+#	store 4 $206 "the leading TA" 0
 	la $t0, string_24
 	sw $t0, 0($t2)
+#	store 4 $206 0 4
 	li $t0, 0
 	sw $t0, 4($t2)
+#	$29 = mul 2 4
 	li $t0, 2
 	li $t1, 4
 	mul $t1, $t0, $t1
 	sw $t1, 164($sp)
+#	$28 = alloc $29
 	lw $a0, 164($sp)
 	li $v0, 9
 	syscall
 	move $t3, $v0
+#	$27 = move $28
+#	$207 = move $27
 	sw $t3, 168($sp)
+#	store 4 $207 "the striking TA" 0
 	la $t0, string_31
 	lw $t1, 168($sp)
 	sw $t0, 0($t1)
+#	store 4 $207 $202 4
 	lw $t0, global_202
 	lw $t1, 168($sp)
 	sw $t0, 4($t1)
+#	nullcall work "MR" $206
 	la $t0, string_33
 	sw $t0, -8($sp)
 	sw $t2, -4($sp)
 	jal _work
 	move $t2, $v0
+#	nullcall work "Mars" $207
 	la $t0, string_35
 	sw $t0, -8($sp)
 	lw $t0, 168($sp)
 	sw $t0, -4($sp)
 	jal _work
 	move $t2, $v0
+#	nullcall work "Mars" $207
 	la $t0, string_37
 	sw $t0, -8($sp)
 	lw $t0, 168($sp)
 	sw $t0, -4($sp)
 	jal _work
 	move $t2, $v0
+#	%EndOfFunctionDecl94
 _EndOfFunctionDecl94:
 	lw $ra, 120($sp)
 	lw $t2, 40($sp)
